@@ -1,0 +1,357 @@
+{
+  "schema_version": "2.0",
+  "id": "for-agents",
+  "kind": "page",
+  "language": "en",
+  "title": "For agents · Tianxing Ren",
+  "url": "https://tianxingren-work.github.io/for-agents/",
+  "markdown_url": "https://tianxingren-work.github.io/machine/en/for-agents.md",
+  "content_markdown": "# For agents\n\nProfile, projects, and experience in one place for Codex, Claude Code, and other automated tools. Follow the source links for further details.\n\n## Profile and research\n\nHi, I’m **Tianxing Ren.** I research AI compilers to help diverse AI algorithms run correctly and efficiently on emerging AI hardware, and to make programming easier for people and agents.\n\nI’m a Doctor of Engineering student at Peking University, jointly trained with Zhongguancun Laboratory. I research AI compilers, tile-level programming, and heterogeneous computing, with an interest in programming languages and computer architecture.\n\nMy advisors are [Tao Xie](https://taoxiease.github.io/) and [Wei Yang](https://youngwei.com/) .\n\nAI compilers, tile-level programming, and heterogeneous computing.\n\n## Projects I lead\n\n### [TileLang-TPU](https://tianxingren-work.github.io/projects/tilelang-tpu/)\n\nProject lead\n\nA TileLang backend for SOPHGO TPUs, from compile-time memory planning to executable kernels.\n\nTileLang-TPU brings tile-level programming to commercial SOPHGO accelerators. It preserves the TileLang programming model and turns on-chip memory placement, data movement, and transfer–compute overlap into compiler decisions. The compiler and JIT runtime provide an end-to-end path from a Python kernel definition to execution on BM1690.\n\nProject stage\nMilestone complete\nSource availability\n[Open source](https://github.com/TongmingLAIC/tilelang-tpu)\n\nFive kernels × five input shapes × three data types on one SOPHGO BM1690 card. Average speedup over PPL uses TPU kernel execution latency; compilation and host execution are outside this timing.\n\n- 1.10× average speedup over PPL\n\n- 71 / 75 configurations faster than PPL\n\n- BF16 · FP16 · FP32\n\nBoth implementations use the same operator semantics, shapes, data types, and vendor compilation toolchain. Each case uses five warm-up runs and ten timed repetitions. The reported set includes 71 faster cases, one tie, and three slower cases.\n\n- **Static memory allocation** Assign concrete local-memory offsets at compile time, accounting for alignment, capacity, and memory-bank placement.\n\n- **Structured pipeline lowering** Turn tiled loops into explicit execution stages so that data transfers can overlap with computation while preserving dependencies.\n\n- **Backend mapping and runtime** Generate TPU kernel API calls and connect the output to host/device compilation, linking, loading, and launch.\n\n### [TileLang-RISC-V](https://tianxingren-work.github.io/projects/tilelang-riscv/)\n\nProject lead\n\nBringing TileLang to RISC-V CPUs with AME matrix acceleration. An ongoing effort with open-source hardware and systems researchers.\n\nThis project is developing a TileLang backend for RISC-V AME AI CPUs, in collaboration with the Beijing Institute of Open Source Chip and the Institute of Software, Chinese Academy of Sciences. Current work focuses on connecting the programming model to target instructions and establishing a usable compilation and execution path.\n\nProject stage\nIn progress\nSource availability\nSource code is not public\n- **Programming model** Express common AI operators with tile-level programs and identify the information the backend needs.\n\n- **Target integration** Connect compiler lowering, AME instruction mapping, and the execution environment.\n\n- **Evaluation** Test operator correctness and performance across target configurations, and use the results to guide backend optimization.\n\nCollaborating institutions\n\n- [Beijing Institute of Open Source Chip](https://www.bosc.ac.cn/)\n\n- [Institute of Software, Chinese Academy of Sciences](https://is.cas.cn/)\n\n## I also contribute to these open-source projects\n\n- [TileLang](https://github.com/tile-ai/tilelang)\n\n- [Asterinas](https://github.com/asterinas/asterinas)\n\n## Education\n\nSep 2025 – Jul 2030 · expected\n\n### [Peking University](https://www.pku.edu.cn/)\n\nDoctor of Engineering student · Electronic Information\n\n[School of Software and Microelectronics](https://ss.pku.edu.cn/)\n\nJoint doctoral training with Zhongguancun Laboratory.\n\nMy advisors are [Tao Xie](https://taoxiease.github.io/) and [Wei Yang](https://youngwei.com/) .\n\nSep 2021 – Jul 2025\n\n### [Beihang University](https://www.buaa.edu.cn/)\n\nBachelor of Engineering · Cyberspace Security\n\n[School of Cyber Science and Technology](https://cst.buaa.edu.cn/)\n\nDuring my undergraduate studies, I collaborated with [Hua Guo](https://cst.buaa.edu.cn/info/1112/2741.htm) .\n\nGPA **3.77 / 4.00** Average grade **90.41 / 100**\n\n## Internships\n\nDec 2025 – Present\n\n### [Beijing Tongming Lake IT Innovation Center](https://www.tlaic.ac.cn/)\n\nIntelligent Systems Intern\n\n- Adapting TileLang to the SOPHGO SG2260E TPU with RISC-V tensor extensions.\n\n- Developing TileLang support for RISC-V CPUs with AME matrix acceleration.\n\nDec 2024 – Aug 2025\n\n### [Beijing Institute of Open Source Chip](https://www.bosc.ac.cn/)\n\nAI Systems Software Intern\n\n- Extended the Triton compilation stack to SOPHGO TPUs through translation into the vendor toolchain.\n\n- Built a TileLang-based operator compilation framework, including a TPU operator library, pipeline passes, and automatic code generation for operators used in LLaMA.\n\n- Several operators matched or exceeded vendor-tuned implementations in the evaluated configurations.\n\nJul 2024 – Aug 2024\n\n### [Eversec (Beijing) Technology Co., Ltd.](https://eversec.com.cn/)\n\nSecurity Services Intern\n\n- Assisted with authorized network security assessments using Burp Suite and related tools, organizing findings and identifying potential risks.\n\n- Captured and standardized more than 100 industrial IoT login-traffic PCAP records with Wireshark.\n\n## Honors & scholarships\n\n2025–2026\n\nAcademic Excellence Scholarship\n\n[Peking University](https://www.pku.edu.cn/)\n\n2024–2025\n\nSpecial Prize, Academic Competition Scholarship; Second Prize, Academic Excellence Scholarship\n\n[Beihang University](https://www.buaa.edu.cn/)\n\n2023–2024\n\nOutstanding Student; Special Prize, Academic Competition Scholarship; Second Prize, Social Service Scholarship\n\n[Beihang University](https://www.buaa.edu.cn/)\n\n2022–2023\n\nFirst Prize, Academic Competition Scholarship; Second Prize, Academic Excellence Scholarship\n\n[Beihang University](https://www.buaa.edu.cn/)\n\n## Visits\n\nJul 2024 – Aug 2024\n\n### [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/)\n\nSummer School Visiting Student\n\n## Tools for AI assistants\n\nMarkdown and JSON are available through the links below. Browsers that support WebMCP also offer tools to read this profile, list projects and match a topic to documented work.\n\n[Tool definitions](https://tianxingren-work.github.io/data/agent-tools.json)\n\n```text\nGET /machine/en/for-agents.json\nGET /data/projects.json\n```\n\n## Contact\n\nFor research collaboration, contact Tianxing Ren through the contact page or the linked GitHub profiles.\n\n- [Get in touch](https://tianxingren-work.github.io/contact/)\n\n- [GitHub / LeslinD](https://github.com/LeslinD)\n\n- [GitHub / tianxingren-work](https://github.com/tianxingren-work)\n\n## Direct access to files\n\n- [`/llms.txt`](https://tianxingren-work.github.io/llms.txt)\n\n- [`/llms-full.md`](https://tianxingren-work.github.io/llms-full.md)\n\n- [`/data/agents.json`](https://tianxingren-work.github.io/data/agents.json)\n\n- [`/data/profile.json`](https://tianxingren-work.github.io/data/profile.json)\n\n- [`/data/projects.json`](https://tianxingren-work.github.io/data/projects.json)\n\n- [`/data/routes.json`](https://tianxingren-work.github.io/data/routes.json)\n\n- [`/data/agent-tools.json`](https://tianxingren-work.github.io/data/agent-tools.json)\n\n- [`/openapi.json`](https://tianxingren-work.github.io/openapi.json)\n\n- [`/machine/en/for-agents.md`](https://tianxingren-work.github.io/machine/en/for-agents.md)\n\n- [`/machine/en/for-agents.json`](https://tianxingren-work.github.io/machine/en/for-agents.json)\n\n- [`/machine/en/about.md`](https://tianxingren-work.github.io/machine/en/about.md)\n\n- [`/machine/en/projects/tilelang-tpu.md`](https://tianxingren-work.github.io/machine/en/projects/tilelang-tpu.md)\n\n- [`/machine/en/projects/tilelang-riscv.md`](https://tianxingren-work.github.io/machine/en/projects/tilelang-riscv.md)\n\nEach page has Markdown and JSON versions. Follow the direct file links below to read the complete profile and sources.\n\n```text\nGET /machine/en/for-agents.md\nGET /machine/en/for-agents.json\n```\n\nAvailable versions use the language codes en, zh, ko, and ms.\n\n## Sources and project roles\n\nWhen summarizing this work, cite the original project pages and include the hardware, baseline, and evaluation scope for performance results. Project stage and source availability are recorded separately. Projects I lead and projects I contribute to are listed with their respective roles.\n",
+  "links": [
+    "https://taoxiease.github.io/",
+    "https://youngwei.com/",
+    "https://tianxingren-work.github.io/projects/tilelang-tpu/",
+    "https://github.com/TongmingLAIC/tilelang-tpu",
+    "https://tianxingren-work.github.io/projects/tilelang-riscv/",
+    "https://www.bosc.ac.cn/",
+    "https://is.cas.cn/",
+    "https://github.com/tile-ai/tilelang",
+    "https://github.com/asterinas/asterinas",
+    "https://www.pku.edu.cn/",
+    "https://ss.pku.edu.cn/",
+    "https://www.buaa.edu.cn/",
+    "https://cst.buaa.edu.cn/",
+    "https://cst.buaa.edu.cn/info/1112/2741.htm",
+    "https://www.tlaic.ac.cn/",
+    "https://eversec.com.cn/",
+    "https://www.cuhk.edu.hk/",
+    "https://tianxingren-work.github.io/data/agent-tools.json",
+    "https://tianxingren-work.github.io/contact/",
+    "https://github.com/LeslinD",
+    "https://github.com/tianxingren-work",
+    "https://tianxingren-work.github.io/llms.txt",
+    "https://tianxingren-work.github.io/llms-full.md",
+    "https://tianxingren-work.github.io/data/agents.json",
+    "https://tianxingren-work.github.io/data/profile.json",
+    "https://tianxingren-work.github.io/data/projects.json",
+    "https://tianxingren-work.github.io/data/routes.json",
+    "https://tianxingren-work.github.io/openapi.json",
+    "https://tianxingren-work.github.io/machine/en/for-agents.md",
+    "https://tianxingren-work.github.io/machine/en/for-agents.json",
+    "https://tianxingren-work.github.io/machine/en/about.md",
+    "https://tianxingren-work.github.io/machine/en/projects/tilelang-tpu.md",
+    "https://tianxingren-work.github.io/machine/en/projects/tilelang-riscv.md"
+  ],
+  "profile": {
+    "schema_version": "2.0",
+    "name": "Tianxing Ren",
+    "name_native": "任天行",
+    "given_name": "Tianxing",
+    "family_name": "Ren",
+    "source": "Owner-provided profile",
+    "organizations": {
+      "pku": {
+        "name": "Peking University",
+        "url": "https://www.pku.edu.cn/"
+      },
+      "pku_sme": {
+        "name": "School of Software and Microelectronics",
+        "url": "https://ss.pku.edu.cn/"
+      },
+      "zgc": {
+        "name": "Zhongguancun Laboratory",
+        "url": null
+      },
+      "buaa": {
+        "name": "Beihang University",
+        "url": "https://www.buaa.edu.cn/"
+      },
+      "buaa_cst": {
+        "name": "School of Cyber Science and Technology",
+        "url": "https://cst.buaa.edu.cn/"
+      },
+      "bosc": {
+        "name": "Beijing Institute of Open Source Chip",
+        "url": "https://www.bosc.ac.cn/"
+      },
+      "iscas": {
+        "name": "Institute of Software, Chinese Academy of Sciences",
+        "url": "https://is.cas.cn/"
+      },
+      "tlaic": {
+        "name": "Beijing Tongming Lake IT Innovation Center",
+        "url": "https://www.tlaic.ac.cn/"
+      },
+      "eversec": {
+        "name": "Eversec (Beijing) Technology Co., Ltd.",
+        "url": "https://eversec.com.cn/"
+      },
+      "cuhk": {
+        "name": "The Chinese University of Hong Kong",
+        "url": "https://www.cuhk.edu.hk/"
+      }
+    },
+    "research_interests": [
+      "AI compilers",
+      "Tile-level programming",
+      "Heterogeneous computing"
+    ],
+    "advisors": [
+      {
+        "name": "Tao Xie",
+        "name_native": "谢涛",
+        "url": "https://taoxiease.github.io/"
+      },
+      {
+        "name": "Wei Yang",
+        "name_native": "杨威",
+        "url": "https://youngwei.com/"
+      }
+    ],
+    "collaborators": [
+      {
+        "name": "Hua Guo",
+        "name_native": "郭华",
+        "url": "https://cst.buaa.edu.cn/info/1112/2741.htm"
+      }
+    ],
+    "education": [
+      {
+        "id": "pku-doctorate",
+        "org": "pku",
+        "school": "pku_sme",
+        "start": "2025-09",
+        "end": "2030-07",
+        "expected": true,
+        "degree": "Doctor of Engineering student",
+        "field": "Electronic Information",
+        "note": "Joint doctoral training with Zhongguancun Laboratory.",
+        "advisors": [
+          "Tao Xie",
+          "Wei Yang"
+        ]
+      },
+      {
+        "id": "beihang-bachelor",
+        "org": "buaa",
+        "school": "buaa_cst",
+        "start": "2021-09",
+        "end": "2025-07",
+        "expected": false,
+        "degree": "Bachelor of Engineering",
+        "field": "Cyberspace Security",
+        "gpa": 3.77,
+        "gpa_scale": 4.0,
+        "average": 90.41,
+        "average_scale": 100,
+        "note": "Research collaboration with Hua Guo."
+      }
+    ],
+    "experience": [
+      {
+        "org": "tlaic",
+        "start": "2025-12",
+        "end": null,
+        "role": "Intelligent Systems Intern",
+        "details": [
+          "Adapting TileLang to the SOPHGO SG2260E TPU with RISC-V tensor extensions.",
+          "Developing TileLang support for RISC-V CPUs with AME matrix acceleration."
+        ]
+      },
+      {
+        "org": "bosc",
+        "start": "2024-12",
+        "end": "2025-08",
+        "role": "AI Systems Software Intern",
+        "details": [
+          "Extended the Triton compilation stack to SOPHGO TPUs through translation into the vendor toolchain.",
+          "Built a TileLang-based operator compilation framework, including a TPU operator library, pipeline passes, and automatic code generation for operators used in LLaMA.",
+          "Several operators matched or exceeded vendor-tuned implementations in the evaluated configurations."
+        ]
+      },
+      {
+        "org": "eversec",
+        "start": "2024-07",
+        "end": "2024-08",
+        "role": "Security Services Intern",
+        "details": [
+          "Assisted with authorized network security assessments using Burp Suite and related tools, organizing findings and identifying potential risks.",
+          "Captured and standardized more than 100 industrial IoT login-traffic PCAP records with Wireshark."
+        ]
+      }
+    ],
+    "awards": [
+      {
+        "year": "2025–2026",
+        "org": "pku",
+        "name": "Academic Excellence Scholarship"
+      },
+      {
+        "year": "2024–2025",
+        "org": "buaa",
+        "name": "Special Prize, Academic Competition Scholarship; Second Prize, Academic Excellence Scholarship"
+      },
+      {
+        "year": "2023–2024",
+        "org": "buaa",
+        "name": "Outstanding Student; Special Prize, Academic Competition Scholarship; Second Prize, Social Service Scholarship"
+      },
+      {
+        "year": "2022–2023",
+        "org": "buaa",
+        "name": "First Prize, Academic Competition Scholarship; Second Prize, Academic Excellence Scholarship"
+      }
+    ],
+    "visits": [
+      {
+        "org": "cuhk",
+        "start": "2024-07",
+        "end": "2024-08",
+        "role": "Summer School Visiting Student"
+      }
+    ],
+    "contact": {
+      "url": "https://tianxingren-work.github.io/contact/",
+      "interaction": "human-initiated",
+      "github": "https://github.com/LeslinD",
+      "github_work": "https://github.com/tianxingren-work"
+    },
+    "url": "https://tianxingren-work.github.io/about/",
+    "site_languages": [
+      "en",
+      "zh",
+      "ko",
+      "ms"
+    ],
+    "research_goal": "I research AI compilers so that diverse AI algorithms can run correctly and efficiently on emerging AI hardware. I aim to make programming easier for people and agents."
+  },
+  "leading_projects": [
+    {
+      "id": "tilelang-tpu",
+      "name": "TileLang-TPU",
+      "kind": "leading-project",
+      "role": "project-lead",
+      "stage": "milestone-complete",
+      "open_source": true,
+      "summary": "A TileLang backend for SOPHGO TPUs, from compile-time memory planning to executable kernels.",
+      "overview": "TileLang-TPU brings tile-level programming to commercial SOPHGO accelerators. It preserves the TileLang programming model and turns on-chip memory placement, data movement, and transfer–compute overlap into compiler decisions. The compiler and JIT runtime provide an end-to-end path from a Python kernel definition to execution on BM1690.",
+      "highlights": [
+        {
+          "title": "Static memory allocation",
+          "description": "Assign concrete local-memory offsets at compile time, accounting for alignment, capacity, and memory-bank placement."
+        },
+        {
+          "title": "Structured pipeline lowering",
+          "description": "Turn tiled loops into explicit execution stages so that data transfers can overlap with computation while preserving dependencies."
+        },
+        {
+          "title": "Backend mapping and runtime",
+          "description": "Generate TPU kernel API calls and connect the output to host/device compilation, linking, loading, and launch."
+        }
+      ],
+      "url": "https://tianxingren-work.github.io/projects/tilelang-tpu/",
+      "markdown": "https://tianxingren-work.github.io/machine/en/projects/tilelang-tpu.md",
+      "repository": "https://github.com/TongmingLAIC/tilelang-tpu",
+      "evaluation": {
+        "study_id": "bm1690-five-kernel-study",
+        "hardware": "SOPHGO BM1690, single card, PCIe mode",
+        "baseline": "SOPHGO PPL",
+        "metric": "PPL kernel latency / TileLang-TPU kernel latency",
+        "average_speedup": 1.1,
+        "faster_configurations": 71,
+        "total_configurations": 75,
+        "tied_configurations": 1,
+        "slower_configurations": 3,
+        "dtypes": [
+          "BF16",
+          "FP16",
+          "FP32"
+        ],
+        "operators": [
+          "Matmul",
+          "RMSNorm",
+          "RoPE",
+          "SwiGLU",
+          "Element-wise addition"
+        ],
+        "setup": {
+          "os": "Ubuntu 24.04 LTS",
+          "sdk": "SOPHGO PPL SDK 1.4.195",
+          "driver": "1.9.1",
+          "warmup_runs": 5,
+          "timed_repetitions": 10
+        },
+        "source": {
+          "type": "owner-supplied evaluation manuscript",
+          "section": "5.1–5.2",
+          "label": "TileLang-TPU evaluation"
+        },
+        "scope": "Five kernels × five input shapes × three data types on one SOPHGO BM1690 card. Average speedup over PPL uses TPU kernel execution latency; compilation and host execution are outside this timing.",
+        "methods": "Both implementations use the same operator semantics, shapes, data types, and vendor compilation toolchain. Each case uses five warm-up runs and ten timed repetitions. The reported set includes 71 faster cases, one tie, and three slower cases."
+      },
+      "implementation_sources": [
+        {
+          "title": "Public implementation and setup instructions",
+          "url": "https://github.com/TongmingLAIC/tilelang-tpu"
+        },
+        {
+          "title": "Runnable TPU demos",
+          "url": "https://github.com/TongmingLAIC/tilelang-tpu/tree/main/tpu_demo"
+        }
+      ]
+    },
+    {
+      "id": "tilelang-riscv",
+      "name": "TileLang-RISC-V",
+      "kind": "leading-project",
+      "role": "project-lead",
+      "stage": "in-progress",
+      "open_source": false,
+      "summary": "Bringing TileLang to RISC-V CPUs with AME matrix acceleration. An ongoing effort with open-source hardware and systems researchers.",
+      "overview": "This project is developing a TileLang backend for RISC-V AME AI CPUs, in collaboration with the Beijing Institute of Open Source Chip and the Institute of Software, Chinese Academy of Sciences. Current work focuses on connecting the programming model to target instructions and establishing a usable compilation and execution path.",
+      "highlights": [
+        {
+          "title": "Programming model",
+          "description": "Express common AI operators with tile-level programs and identify the information the backend needs."
+        },
+        {
+          "title": "Target integration",
+          "description": "Connect compiler lowering, AME instruction mapping, and the execution environment."
+        },
+        {
+          "title": "Evaluation",
+          "description": "Test operator correctness and performance across target configurations, and use the results to guide backend optimization."
+        }
+      ],
+      "url": "https://tianxingren-work.github.io/projects/tilelang-riscv/",
+      "markdown": "https://tianxingren-work.github.io/machine/en/projects/tilelang-riscv.md",
+      "partners": [
+        {
+          "name": "Beijing Institute of Open Source Chip",
+          "url": "https://www.bosc.ac.cn/"
+        },
+        {
+          "name": "Institute of Software, Chinese Academy of Sciences",
+          "url": "https://is.cas.cn/"
+        }
+      ],
+      "implementation_sources": []
+    }
+  ],
+  "participation": [
+    {
+      "name": "TileLang",
+      "url": "https://github.com/tile-ai/tilelang",
+      "site": "https://tilelang.com/",
+      "role": "contributor",
+      "marker": "tilelang"
+    },
+    {
+      "name": "Asterinas",
+      "url": "https://github.com/asterinas/asterinas",
+      "site": "https://asterinas.github.io/",
+      "role": "contributor",
+      "marker": "asterinas"
+    }
+  ]
+}

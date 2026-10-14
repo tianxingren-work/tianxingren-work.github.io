@@ -1,0 +1,19 @@
+{
+  "schema_version": "2.0",
+  "id": "projects",
+  "kind": "page",
+  "language": "zh",
+  "title": "项目 · Tianxing Ren",
+  "url": "https://tianxingren-work.github.io/zh/projects/",
+  "markdown_url": "https://tianxingren-work.github.io/machine/zh/projects.md",
+  "content_markdown": "01 / 主导项目\n\n# 把想法， 做成系统。\n\n我主导的项目将 Tile 级编程带到新兴 AI 硬件上。\n\n01 / 项目负责人\n阶段性完成 [开源](https://github.com/TongmingLAIC/tilelang-tpu)\n\n### [TileLang-TPU](https://tianxingren-work.github.io/zh/projects/tilelang-tpu/)\n\n面向算能 TPU 的 TileLang 后端，打通编译期内存规划、流水线优化与算子执行。\n\n[](https://tianxingren-work.github.io/zh/projects/tilelang-tpu/)\n[查看项目](https://tianxingren-work.github.io/zh/projects/tilelang-tpu/) [源代码](https://github.com/TongmingLAIC/tilelang-tpu)\n\n02 / 项目负责人\n进行中\n\n### [TileLang-RISC-V](https://tianxingren-work.github.io/zh/projects/tilelang-riscv/)\n\n将 TileLang 接入具有 AME 矩阵加速能力的 RISC-V CPU，与开源硬件和系统研究团队共同推进。\n\n[查看项目](https://tianxingren-work.github.io/zh/projects/tilelang-riscv/) RISC-V / AME\n\n我参与的开源项目\n\n[**TileLang**](https://github.com/tile-ai/tilelang) [**Asterinas**](https://github.com/asterinas/asterinas)\n\n聊聊你在做的事情\n\n## 好的系统， 从一次交流开始。\n\n如果你在研究 AI 编译器、新兴 AI 硬件或相关系统问题，欢迎交流。可以聊聊你的想法、遇到的问题或正在做的工作。\n\n[联系我](https://tianxingren-work.github.io/zh/contact/) [GitHub ](https://github.com/LeslinD)\n",
+  "links": [
+    "https://github.com/TongmingLAIC/tilelang-tpu",
+    "https://tianxingren-work.github.io/zh/projects/tilelang-tpu/",
+    "https://tianxingren-work.github.io/zh/projects/tilelang-riscv/",
+    "https://github.com/tile-ai/tilelang",
+    "https://github.com/asterinas/asterinas",
+    "https://tianxingren-work.github.io/zh/contact/",
+    "https://github.com/LeslinD"
+  ]
+}

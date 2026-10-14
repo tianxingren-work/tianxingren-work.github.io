@@ -1,0 +1,14 @@
+{
+  "schema_version": "2.0",
+  "id": "contact",
+  "kind": "page",
+  "language": "zh",
+  "title": "联系 · Tianxing Ren",
+  "url": "https://tianxingren-work.github.io/zh/contact/",
+  "markdown_url": "https://tianxingren-work.github.io/machine/zh/contact.md",
+  "content_markdown": "聊聊你在做的事情\n\n# 好的系统， 从一次交流开始。\n\n如果你在研究 AI 编译器、新兴 AI 硬件或相关系统问题，欢迎交流。可以聊聊你的想法、遇到的问题或正在做的工作。\n\n## 可以从这些话题开始\n\n新 AI 硬件与编译器后端\n\nTileLang、RISC-V 与矩阵加速\n\n开源系统与研究合作\n\n[GitHub / LeslinD ](https://github.com/LeslinD) [GitHub / tianxingren-work ](https://github.com/tianxingren-work)\n",
+  "links": [
+    "https://github.com/LeslinD",
+    "https://github.com/tianxingren-work"
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "name": "Tianxing Ren public research tools",
+  "transport": "WebMCP",
+  "profile": "https://tianxingren-work.github.io/data/agents.json",
+  "projects": "https://tianxingren-work.github.io/data/projects.json",
+  "tools": [
+    {
+      "name": "read_tianxing_profile",
+      "description": "Read Tianxing Ren’s AI compiler research goals, education, advisors, internships and visits.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "read_tianxing_projects",
+      "description": "Read projects Tianxing Ren leads or contributes to, with roles, source links and evaluation scope.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "match_tianxing_work",
+      "description": "Find relevant AI compiler work from a short topic. Returns project matches, source links and evaluation limits.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "topic": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 300
+          }
+        },
+        "required": [
+          "topic"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    }
+  ]
+}

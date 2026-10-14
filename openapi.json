@@ -1,0 +1,287 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Tianxing Ren profile and projects for agents",
+    "version": "3.0.0",
+    "description": "Direct access to the complete researcher profile and projects. Served by server.py or the included Cloudflare Worker; static data/*.json files work on static hosts."
+  },
+  "servers": [
+    {
+      "url": "https://tianxingren-work.github.io"
+    }
+  ],
+  "paths": {
+    "/data/agents.json": {
+      "get": {
+        "operationId": "getAgentProfile",
+        "responses": {
+          "200": {
+            "description": "Public source data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AgentProfile"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/data/profile.json": {
+      "get": {
+        "operationId": "getProfile",
+        "responses": {
+          "200": {
+            "description": "Public source data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Profile"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/data/projects.json": {
+      "get": {
+        "operationId": "listProjects",
+        "responses": {
+          "200": {
+            "description": "Public source data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProjectDirectory"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ProjectRecord": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "kind",
+          "role",
+          "stage",
+          "open_source",
+          "summary",
+          "url"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "kind": {
+            "const": "leading-project"
+          },
+          "role": {
+            "const": "project-lead"
+          },
+          "stage": {
+            "type": "string",
+            "enum": [
+              "milestone-complete",
+              "in-progress"
+            ]
+          },
+          "open_source": {
+            "type": "boolean"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "overview": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri-reference"
+          },
+          "markdown": {
+            "type": "string",
+            "format": "uri-reference"
+          },
+          "repository": {
+            "type": "string",
+            "format": "uri"
+          },
+          "evaluation": {
+            "type": "object",
+            "description": "Hardware, baseline, metric definition, result values, configuration counts, and scope must be cited together.",
+            "properties": {
+              "hardware": {
+                "type": "string"
+              },
+              "baseline": {
+                "type": "string"
+              },
+              "metric": {
+                "type": "string"
+              },
+              "average_speedup": {
+                "type": "number"
+              },
+              "faster_configurations": {
+                "type": "integer"
+              },
+              "total_configurations": {
+                "type": "integer"
+              },
+              "scope": {
+                "type": "string"
+              },
+              "methods": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "Profile": {
+        "type": "object",
+        "required": [
+          "name",
+          "education",
+          "experience",
+          "awards",
+          "contact"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "name_native": {
+            "type": "string"
+          },
+          "education": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "experience": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "awards": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "contact": {
+            "type": "object",
+            "description": "Contact-page URL and public GitHub profiles. No email address.",
+            "properties": {
+              "url": {
+                "type": "string",
+                "format": "uri-reference"
+              },
+              "interaction": {
+                "const": "human-initiated"
+              }
+            }
+          }
+        }
+      },
+      "ProjectDirectory": {
+        "type": "object",
+        "required": [
+          "leading_projects",
+          "participation"
+        ],
+        "properties": {
+          "leading_projects": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProjectRecord"
+            }
+          },
+          "participation": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "name",
+                "url",
+                "role"
+              ],
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "role": {
+                  "const": "contributor"
+                }
+              }
+            }
+          }
+        }
+      },
+      "AgentProfile": {
+        "type": "object",
+        "required": [
+          "profile",
+          "leading_projects",
+          "participation",
+          "content_markdown",
+          "url"
+        ],
+        "properties": {
+          "profile": {
+            "$ref": "#/components/schemas/Profile"
+          },
+          "leading_projects": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProjectRecord"
+            }
+          },
+          "participation": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "content_markdown": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri-reference"
+          }
+        }
+      },
+      "Error": {
+        "type": "object",
+        "required": [
+          "error"
+        ],
+        "properties": {
+          "error": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

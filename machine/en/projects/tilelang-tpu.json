@@ -1,0 +1,91 @@
+{
+  "schema_version": "2.0",
+  "id": "projects/tilelang-tpu",
+  "kind": "project",
+  "language": "en",
+  "title": "TileLang-TPU · Tianxing Ren",
+  "url": "https://tianxingren-work.github.io/projects/tilelang-tpu/",
+  "markdown_url": "https://tianxingren-work.github.io/machine/en/projects/tilelang-tpu.md",
+  "content_markdown": "[Back to projects](https://tianxingren-work.github.io/projects/)\n\nProject lead\n\n# TileLang-TPU\n\nTile-level code. TPU performance.\n\nMilestone complete [Open source](https://github.com/TongmingLAIC/tilelang-tpu)\nTileLang SOPHGO TPU Compiler backends\n[Source code](https://github.com/TongmingLAIC/tilelang-tpu) [Get in touch](https://tianxingren-work.github.io/contact/)\n\nRESULTS ON REAL HARDWARE\n\n## A higher-level interface. Competitive kernel performance.\n\n**1.10×**\n\naverage speedup over PPL\n\n**71 / 75**\n\nconfigurations faster than PPL\n\n**3**\n\nevaluated data types\n\nBF16 · FP16 · FP32\n\nFive kernels × five input shapes × three data types on one SOPHGO BM1690 card. Average speedup over PPL uses TPU kernel execution latency; compilation and host execution are outside this timing.\n\nEvaluation setup\n\nBoth implementations use the same operator semantics, shapes, data types, and vendor compilation toolchain. Each case uses five warm-up runs and ten timed repetitions. The reported set includes 71 faster cases, one tie, and three slower cases.\n\nMatmul · RMSNorm · RoPE · SwiGLU · Element-wise addition\n\nUbuntu 24.04 LTS · PPL SDK 1.4.195 · TPU driver 1.9.1\n\nOverview\n\n## Keep the programming abstraction. Let the compiler handle the hardware details.\n\nTileLang-TPU brings tile-level programming to commercial SOPHGO accelerators. It preserves the TileLang programming model and turns on-chip memory placement, data movement, and transfer–compute overlap into compiler decisions. The compiler and JIT runtime provide an end-to-end path from a Python kernel definition to execution on BM1690.\n\n[](https://tianxingren-work.github.io/assets/tilelang-tpu-overview.png)\nCompilation overview. The reused TileLang frontend feeds TPU-specific memory allocation, pipeline lowering, and backend mapping. The JIT runtime builds and launches the generated kernels.\n\n## Inside the compiler\n\n01\n\n### Static memory allocation\n\nAssign concrete local-memory offsets at compile time, accounting for alignment, capacity, and memory-bank placement.\n\n02\n\n### Structured pipeline lowering\n\nTurn tiled loops into explicit execution stages so that data transfers can overlap with computation while preserving dependencies.\n\n03\n\n### Backend mapping and runtime\n\nGenerate TPU kernel API calls and connect the output to host/device compilation, linking, loading, and launch.\n\n## Code & resources\n\n[TileLang-TPU](https://github.com/TongmingLAIC/tilelang-tpu) [Source code](https://github.com/TongmingLAIC/tilelang-tpu/tree/main/tpu_demo)\n\n## Working on a related problem?\n\n[Say hello](https://tianxingren-work.github.io/contact/)\n",
+  "links": [
+    "https://tianxingren-work.github.io/projects/",
+    "https://github.com/TongmingLAIC/tilelang-tpu",
+    "https://tianxingren-work.github.io/contact/",
+    "https://tianxingren-work.github.io/assets/tilelang-tpu-overview.png",
+    "https://github.com/TongmingLAIC/tilelang-tpu/tree/main/tpu_demo"
+  ],
+  "project": {
+    "id": "tilelang-tpu",
+    "name": "TileLang-TPU",
+    "kind": "leading-project",
+    "role": "project-lead",
+    "stage": "milestone-complete",
+    "open_source": true,
+    "summary": "A TileLang backend for SOPHGO TPUs, from compile-time memory planning to executable kernels.",
+    "overview": "TileLang-TPU brings tile-level programming to commercial SOPHGO accelerators. It preserves the TileLang programming model and turns on-chip memory placement, data movement, and transfer–compute overlap into compiler decisions. The compiler and JIT runtime provide an end-to-end path from a Python kernel definition to execution on BM1690.",
+    "highlights": [
+      {
+        "title": "Static memory allocation",
+        "description": "Assign concrete local-memory offsets at compile time, accounting for alignment, capacity, and memory-bank placement."
+      },
+      {
+        "title": "Structured pipeline lowering",
+        "description": "Turn tiled loops into explicit execution stages so that data transfers can overlap with computation while preserving dependencies."
+      },
+      {
+        "title": "Backend mapping and runtime",
+        "description": "Generate TPU kernel API calls and connect the output to host/device compilation, linking, loading, and launch."
+      }
+    ],
+    "url": "https://tianxingren-work.github.io/projects/tilelang-tpu/",
+    "markdown": "https://tianxingren-work.github.io/machine/en/projects/tilelang-tpu.md",
+    "repository": "https://github.com/TongmingLAIC/tilelang-tpu",
+    "evaluation": {
+      "study_id": "bm1690-five-kernel-study",
+      "hardware": "SOPHGO BM1690, single card, PCIe mode",
+      "baseline": "SOPHGO PPL",
+      "metric": "PPL kernel latency / TileLang-TPU kernel latency",
+      "average_speedup": 1.1,
+      "faster_configurations": 71,
+      "total_configurations": 75,
+      "tied_configurations": 1,
+      "slower_configurations": 3,
+      "dtypes": [
+        "BF16",
+        "FP16",
+        "FP32"
+      ],
+      "operators": [
+        "Matmul",
+        "RMSNorm",
+        "RoPE",
+        "SwiGLU",
+        "Element-wise addition"
+      ],
+      "setup": {
+        "os": "Ubuntu 24.04 LTS",
+        "sdk": "SOPHGO PPL SDK 1.4.195",
+        "driver": "1.9.1",
+        "warmup_runs": 5,
+        "timed_repetitions": 10
+      },
+      "source": {
+        "type": "owner-supplied evaluation manuscript",
+        "section": "5.1–5.2",
+        "label": "TileLang-TPU evaluation"
+      },
+      "scope": "Five kernels × five input shapes × three data types on one SOPHGO BM1690 card. Average speedup over PPL uses TPU kernel execution latency; compilation and host execution are outside this timing.",
+      "methods": "Both implementations use the same operator semantics, shapes, data types, and vendor compilation toolchain. Each case uses five warm-up runs and ten timed repetitions. The reported set includes 71 faster cases, one tie, and three slower cases."
+    },
+    "implementation_sources": [
+      {
+        "title": "Public implementation and setup instructions",
+        "url": "https://github.com/TongmingLAIC/tilelang-tpu"
+      },
+      {
+        "title": "Runnable TPU demos",
+        "url": "https://github.com/TongmingLAIC/tilelang-tpu/tree/main/tpu_demo"
+      }
+    ]
+  }
+}

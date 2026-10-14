@@ -1,0 +1,42 @@
+# Tianxing Ren
+
+> Doctoral researcher at Peking University. AI compilers, tile-level programming, and heterogeneous computing.
+
+I research AI compilers so that diverse AI algorithms can run correctly and efficiently on emerging AI hardware. I aim to make programming easier for people and agents.
+
+## Profile and projects
+
+- [About](https://tianxingren-work.github.io/machine/en/about.md): education, advisors, internships, awards, and visits.
+- [TileLang-TPU](https://tianxingren-work.github.io/machine/en/projects/tilelang-tpu.md): project lead; stage milestone-complete; open source true.
+- [TileLang-RISC-V](https://tianxingren-work.github.io/machine/en/projects/tilelang-riscv.md): project lead; stage in-progress; open source false.
+
+## Complete profile
+
+- [Full profile in Markdown](https://tianxingren-work.github.io/llms-full.md)
+- [Full profile in JSON](https://tianxingren-work.github.io/data/agents.json)
+- [For agents](https://tianxingren-work.github.io/for-agents/)
+
+## Structured access
+
+- [Profile](https://tianxingren-work.github.io/data/profile.json)
+- [Projects and participation](https://tianxingren-work.github.io/data/projects.json)
+- [All page representations](https://tianxingren-work.github.io/data/routes.json)
+- [HTTP API description](https://tianxingren-work.github.io/openapi.json)
+- [Agent tool definitions](https://tianxingren-work.github.io/data/agent-tools.json)
+
+## Language versions
+
+- [English](https://tianxingren-work.github.io/machine/en/for-agents.md)
+- [中文](https://tianxingren-work.github.io/machine/zh/for-agents.md)
+- [한국어](https://tianxingren-work.github.io/machine/ko/for-agents.md)
+- [Bahasa Melayu](https://tianxingren-work.github.io/machine/ms/for-agents.md)
+
+## Requesting a representation
+
+The supplied HTTP server and Cloudflare Worker automatically serve Markdown to recognized AI tool user agents. Homepage requests receive the complete agent profile; other routes keep the requested page content. An explicit format query parameter or Accept media type takes priority. Use ?format=markdown, ?format=json or ?format=html. Static hosts expose the directly linked files.
+
+## Sources
+
+Cite the original project page and preserve the hardware, baseline, and evaluation scope. Project stage and source availability are recorded separately. Project lead and contributor roles are specified in the project directory.
+
+For research collaboration, use the contact page at https://tianxingren-work.github.io/contact/ or the linked GitHub profiles.

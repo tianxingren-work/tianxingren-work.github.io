@@ -1,0 +1,113 @@
+关于我 / TIANXING REN
+
+# 认识一下， 项目背后的我。
+
+我研究 AI 编译器，希望能让各种 AI 算法正确和高效地运行在新兴 AI 硬件上，让人和 Agent 更容易地编程。
+
+[打个招呼](https://tianxingren-work.github.io/zh/contact/) [GitHub ](https://github.com/LeslinD)
+
+我在北京大学攻读工程博士，与中关村实验室联合培养。我研究 AI 编译器、Tile 级编程与异构计算，也关注相关的编程语言和计算机体系结构问题。
+
+我的导师是[谢涛](https://taoxiease.github.io/) 和[杨威](https://youngwei.com/) 。
+
+## 教育经历
+
+2025.09 – 2030.07 · 预计
+
+### [北京大学](https://www.pku.edu.cn/)
+
+工程博士研究生 · 电子信息
+
+[软件与微电子学院](https://ss.pku.edu.cn/)
+
+与中关村实验室联合培养。
+
+我的导师是[谢涛](https://taoxiease.github.io/) 和[杨威](https://youngwei.com/) 。
+
+2021.09 – 2025.07
+
+### [北京航空航天大学](https://www.buaa.edu.cn/)
+
+工学学士 · 网络空间安全
+
+[网络空间安全学院](https://cst.buaa.edu.cn/)
+
+本科期间，我与[郭华](https://cst.buaa.edu.cn/info/1112/2741.htm) 老师开展研究合作。
+
+GPA **3.77 / 4.00** 平均成绩 **90.41 / 100**
+
+## 实习经历
+
+2025.12 – 至今
+
+### [北京通明湖信息技术应用创新中心](https://www.tlaic.ac.cn/)
+
+智能系统部实习生
+
+- 将 TileLang 对接到采用 RISC-V Tensor 扩展的算能 SG2260E TPU。
+
+- 开发 TileLang 对 RISC-V AME 矩阵加速 CPU 的支持。
+
+2024.12 – 2025.08
+
+### [北京开源芯片研究院](https://www.bosc.ac.cn/)
+
+AI 系统软件栈研发实习生
+
+- 通过转译衔接算能 TPU 编译工具链，扩展 Triton 编译栈以运行 Triton 生态程序。
+
+- 基于 TileLang 构建异构芯片算子编译框架，开发 TPU 算子库、流水线 Pass 和自动代码生成，支持 LLaMA 所用算子。
+
+- 在已测试的配置中，多个算子性能达到或超过厂商调优实现。
+
+2024.07 – 2024.08
+
+### [恒安嘉新（北京）科技股份公司](https://eversec.com.cn/)
+
+安全服务实习生
+
+- 使用 Burp Suite 等工具参与经授权的网络安全评估，整理扫描结果并初步识别风险。
+
+- 使用 Wireshark 收集并标准化处理 100 余项工业物联网设备登录 PCAP 流量记录。
+
+## 荣誉与奖学金
+
+2025–2026
+
+学习优秀奖学金
+
+[北京大学](https://www.pku.edu.cn/)
+
+2024–2025
+
+学科竞赛奖学金特等奖；学习优秀奖学金二等奖
+
+[北京航空航天大学](https://www.buaa.edu.cn/)
+
+2023–2024
+
+校级三好学生；学科竞赛奖学金特等奖；社会工作优秀奖学金二等奖
+
+[北京航空航天大学](https://www.buaa.edu.cn/)
+
+2022–2023
+
+学科竞赛奖学金一等奖；学习优秀奖学金二等奖
+
+[北京航空航天大学](https://www.buaa.edu.cn/)
+
+## 访问
+
+2024.07 – 2024.08
+
+### [香港中文大学](https://www.cuhk.edu.hk/)
+
+暑期学校访学学生
+
+聊聊你在做的事情
+
+## 好的系统， 从一次交流开始。
+
+如果你在研究 AI 编译器、新兴 AI 硬件或相关系统问题，欢迎交流。可以聊聊你的想法、遇到的问题或正在做的工作。
+
+[联系我](https://tianxingren-work.github.io/zh/contact/) [GitHub ](https://github.com/LeslinD)

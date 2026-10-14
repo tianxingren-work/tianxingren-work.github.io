@@ -1,0 +1,357 @@
+{
+  "schema_version": "2.0",
+  "id": "for-agents",
+  "kind": "page",
+  "language": "ms",
+  "title": "For agents · Tianxing Ren",
+  "url": "https://tianxingren-work.github.io/ms/for-agents/",
+  "markdown_url": "https://tianxingren-work.github.io/machine/ms/for-agents.md",
+  "content_markdown": "# For agents\n\nProfil, projek dan pengalaman dikumpulkan di sini untuk dibaca oleh Codex, Claude Code dan alat automasi lain. Pautan sumber disertakan untuk butiran lanjut dan rujukan.\n\n## Profil dan penyelidikan\n\nSalam, saya **Tianxing Ren.** Saya menyelidik pengkompil AI agar pelbagai algoritma AI dapat berjalan dengan betul dan cekap pada perkakasan AI baharu, serta memudahkan pengaturcaraan untuk manusia dan ejen.\n\nSaya mengikuti pengajian Doktor Kejuruteraan di Universiti Peking melalui program bersama Makmal Zhongguancun. Saya menyelidik pengkompil AI, pengaturcaraan peringkat tile dan pengkomputeran heterogen, serta berminat dengan bahasa pengaturcaraan dan seni bina komputer yang berkaitan.\n\nPenyelia saya ialah [Tao Xie](https://taoxiease.github.io/) dan [Wei Yang](https://youngwei.com/) .\n\nPengkompil AI, pengaturcaraan peringkat tile dan pengkomputeran heterogen.\n\n## Projek yang saya terajui\n\n### [TileLang-TPU](https://tianxingren-work.github.io/ms/projects/tilelang-tpu/)\n\nPeneraju projek\n\nBackend TileLang untuk TPU SOPHGO, daripada perancangan memori ketika kompilasi hingga pelaksanaan kernel.\n\nTileLang-TPU membawa pengaturcaraan peringkat tile kepada pemecut SOPHGO komersial. Model pengaturcaraan TileLang dikekalkan, sementara penempatan memori dalam cip, pergerakan data dan pertindihan pemindahan dengan pengiraan diurus oleh pengkompil. Pengkompil dan masa jalan JIT menyokong keseluruhan proses daripada takrif kernel Python hingga pelaksanaan pada BM1690.\n\nTahap projek\nFasa utama selesai\nKetersediaan sumber\n[Sumber terbuka](https://github.com/TongmingLAIC/tilelang-tpu)\n\nLima kernel, lima bentuk input dan tiga jenis data diuji pada satu kad SOPHGO BM1690. Purata peningkatan kelajuan berbanding PPL berdasarkan masa pelaksanaan kernel TPU, tanpa masa kompilasi atau pelaksanaan hos.\n\n- 1.10× purata peningkatan kelajuan berbanding PPL\n\n- 71 / 75 konfigurasi lebih pantas daripada PPL\n\n- BF16 · FP16 · FP32\n\nKedua-dua pelaksanaan menggunakan semantik operator, bentuk input, jenis data dan rantaian alat vendor yang sama. Setiap konfigurasi menjalani lima larian pemanasan dan sepuluh larian bermasa. Daripada set ini, 71 konfigurasi lebih pantas, satu setara dan tiga lebih perlahan.\n\n- **Peruntukan memori statik** Menentukan ofset memori setempat semasa kompilasi dengan mengambil kira penjajaran, kapasiti dan penempatan bank memori.\n\n- **Penurunan saluran paip berstruktur** Menukar gelung tile kepada peringkat pelaksanaan yang jelas supaya pemindahan data dapat bertindih dengan pengiraan tanpa melanggar kebergantungan.\n\n- **Pemetaan backend dan masa jalan** Menjana panggilan API kernel TPU dan menghubungkan hasilnya kepada kompilasi hos/peranti, pemautan, pemuatan dan pelancaran.\n\n### [TileLang-RISC-V](https://tianxingren-work.github.io/ms/projects/tilelang-riscv/)\n\nPeneraju projek\n\nMembawa TileLang ke CPU RISC-V dengan pecutan matriks AME. Usaha berterusan bersama penyelidik perkakasan sumber terbuka dan sistem.\n\nProjek ini membangunkan backend TileLang untuk CPU AI RISC-V AME bersama Institut Cip Sumber Terbuka Beijing dan Institut Perisian, Akademi Sains China. Kerja semasa menumpukan pada pemetaan model pengaturcaraan kepada arahan sasaran serta pembinaan laluan kompilasi dan pelaksanaan yang boleh digunakan.\n\nTahap projek\nSedang berjalan\nKetersediaan sumber\nKod sumber belum dibuka kepada umum\n- **Model pengaturcaraan** Menyatakan operator AI lazim melalui program peringkat tile dan mengenal pasti maklumat yang diperlukan oleh backend.\n\n- **Penyepaduan sasaran** Menghubungkan penurunan kompilasi, pemetaan arahan AME dan persekitaran pelaksanaan.\n\n- **Penilaian** Menguji ketepatan dan prestasi operator merentas konfigurasi sasaran, kemudian menggunakan hasilnya untuk mengoptimumkan backend.\n\nInstitusi rakan kerjasama\n\n- [Institut Cip Sumber Terbuka Beijing](https://www.bosc.ac.cn/)\n\n- [Institut Perisian, Akademi Sains China](https://is.cas.cn/)\n\n## Projek sumber terbuka yang saya sertai\n\n- [TileLang](https://github.com/tile-ai/tilelang)\n\n- [Asterinas](https://github.com/asterinas/asterinas)\n\n## Pendidikan\n\nSep 2025 – Jul 2030 · dijangka\n\n### [Universiti Peking](https://www.pku.edu.cn/)\n\nPelajar Doktor Kejuruteraan · Maklumat Elektronik\n\n[Pusat Pengajian Perisian dan Mikroelektronik](https://ss.pku.edu.cn/)\n\nLatihan kedoktoran bersama Makmal Zhongguancun.\n\nPenyelia saya ialah [Tao Xie](https://taoxiease.github.io/) dan [Wei Yang](https://youngwei.com/) .\n\nSep 2021 – Jul 2025\n\n### [Universiti Beihang](https://www.buaa.edu.cn/)\n\nSarjana Muda Kejuruteraan · Keselamatan Siber\n\n[Pusat Pengajian Sains dan Teknologi Siber](https://cst.buaa.edu.cn/)\n\nSemasa pengajian sarjana muda, saya menjalankan kerjasama penyelidikan bersama [Hua Guo](https://cst.buaa.edu.cn/info/1112/2741.htm) .\n\nGPA **3.77 / 4.00** Purata markah **90.41 / 100**\n\n## Pengalaman latihan industri\n\nDis 2025 – Kini\n\n### [Pusat Inovasi Teknologi Maklumat Tongming Lake Beijing](https://www.tlaic.ac.cn/)\n\nPelatih Sistem Pintar\n\n- Menyesuaikan TileLang untuk TPU SOPHGO SG2260E yang menggunakan sambungan tensor RISC-V.\n\n- Membangunkan sokongan TileLang untuk CPU RISC-V dengan pecutan matriks AME.\n\nDis 2024 – Ogo 2025\n\n### [Institut Cip Sumber Terbuka Beijing](https://www.bosc.ac.cn/)\n\nPelatih Pembangunan Perisian Sistem AI\n\n- Memperluas tindanan kompilasi Triton kepada TPU SOPHGO melalui penterjemahan ke rantaian alat vendor.\n\n- Membina rangka kerja kompilasi operator berasaskan TileLang, termasuk pustaka operator TPU, pas saluran paip dan penjanaan kod automatik bagi operator LLaMA.\n\n- Dalam konfigurasi yang diuji, beberapa operator menyamai atau mengatasi prestasi pelaksanaan yang dioptimumkan oleh vendor.\n\nJul 2024 – Ogo 2024\n\n### [Eversec (Beijing) Technology Co., Ltd.](https://eversec.com.cn/)\n\nPelatih Perkhidmatan Keselamatan\n\n- Membantu penilaian keselamatan rangkaian yang dibenarkan menggunakan Burp Suite dan alat berkaitan, menyusun penemuan serta mengenal pasti risiko.\n\n- Mengumpul dan menyeragamkan lebih 100 rekod PCAP trafik log masuk peranti IoT industri menggunakan Wireshark.\n\n## Anugerah dan biasiswa\n\n2025–2026\n\nBiasiswa Kecemerlangan Akademik\n\n[Universiti Peking](https://www.pku.edu.cn/)\n\n2024–2025\n\nAnugerah Khas, Biasiswa Pertandingan Akademik; Hadiah Kedua, Biasiswa Kecemerlangan Akademik\n\n[Universiti Beihang](https://www.buaa.edu.cn/)\n\n2023–2024\n\nPelajar Cemerlang; Anugerah Khas, Biasiswa Pertandingan Akademik; Hadiah Kedua, Biasiswa Khidmat Sosial\n\n[Universiti Beihang](https://www.buaa.edu.cn/)\n\n2022–2023\n\nHadiah Pertama, Biasiswa Pertandingan Akademik; Hadiah Kedua, Biasiswa Kecemerlangan Akademik\n\n[Universiti Beihang](https://www.buaa.edu.cn/)\n\n## Lawatan\n\nJul 2024 – Ogo 2024\n\n### [Universiti Cina Hong Kong](https://www.cuhk.edu.hk/)\n\nPelajar Lawatan Sekolah Musim Panas\n\n## Alat untuk pembantu AI\n\nBaca Markdown dan JSON terus melalui pautan di bawah. Pelayar yang menyokong WebMCP turut menyediakan alat untuk membaca profil, menyenaraikan projek dan mencari kerja berkaitan topik, dengan sumber awam.\n\n[Takrif alat](https://tianxingren-work.github.io/data/agent-tools.json)\n\n```text\nGET /machine/ms/for-agents.json\nGET /data/projects.json\n```\n\n## Hubungi\n\nUntuk pertukaran idea dan kerjasama penyelidikan, hubungi Tianxing Ren melalui halaman hubungan atau profil GitHub.\n\n- [Hubungi saya](https://tianxingren-work.github.io/ms/contact/)\n\n- [GitHub / LeslinD](https://github.com/LeslinD)\n\n- [GitHub / tianxingren-work](https://github.com/tianxingren-work)\n\n## Baca fail secara terus\n\n- [`/llms.txt`](https://tianxingren-work.github.io/llms.txt)\n\n- [`/llms-full.md`](https://tianxingren-work.github.io/llms-full.md)\n\n- [`/data/agents.json`](https://tianxingren-work.github.io/data/agents.json)\n\n- [`/data/profile.json`](https://tianxingren-work.github.io/data/profile.json)\n\n- [`/data/projects.json`](https://tianxingren-work.github.io/data/projects.json)\n\n- [`/data/routes.json`](https://tianxingren-work.github.io/data/routes.json)\n\n- [`/data/agent-tools.json`](https://tianxingren-work.github.io/data/agent-tools.json)\n\n- [`/openapi.json`](https://tianxingren-work.github.io/openapi.json)\n\n- [`/machine/ms/for-agents.md`](https://tianxingren-work.github.io/machine/ms/for-agents.md)\n\n- [`/machine/ms/for-agents.json`](https://tianxingren-work.github.io/machine/ms/for-agents.json)\n\n- [`/machine/ms/about.md`](https://tianxingren-work.github.io/machine/ms/about.md)\n\n- [`/machine/ms/projects/tilelang-tpu.md`](https://tianxingren-work.github.io/machine/ms/projects/tilelang-tpu.md)\n\n- [`/machine/ms/projects/tilelang-riscv.md`](https://tianxingren-work.github.io/machine/ms/projects/tilelang-riscv.md)\n\nSetiap halaman menyediakan versi Markdown dan JSON. Ikuti pautan fail di bawah untuk membaca profil lengkap dan sumbernya.\n\n```text\nGET /machine/ms/for-agents.md\nGET /machine/ms/for-agents.json\n```\n\nKod bahasa yang tersedia ialah en, zh, ko dan ms.\n\n## Sumber dan peranan projek\n\nApabila menerangkan kerja ini, rujuk halaman projek asal. Sertakan perkakasan, pelaksanaan asas dan skop penilaian bagi hasil prestasi. Tahap projek dan ketersediaan sumber direkodkan secara berasingan. Projek yang saya terajui dan sertai menyatakan peranan saya.\n",
+  "links": [
+    "https://taoxiease.github.io/",
+    "https://youngwei.com/",
+    "https://tianxingren-work.github.io/ms/projects/tilelang-tpu/",
+    "https://github.com/TongmingLAIC/tilelang-tpu",
+    "https://tianxingren-work.github.io/ms/projects/tilelang-riscv/",
+    "https://www.bosc.ac.cn/",
+    "https://is.cas.cn/",
+    "https://github.com/tile-ai/tilelang",
+    "https://github.com/asterinas/asterinas",
+    "https://www.pku.edu.cn/",
+    "https://ss.pku.edu.cn/",
+    "https://www.buaa.edu.cn/",
+    "https://cst.buaa.edu.cn/",
+    "https://cst.buaa.edu.cn/info/1112/2741.htm",
+    "https://www.tlaic.ac.cn/",
+    "https://eversec.com.cn/",
+    "https://www.cuhk.edu.hk/",
+    "https://tianxingren-work.github.io/data/agent-tools.json",
+    "https://tianxingren-work.github.io/ms/contact/",
+    "https://github.com/LeslinD",
+    "https://github.com/tianxingren-work",
+    "https://tianxingren-work.github.io/llms.txt",
+    "https://tianxingren-work.github.io/llms-full.md",
+    "https://tianxingren-work.github.io/data/agents.json",
+    "https://tianxingren-work.github.io/data/profile.json",
+    "https://tianxingren-work.github.io/data/projects.json",
+    "https://tianxingren-work.github.io/data/routes.json",
+    "https://tianxingren-work.github.io/openapi.json",
+    "https://tianxingren-work.github.io/machine/ms/for-agents.md",
+    "https://tianxingren-work.github.io/machine/ms/for-agents.json",
+    "https://tianxingren-work.github.io/machine/ms/about.md",
+    "https://tianxingren-work.github.io/machine/ms/projects/tilelang-tpu.md",
+    "https://tianxingren-work.github.io/machine/ms/projects/tilelang-riscv.md"
+  ],
+  "profile": {
+    "schema_version": "2.0",
+    "name": "Tianxing Ren",
+    "name_native": "任天行",
+    "given_name": "Tianxing",
+    "family_name": "Ren",
+    "source": "Owner-provided profile",
+    "organizations": {
+      "pku": {
+        "name": "Universiti Peking",
+        "url": "https://www.pku.edu.cn/"
+      },
+      "pku_sme": {
+        "name": "Pusat Pengajian Perisian dan Mikroelektronik",
+        "url": "https://ss.pku.edu.cn/"
+      },
+      "zgc": {
+        "name": "Makmal Zhongguancun",
+        "url": null
+      },
+      "buaa": {
+        "name": "Universiti Beihang",
+        "url": "https://www.buaa.edu.cn/"
+      },
+      "buaa_cst": {
+        "name": "Pusat Pengajian Sains dan Teknologi Siber",
+        "url": "https://cst.buaa.edu.cn/"
+      },
+      "bosc": {
+        "name": "Institut Cip Sumber Terbuka Beijing",
+        "url": "https://www.bosc.ac.cn/"
+      },
+      "iscas": {
+        "name": "Institut Perisian, Akademi Sains China",
+        "url": "https://is.cas.cn/"
+      },
+      "tlaic": {
+        "name": "Pusat Inovasi Teknologi Maklumat Tongming Lake Beijing",
+        "url": "https://www.tlaic.ac.cn/"
+      },
+      "eversec": {
+        "name": "Eversec (Beijing) Technology Co., Ltd.",
+        "url": "https://eversec.com.cn/"
+      },
+      "cuhk": {
+        "name": "Universiti Cina Hong Kong",
+        "url": "https://www.cuhk.edu.hk/"
+      }
+    },
+    "research_interests": [
+      "AI compilers",
+      "Tile-level programming",
+      "Heterogeneous computing"
+    ],
+    "advisors": [
+      {
+        "name": "Tao Xie",
+        "name_native": "谢涛",
+        "url": "https://taoxiease.github.io/"
+      },
+      {
+        "name": "Wei Yang",
+        "name_native": "杨威",
+        "url": "https://youngwei.com/"
+      }
+    ],
+    "collaborators": [
+      {
+        "name": "Hua Guo",
+        "name_native": "郭华",
+        "url": "https://cst.buaa.edu.cn/info/1112/2741.htm"
+      }
+    ],
+    "education": [
+      {
+        "id": "pku-doctorate",
+        "org": "pku",
+        "school": "pku_sme",
+        "start": "2025-09",
+        "end": "2030-07",
+        "expected": true,
+        "degree": "Pelajar Doktor Kejuruteraan",
+        "field": "Maklumat Elektronik",
+        "note": "Latihan kedoktoran bersama Makmal Zhongguancun.",
+        "advisors": [
+          "Tao Xie",
+          "Wei Yang"
+        ]
+      },
+      {
+        "id": "beihang-bachelor",
+        "org": "buaa",
+        "school": "buaa_cst",
+        "start": "2021-09",
+        "end": "2025-07",
+        "expected": false,
+        "degree": "Sarjana Muda Kejuruteraan",
+        "field": "Keselamatan Siber",
+        "gpa": 3.77,
+        "gpa_scale": 4.0,
+        "average": 90.41,
+        "average_scale": 100,
+        "note": "Kerjasama penyelidikan bersama Hua Guo."
+      }
+    ],
+    "experience": [
+      {
+        "org": "tlaic",
+        "start": "2025-12",
+        "end": null,
+        "role": "Pelatih Sistem Pintar",
+        "details": [
+          "Menyesuaikan TileLang untuk TPU SOPHGO SG2260E yang menggunakan sambungan tensor RISC-V.",
+          "Membangunkan sokongan TileLang untuk CPU RISC-V dengan pecutan matriks AME."
+        ]
+      },
+      {
+        "org": "bosc",
+        "start": "2024-12",
+        "end": "2025-08",
+        "role": "Pelatih Pembangunan Perisian Sistem AI",
+        "details": [
+          "Memperluas tindanan kompilasi Triton kepada TPU SOPHGO melalui penterjemahan ke rantaian alat vendor.",
+          "Membina rangka kerja kompilasi operator berasaskan TileLang, termasuk pustaka operator TPU, pas saluran paip dan penjanaan kod automatik bagi operator LLaMA.",
+          "Dalam konfigurasi yang diuji, beberapa operator menyamai atau mengatasi prestasi pelaksanaan yang dioptimumkan oleh vendor."
+        ]
+      },
+      {
+        "org": "eversec",
+        "start": "2024-07",
+        "end": "2024-08",
+        "role": "Pelatih Perkhidmatan Keselamatan",
+        "details": [
+          "Membantu penilaian keselamatan rangkaian yang dibenarkan menggunakan Burp Suite dan alat berkaitan, menyusun penemuan serta mengenal pasti risiko.",
+          "Mengumpul dan menyeragamkan lebih 100 rekod PCAP trafik log masuk peranti IoT industri menggunakan Wireshark."
+        ]
+      }
+    ],
+    "awards": [
+      {
+        "year": "2025–2026",
+        "org": "pku",
+        "name": "Biasiswa Kecemerlangan Akademik"
+      },
+      {
+        "year": "2024–2025",
+        "org": "buaa",
+        "name": "Anugerah Khas, Biasiswa Pertandingan Akademik; Hadiah Kedua, Biasiswa Kecemerlangan Akademik"
+      },
+      {
+        "year": "2023–2024",
+        "org": "buaa",
+        "name": "Pelajar Cemerlang; Anugerah Khas, Biasiswa Pertandingan Akademik; Hadiah Kedua, Biasiswa Khidmat Sosial"
+      },
+      {
+        "year": "2022–2023",
+        "org": "buaa",
+        "name": "Hadiah Pertama, Biasiswa Pertandingan Akademik; Hadiah Kedua, Biasiswa Kecemerlangan Akademik"
+      }
+    ],
+    "visits": [
+      {
+        "org": "cuhk",
+        "start": "2024-07",
+        "end": "2024-08",
+        "role": "Pelajar Lawatan Sekolah Musim Panas"
+      }
+    ],
+    "contact": {
+      "url": "https://tianxingren-work.github.io/ms/contact/",
+      "interaction": "human-initiated",
+      "github": "https://github.com/LeslinD",
+      "github_work": "https://github.com/tianxingren-work"
+    },
+    "url": "https://tianxingren-work.github.io/ms/about/",
+    "site_languages": [
+      "en",
+      "zh",
+      "ko",
+      "ms"
+    ],
+    "research_goal": "Saya menyelidik pengkompil AI agar pelbagai algoritma AI dapat berjalan dengan betul dan cekap pada perkakasan AI baharu. Saya ingin memudahkan pengaturcaraan untuk manusia dan ejen."
+  },
+  "leading_projects": [
+    {
+      "id": "tilelang-tpu",
+      "name": "TileLang-TPU",
+      "kind": "leading-project",
+      "role": "project-lead",
+      "stage": "milestone-complete",
+      "open_source": true,
+      "summary": "Backend TileLang untuk TPU SOPHGO, daripada perancangan memori ketika kompilasi hingga pelaksanaan kernel.",
+      "overview": "TileLang-TPU membawa pengaturcaraan peringkat tile kepada pemecut SOPHGO komersial. Model pengaturcaraan TileLang dikekalkan, sementara penempatan memori dalam cip, pergerakan data dan pertindihan pemindahan dengan pengiraan diurus oleh pengkompil. Pengkompil dan masa jalan JIT menyokong keseluruhan proses daripada takrif kernel Python hingga pelaksanaan pada BM1690.",
+      "highlights": [
+        {
+          "title": "Peruntukan memori statik",
+          "description": "Menentukan ofset memori setempat semasa kompilasi dengan mengambil kira penjajaran, kapasiti dan penempatan bank memori."
+        },
+        {
+          "title": "Penurunan saluran paip berstruktur",
+          "description": "Menukar gelung tile kepada peringkat pelaksanaan yang jelas supaya pemindahan data dapat bertindih dengan pengiraan tanpa melanggar kebergantungan."
+        },
+        {
+          "title": "Pemetaan backend dan masa jalan",
+          "description": "Menjana panggilan API kernel TPU dan menghubungkan hasilnya kepada kompilasi hos/peranti, pemautan, pemuatan dan pelancaran."
+        }
+      ],
+      "url": "https://tianxingren-work.github.io/ms/projects/tilelang-tpu/",
+      "markdown": "https://tianxingren-work.github.io/machine/ms/projects/tilelang-tpu.md",
+      "repository": "https://github.com/TongmingLAIC/tilelang-tpu",
+      "evaluation": {
+        "study_id": "bm1690-five-kernel-study",
+        "hardware": "SOPHGO BM1690, single card, PCIe mode",
+        "baseline": "SOPHGO PPL",
+        "metric": "PPL kernel latency / TileLang-TPU kernel latency",
+        "average_speedup": 1.1,
+        "faster_configurations": 71,
+        "total_configurations": 75,
+        "tied_configurations": 1,
+        "slower_configurations": 3,
+        "dtypes": [
+          "BF16",
+          "FP16",
+          "FP32"
+        ],
+        "operators": [
+          "Matmul",
+          "RMSNorm",
+          "RoPE",
+          "SwiGLU",
+          "Element-wise addition"
+        ],
+        "setup": {
+          "os": "Ubuntu 24.04 LTS",
+          "sdk": "SOPHGO PPL SDK 1.4.195",
+          "driver": "1.9.1",
+          "warmup_runs": 5,
+          "timed_repetitions": 10
+        },
+        "source": {
+          "type": "owner-supplied evaluation manuscript",
+          "section": "5.1–5.2",
+          "label": "TileLang-TPU evaluation"
+        },
+        "scope": "Lima kernel, lima bentuk input dan tiga jenis data diuji pada satu kad SOPHGO BM1690. Purata peningkatan kelajuan berbanding PPL berdasarkan masa pelaksanaan kernel TPU, tanpa masa kompilasi atau pelaksanaan hos.",
+        "methods": "Kedua-dua pelaksanaan menggunakan semantik operator, bentuk input, jenis data dan rantaian alat vendor yang sama. Setiap konfigurasi menjalani lima larian pemanasan dan sepuluh larian bermasa. Daripada set ini, 71 konfigurasi lebih pantas, satu setara dan tiga lebih perlahan."
+      },
+      "implementation_sources": [
+        {
+          "title": "Public implementation and setup instructions",
+          "url": "https://github.com/TongmingLAIC/tilelang-tpu"
+        },
+        {
+          "title": "Runnable TPU demos",
+          "url": "https://github.com/TongmingLAIC/tilelang-tpu/tree/main/tpu_demo"
+        }
+      ]
+    },
+    {
+      "id": "tilelang-riscv",
+      "name": "TileLang-RISC-V",
+      "kind": "leading-project",
+      "role": "project-lead",
+      "stage": "in-progress",
+      "open_source": false,
+      "summary": "Membawa TileLang ke CPU RISC-V dengan pecutan matriks AME. Usaha berterusan bersama penyelidik perkakasan sumber terbuka dan sistem.",
+      "overview": "Projek ini membangunkan backend TileLang untuk CPU AI RISC-V AME bersama Institut Cip Sumber Terbuka Beijing dan Institut Perisian, Akademi Sains China. Kerja semasa menumpukan pada pemetaan model pengaturcaraan kepada arahan sasaran serta pembinaan laluan kompilasi dan pelaksanaan yang boleh digunakan.",
+      "highlights": [
+        {
+          "title": "Model pengaturcaraan",
+          "description": "Menyatakan operator AI lazim melalui program peringkat tile dan mengenal pasti maklumat yang diperlukan oleh backend."
+        },
+        {
+          "title": "Penyepaduan sasaran",
+          "description": "Menghubungkan penurunan kompilasi, pemetaan arahan AME dan persekitaran pelaksanaan."
+        },
+        {
+          "title": "Penilaian",
+          "description": "Menguji ketepatan dan prestasi operator merentas konfigurasi sasaran, kemudian menggunakan hasilnya untuk mengoptimumkan backend."
+        }
+      ],
+      "url": "https://tianxingren-work.github.io/ms/projects/tilelang-riscv/",
+      "markdown": "https://tianxingren-work.github.io/machine/ms/projects/tilelang-riscv.md",
+      "partners": [
+        {
+          "name": "Institut Cip Sumber Terbuka Beijing",
+          "url": "https://www.bosc.ac.cn/"
+        },
+        {
+          "name": "Institut Perisian, Akademi Sains China",
+          "url": "https://is.cas.cn/"
+        }
+      ],
+      "implementation_sources": []
+    }
+  ],
+  "participation": [
+    {
+      "name": "TileLang",
+      "url": "https://github.com/tile-ai/tilelang",
+      "site": "https://tilelang.com/",
+      "role": "contributor",
+      "marker": "tilelang"
+    },
+    {
+      "name": "Asterinas",
+      "url": "https://github.com/asterinas/asterinas",
+      "site": "https://asterinas.github.io/",
+      "role": "contributor",
+      "marker": "asterinas"
+    }
+  ]
+}

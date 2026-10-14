@@ -1,0 +1,19 @@
+{
+  "schema_version": "2.0",
+  "id": "projects",
+  "kind": "page",
+  "language": "ms",
+  "title": "Projek · Tianxing Ren",
+  "url": "https://tianxingren-work.github.io/ms/projects/",
+  "markdown_url": "https://tianxingren-work.github.io/machine/ms/projects.md",
+  "content_markdown": "01 / PROJEK YANG SAYA TERAJUI\n\n# Daripada idea kepada sistem.\n\nSaya menerajui projek yang membawa pengaturcaraan peringkat tile kepada perkakasan AI baharu.\n\n01 / Peneraju projek\nFasa utama selesai [Sumber terbuka](https://github.com/TongmingLAIC/tilelang-tpu)\n\n### [TileLang-TPU](https://tianxingren-work.github.io/ms/projects/tilelang-tpu/)\n\nBackend TileLang untuk TPU SOPHGO, daripada perancangan memori ketika kompilasi hingga pelaksanaan kernel.\n\n[](https://tianxingren-work.github.io/ms/projects/tilelang-tpu/)\n[Lihat projek](https://tianxingren-work.github.io/ms/projects/tilelang-tpu/) [Kod sumber](https://github.com/TongmingLAIC/tilelang-tpu)\n\n02 / Peneraju projek\nSedang berjalan\n\n### [TileLang-RISC-V](https://tianxingren-work.github.io/ms/projects/tilelang-riscv/)\n\nMembawa TileLang ke CPU RISC-V dengan pecutan matriks AME. Usaha berterusan bersama penyelidik perkakasan sumber terbuka dan sistem.\n\n[Lihat projek](https://tianxingren-work.github.io/ms/projects/tilelang-riscv/) RISC-V / AME\n\nProjek sumber terbuka yang saya sertai\n\n[**TileLang**](https://github.com/tile-ai/tilelang) [**Asterinas**](https://github.com/asterinas/asterinas)\n\nMARI BERTUKAR PANDANGAN\n\n## Sistem yang baik bermula dengan perbualan.\n\nJika anda menyelidik pengkompil AI, perkakasan AI baharu atau persoalan sistem yang berkaitan, saya berbesar hati untuk bertukar pandangan. Kongsikan idea, soalan atau kerja yang sedang anda lakukan.\n\n[Hubungi saya](https://tianxingren-work.github.io/ms/contact/) [GitHub ](https://github.com/LeslinD)\n",
+  "links": [
+    "https://github.com/TongmingLAIC/tilelang-tpu",
+    "https://tianxingren-work.github.io/ms/projects/tilelang-tpu/",
+    "https://tianxingren-work.github.io/ms/projects/tilelang-riscv/",
+    "https://github.com/tile-ai/tilelang",
+    "https://github.com/asterinas/asterinas",
+    "https://tianxingren-work.github.io/ms/contact/",
+    "https://github.com/LeslinD"
+  ]
+}

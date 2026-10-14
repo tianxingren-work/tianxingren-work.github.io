@@ -1,0 +1,91 @@
+{
+  "schema_version": "2.0",
+  "id": "projects/tilelang-tpu",
+  "kind": "project",
+  "language": "ms",
+  "title": "TileLang-TPU · Tianxing Ren",
+  "url": "https://tianxingren-work.github.io/ms/projects/tilelang-tpu/",
+  "markdown_url": "https://tianxingren-work.github.io/machine/ms/projects/tilelang-tpu.md",
+  "content_markdown": "[Kembali ke projek](https://tianxingren-work.github.io/ms/projects/)\n\nPeneraju projek\n\n# TileLang-TPU\n\nKod peringkat tile. Prestasi TPU.\n\nFasa utama selesai [Sumber terbuka](https://github.com/TongmingLAIC/tilelang-tpu)\nTileLang SOPHGO TPU Compiler backends\n[Kod sumber](https://github.com/TongmingLAIC/tilelang-tpu) [Hubungi saya](https://tianxingren-work.github.io/ms/contact/)\n\nHASIL PADA PERKAKASAN SEBENAR\n\n## Antara muka aras tinggi. Prestasi kernel yang kompetitif.\n\n**1.10×**\n\npurata peningkatan kelajuan berbanding PPL\n\n**71 / 75**\n\nkonfigurasi lebih pantas daripada PPL\n\n**3**\n\njenis data yang dinilai\n\nBF16 · FP16 · FP32\n\nLima kernel, lima bentuk input dan tiga jenis data diuji pada satu kad SOPHGO BM1690. Purata peningkatan kelajuan berbanding PPL berdasarkan masa pelaksanaan kernel TPU, tanpa masa kompilasi atau pelaksanaan hos.\n\nPersediaan penilaian\n\nKedua-dua pelaksanaan menggunakan semantik operator, bentuk input, jenis data dan rantaian alat vendor yang sama. Setiap konfigurasi menjalani lima larian pemanasan dan sepuluh larian bermasa. Daripada set ini, 71 konfigurasi lebih pantas, satu setara dan tiga lebih perlahan.\n\nMatmul · RMSNorm · RoPE · SwiGLU · Element-wise addition\n\nUbuntu 24.04 LTS · PPL SDK 1.4.195 · TPU driver 1.9.1\n\nGambaran keseluruhan\n\n## Kekalkan abstraksi pengaturcaraan. Serahkan butiran perkakasan kepada pengkompil.\n\nTileLang-TPU membawa pengaturcaraan peringkat tile kepada pemecut SOPHGO komersial. Model pengaturcaraan TileLang dikekalkan, sementara penempatan memori dalam cip, pergerakan data dan pertindihan pemindahan dengan pengiraan diurus oleh pengkompil. Pengkompil dan masa jalan JIT menyokong keseluruhan proses daripada takrif kernel Python hingga pelaksanaan pada BM1690.\n\n[](https://tianxingren-work.github.io/assets/tilelang-tpu-overview.png)\nGambaran keseluruhan kompilasi. Frontend TileLang disambungkan kepada peruntukan memori khusus TPU, penurunan saluran paip dan pemetaan backend. Masa jalan JIT membina serta melancarkan kernel yang dijana.\n\n## Di dalam pengkompil\n\n01\n\n### Peruntukan memori statik\n\nMenentukan ofset memori setempat semasa kompilasi dengan mengambil kira penjajaran, kapasiti dan penempatan bank memori.\n\n02\n\n### Penurunan saluran paip berstruktur\n\nMenukar gelung tile kepada peringkat pelaksanaan yang jelas supaya pemindahan data dapat bertindih dengan pengiraan tanpa melanggar kebergantungan.\n\n03\n\n### Pemetaan backend dan masa jalan\n\nMenjana panggilan API kernel TPU dan menghubungkan hasilnya kepada kompilasi hos/peranti, pemautan, pemuatan dan pelancaran.\n\n## Kod dan sumber\n\n[TileLang-TPU](https://github.com/TongmingLAIC/tilelang-tpu) [Kod sumber](https://github.com/TongmingLAIC/tilelang-tpu/tree/main/tpu_demo)\n\n## Mengkaji masalah yang berkaitan?\n\n[Sapa saya](https://tianxingren-work.github.io/ms/contact/)\n",
+  "links": [
+    "https://tianxingren-work.github.io/ms/projects/",
+    "https://github.com/TongmingLAIC/tilelang-tpu",
+    "https://tianxingren-work.github.io/ms/contact/",
+    "https://tianxingren-work.github.io/assets/tilelang-tpu-overview.png",
+    "https://github.com/TongmingLAIC/tilelang-tpu/tree/main/tpu_demo"
+  ],
+  "project": {
+    "id": "tilelang-tpu",
+    "name": "TileLang-TPU",
+    "kind": "leading-project",
+    "role": "project-lead",
+    "stage": "milestone-complete",
+    "open_source": true,
+    "summary": "Backend TileLang untuk TPU SOPHGO, daripada perancangan memori ketika kompilasi hingga pelaksanaan kernel.",
+    "overview": "TileLang-TPU membawa pengaturcaraan peringkat tile kepada pemecut SOPHGO komersial. Model pengaturcaraan TileLang dikekalkan, sementara penempatan memori dalam cip, pergerakan data dan pertindihan pemindahan dengan pengiraan diurus oleh pengkompil. Pengkompil dan masa jalan JIT menyokong keseluruhan proses daripada takrif kernel Python hingga pelaksanaan pada BM1690.",
+    "highlights": [
+      {
+        "title": "Peruntukan memori statik",
+        "description": "Menentukan ofset memori setempat semasa kompilasi dengan mengambil kira penjajaran, kapasiti dan penempatan bank memori."
+      },
+      {
+        "title": "Penurunan saluran paip berstruktur",
+        "description": "Menukar gelung tile kepada peringkat pelaksanaan yang jelas supaya pemindahan data dapat bertindih dengan pengiraan tanpa melanggar kebergantungan."
+      },
+      {
+        "title": "Pemetaan backend dan masa jalan",
+        "description": "Menjana panggilan API kernel TPU dan menghubungkan hasilnya kepada kompilasi hos/peranti, pemautan, pemuatan dan pelancaran."
+      }
+    ],
+    "url": "https://tianxingren-work.github.io/ms/projects/tilelang-tpu/",
+    "markdown": "https://tianxingren-work.github.io/machine/ms/projects/tilelang-tpu.md",
+    "repository": "https://github.com/TongmingLAIC/tilelang-tpu",
+    "evaluation": {
+      "study_id": "bm1690-five-kernel-study",
+      "hardware": "SOPHGO BM1690, single card, PCIe mode",
+      "baseline": "SOPHGO PPL",
+      "metric": "PPL kernel latency / TileLang-TPU kernel latency",
+      "average_speedup": 1.1,
+      "faster_configurations": 71,
+      "total_configurations": 75,
+      "tied_configurations": 1,
+      "slower_configurations": 3,
+      "dtypes": [
+        "BF16",
+        "FP16",
+        "FP32"
+      ],
+      "operators": [
+        "Matmul",
+        "RMSNorm",
+        "RoPE",
+        "SwiGLU",
+        "Element-wise addition"
+      ],
+      "setup": {
+        "os": "Ubuntu 24.04 LTS",
+        "sdk": "SOPHGO PPL SDK 1.4.195",
+        "driver": "1.9.1",
+        "warmup_runs": 5,
+        "timed_repetitions": 10
+      },
+      "source": {
+        "type": "owner-supplied evaluation manuscript",
+        "section": "5.1–5.2",
+        "label": "TileLang-TPU evaluation"
+      },
+      "scope": "Lima kernel, lima bentuk input dan tiga jenis data diuji pada satu kad SOPHGO BM1690. Purata peningkatan kelajuan berbanding PPL berdasarkan masa pelaksanaan kernel TPU, tanpa masa kompilasi atau pelaksanaan hos.",
+      "methods": "Kedua-dua pelaksanaan menggunakan semantik operator, bentuk input, jenis data dan rantaian alat vendor yang sama. Setiap konfigurasi menjalani lima larian pemanasan dan sepuluh larian bermasa. Daripada set ini, 71 konfigurasi lebih pantas, satu setara dan tiga lebih perlahan."
+    },
+    "implementation_sources": [
+      {
+        "title": "Public implementation and setup instructions",
+        "url": "https://github.com/TongmingLAIC/tilelang-tpu"
+      },
+      {
+        "title": "Runnable TPU demos",
+        "url": "https://github.com/TongmingLAIC/tilelang-tpu/tree/main/tpu_demo"
+      }
+    ]
+  }
+}

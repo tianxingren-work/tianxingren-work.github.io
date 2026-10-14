@@ -1,0 +1,53 @@
+{
+  "schema_version": "2.0",
+  "id": "projects/tilelang-riscv",
+  "kind": "project",
+  "language": "zh",
+  "title": "TileLang-RISC-V · Tianxing Ren",
+  "url": "https://tianxingren-work.github.io/zh/projects/tilelang-riscv/",
+  "markdown_url": "https://tianxingren-work.github.io/machine/zh/projects/tilelang-riscv.md",
+  "content_markdown": "[返回项目](https://tianxingren-work.github.io/zh/projects/)\n\n项目负责人\n\n# TileLang-RISC-V\n\n将 TileLang 带到 RISC-V 矩阵加速 CPU。\n\n进行中\nRISC-V AME AI CPUs\n[联系我](https://tianxingren-work.github.io/zh/contact/)\n\n项目概述\n\n## 让熟悉的 Tile 级编程模型适用于 RISC-V AME CPU。\n\n项目面向 RISC-V AME AI CPU 开发 TileLang 后端，与北京开源芯片研究院和中国科学院软件研究所合作。当前重点是完成编程模型与目标指令的对应，建立可用的编译和执行流程。\n\n## 当前工作\n\n01\n\n### 编程模型\n\n使用 Tile-level 程序表达常用 AI 算子，明确后端所需信息。\n\n02\n\n### 目标平台接入\n\n衔接编译转换、AME 指令映射和执行环境。\n\n03\n\n### 实验评估\n\n测试不同目标配置下的算子正确性与性能，并据此优化后端。\n\n## 合作机构\n\n[北京开源芯片研究院](https://www.bosc.ac.cn/) [中国科学院软件研究所](https://is.cas.cn/)\n\n## 你也在研究相关问题吗？\n\n[打个招呼](https://tianxingren-work.github.io/zh/contact/)\n",
+  "links": [
+    "https://tianxingren-work.github.io/zh/projects/",
+    "https://tianxingren-work.github.io/zh/contact/",
+    "https://www.bosc.ac.cn/",
+    "https://is.cas.cn/"
+  ],
+  "project": {
+    "id": "tilelang-riscv",
+    "name": "TileLang-RISC-V",
+    "kind": "leading-project",
+    "role": "project-lead",
+    "stage": "in-progress",
+    "open_source": false,
+    "summary": "将 TileLang 接入具有 AME 矩阵加速能力的 RISC-V CPU，与开源硬件和系统研究团队共同推进。",
+    "overview": "项目面向 RISC-V AME AI CPU 开发 TileLang 后端，与北京开源芯片研究院和中国科学院软件研究所合作。当前重点是完成编程模型与目标指令的对应，建立可用的编译和执行流程。",
+    "highlights": [
+      {
+        "title": "编程模型",
+        "description": "使用 Tile-level 程序表达常用 AI 算子，明确后端所需信息。"
+      },
+      {
+        "title": "目标平台接入",
+        "description": "衔接编译转换、AME 指令映射和执行环境。"
+      },
+      {
+        "title": "实验评估",
+        "description": "测试不同目标配置下的算子正确性与性能，并据此优化后端。"
+      }
+    ],
+    "url": "https://tianxingren-work.github.io/zh/projects/tilelang-riscv/",
+    "markdown": "https://tianxingren-work.github.io/machine/zh/projects/tilelang-riscv.md",
+    "partners": [
+      {
+        "name": "北京开源芯片研究院",
+        "url": "https://www.bosc.ac.cn/"
+      },
+      {
+        "name": "中国科学院软件研究所",
+        "url": "https://is.cas.cn/"
+      }
+    ],
+    "implementation_sources": []
+  }
+}

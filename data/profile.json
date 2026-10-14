@@ -1,0 +1,183 @@
+{
+  "schema_version": "2.0",
+  "name": "Tianxing Ren",
+  "name_native": "任天行",
+  "given_name": "Tianxing",
+  "family_name": "Ren",
+  "source": "Owner-provided profile",
+  "organizations": {
+    "pku": {
+      "name": "Peking University",
+      "url": "https://www.pku.edu.cn/"
+    },
+    "pku_sme": {
+      "name": "School of Software and Microelectronics",
+      "url": "https://ss.pku.edu.cn/"
+    },
+    "zgc": {
+      "name": "Zhongguancun Laboratory",
+      "url": null
+    },
+    "buaa": {
+      "name": "Beihang University",
+      "url": "https://www.buaa.edu.cn/"
+    },
+    "buaa_cst": {
+      "name": "School of Cyber Science and Technology",
+      "url": "https://cst.buaa.edu.cn/"
+    },
+    "bosc": {
+      "name": "Beijing Institute of Open Source Chip",
+      "url": "https://www.bosc.ac.cn/"
+    },
+    "iscas": {
+      "name": "Institute of Software, Chinese Academy of Sciences",
+      "url": "https://is.cas.cn/"
+    },
+    "tlaic": {
+      "name": "Beijing Tongming Lake IT Innovation Center",
+      "url": "https://www.tlaic.ac.cn/"
+    },
+    "eversec": {
+      "name": "Eversec (Beijing) Technology Co., Ltd.",
+      "url": "https://eversec.com.cn/"
+    },
+    "cuhk": {
+      "name": "The Chinese University of Hong Kong",
+      "url": "https://www.cuhk.edu.hk/"
+    }
+  },
+  "research_interests": [
+    "AI compilers",
+    "Tile-level programming",
+    "Heterogeneous computing"
+  ],
+  "advisors": [
+    {
+      "name": "Tao Xie",
+      "name_native": "谢涛",
+      "url": "https://taoxiease.github.io/"
+    },
+    {
+      "name": "Wei Yang",
+      "name_native": "杨威",
+      "url": "https://youngwei.com/"
+    }
+  ],
+  "collaborators": [
+    {
+      "name": "Hua Guo",
+      "name_native": "郭华",
+      "url": "https://cst.buaa.edu.cn/info/1112/2741.htm"
+    }
+  ],
+  "education": [
+    {
+      "id": "pku-doctorate",
+      "org": "pku",
+      "school": "pku_sme",
+      "start": "2025-09",
+      "end": "2030-07",
+      "expected": true,
+      "degree": "Doctor of Engineering student",
+      "field": "Electronic Information",
+      "note": "Joint doctoral training with Zhongguancun Laboratory.",
+      "advisors": [
+        "Tao Xie",
+        "Wei Yang"
+      ]
+    },
+    {
+      "id": "beihang-bachelor",
+      "org": "buaa",
+      "school": "buaa_cst",
+      "start": "2021-09",
+      "end": "2025-07",
+      "expected": false,
+      "degree": "Bachelor of Engineering",
+      "field": "Cyberspace Security",
+      "gpa": 3.77,
+      "gpa_scale": 4.0,
+      "average": 90.41,
+      "average_scale": 100,
+      "note": "Research collaboration with Hua Guo."
+    }
+  ],
+  "experience": [
+    {
+      "org": "tlaic",
+      "start": "2025-12",
+      "end": null,
+      "role": "Intelligent Systems Intern",
+      "details": [
+        "Adapting TileLang to the SOPHGO SG2260E TPU with RISC-V tensor extensions.",
+        "Developing TileLang support for RISC-V CPUs with AME matrix acceleration."
+      ]
+    },
+    {
+      "org": "bosc",
+      "start": "2024-12",
+      "end": "2025-08",
+      "role": "AI Systems Software Intern",
+      "details": [
+        "Extended the Triton compilation stack to SOPHGO TPUs through translation into the vendor toolchain.",
+        "Built a TileLang-based operator compilation framework, including a TPU operator library, pipeline passes, and automatic code generation for operators used in LLaMA.",
+        "Several operators matched or exceeded vendor-tuned implementations in the evaluated configurations."
+      ]
+    },
+    {
+      "org": "eversec",
+      "start": "2024-07",
+      "end": "2024-08",
+      "role": "Security Services Intern",
+      "details": [
+        "Assisted with authorized network security assessments using Burp Suite and related tools, organizing findings and identifying potential risks.",
+        "Captured and standardized more than 100 industrial IoT login-traffic PCAP records with Wireshark."
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "year": "2025–2026",
+      "org": "pku",
+      "name": "Academic Excellence Scholarship"
+    },
+    {
+      "year": "2024–2025",
+      "org": "buaa",
+      "name": "Special Prize, Academic Competition Scholarship; Second Prize, Academic Excellence Scholarship"
+    },
+    {
+      "year": "2023–2024",
+      "org": "buaa",
+      "name": "Outstanding Student; Special Prize, Academic Competition Scholarship; Second Prize, Social Service Scholarship"
+    },
+    {
+      "year": "2022–2023",
+      "org": "buaa",
+      "name": "First Prize, Academic Competition Scholarship; Second Prize, Academic Excellence Scholarship"
+    }
+  ],
+  "visits": [
+    {
+      "org": "cuhk",
+      "start": "2024-07",
+      "end": "2024-08",
+      "role": "Summer School Visiting Student"
+    }
+  ],
+  "contact": {
+    "url": "https://tianxingren-work.github.io/contact/",
+    "interaction": "human-initiated",
+    "github": "https://github.com/LeslinD",
+    "github_work": "https://github.com/tianxingren-work"
+  },
+  "url": "https://tianxingren-work.github.io/about/",
+  "site_languages": [
+    "en",
+    "zh",
+    "ko",
+    "ms"
+  ],
+  "research_goal": "I research AI compilers so that diverse AI algorithms can run correctly and efficiently on emerging AI hardware. I aim to make programming easier for people and agents."
+}

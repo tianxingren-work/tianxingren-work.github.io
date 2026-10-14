@@ -1,0 +1,37 @@
+{
+  "id": "tilelang-riscv",
+  "name": "TileLang-RISC-V",
+  "kind": "leading-project",
+  "role": "project-lead",
+  "stage": "in-progress",
+  "open_source": false,
+  "summary": "Bringing TileLang to RISC-V CPUs with AME matrix acceleration. An ongoing effort with open-source hardware and systems researchers.",
+  "overview": "This project is developing a TileLang backend for RISC-V AME AI CPUs, in collaboration with the Beijing Institute of Open Source Chip and the Institute of Software, Chinese Academy of Sciences. Current work focuses on connecting the programming model to target instructions and establishing a usable compilation and execution path.",
+  "highlights": [
+    {
+      "title": "Programming model",
+      "description": "Express common AI operators with tile-level programs and identify the information the backend needs."
+    },
+    {
+      "title": "Target integration",
+      "description": "Connect compiler lowering, AME instruction mapping, and the execution environment."
+    },
+    {
+      "title": "Evaluation",
+      "description": "Test operator correctness and performance across target configurations, and use the results to guide backend optimization."
+    }
+  ],
+  "url": "https://tianxingren-work.github.io/projects/tilelang-riscv/",
+  "markdown": "https://tianxingren-work.github.io/machine/en/projects/tilelang-riscv.md",
+  "partners": [
+    {
+      "name": "Beijing Institute of Open Source Chip",
+      "url": "https://www.bosc.ac.cn/"
+    },
+    {
+      "name": "Institute of Software, Chinese Academy of Sciences",
+      "url": "https://is.cas.cn/"
+    }
+  ],
+  "implementation_sources": []
+}

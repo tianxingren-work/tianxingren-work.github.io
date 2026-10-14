@@ -1,0 +1,25 @@
+{
+  "schema_version": "2.0",
+  "id": "about",
+  "kind": "profile",
+  "language": "ms",
+  "title": "Tentang · Tianxing Ren",
+  "url": "https://tianxingren-work.github.io/ms/about/",
+  "markdown_url": "https://tianxingren-work.github.io/machine/ms/about.md",
+  "content_markdown": "Tentang / TIANXING REN\n\n# Sedikit tentang diri saya.\n\nSaya menyelidik pengkompil AI agar pelbagai algoritma AI dapat berjalan dengan betul dan cekap pada perkakasan AI baharu. Saya ingin memudahkan pengaturcaraan untuk manusia dan ejen.\n\n[Sapa saya](https://tianxingren-work.github.io/ms/contact/) [GitHub ](https://github.com/LeslinD)\n\nSaya mengikuti pengajian Doktor Kejuruteraan di Universiti Peking melalui program bersama Makmal Zhongguancun. Saya menyelidik pengkompil AI, pengaturcaraan peringkat tile dan pengkomputeran heterogen, serta berminat dengan bahasa pengaturcaraan dan seni bina komputer yang berkaitan.\n\nPenyelia saya ialah [Tao Xie](https://taoxiease.github.io/) dan [Wei Yang](https://youngwei.com/) .\n\n## Pendidikan\n\nSep 2025 – Jul 2030 · dijangka\n\n### [Universiti Peking](https://www.pku.edu.cn/)\n\nPelajar Doktor Kejuruteraan · Maklumat Elektronik\n\n[Pusat Pengajian Perisian dan Mikroelektronik](https://ss.pku.edu.cn/)\n\nLatihan kedoktoran bersama Makmal Zhongguancun.\n\nPenyelia saya ialah [Tao Xie](https://taoxiease.github.io/) dan [Wei Yang](https://youngwei.com/) .\n\nSep 2021 – Jul 2025\n\n### [Universiti Beihang](https://www.buaa.edu.cn/)\n\nSarjana Muda Kejuruteraan · Keselamatan Siber\n\n[Pusat Pengajian Sains dan Teknologi Siber](https://cst.buaa.edu.cn/)\n\nSemasa pengajian sarjana muda, saya menjalankan kerjasama penyelidikan bersama [Hua Guo](https://cst.buaa.edu.cn/info/1112/2741.htm) .\n\nGPA **3.77 / 4.00** Purata markah **90.41 / 100**\n\n## Pengalaman latihan industri\n\nDis 2025 – Kini\n\n### [Pusat Inovasi Teknologi Maklumat Tongming Lake Beijing](https://www.tlaic.ac.cn/)\n\nPelatih Sistem Pintar\n\n- Menyesuaikan TileLang untuk TPU SOPHGO SG2260E yang menggunakan sambungan tensor RISC-V.\n\n- Membangunkan sokongan TileLang untuk CPU RISC-V dengan pecutan matriks AME.\n\nDis 2024 – Ogo 2025\n\n### [Institut Cip Sumber Terbuka Beijing](https://www.bosc.ac.cn/)\n\nPelatih Pembangunan Perisian Sistem AI\n\n- Memperluas tindanan kompilasi Triton kepada TPU SOPHGO melalui penterjemahan ke rantaian alat vendor.\n\n- Membina rangka kerja kompilasi operator berasaskan TileLang, termasuk pustaka operator TPU, pas saluran paip dan penjanaan kod automatik bagi operator LLaMA.\n\n- Dalam konfigurasi yang diuji, beberapa operator menyamai atau mengatasi prestasi pelaksanaan yang dioptimumkan oleh vendor.\n\nJul 2024 – Ogo 2024\n\n### [Eversec (Beijing) Technology Co., Ltd.](https://eversec.com.cn/)\n\nPelatih Perkhidmatan Keselamatan\n\n- Membantu penilaian keselamatan rangkaian yang dibenarkan menggunakan Burp Suite dan alat berkaitan, menyusun penemuan serta mengenal pasti risiko.\n\n- Mengumpul dan menyeragamkan lebih 100 rekod PCAP trafik log masuk peranti IoT industri menggunakan Wireshark.\n\n## Anugerah dan biasiswa\n\n2025–2026\n\nBiasiswa Kecemerlangan Akademik\n\n[Universiti Peking](https://www.pku.edu.cn/)\n\n2024–2025\n\nAnugerah Khas, Biasiswa Pertandingan Akademik; Hadiah Kedua, Biasiswa Kecemerlangan Akademik\n\n[Universiti Beihang](https://www.buaa.edu.cn/)\n\n2023–2024\n\nPelajar Cemerlang; Anugerah Khas, Biasiswa Pertandingan Akademik; Hadiah Kedua, Biasiswa Khidmat Sosial\n\n[Universiti Beihang](https://www.buaa.edu.cn/)\n\n2022–2023\n\nHadiah Pertama, Biasiswa Pertandingan Akademik; Hadiah Kedua, Biasiswa Kecemerlangan Akademik\n\n[Universiti Beihang](https://www.buaa.edu.cn/)\n\n## Lawatan\n\nJul 2024 – Ogo 2024\n\n### [Universiti Cina Hong Kong](https://www.cuhk.edu.hk/)\n\nPelajar Lawatan Sekolah Musim Panas\n\nMARI BERTUKAR PANDANGAN\n\n## Sistem yang baik bermula dengan perbualan.\n\nJika anda menyelidik pengkompil AI, perkakasan AI baharu atau persoalan sistem yang berkaitan, saya berbesar hati untuk bertukar pandangan. Kongsikan idea, soalan atau kerja yang sedang anda lakukan.\n\n[Hubungi saya](https://tianxingren-work.github.io/ms/contact/) [GitHub ](https://github.com/LeslinD)\n",
+  "links": [
+    "https://tianxingren-work.github.io/ms/contact/",
+    "https://github.com/LeslinD",
+    "https://taoxiease.github.io/",
+    "https://youngwei.com/",
+    "https://www.pku.edu.cn/",
+    "https://ss.pku.edu.cn/",
+    "https://www.buaa.edu.cn/",
+    "https://cst.buaa.edu.cn/",
+    "https://cst.buaa.edu.cn/info/1112/2741.htm",
+    "https://www.tlaic.ac.cn/",
+    "https://www.bosc.ac.cn/",
+    "https://eversec.com.cn/",
+    "https://www.cuhk.edu.hk/"
+  ]
+}

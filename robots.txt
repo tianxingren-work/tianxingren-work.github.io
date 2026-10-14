@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tianxingren-work.github.io/sitemap.xml
