@@ -1,4 +1,4 @@
-[Back to projects](https://tianxingren-work.github.io/projects/)
+[Back to projects](https://tianxing-ren.netlify.app/projects/)
 
 Project lead
 
@@ -8,7 +8,7 @@ Tile-level code. TPU performance.
 
 Milestone complete [Open source](https://github.com/TongmingLAIC/tilelang-tpu)
 TileLang SOPHGO TPU Compiler backends
-[Source code](https://github.com/TongmingLAIC/tilelang-tpu) [Get in touch](https://tianxingren-work.github.io/contact/)
+[Source code](https://github.com/TongmingLAIC/tilelang-tpu) [Get in touch](https://tianxing-ren.netlify.app/contact/)
 
 RESULTS ON REAL HARDWARE
 
@@ -44,7 +44,7 @@ Overview
 
 TileLang-TPU brings tile-level programming to commercial SOPHGO accelerators. It preserves the TileLang programming model and turns on-chip memory placement, data movement, and transfer–compute overlap into compiler decisions. The compiler and JIT runtime provide an end-to-end path from a Python kernel definition to execution on BM1690.
 
-[](https://tianxingren-work.github.io/assets/tilelang-tpu-overview.png)
+[](https://tianxing-ren.netlify.app/assets/tilelang-tpu-overview.png)
 Compilation overview. The reused TileLang frontend feeds TPU-specific memory allocation, pipeline lowering, and backend mapping. The JIT runtime builds and launches the generated kernels.
 
 ## Inside the compiler
@@ -73,4 +73,4 @@ Generate TPU kernel API calls and connect the output to host/device compilation,
 
 ## Working on a related problem?
 
-[Say hello](https://tianxingren-work.github.io/contact/)
+[Say hello](https://tianxing-ren.netlify.app/contact/)

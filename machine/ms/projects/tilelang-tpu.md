@@ -1,4 +1,4 @@
-[Kembali ke projek](https://tianxingren-work.github.io/ms/projects/)
+[Kembali ke projek](https://tianxing-ren.netlify.app/ms/projects/)
 
 Peneraju projek
 
@@ -8,7 +8,7 @@ Kod peringkat tile. Prestasi TPU.
 
 Fasa utama selesai [Sumber terbuka](https://github.com/TongmingLAIC/tilelang-tpu)
 TileLang SOPHGO TPU Compiler backends
-[Kod sumber](https://github.com/TongmingLAIC/tilelang-tpu) [Hubungi saya](https://tianxingren-work.github.io/ms/contact/)
+[Kod sumber](https://github.com/TongmingLAIC/tilelang-tpu) [Hubungi saya](https://tianxing-ren.netlify.app/ms/contact/)
 
 HASIL PADA PERKAKASAN SEBENAR
 
@@ -44,7 +44,7 @@ Gambaran keseluruhan
 
 TileLang-TPU membawa pengaturcaraan peringkat tile kepada pemecut SOPHGO komersial. Model pengaturcaraan TileLang dikekalkan, sementara penempatan memori dalam cip, pergerakan data dan pertindihan pemindahan dengan pengiraan diurus oleh pengkompil. Pengkompil dan masa jalan JIT menyokong keseluruhan proses daripada takrif kernel Python hingga pelaksanaan pada BM1690.
 
-[](https://tianxingren-work.github.io/assets/tilelang-tpu-overview.png)
+[](https://tianxing-ren.netlify.app/assets/tilelang-tpu-overview.png)
 Gambaran keseluruhan kompilasi. Frontend TileLang disambungkan kepada peruntukan memori khusus TPU, penurunan saluran paip dan pemetaan backend. Masa jalan JIT membina serta melancarkan kernel yang dijana.
 
 ## Di dalam pengkompil
@@ -73,4 +73,4 @@ Menjana panggilan API kernel TPU dan menghubungkan hasilnya kepada kompilasi hos
 
 ## Mengkaji masalah yang berkaitan?
 
-[Sapa saya](https://tianxingren-work.github.io/ms/contact/)
+[Sapa saya](https://tianxing-ren.netlify.app/ms/contact/)

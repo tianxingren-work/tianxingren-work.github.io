@@ -4,15 +4,15 @@
   "kind": "page",
   "language": "zh",
   "title": "For agents · Tianxing Ren",
-  "url": "https://tianxingren-work.github.io/zh/for-agents/",
-  "markdown_url": "https://tianxingren-work.github.io/machine/zh/for-agents.md",
-  "content_markdown": "# For agents\n\n本页集中提供个人简介、项目和经历，便于 Codex、Claude Code 等自动化工具读取。各项资料附有来源链接，方便进一步了解和引用。\n\n## 个人简介与研究\n\n你好，我是**任天行**。我研究AI编译器，希望能让各种AI算法正确和高效地运行在新兴AI硬件上，让人和Agent更容易地编程。\n\n我在北京大学攻读工程博士，与中关村实验室联合培养。我研究 AI 编译器、Tile 级编程与异构计算，也关注相关的编程语言和计算机体系结构问题。\n\n我的导师是[谢涛](https://taoxiease.github.io/) 和[杨威](https://youngwei.com/) 。\n\n关注 AI 编译器、Tile 级编程与异构计算。\n\n## 我主导的项目\n\n### [TileLang-TPU](https://tianxingren-work.github.io/zh/projects/tilelang-tpu/)\n\n项目负责人\n\n面向算能 TPU 的 TileLang 后端，打通编译期内存规划、流水线优化与算子执行。\n\nTileLang-TPU 将 Tile 级编程带到商用算能加速器。在保留 TileLang 编程模型的同时，由编译器处理片上内存布局、数据搬运和搬运与计算的重叠。编译器与 JIT 运行时共同打通从 Python 算子定义到 BM1690 执行的完整流程。\n\n项目阶段\n阶段性完成\n源码情况\n[开源](https://github.com/TongmingLAIC/tilelang-tpu)\n\n在单张 SOPHGO BM1690 上测试 5 种算子、5 组形状和 3 种数据类型。平均加速比以 PPL 为基线，仅统计 TPU 算子执行时间，不含编译及主机端执行时间。\n\n- 1.10× 相对 PPL 的平均加速比\n\n- 71 / 75 组配置快于 PPL\n\n- BF16 · FP16 · FP32\n\n两种实现采用相同的算子语义、形状、数据类型和厂商编译工具链。每组配置预热 5 次，计时 10 次并取平均。其中 71 组更快，1 组持平，3 组较慢。\n\n- **静态内存分配** 在编译期确定片上内存偏移，考虑对齐、容量和存储体分布。\n\n- **结构化流水线转换** 将分块循环转换为明确的执行阶段，在保持依赖关系的前提下重叠数据搬运与计算。\n\n- **后端映射与运行时** 生成 TPU 算子 API 调用，连接设备端与主机端编译、链接、加载及启动。\n\n### [TileLang-RISC-V](https://tianxingren-work.github.io/zh/projects/tilelang-riscv/)\n\n项目负责人\n\n将 TileLang 接入具有 AME 矩阵加速能力的 RISC-V CPU，与开源硬件和系统研究团队共同推进。\n\n项目面向 RISC-V AME AI CPU 开发 TileLang 后端，与北京开源芯片研究院和中国科学院软件研究所合作。当前重点是完成编程模型与目标指令的对应，建立可用的编译和执行流程。\n\n项目阶段\n进行中\n源码情况\n源码暂未公开\n- **编程模型** 使用 Tile-level 程序表达常用 AI 算子，明确后端所需信息。\n\n- **目标平台接入** 衔接编译转换、AME 指令映射和执行环境。\n\n- **实验评估** 测试不同目标配置下的算子正确性与性能，并据此优化后端。\n\n合作机构\n\n- [北京开源芯片研究院](https://www.bosc.ac.cn/)\n\n- [中国科学院软件研究所](https://is.cas.cn/)\n\n## 我参与的开源项目\n\n- [TileLang](https://github.com/tile-ai/tilelang)\n\n- [Asterinas](https://github.com/asterinas/asterinas)\n\n## 教育经历\n\n2025.09 – 2030.07 · 预计\n\n### [北京大学](https://www.pku.edu.cn/)\n\n工程博士研究生 · 电子信息\n\n[软件与微电子学院](https://ss.pku.edu.cn/)\n\n与中关村实验室联合培养。\n\n我的导师是[谢涛](https://taoxiease.github.io/) 和[杨威](https://youngwei.com/) 。\n\n2021.09 – 2025.07\n\n### [北京航空航天大学](https://www.buaa.edu.cn/)\n\n工学学士 · 网络空间安全\n\n[网络空间安全学院](https://cst.buaa.edu.cn/)\n\n本科期间，我与[郭华](https://cst.buaa.edu.cn/info/1112/2741.htm) 老师开展研究合作。\n\nGPA **3.77 / 4.00** 平均成绩 **90.41 / 100**\n\n## 实习经历\n\n2025.12 – 至今\n\n### [北京通明湖信息技术应用创新中心](https://www.tlaic.ac.cn/)\n\n智能系统部实习生\n\n- 将 TileLang 对接到采用 RISC-V Tensor 扩展的算能 SG2260E TPU。\n\n- 开发 TileLang 对 RISC-V AME 矩阵加速 CPU 的支持。\n\n2024.12 – 2025.08\n\n### [北京开源芯片研究院](https://www.bosc.ac.cn/)\n\nAI 系统软件栈研发实习生\n\n- 通过转译衔接算能 TPU 编译工具链，扩展 Triton 编译栈以运行 Triton 生态程序。\n\n- 基于 TileLang 构建异构芯片算子编译框架，开发 TPU 算子库、流水线 Pass 和自动代码生成，支持 LLaMA 所用算子。\n\n- 在已测试的配置中，多个算子性能达到或超过厂商调优实现。\n\n2024.07 – 2024.08\n\n### [恒安嘉新（北京）科技股份公司](https://eversec.com.cn/)\n\n安全服务实习生\n\n- 使用 Burp Suite 等工具参与经授权的网络安全评估，整理扫描结果并初步识别风险。\n\n- 使用 Wireshark 收集并标准化处理 100 余项工业物联网设备登录 PCAP 流量记录。\n\n## 荣誉与奖学金\n\n2025–2026\n\n学习优秀奖学金\n\n[北京大学](https://www.pku.edu.cn/)\n\n2024–2025\n\n学科竞赛奖学金特等奖；学习优秀奖学金二等奖\n\n[北京航空航天大学](https://www.buaa.edu.cn/)\n\n2023–2024\n\n校级三好学生；学科竞赛奖学金特等奖；社会工作优秀奖学金二等奖\n\n[北京航空航天大学](https://www.buaa.edu.cn/)\n\n2022–2023\n\n学科竞赛奖学金一等奖；学习优秀奖学金二等奖\n\n[北京航空航天大学](https://www.buaa.edu.cn/)\n\n## 访问\n\n2024.07 – 2024.08\n\n### [香港中文大学](https://www.cuhk.edu.hk/)\n\n暑期学校访学学生\n\n## 供 AI 工具调用\n\n可通过下方链接直接读取 Markdown 和 JSON。支持 WebMCP 的浏览器还提供资料读取、项目列表和主题匹配工具，结果包含公开来源。\n\n[工具定义](https://tianxingren-work.github.io/data/agent-tools.json)\n\n```text\nGET /machine/zh/for-agents.json\nGET /data/projects.json\n```\n\n## 联系\n\n如需研究交流与合作，可以通过联系页面或 GitHub 联系任天行。\n\n- [联系我](https://tianxingren-work.github.io/zh/contact/)\n\n- [GitHub / LeslinD](https://github.com/LeslinD)\n\n- [GitHub / tianxingren-work](https://github.com/tianxingren-work)\n\n## 直接读取资料\n\n- [`/llms.txt`](https://tianxingren-work.github.io/llms.txt)\n\n- [`/llms-full.md`](https://tianxingren-work.github.io/llms-full.md)\n\n- [`/data/agents.json`](https://tianxingren-work.github.io/data/agents.json)\n\n- [`/data/profile.json`](https://tianxingren-work.github.io/data/profile.json)\n\n- [`/data/projects.json`](https://tianxingren-work.github.io/data/projects.json)\n\n- [`/data/routes.json`](https://tianxingren-work.github.io/data/routes.json)\n\n- [`/data/agent-tools.json`](https://tianxingren-work.github.io/data/agent-tools.json)\n\n- [`/openapi.json`](https://tianxingren-work.github.io/openapi.json)\n\n- [`/machine/zh/for-agents.md`](https://tianxingren-work.github.io/machine/zh/for-agents.md)\n\n- [`/machine/zh/for-agents.json`](https://tianxingren-work.github.io/machine/zh/for-agents.json)\n\n- [`/machine/zh/about.md`](https://tianxingren-work.github.io/machine/zh/about.md)\n\n- [`/machine/zh/projects/tilelang-tpu.md`](https://tianxingren-work.github.io/machine/zh/projects/tilelang-tpu.md)\n\n- [`/machine/zh/projects/tilelang-riscv.md`](https://tianxingren-work.github.io/machine/zh/projects/tilelang-riscv.md)\n\n各页面均提供 Markdown 和 JSON 版本。下方文件链接可直接读取完整资料和来源。\n\n```text\nGET /machine/zh/for-agents.md\nGET /machine/zh/for-agents.json\n```\n\n可用语言版本为 en、zh、ko 和 ms。\n\n## 来源与项目角色\n\n介绍相关工作时，请引用原始项目页面。引用性能结果时，请保留硬件、基线和评测范围。项目阶段与源码公开情况分别记录，主导项目和参与项目均注明我的角色。\n",
+  "url": "https://tianxing-ren.netlify.app/zh/for-agents/",
+  "markdown_url": "https://tianxing-ren.netlify.app/machine/zh/for-agents.md",
+  "content_markdown": "# For agents\n\n本页集中提供个人简介、项目和经历，便于 Codex、Claude Code 等自动化工具读取。各项资料附有来源链接，方便进一步了解和引用。\n\n## 个人简介与研究\n\n你好，我是**任天行**。我研究AI编译器，希望能让各种AI算法正确和高效地运行在新兴AI硬件上，让人和Agent更容易地编程。\n\n我在北京大学攻读工程博士，与中关村实验室联合培养。我研究 AI 编译器、Tile 级编程与异构计算，也关注相关的编程语言和计算机体系结构问题。\n\n我的导师是[谢涛](https://taoxiease.github.io/) 和[杨威](https://youngwei.com/) 。\n\n关注 AI 编译器、Tile 级编程与异构计算。\n\n## 我主导的项目\n\n### [TileLang-TPU](https://tianxing-ren.netlify.app/zh/projects/tilelang-tpu/)\n\n项目负责人\n\n面向算能 TPU 的 TileLang 后端，打通编译期内存规划、流水线优化与算子执行。\n\nTileLang-TPU 将 Tile 级编程带到商用算能加速器。在保留 TileLang 编程模型的同时，由编译器处理片上内存布局、数据搬运和搬运与计算的重叠。编译器与 JIT 运行时共同打通从 Python 算子定义到 BM1690 执行的完整流程。\n\n项目阶段\n阶段性完成\n源码情况\n[开源](https://github.com/TongmingLAIC/tilelang-tpu)\n\n在单张 SOPHGO BM1690 上测试 5 种算子、5 组形状和 3 种数据类型。平均加速比以 PPL 为基线，仅统计 TPU 算子执行时间，不含编译及主机端执行时间。\n\n- 1.10× 相对 PPL 的平均加速比\n\n- 71 / 75 组配置快于 PPL\n\n- BF16 · FP16 · FP32\n\n两种实现采用相同的算子语义、形状、数据类型和厂商编译工具链。每组配置预热 5 次，计时 10 次并取平均。其中 71 组更快，1 组持平，3 组较慢。\n\n- **静态内存分配** 在编译期确定片上内存偏移，考虑对齐、容量和存储体分布。\n\n- **结构化流水线转换** 将分块循环转换为明确的执行阶段，在保持依赖关系的前提下重叠数据搬运与计算。\n\n- **后端映射与运行时** 生成 TPU 算子 API 调用，连接设备端与主机端编译、链接、加载及启动。\n\n### [TileLang-RISC-V](https://tianxing-ren.netlify.app/zh/projects/tilelang-riscv/)\n\n项目负责人\n\n将 TileLang 接入具有 AME 矩阵加速能力的 RISC-V CPU，与开源硬件和系统研究团队共同推进。\n\n项目面向 RISC-V AME AI CPU 开发 TileLang 后端，与北京开源芯片研究院和中国科学院软件研究所合作。当前重点是完成编程模型与目标指令的对应，建立可用的编译和执行流程。\n\n项目阶段\n进行中\n源码情况\n源码暂未公开\n- **编程模型** 使用 Tile-level 程序表达常用 AI 算子，明确后端所需信息。\n\n- **目标平台接入** 衔接编译转换、AME 指令映射和执行环境。\n\n- **实验评估** 测试不同目标配置下的算子正确性与性能，并据此优化后端。\n\n合作机构\n\n- [北京开源芯片研究院](https://www.bosc.ac.cn/)\n\n- [中国科学院软件研究所](https://is.cas.cn/)\n\n## 我参与的开源项目\n\n- [TileLang](https://github.com/tile-ai/tilelang)\n\n- [Asterinas](https://github.com/asterinas/asterinas)\n\n## 教育经历\n\n2025.09 – 2030.07 · 预计\n\n### [北京大学](https://www.pku.edu.cn/)\n\n工程博士研究生 · 电子信息\n\n[软件与微电子学院](https://ss.pku.edu.cn/)\n\n与中关村实验室联合培养。\n\n我的导师是[谢涛](https://taoxiease.github.io/) 和[杨威](https://youngwei.com/) 。\n\n2021.09 – 2025.07\n\n### [北京航空航天大学](https://www.buaa.edu.cn/)\n\n工学学士 · 网络空间安全\n\n[网络空间安全学院](https://cst.buaa.edu.cn/)\n\n本科期间，我与[郭华](https://cst.buaa.edu.cn/info/1112/2741.htm) 老师开展研究合作。\n\nGPA **3.77 / 4.00** 平均成绩 **90.41 / 100**\n\n## 实习经历\n\n2025.12 – 至今\n\n### [北京通明湖信息技术应用创新中心](https://www.tlaic.ac.cn/)\n\n智能系统部实习生\n\n- 将 TileLang 对接到采用 RISC-V Tensor 扩展的算能 SG2260E TPU。\n\n- 开发 TileLang 对 RISC-V AME 矩阵加速 CPU 的支持。\n\n2024.12 – 2025.08\n\n### [北京开源芯片研究院](https://www.bosc.ac.cn/)\n\nAI 系统软件栈研发实习生\n\n- 通过转译衔接算能 TPU 编译工具链，扩展 Triton 编译栈以运行 Triton 生态程序。\n\n- 基于 TileLang 构建异构芯片算子编译框架，开发 TPU 算子库、流水线 Pass 和自动代码生成，支持 LLaMA 所用算子。\n\n- 在已测试的配置中，多个算子性能达到或超过厂商调优实现。\n\n2024.07 – 2024.08\n\n### [恒安嘉新（北京）科技股份公司](https://eversec.com.cn/)\n\n安全服务实习生\n\n- 使用 Burp Suite 等工具参与经授权的网络安全评估，整理扫描结果并初步识别风险。\n\n- 使用 Wireshark 收集并标准化处理 100 余项工业物联网设备登录 PCAP 流量记录。\n\n## 荣誉与奖学金\n\n2025–2026\n\n学习优秀奖学金\n\n[北京大学](https://www.pku.edu.cn/)\n\n2024–2025\n\n学科竞赛奖学金特等奖；学习优秀奖学金二等奖\n\n[北京航空航天大学](https://www.buaa.edu.cn/)\n\n2023–2024\n\n校级三好学生；学科竞赛奖学金特等奖；社会工作优秀奖学金二等奖\n\n[北京航空航天大学](https://www.buaa.edu.cn/)\n\n2022–2023\n\n学科竞赛奖学金一等奖；学习优秀奖学金二等奖\n\n[北京航空航天大学](https://www.buaa.edu.cn/)\n\n## 访问\n\n2024.07 – 2024.08\n\n### [香港中文大学](https://www.cuhk.edu.hk/)\n\n暑期学校访学学生\n\n## 供 AI 工具调用\n\n可以通过 MCP 读取个人与项目资料，也可以提交一个主题，获取相关项目、来源链接和评测范围。\n\n[工具定义](https://tianxing-ren.netlify.app/data/agent-tools.json)\n\n```text\nPOST https://tianxing-ren.netlify.app/api/agent/query\nContent-Type: application/json\n\n{\"topic\":\"RISC-V AME\",\"language\":\"zh\"}\n\nPOST https://tianxing-ren.netlify.app/api/mcp\n```\n\n## 联系\n\n如需研究交流与合作，可以通过联系页面或 GitHub 联系任天行。\n\n- [联系我](https://tianxing-ren.netlify.app/zh/contact/)\n\n- [GitHub / LeslinD](https://github.com/LeslinD)\n\n- [GitHub / tianxingren-work](https://github.com/tianxingren-work)\n\n## 直接读取资料\n\n- [`/llms.txt`](https://tianxing-ren.netlify.app/llms.txt)\n\n- [`/llms-full.md`](https://tianxing-ren.netlify.app/llms-full.md)\n\n- [`/data/agents.json`](https://tianxing-ren.netlify.app/data/agents.json)\n\n- [`/data/profile.json`](https://tianxing-ren.netlify.app/data/profile.json)\n\n- [`/data/projects.json`](https://tianxing-ren.netlify.app/data/projects.json)\n\n- [`/data/routes.json`](https://tianxing-ren.netlify.app/data/routes.json)\n\n- [`/data/agent-tools.json`](https://tianxing-ren.netlify.app/data/agent-tools.json)\n\n- [`/openapi.json`](https://tianxing-ren.netlify.app/openapi.json)\n\n- [`/machine/zh/for-agents.md`](https://tianxing-ren.netlify.app/machine/zh/for-agents.md)\n\n- [`/machine/zh/for-agents.json`](https://tianxing-ren.netlify.app/machine/zh/for-agents.json)\n\n- [`/machine/zh/about.md`](https://tianxing-ren.netlify.app/machine/zh/about.md)\n\n- [`/machine/zh/projects/tilelang-tpu.md`](https://tianxing-ren.netlify.app/machine/zh/projects/tilelang-tpu.md)\n\n- [`/machine/zh/projects/tilelang-riscv.md`](https://tianxing-ren.netlify.app/machine/zh/projects/tilelang-riscv.md)\n\n可识别的 AI 工具请求会自动收到 Markdown。访问首页时返回本页的完整资料，访问其他页面时返回对应内容。也可以通过 ?format=markdown、?format=json、?format=html 或 Accept 请求头指定格式，或直接读取上方文件。\n\n```text\nGET /for-agents/?format=markdown\nGET /api/agents\nGET /api/profile\nGET /api/projects\n```\n\n可用语言版本为 en、zh、ko 和 ms。\n\n## 来源与项目角色\n\n介绍相关工作时，请引用原始项目页面。引用性能结果时，请保留硬件、基线和评测范围。项目阶段与源码公开情况分别记录，主导项目和参与项目均注明我的角色。\n",
   "links": [
     "https://taoxiease.github.io/",
     "https://youngwei.com/",
-    "https://tianxingren-work.github.io/zh/projects/tilelang-tpu/",
+    "https://tianxing-ren.netlify.app/zh/projects/tilelang-tpu/",
     "https://github.com/TongmingLAIC/tilelang-tpu",
-    "https://tianxingren-work.github.io/zh/projects/tilelang-riscv/",
+    "https://tianxing-ren.netlify.app/zh/projects/tilelang-riscv/",
     "https://www.bosc.ac.cn/",
     "https://is.cas.cn/",
     "https://github.com/tile-ai/tilelang",
@@ -25,22 +25,22 @@
     "https://www.tlaic.ac.cn/",
     "https://eversec.com.cn/",
     "https://www.cuhk.edu.hk/",
-    "https://tianxingren-work.github.io/data/agent-tools.json",
-    "https://tianxingren-work.github.io/zh/contact/",
+    "https://tianxing-ren.netlify.app/data/agent-tools.json",
+    "https://tianxing-ren.netlify.app/zh/contact/",
     "https://github.com/LeslinD",
     "https://github.com/tianxingren-work",
-    "https://tianxingren-work.github.io/llms.txt",
-    "https://tianxingren-work.github.io/llms-full.md",
-    "https://tianxingren-work.github.io/data/agents.json",
-    "https://tianxingren-work.github.io/data/profile.json",
-    "https://tianxingren-work.github.io/data/projects.json",
-    "https://tianxingren-work.github.io/data/routes.json",
-    "https://tianxingren-work.github.io/openapi.json",
-    "https://tianxingren-work.github.io/machine/zh/for-agents.md",
-    "https://tianxingren-work.github.io/machine/zh/for-agents.json",
-    "https://tianxingren-work.github.io/machine/zh/about.md",
-    "https://tianxingren-work.github.io/machine/zh/projects/tilelang-tpu.md",
-    "https://tianxingren-work.github.io/machine/zh/projects/tilelang-riscv.md"
+    "https://tianxing-ren.netlify.app/llms.txt",
+    "https://tianxing-ren.netlify.app/llms-full.md",
+    "https://tianxing-ren.netlify.app/data/agents.json",
+    "https://tianxing-ren.netlify.app/data/profile.json",
+    "https://tianxing-ren.netlify.app/data/projects.json",
+    "https://tianxing-ren.netlify.app/data/routes.json",
+    "https://tianxing-ren.netlify.app/openapi.json",
+    "https://tianxing-ren.netlify.app/machine/zh/for-agents.md",
+    "https://tianxing-ren.netlify.app/machine/zh/for-agents.json",
+    "https://tianxing-ren.netlify.app/machine/zh/about.md",
+    "https://tianxing-ren.netlify.app/machine/zh/projects/tilelang-tpu.md",
+    "https://tianxing-ren.netlify.app/machine/zh/projects/tilelang-riscv.md"
   ],
   "profile": {
     "schema_version": "2.0",
@@ -211,12 +211,12 @@
       }
     ],
     "contact": {
-      "url": "https://tianxingren-work.github.io/zh/contact/",
+      "url": "https://tianxing-ren.netlify.app/zh/contact/",
       "interaction": "human-initiated",
       "github": "https://github.com/LeslinD",
       "github_work": "https://github.com/tianxingren-work"
     },
-    "url": "https://tianxingren-work.github.io/zh/about/",
+    "url": "https://tianxing-ren.netlify.app/zh/about/",
     "site_languages": [
       "en",
       "zh",
@@ -249,8 +249,8 @@
           "description": "生成 TPU 算子 API 调用，连接设备端与主机端编译、链接、加载及启动。"
         }
       ],
-      "url": "https://tianxingren-work.github.io/zh/projects/tilelang-tpu/",
-      "markdown": "https://tianxingren-work.github.io/machine/zh/projects/tilelang-tpu.md",
+      "url": "https://tianxing-ren.netlify.app/zh/projects/tilelang-tpu/",
+      "markdown": "https://tianxing-ren.netlify.app/machine/zh/projects/tilelang-tpu.md",
       "repository": "https://github.com/TongmingLAIC/tilelang-tpu",
       "evaluation": {
         "study_id": "bm1690-five-kernel-study",
@@ -323,8 +323,8 @@
           "description": "测试不同目标配置下的算子正确性与性能，并据此优化后端。"
         }
       ],
-      "url": "https://tianxingren-work.github.io/zh/projects/tilelang-riscv/",
-      "markdown": "https://tianxingren-work.github.io/machine/zh/projects/tilelang-riscv.md",
+      "url": "https://tianxing-ren.netlify.app/zh/projects/tilelang-riscv/",
+      "markdown": "https://tianxing-ren.netlify.app/machine/zh/projects/tilelang-riscv.md",
       "partners": [
         {
           "name": "北京开源芯片研究院",

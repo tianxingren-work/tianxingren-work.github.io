@@ -14,7 +14,7 @@ AI compilers, tile-level programming, and heterogeneous computing.
 
 ## Projects I lead
 
-### [TileLang-TPU](https://tianxingren-work.github.io/projects/tilelang-tpu/)
+### [TileLang-TPU](https://tianxing-ren.netlify.app/projects/tilelang-tpu/)
 
 Project lead
 
@@ -43,7 +43,7 @@ Both implementations use the same operator semantics, shapes, data types, and ve
 
 - **Backend mapping and runtime** Generate TPU kernel API calls and connect the output to host/device compilation, linking, loading, and launch.
 
-### [TileLang-RISC-V](https://tianxingren-work.github.io/projects/tilelang-riscv/)
+### [TileLang-RISC-V](https://tianxing-ren.netlify.app/projects/tilelang-riscv/)
 
 Project lead
 
@@ -169,20 +169,24 @@ Summer School Visiting Student
 
 ## Tools for AI assistants
 
-Markdown and JSON are available through the links below. Browsers that support WebMCP also offer tools to read this profile, list projects and match a topic to documented work.
+Read the profile and projects through MCP, or submit a short topic to find relevant documented work. The response includes sources, project roles and evaluation scope.
 
-[Tool definitions](https://tianxingren-work.github.io/data/agent-tools.json)
+[Tool definitions](https://tianxing-ren.netlify.app/data/agent-tools.json)
 
 ```text
-GET /machine/en/for-agents.json
-GET /data/projects.json
+POST https://tianxing-ren.netlify.app/api/agent/query
+Content-Type: application/json
+
+{"topic":"RISC-V AME","language":"en"}
+
+POST https://tianxing-ren.netlify.app/api/mcp
 ```
 
 ## Contact
 
 For research collaboration, contact Tianxing Ren through the contact page or the linked GitHub profiles.
 
-- [Get in touch](https://tianxingren-work.github.io/contact/)
+- [Get in touch](https://tianxing-ren.netlify.app/contact/)
 
 - [GitHub / LeslinD](https://github.com/LeslinD)
 
@@ -190,37 +194,39 @@ For research collaboration, contact Tianxing Ren through the contact page or the
 
 ## Direct access to files
 
-- [`/llms.txt`](https://tianxingren-work.github.io/llms.txt)
+- [`/llms.txt`](https://tianxing-ren.netlify.app/llms.txt)
 
-- [`/llms-full.md`](https://tianxingren-work.github.io/llms-full.md)
+- [`/llms-full.md`](https://tianxing-ren.netlify.app/llms-full.md)
 
-- [`/data/agents.json`](https://tianxingren-work.github.io/data/agents.json)
+- [`/data/agents.json`](https://tianxing-ren.netlify.app/data/agents.json)
 
-- [`/data/profile.json`](https://tianxingren-work.github.io/data/profile.json)
+- [`/data/profile.json`](https://tianxing-ren.netlify.app/data/profile.json)
 
-- [`/data/projects.json`](https://tianxingren-work.github.io/data/projects.json)
+- [`/data/projects.json`](https://tianxing-ren.netlify.app/data/projects.json)
 
-- [`/data/routes.json`](https://tianxingren-work.github.io/data/routes.json)
+- [`/data/routes.json`](https://tianxing-ren.netlify.app/data/routes.json)
 
-- [`/data/agent-tools.json`](https://tianxingren-work.github.io/data/agent-tools.json)
+- [`/data/agent-tools.json`](https://tianxing-ren.netlify.app/data/agent-tools.json)
 
-- [`/openapi.json`](https://tianxingren-work.github.io/openapi.json)
+- [`/openapi.json`](https://tianxing-ren.netlify.app/openapi.json)
 
-- [`/machine/en/for-agents.md`](https://tianxingren-work.github.io/machine/en/for-agents.md)
+- [`/machine/en/for-agents.md`](https://tianxing-ren.netlify.app/machine/en/for-agents.md)
 
-- [`/machine/en/for-agents.json`](https://tianxingren-work.github.io/machine/en/for-agents.json)
+- [`/machine/en/for-agents.json`](https://tianxing-ren.netlify.app/machine/en/for-agents.json)
 
-- [`/machine/en/about.md`](https://tianxingren-work.github.io/machine/en/about.md)
+- [`/machine/en/about.md`](https://tianxing-ren.netlify.app/machine/en/about.md)
 
-- [`/machine/en/projects/tilelang-tpu.md`](https://tianxingren-work.github.io/machine/en/projects/tilelang-tpu.md)
+- [`/machine/en/projects/tilelang-tpu.md`](https://tianxing-ren.netlify.app/machine/en/projects/tilelang-tpu.md)
 
-- [`/machine/en/projects/tilelang-riscv.md`](https://tianxingren-work.github.io/machine/en/projects/tilelang-riscv.md)
+- [`/machine/en/projects/tilelang-riscv.md`](https://tianxing-ren.netlify.app/machine/en/projects/tilelang-riscv.md)
 
-Each page has Markdown and JSON versions. Follow the direct file links below to read the complete profile and sources.
+Recognized AI tool requests receive Markdown automatically. Requests to the homepage receive this complete profile, and requests to other pages receive that page’s content. Select ?format=markdown, ?format=json, or ?format=html, or use the Accept header to request a format. The direct file links above are also available.
 
 ```text
-GET /machine/en/for-agents.md
-GET /machine/en/for-agents.json
+GET /for-agents/?format=markdown
+GET /api/agents
+GET /api/profile
+GET /api/projects
 ```
 
 Available versions use the language codes en, zh, ko, and ms.

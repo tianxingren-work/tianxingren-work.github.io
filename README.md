@@ -1,3 +1,3 @@
 # Tianxing Ren
 
-[Visit my homepage](https://tianxingren-work.github.io/) · [中文](https://tianxingren-work.github.io/zh/)
+[Visit my homepage](https://tianxing-ren.netlify.app/) · [中文](https://tianxing-ren.netlify.app/zh/)

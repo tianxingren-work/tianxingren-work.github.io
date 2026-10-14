@@ -7,16 +7,17 @@
   },
   "servers": [
     {
-      "url": "https://tianxingren-work.github.io"
+      "url": "https://tianxing-ren.netlify.app"
     }
   ],
   "paths": {
-    "/data/agents.json": {
+    "/api/agents": {
       "get": {
         "operationId": "getAgentProfile",
+        "summary": "Read the complete profile, research goals, projects, internships, visits, and source links",
         "responses": {
           "200": {
-            "description": "Public source data",
+            "description": "Complete agent profile",
             "content": {
               "application/json": {
                 "schema": {
@@ -28,12 +29,13 @@
         }
       }
     },
-    "/data/profile.json": {
+    "/api/profile": {
       "get": {
         "operationId": "getProfile",
+        "summary": "Read identity, education, experience, awards, and public contact-page URL",
         "responses": {
           "200": {
-            "description": "Public source data",
+            "description": "Public profile",
             "content": {
               "application/json": {
                 "schema": {
@@ -45,16 +47,214 @@
         }
       }
     },
-    "/data/projects.json": {
+    "/api/projects": {
       "get": {
         "operationId": "listProjects",
+        "summary": "List leading projects and participating projects separately",
         "responses": {
           "200": {
-            "description": "Public source data",
+            "description": "Project directory",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ProjectDirectory"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/projects/{id}": {
+      "get": {
+        "operationId": "getProject",
+        "summary": "Read project stage, source availability, highlights, and evaluation scope",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "tilelang-tpu",
+                "tilelang-riscv"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Project",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProjectRecord"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Unknown project",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/agent": {
+      "get": {
+        "operationId": "discoverAgentTools",
+        "summary": "Discover public AI assistant tools and MCP access",
+        "responses": {
+          "200": {
+            "description": "Agent tool definitions",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/agent/query": {
+      "post": {
+        "operationId": "findRelevantWork",
+        "summary": "Find documented work relevant to a topic, with sources and evaluation scope",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "topic": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 300
+                  },
+                  "language": {
+                    "type": "string",
+                    "enum": [
+                      "en",
+                      "zh",
+                      "ko",
+                      "ms"
+                    ]
+                  }
+                },
+                "required": [
+                  "topic"
+                ],
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Relevant projects and profile",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid topic",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Please retry later",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/mcp": {
+      "post": {
+        "operationId": "callProfileMCP",
+        "summary": "MCP tools for profile, projects and relevant work",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "jsonrpc",
+                  "method"
+                ],
+                "properties": {
+                  "jsonrpc": {
+                    "const": "2.0"
+                  },
+                  "id": {
+                    "type": [
+                      "string",
+                      "number"
+                    ]
+                  },
+                  "method": {
+                    "type": "string"
+                  },
+                  "params": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "JSON-RPC response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid MCP request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Please retry later",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
                 }
               }
             }

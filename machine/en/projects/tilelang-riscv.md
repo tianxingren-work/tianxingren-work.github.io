@@ -1,4 +1,4 @@
-[Back to projects](https://tianxingren-work.github.io/projects/)
+[Back to projects](https://tianxing-ren.netlify.app/projects/)
 
 Project lead
 
@@ -8,7 +8,7 @@ TileLang meets RISC-V matrix acceleration.
 
 In progress
 RISC-V AME AI CPUs
-[Get in touch](https://tianxingren-work.github.io/contact/)
+[Get in touch](https://tianxing-ren.netlify.app/contact/)
 
 Overview
 
@@ -42,4 +42,4 @@ Test operator correctness and performance across target configurations, and use 
 
 ## Working on a related problem?
 
-[Say hello](https://tianxingren-work.github.io/contact/)
+[Say hello](https://tianxing-ren.netlify.app/contact/)

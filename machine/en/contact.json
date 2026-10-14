@@ -4,8 +4,8 @@
   "kind": "page",
   "language": "en",
   "title": "Contact · Tianxing Ren",
-  "url": "https://tianxingren-work.github.io/contact/",
-  "markdown_url": "https://tianxingren-work.github.io/machine/en/contact.md",
+  "url": "https://tianxing-ren.netlify.app/contact/",
+  "markdown_url": "https://tianxing-ren.netlify.app/machine/en/contact.md",
   "content_markdown": "LET’S COMPARE NOTES\n\n# Good systems start with a conversation.\n\nWorking on AI compilers, emerging AI hardware, or a related systems problem? I’d be happy to exchange ideas and discuss your work.\n\n## A few starting points\n\nNew AI hardware & compiler backends\n\nTileLang, RISC-V & matrix acceleration\n\nOpen-source systems & research collaboration\n\n[GitHub / LeslinD ](https://github.com/LeslinD) [GitHub / tianxingren-work ](https://github.com/tianxingren-work)\n",
   "links": [
     "https://github.com/LeslinD",

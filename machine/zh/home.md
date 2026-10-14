@@ -6,7 +6,7 @@
 
 关注 AI 编译器、Tile 级编程与异构计算。
 
-[看看我做的项目](https://tianxingren-work.github.io/zh/projects/) [打个招呼](https://tianxingren-work.github.io/zh/contact/)
+[看看我做的项目](https://tianxing-ren.netlify.app/zh/projects/) [打个招呼](https://tianxing-ren.netlify.app/zh/contact/)
 
 AI COMPILERS TILE-LEVEL PROGRAMMING HETEROGENEOUS COMPUTING
 
@@ -19,21 +19,21 @@ AI COMPILERS TILE-LEVEL PROGRAMMING HETEROGENEOUS COMPUTING
 01 / 项目负责人
 阶段性完成 [开源](https://github.com/TongmingLAIC/tilelang-tpu)
 
-### [TileLang-TPU](https://tianxingren-work.github.io/zh/projects/tilelang-tpu/)
+### [TileLang-TPU](https://tianxing-ren.netlify.app/zh/projects/tilelang-tpu/)
 
 面向算能 TPU 的 TileLang 后端，打通编译期内存规划、流水线优化与算子执行。
 
-[](https://tianxingren-work.github.io/zh/projects/tilelang-tpu/)
-[查看项目](https://tianxingren-work.github.io/zh/projects/tilelang-tpu/) [源代码](https://github.com/TongmingLAIC/tilelang-tpu)
+[](https://tianxing-ren.netlify.app/zh/projects/tilelang-tpu/)
+[查看项目](https://tianxing-ren.netlify.app/zh/projects/tilelang-tpu/) [源代码](https://github.com/TongmingLAIC/tilelang-tpu)
 
 02 / 项目负责人
 进行中
 
-### [TileLang-RISC-V](https://tianxingren-work.github.io/zh/projects/tilelang-riscv/)
+### [TileLang-RISC-V](https://tianxing-ren.netlify.app/zh/projects/tilelang-riscv/)
 
 将 TileLang 接入具有 AME 矩阵加速能力的 RISC-V CPU，与开源硬件和系统研究团队共同推进。
 
-[查看项目](https://tianxingren-work.github.io/zh/projects/tilelang-riscv/) RISC-V / AME
+[查看项目](https://tianxing-ren.netlify.app/zh/projects/tilelang-riscv/) RISC-V / AME
 
 我参与的开源项目
 
@@ -47,7 +47,7 @@ AI COMPILERS TILE-LEVEL PROGRAMMING HETEROGENEOUS COMPUTING
 
 我的导师是[谢涛](https://taoxiease.github.io/) 和[杨威](https://youngwei.com/) 。
 
-[进一步了解我](https://tianxingren-work.github.io/zh/about/)
+[进一步了解我](https://tianxing-ren.netlify.app/zh/about/)
 
 聊聊你在做的事情
 
@@ -55,4 +55,4 @@ AI COMPILERS TILE-LEVEL PROGRAMMING HETEROGENEOUS COMPUTING
 
 如果你在研究 AI 编译器、新兴 AI 硬件或相关系统问题，欢迎交流。可以聊聊你的想法、遇到的问题或正在做的工作。
 
-[联系我](https://tianxingren-work.github.io/zh/contact/) [GitHub ](https://github.com/LeslinD)
+[联系我](https://tianxing-ren.netlify.app/zh/contact/) [GitHub ](https://github.com/LeslinD)

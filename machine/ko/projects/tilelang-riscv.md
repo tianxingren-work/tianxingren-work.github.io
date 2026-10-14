@@ -1,4 +1,4 @@
-[프로젝트로 돌아가기](https://tianxingren-work.github.io/ko/projects/)
+[프로젝트로 돌아가기](https://tianxing-ren.netlify.app/ko/projects/)
 
 프로젝트 리드
 
@@ -8,7 +8,7 @@ TileLang과 RISC-V 행렬 가속의 만남.
 
 진행 중
 RISC-V AME AI CPUs
-[연락하기](https://tianxingren-work.github.io/ko/contact/)
+[연락하기](https://tianxing-ren.netlify.app/ko/contact/)
 
 개요
 
@@ -42,4 +42,4 @@ RISC-V AME AI CPUs
 
 ## 관련 문제를 연구하고 계신가요?
 
-[인사 나누기](https://tianxingren-work.github.io/ko/contact/)
+[인사 나누기](https://tianxing-ren.netlify.app/ko/contact/)

@@ -6,30 +6,30 @@ I research AI compilers so that diverse AI algorithms can run correctly and effi
 
 ## Profile and projects
 
-- [About](https://tianxingren-work.github.io/machine/en/about.md): education, advisors, internships, awards, and visits.
-- [TileLang-TPU](https://tianxingren-work.github.io/machine/en/projects/tilelang-tpu.md): project lead; stage milestone-complete; open source true.
-- [TileLang-RISC-V](https://tianxingren-work.github.io/machine/en/projects/tilelang-riscv.md): project lead; stage in-progress; open source false.
+- [About](https://tianxing-ren.netlify.app/machine/en/about.md): education, advisors, internships, awards, and visits.
+- [TileLang-TPU](https://tianxing-ren.netlify.app/machine/en/projects/tilelang-tpu.md): project lead; stage milestone-complete; open source true.
+- [TileLang-RISC-V](https://tianxing-ren.netlify.app/machine/en/projects/tilelang-riscv.md): project lead; stage in-progress; open source false.
 
 ## Complete profile
 
-- [Full profile in Markdown](https://tianxingren-work.github.io/llms-full.md)
-- [Full profile in JSON](https://tianxingren-work.github.io/data/agents.json)
-- [For agents](https://tianxingren-work.github.io/for-agents/)
+- [Full profile in Markdown](https://tianxing-ren.netlify.app/llms-full.md)
+- [Full profile in JSON](https://tianxing-ren.netlify.app/data/agents.json)
+- [For agents](https://tianxing-ren.netlify.app/for-agents/)
 
 ## Structured access
 
-- [Profile](https://tianxingren-work.github.io/data/profile.json)
-- [Projects and participation](https://tianxingren-work.github.io/data/projects.json)
-- [All page representations](https://tianxingren-work.github.io/data/routes.json)
-- [HTTP API description](https://tianxingren-work.github.io/openapi.json)
-- [Agent tool definitions](https://tianxingren-work.github.io/data/agent-tools.json)
+- [Profile](https://tianxing-ren.netlify.app/data/profile.json)
+- [Projects and participation](https://tianxing-ren.netlify.app/data/projects.json)
+- [All page representations](https://tianxing-ren.netlify.app/data/routes.json)
+- [HTTP API description](https://tianxing-ren.netlify.app/openapi.json)
+- [Agent tool definitions](https://tianxing-ren.netlify.app/data/agent-tools.json)
 
 ## Language versions
 
-- [English](https://tianxingren-work.github.io/machine/en/for-agents.md)
-- [中文](https://tianxingren-work.github.io/machine/zh/for-agents.md)
-- [한국어](https://tianxingren-work.github.io/machine/ko/for-agents.md)
-- [Bahasa Melayu](https://tianxingren-work.github.io/machine/ms/for-agents.md)
+- [English](https://tianxing-ren.netlify.app/machine/en/for-agents.md)
+- [中文](https://tianxing-ren.netlify.app/machine/zh/for-agents.md)
+- [한국어](https://tianxing-ren.netlify.app/machine/ko/for-agents.md)
+- [Bahasa Melayu](https://tianxing-ren.netlify.app/machine/ms/for-agents.md)
 
 ## Requesting a representation
 
@@ -39,4 +39,4 @@ The supplied HTTP server and Cloudflare Worker automatically serve Markdown to r
 
 Cite the original project page and preserve the hardware, baseline, and evaluation scope. Project stage and source availability are recorded separately. Project lead and contributor roles are specified in the project directory.
 
-For research collaboration, use the contact page at https://tianxingren-work.github.io/contact/ or the linked GitHub profiles.
+For research collaboration, use the contact page at https://tianxing-ren.netlify.app/contact/ or the linked GitHub profiles.

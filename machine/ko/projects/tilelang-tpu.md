@@ -1,4 +1,4 @@
-[프로젝트로 돌아가기](https://tianxingren-work.github.io/ko/projects/)
+[프로젝트로 돌아가기](https://tianxing-ren.netlify.app/ko/projects/)
 
 프로젝트 리드
 
@@ -8,7 +8,7 @@
 
 주요 단계 완료 [오픈 소스](https://github.com/TongmingLAIC/tilelang-tpu)
 TileLang SOPHGO TPU Compiler backends
-[소스 코드](https://github.com/TongmingLAIC/tilelang-tpu) [연락하기](https://tianxingren-work.github.io/ko/contact/)
+[소스 코드](https://github.com/TongmingLAIC/tilelang-tpu) [연락하기](https://tianxing-ren.netlify.app/ko/contact/)
 
 실제 하드웨어 평가 결과
 
@@ -44,7 +44,7 @@ Ubuntu 24.04 LTS · PPL SDK 1.4.195 · TPU driver 1.9.1
 
 TileLang-TPU는 상용 SOPHGO 가속기에 타일 단위 프로그래밍을 적용합니다. TileLang 프로그래밍 모델을 유지하면서 온칩 메모리 배치, 데이터 이동, 전송과 연산의 중첩을 컴파일러가 처리합니다. 컴파일러와 JIT 런타임은 Python 커널 정의부터 BM1690 실행까지의 전체 과정을 지원합니다.
 
-[](https://tianxingren-work.github.io/assets/tilelang-tpu-overview.png)
+[](https://tianxing-ren.netlify.app/assets/tilelang-tpu-overview.png)
 컴파일 개요. 재사용한 TileLang 프런트엔드에서 TPU 전용 메모리 할당, 파이프라인 변환, 백엔드 매핑으로 이어지며, JIT 런타임이 생성된 커널을 빌드하고 실행합니다.
 
 ## 컴파일러 내부
@@ -73,4 +73,4 @@ TPU 커널 API 호출을 생성하고 호스트·디바이스 컴파일, 링크,
 
 ## 관련 문제를 연구하고 계신가요?
 
-[인사 나누기](https://tianxingren-work.github.io/ko/contact/)
+[인사 나누기](https://tianxing-ren.netlify.app/ko/contact/)

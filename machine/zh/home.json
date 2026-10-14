@@ -4,20 +4,20 @@
   "kind": "page",
   "language": "zh",
   "title": "AI Compilers & Systems · Tianxing Ren",
-  "url": "https://tianxingren-work.github.io/zh/",
-  "markdown_url": "https://tianxingren-work.github.io/machine/zh/home.md",
-  "content_markdown": "北京大学 · 工程博士研究生\n\n# 新的硬件。 更好的代码。\n\n你好，我是**任天行**。我研究AI编译器，希望能让各种AI算法正确和高效地运行在新兴AI硬件上，让人和Agent更容易地编程。\n\n关注 AI 编译器、Tile 级编程与异构计算。\n\n[看看我做的项目](https://tianxingren-work.github.io/zh/projects/) [打个招呼](https://tianxingren-work.github.io/zh/contact/)\n\nAI COMPILERS TILE-LEVEL PROGRAMMING HETEROGENEOUS COMPUTING\n\n01 / 主导项目\n\n## 把想法， 做成系统。\n\n我主导的项目将 Tile 级编程带到新兴 AI 硬件上。\n\n01 / 项目负责人\n阶段性完成 [开源](https://github.com/TongmingLAIC/tilelang-tpu)\n\n### [TileLang-TPU](https://tianxingren-work.github.io/zh/projects/tilelang-tpu/)\n\n面向算能 TPU 的 TileLang 后端，打通编译期内存规划、流水线优化与算子执行。\n\n[](https://tianxingren-work.github.io/zh/projects/tilelang-tpu/)\n[查看项目](https://tianxingren-work.github.io/zh/projects/tilelang-tpu/) [源代码](https://github.com/TongmingLAIC/tilelang-tpu)\n\n02 / 项目负责人\n进行中\n\n### [TileLang-RISC-V](https://tianxingren-work.github.io/zh/projects/tilelang-riscv/)\n\n将 TileLang 接入具有 AME 矩阵加速能力的 RISC-V CPU，与开源硬件和系统研究团队共同推进。\n\n[查看项目](https://tianxingren-work.github.io/zh/projects/tilelang-riscv/) RISC-V / AME\n\n我参与的开源项目\n\n[**TileLang**](https://github.com/tile-ai/tilelang) [**Asterinas**](https://github.com/asterinas/asterinas)\n\n02 / 关于我\n\n## 带着好奇心， 把事情做出来。\n\n我在北京大学攻读工程博士，与中关村实验室联合培养。我研究 AI 编译器、Tile 级编程与异构计算，也关注相关的编程语言和计算机体系结构问题。\n\n我的导师是[谢涛](https://taoxiease.github.io/) 和[杨威](https://youngwei.com/) 。\n\n[进一步了解我](https://tianxingren-work.github.io/zh/about/)\n\n聊聊你在做的事情\n\n## 好的系统， 从一次交流开始。\n\n如果你在研究 AI 编译器、新兴 AI 硬件或相关系统问题，欢迎交流。可以聊聊你的想法、遇到的问题或正在做的工作。\n\n[联系我](https://tianxingren-work.github.io/zh/contact/) [GitHub ](https://github.com/LeslinD)\n",
+  "url": "https://tianxing-ren.netlify.app/zh/",
+  "markdown_url": "https://tianxing-ren.netlify.app/machine/zh/home.md",
+  "content_markdown": "北京大学 · 工程博士研究生\n\n# 新的硬件。 更好的代码。\n\n你好，我是**任天行**。我研究AI编译器，希望能让各种AI算法正确和高效地运行在新兴AI硬件上，让人和Agent更容易地编程。\n\n关注 AI 编译器、Tile 级编程与异构计算。\n\n[看看我做的项目](https://tianxing-ren.netlify.app/zh/projects/) [打个招呼](https://tianxing-ren.netlify.app/zh/contact/)\n\nAI COMPILERS TILE-LEVEL PROGRAMMING HETEROGENEOUS COMPUTING\n\n01 / 主导项目\n\n## 把想法， 做成系统。\n\n我主导的项目将 Tile 级编程带到新兴 AI 硬件上。\n\n01 / 项目负责人\n阶段性完成 [开源](https://github.com/TongmingLAIC/tilelang-tpu)\n\n### [TileLang-TPU](https://tianxing-ren.netlify.app/zh/projects/tilelang-tpu/)\n\n面向算能 TPU 的 TileLang 后端，打通编译期内存规划、流水线优化与算子执行。\n\n[](https://tianxing-ren.netlify.app/zh/projects/tilelang-tpu/)\n[查看项目](https://tianxing-ren.netlify.app/zh/projects/tilelang-tpu/) [源代码](https://github.com/TongmingLAIC/tilelang-tpu)\n\n02 / 项目负责人\n进行中\n\n### [TileLang-RISC-V](https://tianxing-ren.netlify.app/zh/projects/tilelang-riscv/)\n\n将 TileLang 接入具有 AME 矩阵加速能力的 RISC-V CPU，与开源硬件和系统研究团队共同推进。\n\n[查看项目](https://tianxing-ren.netlify.app/zh/projects/tilelang-riscv/) RISC-V / AME\n\n我参与的开源项目\n\n[**TileLang**](https://github.com/tile-ai/tilelang) [**Asterinas**](https://github.com/asterinas/asterinas)\n\n02 / 关于我\n\n## 带着好奇心， 把事情做出来。\n\n我在北京大学攻读工程博士，与中关村实验室联合培养。我研究 AI 编译器、Tile 级编程与异构计算，也关注相关的编程语言和计算机体系结构问题。\n\n我的导师是[谢涛](https://taoxiease.github.io/) 和[杨威](https://youngwei.com/) 。\n\n[进一步了解我](https://tianxing-ren.netlify.app/zh/about/)\n\n聊聊你在做的事情\n\n## 好的系统， 从一次交流开始。\n\n如果你在研究 AI 编译器、新兴 AI 硬件或相关系统问题，欢迎交流。可以聊聊你的想法、遇到的问题或正在做的工作。\n\n[联系我](https://tianxing-ren.netlify.app/zh/contact/) [GitHub ](https://github.com/LeslinD)\n",
   "links": [
-    "https://tianxingren-work.github.io/zh/projects/",
-    "https://tianxingren-work.github.io/zh/contact/",
+    "https://tianxing-ren.netlify.app/zh/projects/",
+    "https://tianxing-ren.netlify.app/zh/contact/",
     "https://github.com/TongmingLAIC/tilelang-tpu",
-    "https://tianxingren-work.github.io/zh/projects/tilelang-tpu/",
-    "https://tianxingren-work.github.io/zh/projects/tilelang-riscv/",
+    "https://tianxing-ren.netlify.app/zh/projects/tilelang-tpu/",
+    "https://tianxing-ren.netlify.app/zh/projects/tilelang-riscv/",
     "https://github.com/tile-ai/tilelang",
     "https://github.com/asterinas/asterinas",
     "https://taoxiease.github.io/",
     "https://youngwei.com/",
-    "https://tianxingren-work.github.io/zh/about/",
+    "https://tianxing-ren.netlify.app/zh/about/",
     "https://github.com/LeslinD"
   ]
 }

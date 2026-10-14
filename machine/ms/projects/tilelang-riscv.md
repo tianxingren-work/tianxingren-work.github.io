@@ -1,4 +1,4 @@
-[Kembali ke projek](https://tianxingren-work.github.io/ms/projects/)
+[Kembali ke projek](https://tianxing-ren.netlify.app/ms/projects/)
 
 Peneraju projek
 
@@ -8,7 +8,7 @@ TileLang bertemu pecutan matriks RISC-V.
 
 Sedang berjalan
 RISC-V AME AI CPUs
-[Hubungi saya](https://tianxingren-work.github.io/ms/contact/)
+[Hubungi saya](https://tianxing-ren.netlify.app/ms/contact/)
 
 Gambaran keseluruhan
 
@@ -42,4 +42,4 @@ Menguji ketepatan dan prestasi operator merentas konfigurasi sasaran, kemudian m
 
 ## Mengkaji masalah yang berkaitan?
 
-[Sapa saya](https://tianxingren-work.github.io/ms/contact/)
+[Sapa saya](https://tianxing-ren.netlify.app/ms/contact/)

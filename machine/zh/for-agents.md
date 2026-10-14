@@ -14,7 +14,7 @@
 
 ## 我主导的项目
 
-### [TileLang-TPU](https://tianxingren-work.github.io/zh/projects/tilelang-tpu/)
+### [TileLang-TPU](https://tianxing-ren.netlify.app/zh/projects/tilelang-tpu/)
 
 项目负责人
 
@@ -43,7 +43,7 @@ TileLang-TPU 将 Tile 级编程带到商用算能加速器。在保留 TileLang 
 
 - **后端映射与运行时** 生成 TPU 算子 API 调用，连接设备端与主机端编译、链接、加载及启动。
 
-### [TileLang-RISC-V](https://tianxingren-work.github.io/zh/projects/tilelang-riscv/)
+### [TileLang-RISC-V](https://tianxing-ren.netlify.app/zh/projects/tilelang-riscv/)
 
 项目负责人
 
@@ -169,20 +169,24 @@ AI 系统软件栈研发实习生
 
 ## 供 AI 工具调用
 
-可通过下方链接直接读取 Markdown 和 JSON。支持 WebMCP 的浏览器还提供资料读取、项目列表和主题匹配工具，结果包含公开来源。
+可以通过 MCP 读取个人与项目资料，也可以提交一个主题，获取相关项目、来源链接和评测范围。
 
-[工具定义](https://tianxingren-work.github.io/data/agent-tools.json)
+[工具定义](https://tianxing-ren.netlify.app/data/agent-tools.json)
 
 ```text
-GET /machine/zh/for-agents.json
-GET /data/projects.json
+POST https://tianxing-ren.netlify.app/api/agent/query
+Content-Type: application/json
+
+{"topic":"RISC-V AME","language":"zh"}
+
+POST https://tianxing-ren.netlify.app/api/mcp
 ```
 
 ## 联系
 
 如需研究交流与合作，可以通过联系页面或 GitHub 联系任天行。
 
-- [联系我](https://tianxingren-work.github.io/zh/contact/)
+- [联系我](https://tianxing-ren.netlify.app/zh/contact/)
 
 - [GitHub / LeslinD](https://github.com/LeslinD)
 
@@ -190,37 +194,39 @@ GET /data/projects.json
 
 ## 直接读取资料
 
-- [`/llms.txt`](https://tianxingren-work.github.io/llms.txt)
+- [`/llms.txt`](https://tianxing-ren.netlify.app/llms.txt)
 
-- [`/llms-full.md`](https://tianxingren-work.github.io/llms-full.md)
+- [`/llms-full.md`](https://tianxing-ren.netlify.app/llms-full.md)
 
-- [`/data/agents.json`](https://tianxingren-work.github.io/data/agents.json)
+- [`/data/agents.json`](https://tianxing-ren.netlify.app/data/agents.json)
 
-- [`/data/profile.json`](https://tianxingren-work.github.io/data/profile.json)
+- [`/data/profile.json`](https://tianxing-ren.netlify.app/data/profile.json)
 
-- [`/data/projects.json`](https://tianxingren-work.github.io/data/projects.json)
+- [`/data/projects.json`](https://tianxing-ren.netlify.app/data/projects.json)
 
-- [`/data/routes.json`](https://tianxingren-work.github.io/data/routes.json)
+- [`/data/routes.json`](https://tianxing-ren.netlify.app/data/routes.json)
 
-- [`/data/agent-tools.json`](https://tianxingren-work.github.io/data/agent-tools.json)
+- [`/data/agent-tools.json`](https://tianxing-ren.netlify.app/data/agent-tools.json)
 
-- [`/openapi.json`](https://tianxingren-work.github.io/openapi.json)
+- [`/openapi.json`](https://tianxing-ren.netlify.app/openapi.json)
 
-- [`/machine/zh/for-agents.md`](https://tianxingren-work.github.io/machine/zh/for-agents.md)
+- [`/machine/zh/for-agents.md`](https://tianxing-ren.netlify.app/machine/zh/for-agents.md)
 
-- [`/machine/zh/for-agents.json`](https://tianxingren-work.github.io/machine/zh/for-agents.json)
+- [`/machine/zh/for-agents.json`](https://tianxing-ren.netlify.app/machine/zh/for-agents.json)
 
-- [`/machine/zh/about.md`](https://tianxingren-work.github.io/machine/zh/about.md)
+- [`/machine/zh/about.md`](https://tianxing-ren.netlify.app/machine/zh/about.md)
 
-- [`/machine/zh/projects/tilelang-tpu.md`](https://tianxingren-work.github.io/machine/zh/projects/tilelang-tpu.md)
+- [`/machine/zh/projects/tilelang-tpu.md`](https://tianxing-ren.netlify.app/machine/zh/projects/tilelang-tpu.md)
 
-- [`/machine/zh/projects/tilelang-riscv.md`](https://tianxingren-work.github.io/machine/zh/projects/tilelang-riscv.md)
+- [`/machine/zh/projects/tilelang-riscv.md`](https://tianxing-ren.netlify.app/machine/zh/projects/tilelang-riscv.md)
 
-各页面均提供 Markdown 和 JSON 版本。下方文件链接可直接读取完整资料和来源。
+可识别的 AI 工具请求会自动收到 Markdown。访问首页时返回本页的完整资料，访问其他页面时返回对应内容。也可以通过 ?format=markdown、?format=json、?format=html 或 Accept 请求头指定格式，或直接读取上方文件。
 
 ```text
-GET /machine/zh/for-agents.md
-GET /machine/zh/for-agents.json
+GET /for-agents/?format=markdown
+GET /api/agents
+GET /api/profile
+GET /api/projects
 ```
 
 可用语言版本为 en、zh、ko 和 ms。

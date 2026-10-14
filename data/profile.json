@@ -167,12 +167,12 @@
     }
   ],
   "contact": {
-    "url": "https://tianxingren-work.github.io/contact/",
+    "url": "https://tianxing-ren.netlify.app/contact/",
     "interaction": "human-initiated",
     "github": "https://github.com/LeslinD",
     "github_work": "https://github.com/tianxingren-work"
   },
-  "url": "https://tianxingren-work.github.io/about/",
+  "url": "https://tianxing-ren.netlify.app/about/",
   "site_languages": [
     "en",
     "zh",

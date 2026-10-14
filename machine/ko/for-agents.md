@@ -14,7 +14,7 @@ AI 컴파일러, 타일 단위 프로그래밍, 이종 컴퓨팅을 연구합니
 
 ## 제가 주도하는 프로젝트
 
-### [TileLang-TPU](https://tianxingren-work.github.io/ko/projects/tilelang-tpu/)
+### [TileLang-TPU](https://tianxing-ren.netlify.app/ko/projects/tilelang-tpu/)
 
 프로젝트 리드
 
@@ -43,7 +43,7 @@ SOPHGO BM1690 카드 한 장에서 커널 5종, 입력 형태 5종, 자료형 3�
 
 - **백엔드 매핑과 런타임** TPU 커널 API 호출을 생성하고 호스트·디바이스 컴파일, 링크, 로딩, 실행으로 연결합니다.
 
-### [TileLang-RISC-V](https://tianxingren-work.github.io/ko/projects/tilelang-riscv/)
+### [TileLang-RISC-V](https://tianxing-ren.netlify.app/ko/projects/tilelang-riscv/)
 
 프로젝트 리드
 
@@ -169,20 +169,24 @@ AI 시스템 소프트웨어 개발 인턴
 
 ## AI 도구 호출
 
-아래 링크에서 Markdown과 JSON을 직접 읽을 수 있습니다. WebMCP를 지원하는 브라우저에서는 프로필 읽기, 프로젝트 목록 및 주제에 관련된 작업을 찾는 도구도 제공하며 공개 출처를 포함합니다.
+MCP로 프로필과 프로젝트를 읽거나 주제를 제출하여 관련 작업, 출처 및 평가 범위를 받을 수 있습니다.
 
-[도구 정의](https://tianxingren-work.github.io/data/agent-tools.json)
+[도구 정의](https://tianxing-ren.netlify.app/data/agent-tools.json)
 
 ```text
-GET /machine/ko/for-agents.json
-GET /data/projects.json
+POST https://tianxing-ren.netlify.app/api/agent/query
+Content-Type: application/json
+
+{"topic":"RISC-V AME","language":"ko"}
+
+POST https://tianxing-ren.netlify.app/api/mcp
 ```
 
 ## 연락
 
 연구 교류와 협업에 관심이 있다면 연락 페이지 또는 GitHub를 통해 Tianxing Ren에게 연락할 수 있습니다.
 
-- [연락하기](https://tianxingren-work.github.io/ko/contact/)
+- [연락하기](https://tianxing-ren.netlify.app/ko/contact/)
 
 - [GitHub / LeslinD](https://github.com/LeslinD)
 
@@ -190,37 +194,39 @@ GET /data/projects.json
 
 ## 자료 직접 읽기
 
-- [`/llms.txt`](https://tianxingren-work.github.io/llms.txt)
+- [`/llms.txt`](https://tianxing-ren.netlify.app/llms.txt)
 
-- [`/llms-full.md`](https://tianxingren-work.github.io/llms-full.md)
+- [`/llms-full.md`](https://tianxing-ren.netlify.app/llms-full.md)
 
-- [`/data/agents.json`](https://tianxingren-work.github.io/data/agents.json)
+- [`/data/agents.json`](https://tianxing-ren.netlify.app/data/agents.json)
 
-- [`/data/profile.json`](https://tianxingren-work.github.io/data/profile.json)
+- [`/data/profile.json`](https://tianxing-ren.netlify.app/data/profile.json)
 
-- [`/data/projects.json`](https://tianxingren-work.github.io/data/projects.json)
+- [`/data/projects.json`](https://tianxing-ren.netlify.app/data/projects.json)
 
-- [`/data/routes.json`](https://tianxingren-work.github.io/data/routes.json)
+- [`/data/routes.json`](https://tianxing-ren.netlify.app/data/routes.json)
 
-- [`/data/agent-tools.json`](https://tianxingren-work.github.io/data/agent-tools.json)
+- [`/data/agent-tools.json`](https://tianxing-ren.netlify.app/data/agent-tools.json)
 
-- [`/openapi.json`](https://tianxingren-work.github.io/openapi.json)
+- [`/openapi.json`](https://tianxing-ren.netlify.app/openapi.json)
 
-- [`/machine/ko/for-agents.md`](https://tianxingren-work.github.io/machine/ko/for-agents.md)
+- [`/machine/ko/for-agents.md`](https://tianxing-ren.netlify.app/machine/ko/for-agents.md)
 
-- [`/machine/ko/for-agents.json`](https://tianxingren-work.github.io/machine/ko/for-agents.json)
+- [`/machine/ko/for-agents.json`](https://tianxing-ren.netlify.app/machine/ko/for-agents.json)
 
-- [`/machine/ko/about.md`](https://tianxingren-work.github.io/machine/ko/about.md)
+- [`/machine/ko/about.md`](https://tianxing-ren.netlify.app/machine/ko/about.md)
 
-- [`/machine/ko/projects/tilelang-tpu.md`](https://tianxingren-work.github.io/machine/ko/projects/tilelang-tpu.md)
+- [`/machine/ko/projects/tilelang-tpu.md`](https://tianxing-ren.netlify.app/machine/ko/projects/tilelang-tpu.md)
 
-- [`/machine/ko/projects/tilelang-riscv.md`](https://tianxingren-work.github.io/machine/ko/projects/tilelang-riscv.md)
+- [`/machine/ko/projects/tilelang-riscv.md`](https://tianxing-ren.netlify.app/machine/ko/projects/tilelang-riscv.md)
 
-각 페이지는 Markdown과 JSON 버전을 제공합니다. 아래 파일 링크로 전체 프로필과 출처를 직접 읽을 수 있습니다.
+식별 가능한 AI 도구 요청에는 Markdown이 자동으로 제공됩니다. 홈페이지 요청에는 이 페이지의 전체 프로필을, 다른 페이지 요청에는 해당 내용을 반환합니다. ?format=markdown, ?format=json, ?format=html 또는 Accept 헤더로 형식을 지정하거나 위의 파일 링크를 직접 읽을 수 있습니다.
 
 ```text
-GET /machine/ko/for-agents.md
-GET /machine/ko/for-agents.json
+GET /for-agents/?format=markdown
+GET /api/agents
+GET /api/profile
+GET /api/projects
 ```
 
 언어 코드는 en, zh, ko, ms입니다.

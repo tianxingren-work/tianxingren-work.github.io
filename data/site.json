@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "name": "Tianxing Ren",
   "type": "public-profile-project-index",
-  "base_url": "https://tianxingren-work.github.io",
+  "base_url": "https://tianxing-ren.netlify.app",
   "default_language": "en",
   "languages": [
     "en",
@@ -10,17 +10,26 @@
     "ko",
     "ms"
   ],
-  "profile": "https://tianxingren-work.github.io/data/profile.json",
-  "projects": "https://tianxingren-work.github.io/data/projects.json",
-  "agents": "https://tianxingren-work.github.io/data/agents.json",
-  "full_profile_markdown": "https://tianxingren-work.github.io/llms-full.md",
-  "agent_tools": "https://tianxingren-work.github.io/data/agent-tools.json",
-  "routes": "https://tianxingren-work.github.io/data/routes.json",
-  "openapi": "https://tianxingren-work.github.io/openapi.json",
-  "contact": "https://tianxingren-work.github.io/contact/",
-  "agent_access": {
-    "markdown": "https://tianxingren-work.github.io/llms-full.md",
-    "json": "https://tianxingren-work.github.io/data/agents.json",
-    "browser_tools": "WebMCP when supported by the browser"
-  }
+  "profile": "https://tianxing-ren.netlify.app/data/profile.json",
+  "projects": "https://tianxing-ren.netlify.app/data/projects.json",
+  "agents": "https://tianxing-ren.netlify.app/data/agents.json",
+  "full_profile_markdown": "https://tianxing-ren.netlify.app/llms-full.md",
+  "agent_tools": "https://tianxing-ren.netlify.app/data/agent-tools.json",
+  "mcp": "https://tianxing-ren.netlify.app/api/mcp",
+  "routes": "https://tianxing-ren.netlify.app/data/routes.json",
+  "openapi": "https://tianxing-ren.netlify.app/openapi.json",
+  "content_negotiation": {
+    "html": "text/html",
+    "markdown": "text/markdown",
+    "json": "application/json"
+  },
+  "automatic_agent_access": {
+    "default_format": "markdown",
+    "homepage_content": "complete agent profile",
+    "other_pages": "requested page content",
+    "override": "format query parameter, then an explicit Accept media type",
+    "origin": "https://tianxing-ren.netlify.app"
+  },
+  "contact": "https://tianxing-ren.netlify.app/contact/",
+  "runtime_origin": "https://tianxing-ren.netlify.app"
 }

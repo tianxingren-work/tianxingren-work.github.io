@@ -4,7 +4,7 @@ Tentang / TIANXING REN
 
 Saya menyelidik pengkompil AI agar pelbagai algoritma AI dapat berjalan dengan betul dan cekap pada perkakasan AI baharu. Saya ingin memudahkan pengaturcaraan untuk manusia dan ejen.
 
-[Sapa saya](https://tianxingren-work.github.io/ms/contact/) [GitHub ](https://github.com/LeslinD)
+[Sapa saya](https://tianxing-ren.netlify.app/ms/contact/) [GitHub ](https://github.com/LeslinD)
 
 Saya mengikuti pengajian Doktor Kejuruteraan di Universiti Peking melalui program bersama Makmal Zhongguancun. Saya menyelidik pengkompil AI, pengaturcaraan peringkat tile dan pengkomputeran heterogen, serta berminat dengan bahasa pengaturcaraan dan seni bina komputer yang berkaitan.
 
@@ -110,4 +110,4 @@ MARI BERTUKAR PANDANGAN
 
 Jika anda menyelidik pengkompil AI, perkakasan AI baharu atau persoalan sistem yang berkaitan, saya berbesar hati untuk bertukar pandangan. Kongsikan idea, soalan atau kerja yang sedang anda lakukan.
 
-[Hubungi saya](https://tianxingren-work.github.io/ms/contact/) [GitHub ](https://github.com/LeslinD)
+[Hubungi saya](https://tianxing-ren.netlify.app/ms/contact/) [GitHub ](https://github.com/LeslinD)

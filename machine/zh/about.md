@@ -4,7 +4,7 @@
 
 我研究 AI 编译器，希望能让各种 AI 算法正确和高效地运行在新兴 AI 硬件上，让人和 Agent 更容易地编程。
 
-[打个招呼](https://tianxingren-work.github.io/zh/contact/) [GitHub ](https://github.com/LeslinD)
+[打个招呼](https://tianxing-ren.netlify.app/zh/contact/) [GitHub ](https://github.com/LeslinD)
 
 我在北京大学攻读工程博士，与中关村实验室联合培养。我研究 AI 编译器、Tile 级编程与异构计算，也关注相关的编程语言和计算机体系结构问题。
 
@@ -110,4 +110,4 @@ AI 系统软件栈研发实习生
 
 如果你在研究 AI 编译器、新兴 AI 硬件或相关系统问题，欢迎交流。可以聊聊你的想法、遇到的问题或正在做的工作。
 
-[联系我](https://tianxingren-work.github.io/zh/contact/) [GitHub ](https://github.com/LeslinD)
+[联系我](https://tianxing-ren.netlify.app/zh/contact/) [GitHub ](https://github.com/LeslinD)

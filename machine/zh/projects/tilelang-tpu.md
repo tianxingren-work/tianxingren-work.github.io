@@ -1,4 +1,4 @@
-[返回项目](https://tianxingren-work.github.io/zh/projects/)
+[返回项目](https://tianxing-ren.netlify.app/zh/projects/)
 
 项目负责人
 
@@ -8,7 +8,7 @@
 
 阶段性完成 [开源](https://github.com/TongmingLAIC/tilelang-tpu)
 TileLang SOPHGO TPU Compiler backends
-[源代码](https://github.com/TongmingLAIC/tilelang-tpu) [联系我](https://tianxingren-work.github.io/zh/contact/)
+[源代码](https://github.com/TongmingLAIC/tilelang-tpu) [联系我](https://tianxing-ren.netlify.app/zh/contact/)
 
 真实硬件上的效果
 
@@ -44,7 +44,7 @@ Ubuntu 24.04 LTS · PPL SDK 1.4.195 · TPU driver 1.9.1
 
 TileLang-TPU 将 Tile 级编程带到商用算能加速器。在保留 TileLang 编程模型的同时，由编译器处理片上内存布局、数据搬运和搬运与计算的重叠。编译器与 JIT 运行时共同打通从 Python 算子定义到 BM1690 执行的完整流程。
 
-[](https://tianxingren-work.github.io/assets/tilelang-tpu-overview.png)
+[](https://tianxing-ren.netlify.app/assets/tilelang-tpu-overview.png)
 编译流程总览。复用的 TileLang 前端输出经 TPU 专用内存分配、流水线转换和后端映射处理，再由 JIT 运行时编译并启动生成的算子。
 
 ## 编译器设计
@@ -73,4 +73,4 @@ TileLang-TPU 将 Tile 级编程带到商用算能加速器。在保留 TileLang 
 
 ## 你也在研究相关问题吗？
 
-[打个招呼](https://tianxingren-work.github.io/zh/contact/)
+[打个招呼](https://tianxing-ren.netlify.app/zh/contact/)

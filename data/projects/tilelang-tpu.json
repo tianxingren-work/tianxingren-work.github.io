@@ -21,8 +21,8 @@
       "description": "Generate TPU kernel API calls and connect the output to host/device compilation, linking, loading, and launch."
     }
   ],
-  "url": "https://tianxingren-work.github.io/projects/tilelang-tpu/",
-  "markdown": "https://tianxingren-work.github.io/machine/en/projects/tilelang-tpu.md",
+  "url": "https://tianxing-ren.netlify.app/projects/tilelang-tpu/",
+  "markdown": "https://tianxing-ren.netlify.app/machine/en/projects/tilelang-tpu.md",
   "repository": "https://github.com/TongmingLAIC/tilelang-tpu",
   "evaluation": {
     "study_id": "bm1690-five-kernel-study",
