@@ -1,14 +1,12 @@
-About / TIANXING REN
-
-# A little about the person.
-
-I research AI compilers so that diverse AI algorithms can run correctly and efficiently on emerging AI hardware. I aim to make programming easier for people and agents.
-
-[Say hello](https://tianxing-ren.netlify.app/contact/) [GitHub ](https://github.com/LeslinD)
+# About me
 
 I’m a Doctor of Engineering student at Peking University, jointly trained with Zhongguancun Laboratory. I research AI compilers, tile-level programming, and heterogeneous computing, with an interest in programming languages and computer architecture.
 
+I research AI compilers so that diverse AI algorithms can run correctly and efficiently on emerging AI hardware. I aim to make programming easier for people and agents.
+
 My advisors are [Tao Xie](https://taoxiease.github.io/) and [Wei Yang](https://youngwei.com/) .
+
+[Get in touch](https://tianxing-ren.netlify.app/contact/) [GitHub ](https://github.com/LeslinD)
 
 ## Education
 

@@ -41,7 +41,7 @@ AI COMPILERS TILE-LEVEL PROGRAMMING HETEROGENEOUS COMPUTING
 
 02 / 关于我
 
-## 带着好奇心， 把事情做出来。
+## 带着好奇心， 构建真实可靠的系统。
 
 我在北京大学攻读工程博士，与中关村实验室联合培养。我研究 AI 编译器、Tile 级编程与异构计算，也关注相关的编程语言和计算机体系结构问题。
 

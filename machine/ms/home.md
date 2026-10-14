@@ -39,9 +39,9 @@ Projek sumber terbuka yang saya sertai
 
 [**TileLang**](https://github.com/tile-ai/tilelang) [**Asterinas**](https://github.com/asterinas/asterinas)
 
-02 / DI SEBALIK PROJEK
+02 / TENTANG SAYA
 
-## Meneroka idea. Membina dengan teliti.
+## Bermula dengan rasa ingin tahu, membina sistem yang boleh diharap.
 
 Saya mengikuti pengajian Doktor Kejuruteraan di Universiti Peking melalui program bersama Makmal Zhongguancun. Saya menyelidik pengkompil AI, pengaturcaraan peringkat tile dan pengkomputeran heterogen, serta berminat dengan bahasa pengaturcaraan dan seni bina komputer yang berkaitan.
 

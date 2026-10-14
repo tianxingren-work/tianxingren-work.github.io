@@ -1,14 +1,12 @@
-소개 / TIANXING REN
-
-# 프로젝트 뒤의 저를 소개합니다.
-
-다양한 AI 알고리즘이 새로운 AI 하드웨어에서 정확하고 효율적으로 실행되도록 AI 컴파일러를 연구합니다. 사람과 에이전트가 더 쉽게 프로그래밍할 수 있도록 돕고자 합니다.
-
-[연락하기](https://tianxing-ren.netlify.app/ko/contact/) [GitHub ](https://github.com/LeslinD)
+# 소개
 
 베이징대학교와 중관춘 연구소의 공동 공학 박사과정에 재학 중입니다. AI 컴파일러, 타일 단위 프로그래밍, 이종 컴퓨팅을 연구하며 관련 프로그래밍 언어와 컴퓨터 구조 문제에 관심이 있습니다.
 
+다양한 AI 알고리즘이 새로운 AI 하드웨어에서 정확하고 효율적으로 실행되도록 AI 컴파일러를 연구합니다. 사람과 에이전트가 더 쉽게 프로그래밍할 수 있도록 돕고자 합니다.
+
 제 지도교수는 [Tao Xie](https://taoxiease.github.io/) 및 [Wei Yang](https://youngwei.com/) 입니다.
+
+[연락하기](https://tianxing-ren.netlify.app/ko/contact/) [GitHub ](https://github.com/LeslinD)
 
 ## 학력
 

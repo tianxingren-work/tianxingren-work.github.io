@@ -39,9 +39,9 @@ AME 행렬 가속을 제공하는 RISC-V CPU에 TileLang을 이식합니다. 오
 
 [**TileLang**](https://github.com/tile-ai/tilelang) [**Asterinas**](https://github.com/asterinas/asterinas)
 
-02 / 프로젝트를 만드는 사람
+02 / 소개
 
-## 아이디어에 호기심을, 구현에 정성을.
+## 호기심을 바탕으로 신뢰할 수 있는 시스템을 만듭니다.
 
 베이징대학교와 중관춘 연구소의 공동 공학 박사과정에 재학 중입니다. AI 컴파일러, 타일 단위 프로그래밍, 이종 컴퓨팅을 연구하며 관련 프로그래밍 언어와 컴퓨터 구조 문제에 관심이 있습니다.
 

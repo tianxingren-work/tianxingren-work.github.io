@@ -1,14 +1,12 @@
-关于我 / TIANXING REN
-
-# 认识一下， 项目背后的我。
-
-我研究 AI 编译器，希望能让各种 AI 算法正确和高效地运行在新兴 AI 硬件上，让人和 Agent 更容易地编程。
-
-[打个招呼](https://tianxing-ren.netlify.app/zh/contact/) [GitHub ](https://github.com/LeslinD)
+# 关于我
 
 我在北京大学攻读工程博士，与中关村实验室联合培养。我研究 AI 编译器、Tile 级编程与异构计算，也关注相关的编程语言和计算机体系结构问题。
 
+我研究 AI 编译器，希望能让各种 AI 算法正确和高效地运行在新兴 AI 硬件上，让人和 Agent 更容易地编程。
+
 我的导师是[谢涛](https://taoxiease.github.io/) 和[杨威](https://youngwei.com/) 。
+
+[联系我](https://tianxing-ren.netlify.app/zh/contact/) [GitHub ](https://github.com/LeslinD)
 
 ## 教育经历
 

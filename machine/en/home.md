@@ -39,9 +39,9 @@ I also contribute to these open-source projects
 
 [**TileLang**](https://github.com/tile-ai/tilelang) [**Asterinas**](https://github.com/asterinas/asterinas)
 
-02 / THE PERSON BEHIND THE PROJECTS
+02 / ABOUT ME
 
-## Curious about ideas. Serious about building.
+## Driven by curiosity, I build reliable systems.
 
 I’m a Doctor of Engineering student at Peking University, jointly trained with Zhongguancun Laboratory. I research AI compilers, tile-level programming, and heterogeneous computing, with an interest in programming languages and computer architecture.
 
