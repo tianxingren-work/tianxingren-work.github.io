@@ -86,6 +86,30 @@
         "destructiveHint": false,
         "openWorldHint": false
       }
+    },
+    {
+      "name": "get_contact",
+      "description": "Read Tianxing Ren’s public contact channels, including readable email text, contact-page URL and GitHub profiles.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "language": {
+            "type": "string",
+            "enum": [
+              "en",
+              "zh",
+              "ko",
+              "ms"
+            ]
+          }
+        },
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
     }
   ]
 }

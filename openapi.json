@@ -125,6 +125,24 @@
         }
       }
     },
+    "/api/contact": {
+      "get": {
+        "operationId": "getContact",
+        "summary": "Read public contact channels and email text",
+        "responses": {
+          "200": {
+            "description": "Contact channels",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/agent/query": {
       "post": {
         "operationId": "findRelevantWork",
@@ -451,14 +469,17 @@
           },
           "contact": {
             "type": "object",
-            "description": "Contact-page URL and public GitHub profiles. No email address.",
+            "description": "Contact-page URL, public GitHub profiles and readable email text.",
             "properties": {
               "url": {
                 "type": "string",
                 "format": "uri-reference"
               },
+              "email_text": {
+                "type": "string"
+              },
               "interaction": {
-                "const": "human-initiated"
+                "const": "visitor-initiated"
               }
             }
           }

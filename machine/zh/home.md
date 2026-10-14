@@ -45,7 +45,7 @@ AI COMPILERS TILE-LEVEL PROGRAMMING HETEROGENEOUS COMPUTING
 
 我在北京大学攻读工程博士，与中关村实验室联合培养。我研究 AI 编译器、Tile 级编程与异构计算，也关注相关的编程语言和计算机体系结构问题。
 
-我的导师是[谢涛](https://taoxiease.github.io/) 和[杨威](https://youngwei.com/) 。
+我在[谢涛教授](https://taoxiease.github.io/) 和[杨威教授](https://youngwei.com/) 的指导下开展博士阶段的研究。
 
 [进一步了解我](https://tianxing-ren.netlify.app/zh/about/)
 

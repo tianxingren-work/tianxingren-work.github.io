@@ -4,7 +4,7 @@
 
 我研究 AI 编译器，希望能让各种 AI 算法正确和高效地运行在新兴 AI 硬件上，让人和 Agent 更容易地编程。
 
-我的导师是[谢涛](https://taoxiease.github.io/) 和[杨威](https://youngwei.com/) 。
+我在[谢涛教授](https://taoxiease.github.io/) 和[杨威教授](https://youngwei.com/) 的指导下开展博士阶段的研究。
 
 [联系我](https://tianxing-ren.netlify.app/zh/contact/) [GitHub ](https://github.com/LeslinD)
 
@@ -20,7 +20,7 @@
 
 与中关村实验室联合培养。
 
-我的导师是[谢涛](https://taoxiease.github.io/) 和[杨威](https://youngwei.com/) 。
+我在[谢涛教授](https://taoxiease.github.io/) 和[杨威教授](https://youngwei.com/) 的指导下开展博士阶段的研究。
 
 2021.09 – 2025.07
 
@@ -30,7 +30,7 @@
 
 [网络空间安全学院](https://cst.buaa.edu.cn/)
 
-本科期间，我与[郭华](https://cst.buaa.edu.cn/info/1112/2741.htm) 老师开展研究合作。
+本科期间，我主要在[郭华教授](https://cst.buaa.edu.cn/info/1112/2741.htm) 的指导下开展研究。我完成了低面积代数格密码套件的 FPGA 实现，项目获全国密码技术竞赛三等奖。我还完成了基于安全多方计算的云服务密钥保护机制，项目获全国大学生信息安全竞赛一等奖。
 
 GPA **3.77 / 4.00** 平均成绩 **90.41 / 100**
 

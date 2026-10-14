@@ -45,7 +45,7 @@ AME 행렬 가속을 제공하는 RISC-V CPU에 TileLang을 이식합니다. 오
 
 베이징대학교와 중관춘 연구소의 공동 공학 박사과정에 재학 중입니다. AI 컴파일러, 타일 단위 프로그래밍, 이종 컴퓨팅을 연구하며 관련 프로그래밍 언어와 컴퓨터 구조 문제에 관심이 있습니다.
 
-제 지도교수는 [Tao Xie](https://taoxiease.github.io/) 및 [Wei Yang](https://youngwei.com/) 입니다.
+[Tao Xie 교수님](https://taoxiease.github.io/) 과 [Wei Yang 교수님](https://youngwei.com/) 의 지도를 받으며 박사과정 연구를 진행하고 있습니다.
 
 [더 알아보기](https://tianxing-ren.netlify.app/ko/about/)
 

@@ -124,8 +124,7 @@
       el.open = false; el.querySelector('summary')?.focus();
     });
   });
-  // Optional native browser-agent tools. Reading never reveals the mailbox,
-  // changes page state, or requests any external service.
+  // Optional browser-agent tools read public profile and contact data.
   const registry = document.modelContext || navigator.modelContext;
   if (!window.__SITE_PREVIEW__ && typeof registry?.registerTool === 'function') {
     const lifecycle = new AbortController();
@@ -144,6 +143,9 @@
       return response.json();
     };
     const definitions = [
+      {name: 'read_tianxing_contact', description: 'Read public email text, contact-page URL and GitHub profiles.',
+        inputSchema: {type: 'object', properties: {}, additionalProperties: false},
+        async execute(input, options = {}) { validate(input); const data = await read(options.signal); return {contact: data.profile.contact, source: data.profile.contact.url}; }},
       {name: 'read_tianxing_profile', description: 'Read Tianxing Ren’s public AI compiler research goals and background in the current page language.',
         inputSchema: {type: 'object', properties: {}, additionalProperties: false},
         async execute(input, options = {}) { validate(input); const data = await read(options.signal); return {profile: data.profile, source: data.profile.url}; }},

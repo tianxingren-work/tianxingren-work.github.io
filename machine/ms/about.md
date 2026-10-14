@@ -4,7 +4,7 @@ Saya mengikuti pengajian Doktor Kejuruteraan di Universiti Peking melalui progra
 
 Saya menyelidik pengkompil AI agar pelbagai algoritma AI dapat berjalan dengan betul dan cekap pada perkakasan AI baharu. Saya ingin memudahkan pengaturcaraan untuk manusia dan ejen.
 
-Penyelia saya ialah [Tao Xie](https://taoxiease.github.io/) dan [Wei Yang](https://youngwei.com/) .
+Saya menjalankan penyelidikan kedoktoran di bawah bimbingan [Prof. Tao Xie](https://taoxiease.github.io/) dan [Prof. Wei Yang](https://youngwei.com/) .
 
 [Hubungi saya](https://tianxing-ren.netlify.app/ms/contact/) [GitHub ](https://github.com/LeslinD)
 
@@ -20,7 +20,7 @@ Pelajar Doktor Kejuruteraan · Maklumat Elektronik
 
 Latihan kedoktoran bersama Makmal Zhongguancun.
 
-Penyelia saya ialah [Tao Xie](https://taoxiease.github.io/) dan [Wei Yang](https://youngwei.com/) .
+Saya menjalankan penyelidikan kedoktoran di bawah bimbingan [Prof. Tao Xie](https://taoxiease.github.io/) dan [Prof. Wei Yang](https://youngwei.com/) .
 
 Sep 2021 – Jul 2025
 
@@ -30,7 +30,7 @@ Sarjana Muda Kejuruteraan · Keselamatan Siber
 
 [Pusat Pengajian Sains dan Teknologi Siber](https://cst.buaa.edu.cn/)
 
-Semasa pengajian sarjana muda, saya menjalankan kerjasama penyelidikan bersama [Hua Guo](https://cst.buaa.edu.cn/info/1112/2741.htm) .
+Semasa pengajian sarjana muda, saya menjalankan penyelidikan terutamanya di bawah bimbingan [Prof. Hua Guo](https://cst.buaa.edu.cn/info/1112/2741.htm) . Saya menyiapkan pelaksanaan suite kriptografi kekisi algebra pada FPGA dengan penggunaan keluasan litar yang rendah. Projek ini menerima Hadiah Ketiga dalam Pertandingan Teknologi Kriptografi Kebangsaan. Saya juga menyiapkan mekanisme perlindungan kunci perkhidmatan awan berasaskan pengiraan berbilang pihak yang selamat, yang menerima Hadiah Pertama dalam Pertandingan Keselamatan Maklumat Mahasiswa Kebangsaan.
 
 GPA **3.77 / 4.00** Purata markah **90.41 / 100**
 

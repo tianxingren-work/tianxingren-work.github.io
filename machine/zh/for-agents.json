@@ -6,8 +6,11 @@
   "title": "For agents · Tianxing Ren",
   "url": "https://tianxing-ren.netlify.app/zh/for-agents/",
   "markdown_url": "https://tianxing-ren.netlify.app/machine/zh/for-agents.md",
-  "content_markdown": "# For agents\n\n本页集中提供个人简介、项目和经历，便于 Codex、Claude Code 等自动化工具读取。各项资料附有来源链接，方便进一步了解和引用。\n\n## 个人简介与研究\n\n你好，我是**任天行**。我研究AI编译器，希望能让各种AI算法正确和高效地运行在新兴AI硬件上，让人和Agent更容易地编程。\n\n我在北京大学攻读工程博士，与中关村实验室联合培养。我研究 AI 编译器、Tile 级编程与异构计算，也关注相关的编程语言和计算机体系结构问题。\n\n我的导师是[谢涛](https://taoxiease.github.io/) 和[杨威](https://youngwei.com/) 。\n\n关注 AI 编译器、Tile 级编程与异构计算。\n\n## 我主导的项目\n\n### [TileLang-TPU](https://tianxing-ren.netlify.app/zh/projects/tilelang-tpu/)\n\n项目负责人\n\n面向算能 TPU 的 TileLang 后端，打通编译期内存规划、流水线优化与算子执行。\n\nTileLang-TPU 将 Tile 级编程带到商用算能加速器，通过数据分块（Tile）来表达计算。编译器负责片上内存布局、数据搬运，以及搬运与计算的重叠。即时编译（JIT）运行时将 Python 中定义的算子编译并在 BM1690 上执行。\n\n项目阶段\n阶段性完成\n源码情况\n[开源](https://github.com/TongmingLAIC/tilelang-tpu)\n\n评测在算能 BM1690 单核上进行，输入形状在编译前确定。基线是算能 Torch-TPU 所用的厂商 PPL 优化实现。PPL（Primitive Programming Language）是厂商提供的底层编程语言。\n\n项目评测了矩阵乘法、RMSNorm、RoPE、SwiGLU 和逐元素加法五类算子，覆盖多种输入配置和数据类型。RMSNorm 调整数值尺度，RoPE 表示序列位置，SwiGLU 完成神经网络中的非线性计算。各类算子相对 PPL 的平均加速为 **1.05–1.23×**。\n\n除了独立算子，TileLang-TPU 还支持把多个计算步骤合在一起的融合算子。FlashAttention 用于高效计算模型的注意力。经过多注意力头批处理（head-batched）算法优化后，其平均加速达到 **12.50×**。这种优化把关注不同信息的多个计算分支，也就是注意力头，放到同一批中处理。\n\n在融合 MLP 工作负载上，W8A16 反量化前向算子的平均加速为 **1.01×**，与 PPL 实现基本持平。MLP（多层感知机）是模型中常见的前馈网络。W8A16 表示权重采用 8 位、激活值采用 16 位，反量化则把存储的低精度权重转换为计算所用的数值。\n\n- [五类算子在五组输入配置、三种浮点格式下相对 PPL 的加速比。](https://tianxing-ren.netlify.app/assets/tilelang-tpu-operators.png)\n\n- [FlashAttention 相对 PPL 平均加速 12.50 倍，融合 MLP 平均加速 1.01 倍。](https://tianxing-ren.netlify.app/assets/tilelang-tpu-attention-mlp.png)\n\n- **静态内存分配** 在程序运行前安排每块数据在芯片内部快速内存中的位置，遵循硬件的放置要求，并避免超过容量。\n\n- **重叠搬运与计算** 把分块计算排成执行阶段，让数据搬运与计算并行，同时确保每一步需要的数据已经准备好。\n\n- **生成代码并运行** 把计算转换为 TPU 能执行的操作，并负责程序的编译、加载和运行。\n\n### [TileLang-RISC-V](https://tianxing-ren.netlify.app/zh/projects/tilelang-riscv/)\n\n项目负责人\n\n将 TileLang 接入具有 AME 矩阵加速能力的 RISC-V CPU，与开源硬件和系统研究团队共同推进。\n\n项目面向 RISC-V AME AI CPU 开发 TileLang 后端，与北京开源芯片研究院和中国科学院软件研究所合作。当前重点是完成编程模型与目标指令的对应，建立可用的编译和执行流程。\n\n项目阶段\n进行中\n源码情况\n源码暂未公开\n- **编程模型** 使用 Tile-level 程序表达常用 AI 算子，明确后端所需信息。\n\n- **目标平台接入** 衔接编译转换、AME 指令映射和执行环境。\n\n- **实验评估** 测试不同目标配置下的算子正确性与性能，并据此优化后端。\n\n合作机构\n\n- [北京开源芯片研究院](https://www.bosc.ac.cn/)\n\n- [中国科学院软件研究所](https://is.cas.cn/)\n\n## 我参与的开源项目\n\n- [TileLang](https://github.com/tile-ai/tilelang)\n\n- [Asterinas](https://github.com/asterinas/asterinas)\n\n## 教育经历\n\n2025.09 – 2030.07 · 预计\n\n### [北京大学](https://www.pku.edu.cn/)\n\n工程博士研究生 · 电子信息\n\n[软件与微电子学院](https://ss.pku.edu.cn/)\n\n与中关村实验室联合培养。\n\n我的导师是[谢涛](https://taoxiease.github.io/) 和[杨威](https://youngwei.com/) 。\n\n2021.09 – 2025.07\n\n### [北京航空航天大学](https://www.buaa.edu.cn/)\n\n工学学士 · 网络空间安全\n\n[网络空间安全学院](https://cst.buaa.edu.cn/)\n\n本科期间，我与[郭华](https://cst.buaa.edu.cn/info/1112/2741.htm) 老师开展研究合作。\n\nGPA **3.77 / 4.00** 平均成绩 **90.41 / 100**\n\n## 实习经历\n\n2025.12 – 至今\n\n### [北京通明湖信息技术应用创新中心](https://www.tlaic.ac.cn/)\n\n智能系统部实习生\n\n- 将 TileLang 对接到采用 RISC-V Tensor 扩展的算能 SG2260E TPU。\n\n- 开发 TileLang 对 RISC-V AME 矩阵加速 CPU 的支持。\n\n2024.12 – 2025.08\n\n### [北京开源芯片研究院](https://www.bosc.ac.cn/)\n\nAI 系统软件栈研发实习生\n\n- 通过转译衔接算能 TPU 编译工具链，扩展 Triton 编译栈以运行 Triton 生态程序。\n\n- 基于 TileLang 构建异构芯片算子编译框架，开发 TPU 算子库、流水线 Pass 和自动代码生成，支持 LLaMA 所用算子。\n\n- 在已测试的配置中，多个算子性能达到或超过厂商调优实现。\n\n2024.07 – 2024.08\n\n### [恒安嘉新（北京）科技股份公司](https://eversec.com.cn/)\n\n安全服务实习生\n\n- 使用 Burp Suite 等工具参与经授权的网络安全评估，整理扫描结果并初步识别风险。\n\n- 使用 Wireshark 收集并标准化处理 100 余项工业物联网设备登录 PCAP 流量记录。\n\n## 荣誉与奖学金\n\n2025–2026\n\n学习优秀奖学金\n\n[北京大学](https://www.pku.edu.cn/)\n\n2024–2025\n\n学科竞赛奖学金特等奖；学习优秀奖学金二等奖\n\n[北京航空航天大学](https://www.buaa.edu.cn/)\n\n2023–2024\n\n校级三好学生；学科竞赛奖学金特等奖；社会工作优秀奖学金二等奖\n\n[北京航空航天大学](https://www.buaa.edu.cn/)\n\n2022–2023\n\n学科竞赛奖学金一等奖；学习优秀奖学金二等奖\n\n[北京航空航天大学](https://www.buaa.edu.cn/)\n\n## 访问\n\n2024.07 – 2024.08\n\n### [香港中文大学](https://www.cuhk.edu.hk/)\n\n暑期学校访学学生\n\n## 供 AI 工具调用\n\n可以通过 MCP 读取个人与项目资料，也可以提交一个主题，获取相关项目、来源链接和评测范围。\n\n[工具定义](https://tianxing-ren.netlify.app/data/agent-tools.json)\n\n```text\nPOST https://tianxing-ren.netlify.app/api/agent/query\nContent-Type: application/json\n\n{\"topic\":\"RISC-V AME\",\"language\":\"zh\"}\n\nPOST https://tianxing-ren.netlify.app/api/mcp\n```\n\n## 联系\n\n如需研究交流与合作，可以通过联系页面或 GitHub 联系任天行。\n\n- [联系我](https://tianxing-ren.netlify.app/zh/contact/)\n\n- [GitHub / LeslinD](https://github.com/LeslinD)\n\n- [GitHub / tianxingren-work](https://github.com/tianxingren-work)\n\n## 直接读取资料\n\n- [`/llms.txt`](https://tianxing-ren.netlify.app/llms.txt)\n\n- [`/llms-full.md`](https://tianxing-ren.netlify.app/llms-full.md)\n\n- [`/data/agents.json`](https://tianxing-ren.netlify.app/data/agents.json)\n\n- [`/data/profile.json`](https://tianxing-ren.netlify.app/data/profile.json)\n\n- [`/data/projects.json`](https://tianxing-ren.netlify.app/data/projects.json)\n\n- [`/data/routes.json`](https://tianxing-ren.netlify.app/data/routes.json)\n\n- [`/data/agent-tools.json`](https://tianxing-ren.netlify.app/data/agent-tools.json)\n\n- [`/openapi.json`](https://tianxing-ren.netlify.app/openapi.json)\n\n- [`/machine/zh/for-agents.md`](https://tianxing-ren.netlify.app/machine/zh/for-agents.md)\n\n- [`/machine/zh/for-agents.json`](https://tianxing-ren.netlify.app/machine/zh/for-agents.json)\n\n- [`/machine/zh/about.md`](https://tianxing-ren.netlify.app/machine/zh/about.md)\n\n- [`/machine/zh/projects/tilelang-tpu.md`](https://tianxing-ren.netlify.app/machine/zh/projects/tilelang-tpu.md)\n\n- [`/machine/zh/projects/tilelang-riscv.md`](https://tianxing-ren.netlify.app/machine/zh/projects/tilelang-riscv.md)\n\n可识别的 AI 工具请求会自动收到 Markdown。访问首页时返回本页的完整资料，访问其他页面时返回对应内容。也可以通过 ?format=markdown、?format=json、?format=html 或 Accept 请求头指定格式，或直接读取上方文件。\n\n```text\nGET /for-agents/?format=markdown\nGET /api/agents\nGET /api/profile\nGET /api/projects\n```\n\n可用语言版本为 en、zh、ko 和 ms。\n\n## 来源与项目角色\n\n介绍相关工作时，请引用原始项目页面。引用性能结果时，请保留硬件、基线和评测范围。项目阶段与源码公开情况分别记录，主导项目和参与项目均注明我的角色。\n",
+  "content_markdown": "# Tianxing Ren / 任天行\n\n> AI compilers, Tile-level programming, Heterogeneous computing\n\nhttps://tianxing-ren.netlify.app/zh/for-agents/\n\nLanguage: zh. Updated: 2026-10-14.\n\n## 个人简介与研究\n\n我研究 AI 编译器，希望能让各种 AI 算法正确和高效地运行在新兴 AI 硬件上，让人和 Agent 更容易地编程。\n\n我在北京大学攻读工程博士，与中关村实验室联合培养。我研究 AI 编译器、Tile 级编程与异构计算，也关注相关的编程语言和计算机体系结构问题。\n\n我在[谢涛教授](https://taoxiease.github.io/) 和[杨威教授](https://youngwei.com/) 的指导下开展博士阶段的研究。\n\n## 我主导的项目\n\n### TileLang-TPU\n\n项目负责人\n\n面向算能 TPU 的 TileLang 后端，打通编译期内存规划、流水线优化与算子执行。\n\nTileLang-TPU 将 Tile 级编程带到商用算能加速器，通过数据分块（Tile）来表达计算。编译器负责片上内存布局、数据搬运，以及搬运与计算的重叠。即时编译（JIT）运行时将 Python 中定义的算子编译并在 BM1690 上执行。\n\n项目阶段: 阶段性完成\n源码情况: https://github.com/TongmingLAIC/tilelang-tpu\n\nhttps://tianxing-ren.netlify.app/zh/projects/tilelang-tpu/\n\n评测在算能 BM1690 单核上进行，输入形状在编译前确定。基线是算能 Torch-TPU 所用的厂商 PPL 优化实现。PPL（Primitive Programming Language）是厂商提供的底层编程语言。\n\n项目评测了矩阵乘法、RMSNorm、RoPE、SwiGLU 和逐元素加法五类算子，覆盖多种输入配置和数据类型。RMSNorm 调整数值尺度，RoPE 表示序列位置，SwiGLU 完成神经网络中的非线性计算。各类算子相对 PPL 的平均加速为 **1.05–1.23×**。\n\n除了独立算子，TileLang-TPU 还支持把多个计算步骤合在一起的融合算子。FlashAttention 用于高效计算模型的注意力。经过多注意力头批处理（head-batched）算法优化后，其平均加速达到 **12.50×**。这种优化把关注不同信息的多个计算分支，也就是注意力头，放到同一批中处理。\n\n在融合 MLP 工作负载上，W8A16 反量化前向算子的平均加速为 **1.01×**，与 PPL 实现基本持平。MLP（多层感知机）是模型中常见的前馈网络。W8A16 表示权重采用 8 位、激活值采用 16 位，反量化则把存储的低精度权重转换为计算所用的数值。\n\n- 静态内存分配: 在程序运行前安排每块数据在芯片内部快速内存中的位置，遵循硬件的放置要求，并避免超过容量。\n- 重叠搬运与计算: 把分块计算排成执行阶段，让数据搬运与计算并行，同时确保每一步需要的数据已经准备好。\n- 生成代码并运行: 把计算转换为 TPU 能执行的操作，并负责程序的编译、加载和运行。\n\n### TileLang-RISC-V\n\n项目负责人\n\n将 TileLang 接入具有 AME 矩阵加速能力的 RISC-V CPU，与开源硬件和系统研究团队共同推进。\n\n项目面向 RISC-V AME AI CPU 开发 TileLang 后端，与北京开源芯片研究院和中国科学院软件研究所合作。当前重点是完成编程模型与目标指令的对应，建立可用的编译和执行流程。\n\n项目阶段: 进行中\n源码情况: 源码暂未公开\n\nhttps://tianxing-ren.netlify.app/zh/projects/tilelang-riscv/\n\n- 编程模型: 使用 Tile-level 程序表达常用 AI 算子，明确后端所需信息。\n- 目标平台接入: 衔接编译转换、AME 指令映射和执行环境。\n- 实验评估: 测试不同目标配置下的算子正确性与性能，并据此优化后端。\n\n## 我参与的开源项目\n\n- [TileLang](https://github.com/tile-ai/tilelang) — contributor\n- [Asterinas](https://github.com/asterinas/asterinas) — contributor\n\n## 教育经历\n\n- 北京大学, 工程博士研究生, 电子信息. 2025.09 – 2030.07 · 预计\n- 北京航空航天大学, 工学学士, 网络空间安全. 2021.09 – 2025.07\n  GPA 3.77 / 4.0. 平均成绩 90.41 / 100\n\n本科期间，我主要在[郭华教授](https://cst.buaa.edu.cn/info/1112/2741.htm) 的指导下开展研究。我完成了低面积代数格密码套件的 FPGA 实现，项目获全国密码技术竞赛三等奖。我还完成了基于安全多方计算的云服务密钥保护机制，项目获全国大学生信息安全竞赛一等奖。\n\n## 实习经历\n\n### 北京通明湖信息技术应用创新中心\n\n2025.12 – 至今. 智能系统部实习生\n\n- 将 TileLang 对接到采用 RISC-V Tensor 扩展的算能 SG2260E TPU。\n- 开发 TileLang 对 RISC-V AME 矩阵加速 CPU 的支持。\n\n### 北京开源芯片研究院\n\n2024.12 – 2025.08. AI 系统软件栈研发实习生\n\n- 通过转译衔接算能 TPU 编译工具链，扩展 Triton 编译栈以运行 Triton 生态程序。\n- 基于 TileLang 构建异构芯片算子编译框架，开发 TPU 算子库、流水线 Pass 和自动代码生成，支持 LLaMA 所用算子。\n- 在已测试的配置中，多个算子性能达到或超过厂商调优实现。\n\n### 恒安嘉新（北京）科技股份公司\n\n2024.07 – 2024.08. 安全服务实习生\n\n- 使用 Burp Suite 等工具参与经授权的网络安全评估，整理扫描结果并初步识别风险。\n- 使用 Wireshark 收集并标准化处理 100 余项工业物联网设备登录 PCAP 流量记录。\n\n## 荣誉与奖学金\n\n- 2025–2026: 学习优秀奖学金\n- 2024–2025: 学科竞赛奖学金特等奖；学习优秀奖学金二等奖\n- 2023–2024: 校级三好学生；学科竞赛奖学金特等奖；社会工作优秀奖学金二等奖\n- 2022–2023: 学科竞赛奖学金一等奖；学习优秀奖学金二等奖\n\n## 访问\n\n- 香港中文大学. 暑期学校访学学生. 2024.07 – 2024.08\n\n## 联系\n\n联系信息可直接读取，包含公开邮箱写法和 GitHub 链接。欢迎就 AI 编译器、新兴 AI 硬件和相关系统研究交流。\n\n邮箱: tianxingren25 [at] stu [dot] pku [dot] edu [dot] cn\nhttps://tianxing-ren.netlify.app/zh/contact/\nhttps://github.com/LeslinD\nhttps://github.com/tianxingren-work\n\n## Agent 接口\n\nMCP 提供个人资料、项目列表、主题匹配和联系信息四个工具。也可以直接读取 Markdown、JSON 或使用 HTTP 资料接口。\n\n- Markdown: https://tianxing-ren.netlify.app/machine/zh/for-agents.md\n- JSON: https://tianxing-ren.netlify.app/machine/zh/for-agents.json\n- Contact JSON: https://tianxing-ren.netlify.app/data/contact.json\n- MCP: https://tianxing-ren.netlify.app/api/mcp\n- OpenAPI: https://tianxing-ren.netlify.app/openapi.json\n- Tools: get_profile, get_projects, find_relevant_work, get_contact\n\n```http\nPOST https://tianxing-ren.netlify.app/api/mcp\nContent-Type: application/json\nAccept: application/json\nMCP-Protocol-Version: 2026-07-28\nMcp-Method: tools/call\nMcp-Name: get_contact\n\n{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"tools/call\",\n  \"params\": {\n    \"name\": \"get_contact\",\n    \"arguments\": {\n      \"language\": \"zh\"\n    },\n    \"_meta\": {\n      \"io.modelcontextprotocol/protocolVersion\": \"2026-07-28\",\n      \"io.modelcontextprotocol/clientInfo\": {\n        \"name\": \"ProfileReader\",\n        \"version\": \"1.0\"\n      },\n      \"io.modelcontextprotocol/clientCapabilities\": {}\n    }\n  }\n}\n```\n\n## 使用与引用\n\n介绍相关工作时，请引用原始项目页面。引用性能结果时，请保留硬件、基线和评测范围。项目阶段与源码公开情况分别记录，主导项目和参与项目均注明我的角色。\n",
   "links": [
+    "https://tianxing-ren.netlify.app/machine/zh/for-agents.md",
+    "https://tianxing-ren.netlify.app/machine/zh/for-agents.json",
+    "https://tianxing-ren.netlify.app/data/contact.json",
     "https://taoxiease.github.io/",
     "https://youngwei.com/",
     "https://tianxing-ren.netlify.app/zh/projects/tilelang-tpu/",
@@ -38,8 +41,6 @@
     "https://tianxing-ren.netlify.app/data/projects.json",
     "https://tianxing-ren.netlify.app/data/routes.json",
     "https://tianxing-ren.netlify.app/openapi.json",
-    "https://tianxing-ren.netlify.app/machine/zh/for-agents.md",
-    "https://tianxing-ren.netlify.app/machine/zh/for-agents.json",
     "https://tianxing-ren.netlify.app/machine/zh/about.md",
     "https://tianxing-ren.netlify.app/machine/zh/projects/tilelang-tpu.md",
     "https://tianxing-ren.netlify.app/machine/zh/projects/tilelang-riscv.md"
@@ -102,19 +103,23 @@
       {
         "name": "Tao Xie",
         "name_native": "谢涛",
-        "url": "https://taoxiease.github.io/"
+        "url": "https://taoxiease.github.io/",
+        "display_name": "谢涛教授"
       },
       {
         "name": "Wei Yang",
         "name_native": "杨威",
-        "url": "https://youngwei.com/"
+        "url": "https://youngwei.com/",
+        "display_name": "杨威教授"
       }
     ],
     "collaborators": [
       {
         "name": "Hua Guo",
         "name_native": "郭华",
-        "url": "https://cst.buaa.edu.cn/info/1112/2741.htm"
+        "url": "https://cst.buaa.edu.cn/info/1112/2741.htm",
+        "relationship": "undergraduate-research-supervisor",
+        "display_name": "郭华教授"
       }
     ],
     "education": [
@@ -146,7 +151,7 @@
         "gpa_scale": 4.0,
         "average": 90.41,
         "average_scale": 100,
-        "note": "合作老师为郭华。"
+        "note": "本科研究主要在郭华教授的指导下开展。"
       }
     ],
     "experience": [
@@ -212,11 +217,24 @@
         "role": "暑期学校访学学生"
       }
     ],
+    "undergraduate_research": [
+      {
+        "id": "lattice-crypto-fpga",
+        "title": "低面积代数格密码套件的 FPGA 实现",
+        "recognition": "全国密码技术竞赛三等奖"
+      },
+      {
+        "id": "cloud-key-protection",
+        "title": "基于安全多方计算的云服务密钥保护机制",
+        "recognition": "全国大学生信息安全竞赛一等奖"
+      }
+    ],
     "contact": {
       "url": "https://tianxing-ren.netlify.app/zh/contact/",
-      "interaction": "human-initiated",
+      "interaction": "visitor-initiated",
       "github": "https://github.com/LeslinD",
-      "github_work": "https://github.com/tianxingren-work"
+      "github_work": "https://github.com/tianxingren-work",
+      "email_text": "tianxingren25 [at] stu [dot] pku [dot] edu [dot] cn"
     },
     "url": "https://tianxing-ren.netlify.app/zh/about/",
     "site_languages": [
@@ -380,5 +398,14 @@
       "role": "contributor",
       "marker": "asterinas"
     }
-  ]
+  ],
+  "last_reviewed": "2026-10-14",
+  "interfaces": {
+    "markdown": "https://tianxing-ren.netlify.app/machine/zh/for-agents.md",
+    "json": "https://tianxing-ren.netlify.app/machine/zh/for-agents.json",
+    "contact": "https://tianxing-ren.netlify.app/data/contact.json",
+    "mcp": "https://tianxing-ren.netlify.app/api/mcp",
+    "tools": "https://tianxing-ren.netlify.app/data/agent-tools.json",
+    "openapi": "https://tianxing-ren.netlify.app/openapi.json"
+  }
 }

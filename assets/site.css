@@ -47,3 +47,5 @@ html[lang=ms] .hero h1{font-size:clamp(48px,5vw,72px);line-height:1.04;letter-sp
 @media(max-width:1040px){.desktop-nav{display:none}.mobile-menu{display:block}.header-contact{display:none}}
 @media(max-width:1000px){.result-plot-scroll>a{min-width:1000px}.figure-hint{display:block;margin-top:8px}}
 @media(max-width:600px){.project-results{padding-bottom:20px}.project-results>.body-copy{font-size:16px;line-height:1.8}.result-plot{padding:11px;margin:24px 0 30px}.result-plot figcaption{font-size:12px}}
+
+body[data-page=for-agents] .page-intro{padding-bottom:24px}body[data-page=for-agents] .page-intro h1{font-size:32px;line-height:1.2}body[data-page=for-agents] .page-lead{font-size:17px;max-width:780px}.agent-start{max-width:900px;margin:0 0 40px;padding:22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.agent-start h2{font-size:19px;margin:0 0 16px}.agent-access{display:flex;flex-wrap:wrap;gap:12px 28px;font-size:14px}.agent-email{overflow-wrap:anywhere}.agent-email code{font-size:14px}@media(max-width:600px){body[data-page=for-agents] .page-intro h1{font-size:28px}.agent-access{display:grid;gap:16px}}

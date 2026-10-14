@@ -14,7 +14,10 @@ I research AI compilers so that diverse AI algorithms can run correctly and effi
 
 - [Full profile in Markdown](https://tianxing-ren.netlify.app/llms-full.md)
 - [Full profile in JSON](https://tianxing-ren.netlify.app/data/agents.json)
-- [For agents](https://tianxing-ren.netlify.app/for-agents/)
+
+## Contact
+
+- [Contact details](https://tianxing-ren.netlify.app/data/contact.json): public email text and GitHub profiles.
 
 ## Structured access
 

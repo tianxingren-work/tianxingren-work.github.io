@@ -56,19 +56,23 @@
     {
       "name": "Tao Xie",
       "name_native": "谢涛",
-      "url": "https://taoxiease.github.io/"
+      "url": "https://taoxiease.github.io/",
+      "display_name": "Prof. Tao Xie"
     },
     {
       "name": "Wei Yang",
       "name_native": "杨威",
-      "url": "https://youngwei.com/"
+      "url": "https://youngwei.com/",
+      "display_name": "Prof. Wei Yang"
     }
   ],
   "collaborators": [
     {
       "name": "Hua Guo",
       "name_native": "郭华",
-      "url": "https://cst.buaa.edu.cn/info/1112/2741.htm"
+      "url": "https://cst.buaa.edu.cn/info/1112/2741.htm",
+      "relationship": "undergraduate-research-supervisor",
+      "display_name": "Prof. Hua Guo"
     }
   ],
   "education": [
@@ -100,7 +104,7 @@
       "gpa_scale": 4.0,
       "average": 90.41,
       "average_scale": 100,
-      "note": "Research collaboration with Hua Guo."
+      "note": "Undergraduate research under the guidance of Prof. Hua Guo."
     }
   ],
   "experience": [
@@ -166,11 +170,24 @@
       "role": "Summer School Visiting Student"
     }
   ],
+  "undergraduate_research": [
+    {
+      "id": "lattice-crypto-fpga",
+      "title": "An area-efficient FPGA implementation of an algebraic lattice cryptography suite",
+      "recognition": "Third Prize, National Cryptography Technology Competition"
+    },
+    {
+      "id": "cloud-key-protection",
+      "title": "A cloud-service key-protection mechanism based on secure multiparty computation",
+      "recognition": "First Prize, National College Student Information Security Competition"
+    }
+  ],
   "contact": {
     "url": "https://tianxing-ren.netlify.app/contact/",
-    "interaction": "human-initiated",
+    "interaction": "visitor-initiated",
     "github": "https://github.com/LeslinD",
-    "github_work": "https://github.com/tianxingren-work"
+    "github_work": "https://github.com/tianxingren-work",
+    "email_text": "tianxingren25 [at] stu [dot] pku [dot] edu [dot] cn"
   },
   "url": "https://tianxing-ren.netlify.app/about/",
   "site_languages": [

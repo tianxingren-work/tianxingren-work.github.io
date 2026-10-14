@@ -4,7 +4,7 @@ I’m a Doctor of Engineering student at Peking University, jointly trained with
 
 I research AI compilers so that diverse AI algorithms can run correctly and efficiently on emerging AI hardware. I aim to make programming easier for people and agents.
 
-My advisors are [Tao Xie](https://taoxiease.github.io/) and [Wei Yang](https://youngwei.com/) .
+[Prof. Tao Xie](https://taoxiease.github.io/) and [Prof. Wei Yang](https://youngwei.com/) supervise my doctoral research.
 
 [Get in touch](https://tianxing-ren.netlify.app/contact/) [GitHub ](https://github.com/LeslinD)
 
@@ -20,7 +20,7 @@ Doctor of Engineering student · Electronic Information
 
 Joint doctoral training with Zhongguancun Laboratory.
 
-My advisors are [Tao Xie](https://taoxiease.github.io/) and [Wei Yang](https://youngwei.com/) .
+[Prof. Tao Xie](https://taoxiease.github.io/) and [Prof. Wei Yang](https://youngwei.com/) supervise my doctoral research.
 
 Sep 2021 – Jul 2025
 
@@ -30,7 +30,7 @@ Bachelor of Engineering · Cyberspace Security
 
 [School of Cyber Science and Technology](https://cst.buaa.edu.cn/)
 
-During my undergraduate studies, I collaborated with [Hua Guo](https://cst.buaa.edu.cn/info/1112/2741.htm) .
+During my undergraduate studies, I conducted research primarily under the guidance of [Prof. Hua Guo](https://cst.buaa.edu.cn/info/1112/2741.htm) . I completed an area-efficient FPGA implementation of an algebraic lattice cryptography suite, which received Third Prize in the National Cryptography Technology Competition. I also completed a cloud-service key-protection mechanism based on secure multiparty computation, which received First Prize in the National College Student Information Security Competition.
 
 GPA **3.77 / 4.00** Average grade **90.41 / 100**
 

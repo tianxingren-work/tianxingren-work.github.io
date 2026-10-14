@@ -4,7 +4,7 @@
 
 다양한 AI 알고리즘이 새로운 AI 하드웨어에서 정확하고 효율적으로 실행되도록 AI 컴파일러를 연구합니다. 사람과 에이전트가 더 쉽게 프로그래밍할 수 있도록 돕고자 합니다.
 
-제 지도교수는 [Tao Xie](https://taoxiease.github.io/) 및 [Wei Yang](https://youngwei.com/) 입니다.
+[Tao Xie 교수님](https://taoxiease.github.io/) 과 [Wei Yang 교수님](https://youngwei.com/) 의 지도를 받으며 박사과정 연구를 진행하고 있습니다.
 
 [연락하기](https://tianxing-ren.netlify.app/ko/contact/) [GitHub ](https://github.com/LeslinD)
 
@@ -20,7 +20,7 @@
 
 중관춘 연구소와 공동으로 박사과정을 이수하고 있습니다.
 
-제 지도교수는 [Tao Xie](https://taoxiease.github.io/) 및 [Wei Yang](https://youngwei.com/) 입니다.
+[Tao Xie 교수님](https://taoxiease.github.io/) 과 [Wei Yang 교수님](https://youngwei.com/) 의 지도를 받으며 박사과정 연구를 진행하고 있습니다.
 
 2021.09 – 2025.07
 
@@ -30,7 +30,7 @@
 
 [사이버보안학원](https://cst.buaa.edu.cn/)
 
-학부 재학 중에는 [Hua Guo](https://cst.buaa.edu.cn/info/1112/2741.htm) 와 연구 협력을 진행했습니다.
+학부 재학 중에는 주로 [Hua Guo 교수님](https://cst.buaa.edu.cn/info/1112/2741.htm) 의 지도 아래 연구를 진행했습니다. 적은 회로 면적을 사용하는 대수 격자 암호 제품군을 FPGA로 구현하여 전국 암호기술 경진대회에서 3등상을 받았습니다. 안전한 다자간 계산을 기반으로 한 클라우드 서비스 키 보호 메커니즘도 완성하여 전국 대학생 정보보안 경진대회에서 1등상을 받았습니다.
 
 GPA **3.77 / 4.00** 평균 성적 **90.41 / 100**
 
