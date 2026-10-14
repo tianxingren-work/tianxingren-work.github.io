@@ -2,8 +2,8 @@
   "openapi": "3.1.0",
   "info": {
     "title": "Tianxing Ren profile and projects for agents",
-    "version": "3.0.0",
-    "description": "Direct access to the complete researcher profile and projects. Served by server.py or the included Cloudflare Worker; static data/*.json files work on static hosts."
+    "version": "3.1.0",
+    "description": "Direct access to the complete researcher profile and projects. Served by the production host or supplied HTTP server; static data/*.json files work on static hosts."
   },
   "servers": [
     {
@@ -320,7 +320,7 @@
           },
           "evaluation": {
             "type": "object",
-            "description": "Hardware, baseline, metric definition, result values, configuration counts, and scope must be cited together.",
+            "description": "Single-core hardware, static input scope, vendor baseline and averages for each workload must be cited together.",
             "properties": {
               "hardware": {
                 "type": "string"
@@ -331,20 +331,85 @@
               "metric": {
                 "type": "string"
               },
-              "average_speedup": {
-                "type": "number"
+              "standalone": {
+                "type": "object",
+                "properties": {
+                  "operators": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "dtypes": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "average_speedup_range": {
+                    "type": "array",
+                    "items": {
+                      "type": "number"
+                    },
+                    "minItems": 2,
+                    "maxItems": 2
+                  },
+                  "aggregation": {
+                    "type": "string"
+                  }
+                }
               },
-              "faster_configurations": {
-                "type": "integer"
+              "flash_attention": {
+                "type": "object",
+                "properties": {
+                  "average_speedup": {
+                    "type": "number"
+                  },
+                  "optimization": {
+                    "type": "string"
+                  }
+                }
               },
-              "total_configurations": {
-                "type": "integer"
+              "fused_mlp": {
+                "type": "object",
+                "properties": {
+                  "workload": {
+                    "type": "string"
+                  },
+                  "average_speedup": {
+                    "type": "number"
+                  },
+                  "weights_bits": {
+                    "type": "integer"
+                  },
+                  "activations_bits": {
+                    "type": "integer"
+                  }
+                }
               },
               "scope": {
                 "type": "string"
               },
               "methods": {
                 "type": "string"
+              },
+              "figures": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "url": {
+                      "type": "string",
+                      "format": "uri-reference"
+                    },
+                    "caption": {
+                      "type": "string"
+                    },
+                    "alt": {
+                      "type": "string"
+                    }
+                  }
+                }
               }
             }
           }

@@ -10,7 +10,7 @@ AI compilers, tile-level programming, and heterogeneous computing.
 
 AI COMPILERS TILE-LEVEL PROGRAMMING HETEROGENEOUS COMPUTING
 
-01 / LEADING PROJECTS
+01 / PROJECTS I LEAD
 
 ## Ideas into running systems.
 

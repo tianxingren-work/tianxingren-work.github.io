@@ -6,7 +6,7 @@ Peneraju projek
 
 TileLang bertemu pecutan matriks RISC-V.
 
-Sedang berjalan
+Sedang dijalankan
 RISC-V AME AI CPUs
 [Hubungi saya](https://tianxing-ren.netlify.app/ms/contact/)
 
@@ -16,7 +16,7 @@ Gambaran keseluruhan
 
 Projek ini membangunkan backend TileLang untuk CPU AI RISC-V AME bersama Institut Cip Sumber Terbuka Beijing dan Institut Perisian, Akademi Sains China. Kerja semasa menumpukan pada pemetaan model pengaturcaraan kepada arahan sasaran serta pembinaan laluan kompilasi dan pelaksanaan yang boleh digunakan.
 
-## Kerja semasa
+## Fokus semasa
 
 01
 
@@ -42,4 +42,4 @@ Menguji ketepatan dan prestasi operator merentas konfigurasi sasaran, kemudian m
 
 ## Mengkaji masalah yang berkaitan?
 
-[Sapa saya](https://tianxing-ren.netlify.app/ms/contact/)
+[Hubungi saya](https://tianxing-ren.netlify.app/ms/contact/)

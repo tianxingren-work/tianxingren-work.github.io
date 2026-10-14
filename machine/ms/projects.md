@@ -15,7 +15,7 @@ Backend TileLang untuk TPU SOPHGO, daripada perancangan memori ketika kompilasi 
 [Lihat projek](https://tianxing-ren.netlify.app/ms/projects/tilelang-tpu/) [Kod sumber](https://github.com/TongmingLAIC/tilelang-tpu)
 
 02 / Peneraju projek
-Sedang berjalan
+Sedang dijalankan
 
 ### [TileLang-RISC-V](https://tianxing-ren.netlify.app/ms/projects/tilelang-riscv/)
 

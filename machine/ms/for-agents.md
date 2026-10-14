@@ -20,28 +20,30 @@ Peneraju projek
 
 Backend TileLang untuk TPU SOPHGO, daripada perancangan memori ketika kompilasi hingga pelaksanaan kernel.
 
-TileLang-TPU membawa pengaturcaraan peringkat tile kepada pemecut SOPHGO komersial. Model pengaturcaraan TileLang dikekalkan, sementara penempatan memori dalam cip, pergerakan data dan pertindihan pemindahan dengan pengiraan diurus oleh pengkompil. Pengkompil dan masa jalan JIT menyokong keseluruhan proses daripada takrif kernel Python hingga pelaksanaan pada BM1690.
+TileLang-TPU membawa pengaturcaraan peringkat tile kepada pemecut SOPHGO komersial. Tile ialah blok data kecil yang digunakan untuk menyatakan pengiraan. Pengkompil mengurus penempatan memori dalam cip, pergerakan data dan pertindihan pemindahan dengan pengiraan. Masa jalan JIT mengkompil takrif kernel Python apabila diperlukan dan menjalankannya pada BM1690.
 
 Tahap projek
 Fasa utama selesai
 Ketersediaan sumber
 [Sumber terbuka](https://github.com/TongmingLAIC/tilelang-tpu)
 
-Lima kernel, lima bentuk input dan tiga jenis data diuji pada satu kad SOPHGO BM1690. Purata peningkatan kelajuan berbanding PPL berdasarkan masa pelaksanaan kernel TPU, tanpa masa kompilasi atau pelaksanaan hos.
+Penilaian dijalankan pada satu teras SOPHGO BM1690, dengan saiz input ditetapkan sebelum kompilasi. Prestasi dibandingkan dengan pelaksanaan PPL yang dioptimumkan oleh pengeluar dan digunakan dalam Torch-TPU. PPL (Primitive Programming Language) ialah bahasa pengaturcaraan aras rendah SOPHGO.
 
-- 1.10× purata peningkatan kelajuan berbanding PPL
+Kami menilai pendaraban matriks, RMSNorm, RoPE, SwiGLU dan penambahan unsur demi unsur dengan pelbagai konfigurasi input dan format nombor. RMSNorm melaraskan skala nilai, RoPE mengekod kedudukan dalam jujukan dan SwiGLU menjalankan transformasi tak linear dalam rangkaian neural. Purata peningkatan kelajuan mengikut jenis operasi ialah **1.05–1.23×** berbanding PPL.
 
-- 71 / 75 konfigurasi lebih pantas daripada PPL
+TileLang-TPU turut menyokong operasi gabungan yang menyatukan beberapa langkah pengiraan. FlashAttention mengira perhatian model dengan cekap. Selepas pengoptimuman algoritma yang memproses beberapa kepala perhatian dalam kelompok yang sama (head-batched), purata peningkatan kelajuannya mencapai **12.50×** berbanding PPL. Kepala perhatian ialah cabang pengiraan selari yang memberi tumpuan kepada maklumat berbeza.
 
-- BF16 · FP16 · FP32
+Bagi MLP gabungan, iaitu rangkaian neural suap hadapan yang lazim dalam model AI, operasi MLP W8A16 Dequantized Forward mencapai purata **1.01×** dan hampir menyamai prestasi PPL. W8A16 menggunakan pemberat 8 bit dan nilai pengaktifan 16 bit. Penyahkuantuman menukar pemberat berketepatan rendah yang disimpan kepada nilai untuk pengiraan.
 
-Kedua-dua pelaksanaan menggunakan semantik operator, bentuk input, jenis data dan rantaian alat vendor yang sama. Setiap konfigurasi menjalani lima larian pemanasan dan sepuluh larian bermasa. Daripada set ini, 71 konfigurasi lebih pantas, satu setara dan tiga lebih perlahan.
+- [Peningkatan kelajuan lima jenis operasi berbanding PPL bagi lima konfigurasi input dan tiga format titik apung.](https://tianxing-ren.netlify.app/assets/tilelang-tpu-operators.png)
 
-- **Peruntukan memori statik** Menentukan ofset memori setempat semasa kompilasi dengan mengambil kira penjajaran, kapasiti dan penempatan bank memori.
+- [Purata peningkatan kelajuan FlashAttention ialah 12.50 kali dan MLP gabungan ialah 1.01 kali berbanding PPL.](https://tianxing-ren.netlify.app/assets/tilelang-tpu-attention-mlp.png)
 
-- **Penurunan saluran paip berstruktur** Menukar gelung tile kepada peringkat pelaksanaan yang jelas supaya pemindahan data dapat bertindih dengan pengiraan tanpa melanggar kebergantungan.
+- **Peruntukan memori statik** Merancang kedudukan setiap blok data dalam memori pantas pada cip sebelum program dijalankan, mengikut aturan perkakasan dan had kapasiti memori.
 
-- **Pemetaan backend dan masa jalan** Menjana panggilan API kernel TPU dan menghubungkan hasilnya kepada kompilasi hos/peranti, pemautan, pemuatan dan pelancaran.
+- **Pemindahan data dan pengiraan serentak** Menyusun pemindahan data dan pengiraan kepada peringkat yang boleh berjalan serentak. Setiap langkah hanya bermula apabila data yang diperlukan tersedia.
+
+- **Menjana dan menjalankan kod TPU** Menterjemah pengiraan kepada operasi yang boleh dilaksanakan oleh TPU, kemudian mengkompil, memuatkan dan menjalankan program.
 
 ### [TileLang-RISC-V](https://tianxing-ren.netlify.app/ms/projects/tilelang-riscv/)
 
@@ -52,7 +54,7 @@ Membawa TileLang ke CPU RISC-V dengan pecutan matriks AME. Usaha berterusan bers
 Projek ini membangunkan backend TileLang untuk CPU AI RISC-V AME bersama Institut Cip Sumber Terbuka Beijing dan Institut Perisian, Akademi Sains China. Kerja semasa menumpukan pada pemetaan model pengaturcaraan kepada arahan sasaran serta pembinaan laluan kompilasi dan pelaksanaan yang boleh digunakan.
 
 Tahap projek
-Sedang berjalan
+Sedang dijalankan
 Ketersediaan sumber
 Kod sumber belum dibuka kepada umum
 - **Model pengaturcaraan** Menyatakan operator AI lazim melalui program peringkat tile dan mengenal pasti maklumat yang diperlukan oleh backend.

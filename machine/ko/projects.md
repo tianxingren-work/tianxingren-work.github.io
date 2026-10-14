@@ -4,8 +4,8 @@
 
 타일 단위 프로그래밍을 새로운 AI 하드웨어에 적용하는 프로젝트를 이끌고 있습니다.
 
-01 / 프로젝트 리드
-주요 단계 완료 [오픈 소스](https://github.com/TongmingLAIC/tilelang-tpu)
+01 / 프로젝트 책임자
+주요 단계 완료 [오픈소스](https://github.com/TongmingLAIC/tilelang-tpu)
 
 ### [TileLang-TPU](https://tianxing-ren.netlify.app/ko/projects/tilelang-tpu/)
 
@@ -14,7 +14,7 @@
 [](https://tianxing-ren.netlify.app/ko/projects/tilelang-tpu/)
 [프로젝트 보기](https://tianxing-ren.netlify.app/ko/projects/tilelang-tpu/) [소스 코드](https://github.com/TongmingLAIC/tilelang-tpu)
 
-02 / 프로젝트 리드
+02 / 프로젝트 책임자
 진행 중
 
 ### [TileLang-RISC-V](https://tianxing-ren.netlify.app/ko/projects/tilelang-riscv/)

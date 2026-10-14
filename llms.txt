@@ -33,7 +33,7 @@ I research AI compilers so that diverse AI algorithms can run correctly and effi
 
 ## Requesting a representation
 
-The supplied HTTP server and Cloudflare Worker automatically serve Markdown to recognized AI tool user agents. Homepage requests receive the complete agent profile; other routes keep the requested page content. An explicit format query parameter or Accept media type takes priority. Use ?format=markdown, ?format=json or ?format=html. Static hosts expose the directly linked files.
+The production host and supplied HTTP server automatically serve Markdown to recognized AI tool user agents. Homepage requests receive the complete agent profile; other routes keep the requested page content. An explicit format query parameter or Accept media type takes priority. Use ?format=markdown, ?format=json or ?format=html. Static hosts expose the directly linked files.
 
 ## Sources
 

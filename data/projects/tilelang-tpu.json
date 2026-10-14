@@ -6,69 +6,94 @@
   "stage": "milestone-complete",
   "open_source": true,
   "summary": "A TileLang backend for SOPHGO TPUs, from compile-time memory planning to executable kernels.",
-  "overview": "TileLang-TPU brings tile-level programming to commercial SOPHGO accelerators. It preserves the TileLang programming model and turns on-chip memory placement, data movement, and transfer–compute overlap into compiler decisions. The compiler and JIT runtime provide an end-to-end path from a Python kernel definition to execution on BM1690.",
+  "overview": "TileLang-TPU brings tile-level programming to commercial SOPHGO accelerators. Tiles are small blocks of data used to express a computation. The compiler handles on-chip memory placement, data movement and overlapping transfers with computation. Its just-in-time (JIT) runtime compiles Python kernel definitions and launches them on the BM1690.",
   "highlights": [
     {
       "title": "Static memory allocation",
-      "description": "Assign concrete local-memory offsets at compile time, accounting for alignment, capacity, and memory-bank placement."
+      "description": "Plan where each data block sits in the chip’s fast local memory before the program runs, following the hardware’s placement rules and staying within its capacity."
     },
     {
-      "title": "Structured pipeline lowering",
-      "description": "Turn tiled loops into explicit execution stages so that data transfers can overlap with computation while preserving dependencies."
+      "title": "Overlap transfers and computation",
+      "description": "Arrange data transfers and computation into stages that can run in parallel, with each step starting only when its required data is ready."
     },
     {
-      "title": "Backend mapping and runtime",
-      "description": "Generate TPU kernel API calls and connect the output to host/device compilation, linking, loading, and launch."
+      "title": "Generate and run TPU code",
+      "description": "Translate the computation into operations the TPU can execute, then compile, load and launch the program."
     }
   ],
   "url": "https://tianxing-ren.netlify.app/projects/tilelang-tpu/",
   "markdown": "https://tianxing-ren.netlify.app/machine/en/projects/tilelang-tpu.md",
   "repository": "https://github.com/TongmingLAIC/tilelang-tpu",
   "evaluation": {
-    "study_id": "bm1690-five-kernel-study",
-    "hardware": "SOPHGO BM1690, single card, PCIe mode",
-    "baseline": "SOPHGO PPL",
-    "metric": "PPL kernel latency / TileLang-TPU kernel latency",
-    "average_speedup": 1.1,
-    "faster_configurations": 71,
-    "total_configurations": 75,
-    "tied_configurations": 1,
-    "slower_configurations": 3,
-    "dtypes": [
-      "BF16",
-      "FP16",
-      "FP32"
-    ],
-    "operators": [
-      "Matmul",
-      "RMSNorm",
-      "RoPE",
-      "SwiGLU",
-      "Element-wise addition"
-    ],
-    "setup": {
-      "os": "Ubuntu 24.04 LTS",
-      "sdk": "SOPHGO PPL SDK 1.4.195",
-      "driver": "1.9.1",
-      "warmup_runs": 5,
-      "timed_repetitions": 10
+    "study_id": "bm1690-single-core-operators-and-fused-workloads",
+    "hardware": "SOPHGO BM1690, single core",
+    "baseline": "Vendor PPL implementations used by SOPHGO Torch-TPU",
+    "metric": "PPL operator execution time / TileLang-TPU operator execution time",
+    "standalone": {
+      "operators": [
+        "Matmul",
+        "RMSNorm",
+        "RoPE",
+        "SwiGLU",
+        "Element-wise addition"
+      ],
+      "dtypes": [
+        "BF16",
+        "FP16",
+        "FP32"
+      ],
+      "average_speedup_range": [
+        1.05,
+        1.23
+      ],
+      "aggregation": "Average speedup by operator category across tested configurations and data types"
+    },
+    "flash_attention": {
+      "average_speedup": 12.5,
+      "dtypes": [
+        "BF16",
+        "FP16"
+      ],
+      "optimization": "Head-batched computation: process multiple attention heads together"
+    },
+    "fused_mlp": {
+      "workload": "MLP W8A16 Dequantized Forward",
+      "average_speedup": 1.01,
+      "weights_bits": 8,
+      "activations_bits": 16
     },
     "source": {
-      "type": "owner-supplied evaluation manuscript",
-      "section": "5.1–5.2",
-      "label": "TileLang-TPU evaluation"
+      "type": "owner-supplied updated evaluation summary and figures",
+      "date": "2026-10-14"
     },
-    "scope": "Five kernels × five input shapes × three data types on one SOPHGO BM1690 card. Average speedup over PPL uses TPU kernel execution latency; compilation and host execution are outside this timing.",
-    "methods": "Both implementations use the same operator semantics, shapes, data types, and vendor compilation toolchain. Each case uses five warm-up runs and ten timed repetitions. The reported set includes 71 faster cases, one tie, and three slower cases."
+    "scope": "Evaluated on a single core of the SOPHGO BM1690, with input sizes fixed before compilation. The baseline is the vendor’s optimized PPL implementation used by Torch-TPU. PPL (Primitive Programming Language) is SOPHGO’s low-level programming language.",
+    "methods": "Speedup compares execution time for the tested operations. Standalone results report averages by operator category. FlashAttention and fused MLP are separate workloads, each with its own average.",
+    "standalone_text": "We evaluated matrix multiplication, RMSNorm, RoPE, SwiGLU and element-wise addition across multiple input configurations and numerical formats. RMSNorm rescales values, RoPE encodes sequence positions and SwiGLU applies a nonlinear neural-network transformation. Average speedups by operator category are 1.05–1.23× over PPL.",
+    "attention_text": "TileLang-TPU also supports fused operators that combine multiple computation steps. FlashAttention efficiently computes model attention. After an algorithm optimization that processes multiple attention heads together in a batch (head-batched), it achieves an average speedup of 12.50× over PPL. Attention heads are parallel computation branches that attend to different information.",
+    "mlp_text": "For a fused MLP, a feed-forward neural network commonly used within AI models, the MLP W8A16 Dequantized Forward operator averages 1.01× over PPL, essentially matching its performance. W8A16 uses 8-bit weights and 16-bit activations. Dequantization converts the stored low-precision weights into values used by the computation.",
+    "figures": [
+      {
+        "asset": "assets/tilelang-tpu-operators.png",
+        "width": 3166,
+        "height": 915,
+        "alt": "Speedup of five operator categories over PPL across five input configurations and three floating-point formats.",
+        "caption": "Standalone operators. M0–M4 label five tested input configurations. BF16 and FP16 use 16-bit floating-point formats; FP32 uses 32 bits. A value of 1× means the same execution time as PPL, and larger values mean faster execution. The 1.05–1.23× summary gives averages by operator category.",
+        "url": "https://tianxing-ren.netlify.app/assets/tilelang-tpu-operators.png"
+      },
+      {
+        "asset": "assets/tilelang-tpu-attention-mlp.png",
+        "width": 9282,
+        "height": 2797,
+        "alt": "FlashAttention average speedup of 12.50 times and fused MLP average speedup of 1.01 times over PPL.",
+        "caption": "Fused workloads. FlashAttention averages 12.50× over PPL; the W8A16 MLP averages 1.01×. B, H, S and D denote batch size, attention heads, sequence length and head dimension. M, H and I denote input rows, hidden width and intermediate width. The tuples identify the tested input sizes.",
+        "url": "https://tianxing-ren.netlify.app/assets/tilelang-tpu-attention-mlp.png"
+      }
+    ]
   },
   "implementation_sources": [
     {
       "title": "Public implementation and setup instructions",
       "url": "https://github.com/TongmingLAIC/tilelang-tpu"
-    },
-    {
-      "title": "Runnable TPU demos",
-      "url": "https://github.com/TongmingLAIC/tilelang-tpu/tree/main/tpu_demo"
     }
   ]
 }

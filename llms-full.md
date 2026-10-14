@@ -20,28 +20,30 @@ Project lead
 
 A TileLang backend for SOPHGO TPUs, from compile-time memory planning to executable kernels.
 
-TileLang-TPU brings tile-level programming to commercial SOPHGO accelerators. It preserves the TileLang programming model and turns on-chip memory placement, data movement, and transfer–compute overlap into compiler decisions. The compiler and JIT runtime provide an end-to-end path from a Python kernel definition to execution on BM1690.
+TileLang-TPU brings tile-level programming to commercial SOPHGO accelerators. Tiles are small blocks of data used to express a computation. The compiler handles on-chip memory placement, data movement and overlapping transfers with computation. Its just-in-time (JIT) runtime compiles Python kernel definitions and launches them on the BM1690.
 
 Project stage
 Milestone complete
 Source availability
 [Open source](https://github.com/TongmingLAIC/tilelang-tpu)
 
-Five kernels × five input shapes × three data types on one SOPHGO BM1690 card. Average speedup over PPL uses TPU kernel execution latency; compilation and host execution are outside this timing.
+Evaluated on a single core of the SOPHGO BM1690, with input sizes fixed before compilation. The baseline is the vendor’s optimized PPL implementation used by Torch-TPU. PPL (Primitive Programming Language) is SOPHGO’s low-level programming language.
 
-- 1.10× average speedup over PPL
+We evaluated matrix multiplication, RMSNorm, RoPE, SwiGLU and element-wise addition across multiple input configurations and numerical formats. RMSNorm rescales values, RoPE encodes sequence positions and SwiGLU applies a nonlinear neural-network transformation. Average speedups by operator category are **1.05–1.23×** over PPL.
 
-- 71 / 75 configurations faster than PPL
+TileLang-TPU also supports fused operators that combine multiple computation steps. FlashAttention efficiently computes model attention. After an algorithm optimization that processes multiple attention heads together in a batch (head-batched), it achieves an average speedup of **12.50×** over PPL. Attention heads are parallel computation branches that attend to different information.
 
-- BF16 · FP16 · FP32
+For a fused MLP, a feed-forward neural network commonly used within AI models, the MLP W8A16 Dequantized Forward operator averages **1.01×** over PPL, essentially matching its performance. W8A16 uses 8-bit weights and 16-bit activations. Dequantization converts the stored low-precision weights into values used by the computation.
 
-Both implementations use the same operator semantics, shapes, data types, and vendor compilation toolchain. Each case uses five warm-up runs and ten timed repetitions. The reported set includes 71 faster cases, one tie, and three slower cases.
+- [Speedup of five operator categories over PPL across five input configurations and three floating-point formats.](https://tianxing-ren.netlify.app/assets/tilelang-tpu-operators.png)
 
-- **Static memory allocation** Assign concrete local-memory offsets at compile time, accounting for alignment, capacity, and memory-bank placement.
+- [FlashAttention average speedup of 12.50 times and fused MLP average speedup of 1.01 times over PPL.](https://tianxing-ren.netlify.app/assets/tilelang-tpu-attention-mlp.png)
 
-- **Structured pipeline lowering** Turn tiled loops into explicit execution stages so that data transfers can overlap with computation while preserving dependencies.
+- **Static memory allocation** Plan where each data block sits in the chip’s fast local memory before the program runs, following the hardware’s placement rules and staying within its capacity.
 
-- **Backend mapping and runtime** Generate TPU kernel API calls and connect the output to host/device compilation, linking, loading, and launch.
+- **Overlap transfers and computation** Arrange data transfers and computation into stages that can run in parallel, with each step starting only when its required data is ready.
+
+- **Generate and run TPU code** Translate the computation into operations the TPU can execute, then compile, load and launch the program.
 
 ### [TileLang-RISC-V](https://tianxing-ren.netlify.app/projects/tilelang-riscv/)
 

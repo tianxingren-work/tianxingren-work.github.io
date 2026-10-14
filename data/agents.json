@@ -6,12 +6,14 @@
   "title": "For agents · Tianxing Ren",
   "url": "https://tianxing-ren.netlify.app/for-agents/",
   "markdown_url": "https://tianxing-ren.netlify.app/machine/en/for-agents.md",
-  "content_markdown": "# For agents\n\nProfile, projects, and experience in one place for Codex, Claude Code, and other automated tools. Follow the source links for further details.\n\n## Profile and research\n\nHi, I’m **Tianxing Ren.** I research AI compilers to help diverse AI algorithms run correctly and efficiently on emerging AI hardware, and to make programming easier for people and agents.\n\nI’m a Doctor of Engineering student at Peking University, jointly trained with Zhongguancun Laboratory. I research AI compilers, tile-level programming, and heterogeneous computing, with an interest in programming languages and computer architecture.\n\nMy advisors are [Tao Xie](https://taoxiease.github.io/) and [Wei Yang](https://youngwei.com/) .\n\nAI compilers, tile-level programming, and heterogeneous computing.\n\n## Projects I lead\n\n### [TileLang-TPU](https://tianxing-ren.netlify.app/projects/tilelang-tpu/)\n\nProject lead\n\nA TileLang backend for SOPHGO TPUs, from compile-time memory planning to executable kernels.\n\nTileLang-TPU brings tile-level programming to commercial SOPHGO accelerators. It preserves the TileLang programming model and turns on-chip memory placement, data movement, and transfer–compute overlap into compiler decisions. The compiler and JIT runtime provide an end-to-end path from a Python kernel definition to execution on BM1690.\n\nProject stage\nMilestone complete\nSource availability\n[Open source](https://github.com/TongmingLAIC/tilelang-tpu)\n\nFive kernels × five input shapes × three data types on one SOPHGO BM1690 card. Average speedup over PPL uses TPU kernel execution latency; compilation and host execution are outside this timing.\n\n- 1.10× average speedup over PPL\n\n- 71 / 75 configurations faster than PPL\n\n- BF16 · FP16 · FP32\n\nBoth implementations use the same operator semantics, shapes, data types, and vendor compilation toolchain. Each case uses five warm-up runs and ten timed repetitions. The reported set includes 71 faster cases, one tie, and three slower cases.\n\n- **Static memory allocation** Assign concrete local-memory offsets at compile time, accounting for alignment, capacity, and memory-bank placement.\n\n- **Structured pipeline lowering** Turn tiled loops into explicit execution stages so that data transfers can overlap with computation while preserving dependencies.\n\n- **Backend mapping and runtime** Generate TPU kernel API calls and connect the output to host/device compilation, linking, loading, and launch.\n\n### [TileLang-RISC-V](https://tianxing-ren.netlify.app/projects/tilelang-riscv/)\n\nProject lead\n\nBringing TileLang to RISC-V CPUs with AME matrix acceleration. An ongoing effort with open-source hardware and systems researchers.\n\nThis project is developing a TileLang backend for RISC-V AME AI CPUs, in collaboration with the Beijing Institute of Open Source Chip and the Institute of Software, Chinese Academy of Sciences. Current work focuses on connecting the programming model to target instructions and establishing a usable compilation and execution path.\n\nProject stage\nIn progress\nSource availability\nSource code is not public\n- **Programming model** Express common AI operators with tile-level programs and identify the information the backend needs.\n\n- **Target integration** Connect compiler lowering, AME instruction mapping, and the execution environment.\n\n- **Evaluation** Test operator correctness and performance across target configurations, and use the results to guide backend optimization.\n\nCollaborating institutions\n\n- [Beijing Institute of Open Source Chip](https://www.bosc.ac.cn/)\n\n- [Institute of Software, Chinese Academy of Sciences](https://is.cas.cn/)\n\n## I also contribute to these open-source projects\n\n- [TileLang](https://github.com/tile-ai/tilelang)\n\n- [Asterinas](https://github.com/asterinas/asterinas)\n\n## Education\n\nSep 2025 – Jul 2030 · expected\n\n### [Peking University](https://www.pku.edu.cn/)\n\nDoctor of Engineering student · Electronic Information\n\n[School of Software and Microelectronics](https://ss.pku.edu.cn/)\n\nJoint doctoral training with Zhongguancun Laboratory.\n\nMy advisors are [Tao Xie](https://taoxiease.github.io/) and [Wei Yang](https://youngwei.com/) .\n\nSep 2021 – Jul 2025\n\n### [Beihang University](https://www.buaa.edu.cn/)\n\nBachelor of Engineering · Cyberspace Security\n\n[School of Cyber Science and Technology](https://cst.buaa.edu.cn/)\n\nDuring my undergraduate studies, I collaborated with [Hua Guo](https://cst.buaa.edu.cn/info/1112/2741.htm) .\n\nGPA **3.77 / 4.00** Average grade **90.41 / 100**\n\n## Internships\n\nDec 2025 – Present\n\n### [Beijing Tongming Lake IT Innovation Center](https://www.tlaic.ac.cn/)\n\nIntelligent Systems Intern\n\n- Adapting TileLang to the SOPHGO SG2260E TPU with RISC-V tensor extensions.\n\n- Developing TileLang support for RISC-V CPUs with AME matrix acceleration.\n\nDec 2024 – Aug 2025\n\n### [Beijing Institute of Open Source Chip](https://www.bosc.ac.cn/)\n\nAI Systems Software Intern\n\n- Extended the Triton compilation stack to SOPHGO TPUs through translation into the vendor toolchain.\n\n- Built a TileLang-based operator compilation framework, including a TPU operator library, pipeline passes, and automatic code generation for operators used in LLaMA.\n\n- Several operators matched or exceeded vendor-tuned implementations in the evaluated configurations.\n\nJul 2024 – Aug 2024\n\n### [Eversec (Beijing) Technology Co., Ltd.](https://eversec.com.cn/)\n\nSecurity Services Intern\n\n- Assisted with authorized network security assessments using Burp Suite and related tools, organizing findings and identifying potential risks.\n\n- Captured and standardized more than 100 industrial IoT login-traffic PCAP records with Wireshark.\n\n## Honors & scholarships\n\n2025–2026\n\nAcademic Excellence Scholarship\n\n[Peking University](https://www.pku.edu.cn/)\n\n2024–2025\n\nSpecial Prize, Academic Competition Scholarship; Second Prize, Academic Excellence Scholarship\n\n[Beihang University](https://www.buaa.edu.cn/)\n\n2023–2024\n\nOutstanding Student; Special Prize, Academic Competition Scholarship; Second Prize, Social Service Scholarship\n\n[Beihang University](https://www.buaa.edu.cn/)\n\n2022–2023\n\nFirst Prize, Academic Competition Scholarship; Second Prize, Academic Excellence Scholarship\n\n[Beihang University](https://www.buaa.edu.cn/)\n\n## Visits\n\nJul 2024 – Aug 2024\n\n### [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/)\n\nSummer School Visiting Student\n\n## Tools for AI assistants\n\nRead the profile and projects through MCP, or submit a short topic to find relevant documented work. The response includes sources, project roles and evaluation scope.\n\n[Tool definitions](https://tianxing-ren.netlify.app/data/agent-tools.json)\n\n```text\nPOST https://tianxing-ren.netlify.app/api/agent/query\nContent-Type: application/json\n\n{\"topic\":\"RISC-V AME\",\"language\":\"en\"}\n\nPOST https://tianxing-ren.netlify.app/api/mcp\n```\n\n## Contact\n\nFor research collaboration, contact Tianxing Ren through the contact page or the linked GitHub profiles.\n\n- [Get in touch](https://tianxing-ren.netlify.app/contact/)\n\n- [GitHub / LeslinD](https://github.com/LeslinD)\n\n- [GitHub / tianxingren-work](https://github.com/tianxingren-work)\n\n## Direct access to files\n\n- [`/llms.txt`](https://tianxing-ren.netlify.app/llms.txt)\n\n- [`/llms-full.md`](https://tianxing-ren.netlify.app/llms-full.md)\n\n- [`/data/agents.json`](https://tianxing-ren.netlify.app/data/agents.json)\n\n- [`/data/profile.json`](https://tianxing-ren.netlify.app/data/profile.json)\n\n- [`/data/projects.json`](https://tianxing-ren.netlify.app/data/projects.json)\n\n- [`/data/routes.json`](https://tianxing-ren.netlify.app/data/routes.json)\n\n- [`/data/agent-tools.json`](https://tianxing-ren.netlify.app/data/agent-tools.json)\n\n- [`/openapi.json`](https://tianxing-ren.netlify.app/openapi.json)\n\n- [`/machine/en/for-agents.md`](https://tianxing-ren.netlify.app/machine/en/for-agents.md)\n\n- [`/machine/en/for-agents.json`](https://tianxing-ren.netlify.app/machine/en/for-agents.json)\n\n- [`/machine/en/about.md`](https://tianxing-ren.netlify.app/machine/en/about.md)\n\n- [`/machine/en/projects/tilelang-tpu.md`](https://tianxing-ren.netlify.app/machine/en/projects/tilelang-tpu.md)\n\n- [`/machine/en/projects/tilelang-riscv.md`](https://tianxing-ren.netlify.app/machine/en/projects/tilelang-riscv.md)\n\nRecognized AI tool requests receive Markdown automatically. Requests to the homepage receive this complete profile, and requests to other pages receive that page’s content. Select ?format=markdown, ?format=json, or ?format=html, or use the Accept header to request a format. The direct file links above are also available.\n\n```text\nGET /for-agents/?format=markdown\nGET /api/agents\nGET /api/profile\nGET /api/projects\n```\n\nAvailable versions use the language codes en, zh, ko, and ms.\n\n## Sources and project roles\n\nWhen summarizing this work, cite the original project pages and include the hardware, baseline, and evaluation scope for performance results. Project stage and source availability are recorded separately. Projects I lead and projects I contribute to are listed with their respective roles.\n",
+  "content_markdown": "# For agents\n\nProfile, projects, and experience in one place for Codex, Claude Code, and other automated tools. Follow the source links for further details.\n\n## Profile and research\n\nHi, I’m **Tianxing Ren.** I research AI compilers to help diverse AI algorithms run correctly and efficiently on emerging AI hardware, and to make programming easier for people and agents.\n\nI’m a Doctor of Engineering student at Peking University, jointly trained with Zhongguancun Laboratory. I research AI compilers, tile-level programming, and heterogeneous computing, with an interest in programming languages and computer architecture.\n\nMy advisors are [Tao Xie](https://taoxiease.github.io/) and [Wei Yang](https://youngwei.com/) .\n\nAI compilers, tile-level programming, and heterogeneous computing.\n\n## Projects I lead\n\n### [TileLang-TPU](https://tianxing-ren.netlify.app/projects/tilelang-tpu/)\n\nProject lead\n\nA TileLang backend for SOPHGO TPUs, from compile-time memory planning to executable kernels.\n\nTileLang-TPU brings tile-level programming to commercial SOPHGO accelerators. Tiles are small blocks of data used to express a computation. The compiler handles on-chip memory placement, data movement and overlapping transfers with computation. Its just-in-time (JIT) runtime compiles Python kernel definitions and launches them on the BM1690.\n\nProject stage\nMilestone complete\nSource availability\n[Open source](https://github.com/TongmingLAIC/tilelang-tpu)\n\nEvaluated on a single core of the SOPHGO BM1690, with input sizes fixed before compilation. The baseline is the vendor’s optimized PPL implementation used by Torch-TPU. PPL (Primitive Programming Language) is SOPHGO’s low-level programming language.\n\nWe evaluated matrix multiplication, RMSNorm, RoPE, SwiGLU and element-wise addition across multiple input configurations and numerical formats. RMSNorm rescales values, RoPE encodes sequence positions and SwiGLU applies a nonlinear neural-network transformation. Average speedups by operator category are **1.05–1.23×** over PPL.\n\nTileLang-TPU also supports fused operators that combine multiple computation steps. FlashAttention efficiently computes model attention. After an algorithm optimization that processes multiple attention heads together in a batch (head-batched), it achieves an average speedup of **12.50×** over PPL. Attention heads are parallel computation branches that attend to different information.\n\nFor a fused MLP, a feed-forward neural network commonly used within AI models, the MLP W8A16 Dequantized Forward operator averages **1.01×** over PPL, essentially matching its performance. W8A16 uses 8-bit weights and 16-bit activations. Dequantization converts the stored low-precision weights into values used by the computation.\n\n- [Speedup of five operator categories over PPL across five input configurations and three floating-point formats.](https://tianxing-ren.netlify.app/assets/tilelang-tpu-operators.png)\n\n- [FlashAttention average speedup of 12.50 times and fused MLP average speedup of 1.01 times over PPL.](https://tianxing-ren.netlify.app/assets/tilelang-tpu-attention-mlp.png)\n\n- **Static memory allocation** Plan where each data block sits in the chip’s fast local memory before the program runs, following the hardware’s placement rules and staying within its capacity.\n\n- **Overlap transfers and computation** Arrange data transfers and computation into stages that can run in parallel, with each step starting only when its required data is ready.\n\n- **Generate and run TPU code** Translate the computation into operations the TPU can execute, then compile, load and launch the program.\n\n### [TileLang-RISC-V](https://tianxing-ren.netlify.app/projects/tilelang-riscv/)\n\nProject lead\n\nBringing TileLang to RISC-V CPUs with AME matrix acceleration. An ongoing effort with open-source hardware and systems researchers.\n\nThis project is developing a TileLang backend for RISC-V AME AI CPUs, in collaboration with the Beijing Institute of Open Source Chip and the Institute of Software, Chinese Academy of Sciences. Current work focuses on connecting the programming model to target instructions and establishing a usable compilation and execution path.\n\nProject stage\nIn progress\nSource availability\nSource code is not public\n- **Programming model** Express common AI operators with tile-level programs and identify the information the backend needs.\n\n- **Target integration** Connect compiler lowering, AME instruction mapping, and the execution environment.\n\n- **Evaluation** Test operator correctness and performance across target configurations, and use the results to guide backend optimization.\n\nCollaborating institutions\n\n- [Beijing Institute of Open Source Chip](https://www.bosc.ac.cn/)\n\n- [Institute of Software, Chinese Academy of Sciences](https://is.cas.cn/)\n\n## I also contribute to these open-source projects\n\n- [TileLang](https://github.com/tile-ai/tilelang)\n\n- [Asterinas](https://github.com/asterinas/asterinas)\n\n## Education\n\nSep 2025 – Jul 2030 · expected\n\n### [Peking University](https://www.pku.edu.cn/)\n\nDoctor of Engineering student · Electronic Information\n\n[School of Software and Microelectronics](https://ss.pku.edu.cn/)\n\nJoint doctoral training with Zhongguancun Laboratory.\n\nMy advisors are [Tao Xie](https://taoxiease.github.io/) and [Wei Yang](https://youngwei.com/) .\n\nSep 2021 – Jul 2025\n\n### [Beihang University](https://www.buaa.edu.cn/)\n\nBachelor of Engineering · Cyberspace Security\n\n[School of Cyber Science and Technology](https://cst.buaa.edu.cn/)\n\nDuring my undergraduate studies, I collaborated with [Hua Guo](https://cst.buaa.edu.cn/info/1112/2741.htm) .\n\nGPA **3.77 / 4.00** Average grade **90.41 / 100**\n\n## Internships\n\nDec 2025 – Present\n\n### [Beijing Tongming Lake IT Innovation Center](https://www.tlaic.ac.cn/)\n\nIntelligent Systems Intern\n\n- Adapting TileLang to the SOPHGO SG2260E TPU with RISC-V tensor extensions.\n\n- Developing TileLang support for RISC-V CPUs with AME matrix acceleration.\n\nDec 2024 – Aug 2025\n\n### [Beijing Institute of Open Source Chip](https://www.bosc.ac.cn/)\n\nAI Systems Software Intern\n\n- Extended the Triton compilation stack to SOPHGO TPUs through translation into the vendor toolchain.\n\n- Built a TileLang-based operator compilation framework, including a TPU operator library, pipeline passes, and automatic code generation for operators used in LLaMA.\n\n- Several operators matched or exceeded vendor-tuned implementations in the evaluated configurations.\n\nJul 2024 – Aug 2024\n\n### [Eversec (Beijing) Technology Co., Ltd.](https://eversec.com.cn/)\n\nSecurity Services Intern\n\n- Assisted with authorized network security assessments using Burp Suite and related tools, organizing findings and identifying potential risks.\n\n- Captured and standardized more than 100 industrial IoT login-traffic PCAP records with Wireshark.\n\n## Honors & scholarships\n\n2025–2026\n\nAcademic Excellence Scholarship\n\n[Peking University](https://www.pku.edu.cn/)\n\n2024–2025\n\nSpecial Prize, Academic Competition Scholarship; Second Prize, Academic Excellence Scholarship\n\n[Beihang University](https://www.buaa.edu.cn/)\n\n2023–2024\n\nOutstanding Student; Special Prize, Academic Competition Scholarship; Second Prize, Social Service Scholarship\n\n[Beihang University](https://www.buaa.edu.cn/)\n\n2022–2023\n\nFirst Prize, Academic Competition Scholarship; Second Prize, Academic Excellence Scholarship\n\n[Beihang University](https://www.buaa.edu.cn/)\n\n## Visits\n\nJul 2024 – Aug 2024\n\n### [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/)\n\nSummer School Visiting Student\n\n## Tools for AI assistants\n\nRead the profile and projects through MCP, or submit a short topic to find relevant documented work. The response includes sources, project roles and evaluation scope.\n\n[Tool definitions](https://tianxing-ren.netlify.app/data/agent-tools.json)\n\n```text\nPOST https://tianxing-ren.netlify.app/api/agent/query\nContent-Type: application/json\n\n{\"topic\":\"RISC-V AME\",\"language\":\"en\"}\n\nPOST https://tianxing-ren.netlify.app/api/mcp\n```\n\n## Contact\n\nFor research collaboration, contact Tianxing Ren through the contact page or the linked GitHub profiles.\n\n- [Get in touch](https://tianxing-ren.netlify.app/contact/)\n\n- [GitHub / LeslinD](https://github.com/LeslinD)\n\n- [GitHub / tianxingren-work](https://github.com/tianxingren-work)\n\n## Direct access to files\n\n- [`/llms.txt`](https://tianxing-ren.netlify.app/llms.txt)\n\n- [`/llms-full.md`](https://tianxing-ren.netlify.app/llms-full.md)\n\n- [`/data/agents.json`](https://tianxing-ren.netlify.app/data/agents.json)\n\n- [`/data/profile.json`](https://tianxing-ren.netlify.app/data/profile.json)\n\n- [`/data/projects.json`](https://tianxing-ren.netlify.app/data/projects.json)\n\n- [`/data/routes.json`](https://tianxing-ren.netlify.app/data/routes.json)\n\n- [`/data/agent-tools.json`](https://tianxing-ren.netlify.app/data/agent-tools.json)\n\n- [`/openapi.json`](https://tianxing-ren.netlify.app/openapi.json)\n\n- [`/machine/en/for-agents.md`](https://tianxing-ren.netlify.app/machine/en/for-agents.md)\n\n- [`/machine/en/for-agents.json`](https://tianxing-ren.netlify.app/machine/en/for-agents.json)\n\n- [`/machine/en/about.md`](https://tianxing-ren.netlify.app/machine/en/about.md)\n\n- [`/machine/en/projects/tilelang-tpu.md`](https://tianxing-ren.netlify.app/machine/en/projects/tilelang-tpu.md)\n\n- [`/machine/en/projects/tilelang-riscv.md`](https://tianxing-ren.netlify.app/machine/en/projects/tilelang-riscv.md)\n\nRecognized AI tool requests receive Markdown automatically. Requests to the homepage receive this complete profile, and requests to other pages receive that page’s content. Select ?format=markdown, ?format=json, or ?format=html, or use the Accept header to request a format. The direct file links above are also available.\n\n```text\nGET /for-agents/?format=markdown\nGET /api/agents\nGET /api/profile\nGET /api/projects\n```\n\nAvailable versions use the language codes en, zh, ko, and ms.\n\n## Sources and project roles\n\nWhen summarizing this work, cite the original project pages and include the hardware, baseline, and evaluation scope for performance results. Project stage and source availability are recorded separately. Projects I lead and projects I contribute to are listed with their respective roles.\n",
   "links": [
     "https://taoxiease.github.io/",
     "https://youngwei.com/",
     "https://tianxing-ren.netlify.app/projects/tilelang-tpu/",
     "https://github.com/TongmingLAIC/tilelang-tpu",
+    "https://tianxing-ren.netlify.app/assets/tilelang-tpu-operators.png",
+    "https://tianxing-ren.netlify.app/assets/tilelang-tpu-attention-mlp.png",
     "https://tianxing-ren.netlify.app/projects/tilelang-riscv/",
     "https://www.bosc.ac.cn/",
     "https://is.cas.cn/",
@@ -234,69 +236,94 @@
       "stage": "milestone-complete",
       "open_source": true,
       "summary": "A TileLang backend for SOPHGO TPUs, from compile-time memory planning to executable kernels.",
-      "overview": "TileLang-TPU brings tile-level programming to commercial SOPHGO accelerators. It preserves the TileLang programming model and turns on-chip memory placement, data movement, and transfer–compute overlap into compiler decisions. The compiler and JIT runtime provide an end-to-end path from a Python kernel definition to execution on BM1690.",
+      "overview": "TileLang-TPU brings tile-level programming to commercial SOPHGO accelerators. Tiles are small blocks of data used to express a computation. The compiler handles on-chip memory placement, data movement and overlapping transfers with computation. Its just-in-time (JIT) runtime compiles Python kernel definitions and launches them on the BM1690.",
       "highlights": [
         {
           "title": "Static memory allocation",
-          "description": "Assign concrete local-memory offsets at compile time, accounting for alignment, capacity, and memory-bank placement."
+          "description": "Plan where each data block sits in the chip’s fast local memory before the program runs, following the hardware’s placement rules and staying within its capacity."
         },
         {
-          "title": "Structured pipeline lowering",
-          "description": "Turn tiled loops into explicit execution stages so that data transfers can overlap with computation while preserving dependencies."
+          "title": "Overlap transfers and computation",
+          "description": "Arrange data transfers and computation into stages that can run in parallel, with each step starting only when its required data is ready."
         },
         {
-          "title": "Backend mapping and runtime",
-          "description": "Generate TPU kernel API calls and connect the output to host/device compilation, linking, loading, and launch."
+          "title": "Generate and run TPU code",
+          "description": "Translate the computation into operations the TPU can execute, then compile, load and launch the program."
         }
       ],
       "url": "https://tianxing-ren.netlify.app/projects/tilelang-tpu/",
       "markdown": "https://tianxing-ren.netlify.app/machine/en/projects/tilelang-tpu.md",
       "repository": "https://github.com/TongmingLAIC/tilelang-tpu",
       "evaluation": {
-        "study_id": "bm1690-five-kernel-study",
-        "hardware": "SOPHGO BM1690, single card, PCIe mode",
-        "baseline": "SOPHGO PPL",
-        "metric": "PPL kernel latency / TileLang-TPU kernel latency",
-        "average_speedup": 1.1,
-        "faster_configurations": 71,
-        "total_configurations": 75,
-        "tied_configurations": 1,
-        "slower_configurations": 3,
-        "dtypes": [
-          "BF16",
-          "FP16",
-          "FP32"
-        ],
-        "operators": [
-          "Matmul",
-          "RMSNorm",
-          "RoPE",
-          "SwiGLU",
-          "Element-wise addition"
-        ],
-        "setup": {
-          "os": "Ubuntu 24.04 LTS",
-          "sdk": "SOPHGO PPL SDK 1.4.195",
-          "driver": "1.9.1",
-          "warmup_runs": 5,
-          "timed_repetitions": 10
+        "study_id": "bm1690-single-core-operators-and-fused-workloads",
+        "hardware": "SOPHGO BM1690, single core",
+        "baseline": "Vendor PPL implementations used by SOPHGO Torch-TPU",
+        "metric": "PPL operator execution time / TileLang-TPU operator execution time",
+        "standalone": {
+          "operators": [
+            "Matmul",
+            "RMSNorm",
+            "RoPE",
+            "SwiGLU",
+            "Element-wise addition"
+          ],
+          "dtypes": [
+            "BF16",
+            "FP16",
+            "FP32"
+          ],
+          "average_speedup_range": [
+            1.05,
+            1.23
+          ],
+          "aggregation": "Average speedup by operator category across tested configurations and data types"
+        },
+        "flash_attention": {
+          "average_speedup": 12.5,
+          "dtypes": [
+            "BF16",
+            "FP16"
+          ],
+          "optimization": "Head-batched computation: process multiple attention heads together"
+        },
+        "fused_mlp": {
+          "workload": "MLP W8A16 Dequantized Forward",
+          "average_speedup": 1.01,
+          "weights_bits": 8,
+          "activations_bits": 16
         },
         "source": {
-          "type": "owner-supplied evaluation manuscript",
-          "section": "5.1–5.2",
-          "label": "TileLang-TPU evaluation"
+          "type": "owner-supplied updated evaluation summary and figures",
+          "date": "2026-10-14"
         },
-        "scope": "Five kernels × five input shapes × three data types on one SOPHGO BM1690 card. Average speedup over PPL uses TPU kernel execution latency; compilation and host execution are outside this timing.",
-        "methods": "Both implementations use the same operator semantics, shapes, data types, and vendor compilation toolchain. Each case uses five warm-up runs and ten timed repetitions. The reported set includes 71 faster cases, one tie, and three slower cases."
+        "scope": "Evaluated on a single core of the SOPHGO BM1690, with input sizes fixed before compilation. The baseline is the vendor’s optimized PPL implementation used by Torch-TPU. PPL (Primitive Programming Language) is SOPHGO’s low-level programming language.",
+        "methods": "Speedup compares execution time for the tested operations. Standalone results report averages by operator category. FlashAttention and fused MLP are separate workloads, each with its own average.",
+        "standalone_text": "We evaluated matrix multiplication, RMSNorm, RoPE, SwiGLU and element-wise addition across multiple input configurations and numerical formats. RMSNorm rescales values, RoPE encodes sequence positions and SwiGLU applies a nonlinear neural-network transformation. Average speedups by operator category are 1.05–1.23× over PPL.",
+        "attention_text": "TileLang-TPU also supports fused operators that combine multiple computation steps. FlashAttention efficiently computes model attention. After an algorithm optimization that processes multiple attention heads together in a batch (head-batched), it achieves an average speedup of 12.50× over PPL. Attention heads are parallel computation branches that attend to different information.",
+        "mlp_text": "For a fused MLP, a feed-forward neural network commonly used within AI models, the MLP W8A16 Dequantized Forward operator averages 1.01× over PPL, essentially matching its performance. W8A16 uses 8-bit weights and 16-bit activations. Dequantization converts the stored low-precision weights into values used by the computation.",
+        "figures": [
+          {
+            "asset": "assets/tilelang-tpu-operators.png",
+            "width": 3166,
+            "height": 915,
+            "alt": "Speedup of five operator categories over PPL across five input configurations and three floating-point formats.",
+            "caption": "Standalone operators. M0–M4 label five tested input configurations. BF16 and FP16 use 16-bit floating-point formats; FP32 uses 32 bits. A value of 1× means the same execution time as PPL, and larger values mean faster execution. The 1.05–1.23× summary gives averages by operator category.",
+            "url": "https://tianxing-ren.netlify.app/assets/tilelang-tpu-operators.png"
+          },
+          {
+            "asset": "assets/tilelang-tpu-attention-mlp.png",
+            "width": 9282,
+            "height": 2797,
+            "alt": "FlashAttention average speedup of 12.50 times and fused MLP average speedup of 1.01 times over PPL.",
+            "caption": "Fused workloads. FlashAttention averages 12.50× over PPL; the W8A16 MLP averages 1.01×. B, H, S and D denote batch size, attention heads, sequence length and head dimension. M, H and I denote input rows, hidden width and intermediate width. The tuples identify the tested input sizes.",
+            "url": "https://tianxing-ren.netlify.app/assets/tilelang-tpu-attention-mlp.png"
+          }
+        ]
       },
       "implementation_sources": [
         {
           "title": "Public implementation and setup instructions",
           "url": "https://github.com/TongmingLAIC/tilelang-tpu"
-        },
-        {
-          "title": "Runnable TPU demos",
-          "url": "https://github.com/TongmingLAIC/tilelang-tpu/tree/main/tpu_demo"
         }
       ]
     },

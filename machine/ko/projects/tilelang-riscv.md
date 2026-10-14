@@ -1,6 +1,6 @@
 [프로젝트로 돌아가기](https://tianxing-ren.netlify.app/ko/projects/)
 
-프로젝트 리드
+프로젝트 책임자
 
 # TileLang-RISC-V
 
@@ -16,7 +16,7 @@ RISC-V AME AI CPUs
 
 베이징 오픈소스 칩 연구원 및 중국과학원 소프트웨어연구소와 협력해 RISC-V AME AI CPU용 TileLang 백엔드를 개발하고 있습니다. 현재 프로그래밍 모델과 대상 명령어를 연결하고 실용적인 컴파일·실행 경로를 구축하는 데 집중합니다.
 
-## 현재 작업
+## 현재 진행 중인 작업
 
 01
 
@@ -42,4 +42,4 @@ RISC-V AME AI CPUs
 
 ## 관련 문제를 연구하고 계신가요?
 
-[인사 나누기](https://tianxing-ren.netlify.app/ko/contact/)
+[연락하기](https://tianxing-ren.netlify.app/ko/contact/)
