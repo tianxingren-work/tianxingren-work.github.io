@@ -1,10 +1,10 @@
-베이징대학교 · 공학 박사과정
+# AI 컴파일러 연구
 
-# Tianxing Ren
+소개
+
+안녕하세요. 저는 베이징대학교와 중관춘 연구소의 공동 공학 박사과정에 재학 중인 **Tianxing Ren**입니다.
 
 다양한 AI 알고리즘이 새로운 AI 하드웨어에서 정확하고 효율적으로 실행되도록 AI 컴파일러를 연구합니다. 사람과 에이전트가 더 쉽게 프로그래밍할 수 있도록 돕고자 합니다.
-
-AI 컴파일러 · 타일 단위 프로그래밍 · 이종 컴퓨팅
 
 [프로젝트 보기](https://tianxingren-work.github.io/ko/projects/) [연락하기](https://tianxingren-work.github.io/ko/contact/)
 

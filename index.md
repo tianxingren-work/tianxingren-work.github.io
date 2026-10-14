@@ -1,10 +1,10 @@
-DOCTORAL RESEARCHER · PEKING UNIVERSITY
+# AI compiler research
 
-# Tianxing Ren
+PROFILE
+
+I’m **Tianxing Ren**, a doctoral researcher at Peking University, jointly trained with Zhongguancun Laboratory.
 
 I research AI compilers to help diverse AI algorithms run correctly and efficiently on emerging AI hardware, and to make programming easier for people and agents.
-
-AI compilers · Tile-level programming · Heterogeneous computing
 
 [Explore projects](https://tianxingren-work.github.io/projects/) [Say hello](https://tianxingren-work.github.io/contact/)
 

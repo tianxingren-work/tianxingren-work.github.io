@@ -1,10 +1,10 @@
-北京大学 · 工程博士研究生
+# AI 编译器研究
 
-# 任天行
+个人简介
+
+你好，我是**任天行**，北京大学工程博士研究生，与中关村实验室联合培养。
 
 我研究 AI 编译器，希望让各种 AI 算法正确、高效地运行在新兴 AI 硬件上，让人和 Agent 更容易编程。
-
-AI 编译器 · Tile 级编程 · 异构计算
 
 [看看我做的项目](https://tianxingren-work.github.io/zh/projects/) [打个招呼](https://tianxingren-work.github.io/zh/contact/)
 

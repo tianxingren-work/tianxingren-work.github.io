@@ -1,10 +1,10 @@
-PELAJAR KEDOKTORAN · PEKING UNIVERSITY
+# Penyelidikan pengkompil AI
 
-# Tianxing Ren
+PROFIL
+
+Saya **Tianxing Ren**, pelajar Doktor Kejuruteraan di Universiti Peking dalam program bersama Makmal Zhongguancun.
 
 Saya menyelidik pengkompil AI agar pelbagai algoritma AI dapat berjalan dengan betul dan cekap pada perkakasan AI baharu, serta memudahkan pengaturcaraan untuk manusia dan ejen.
-
-Pengkompil AI · Pengaturcaraan peringkat tile · Pengkomputeran heterogen
 
 [Terokai projek](https://tianxingren-work.github.io/ms/projects/) [Hubungi saya](https://tianxingren-work.github.io/ms/contact/)
 
