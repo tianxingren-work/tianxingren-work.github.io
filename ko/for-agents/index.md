@@ -14,7 +14,7 @@ Language: ko. Updated: 2026-10-14.
 
 [Tao Xie 교수님](https://taoxiease.github.io/) 과 [Wei Yang 교수님](https://youngwei.com/) 의 지도를 받으며 박사과정 연구를 진행하고 있습니다.
 
-## 제가 이끄는 프로젝트
+## 연구 프로젝트
 
 ### TileLang-TPU
 
@@ -58,7 +58,7 @@ https://tianxingren-work.github.io/ko/projects/tilelang-riscv/
 - 대상 플랫폼 통합: 컴파일 하향 변환, AME 명령어 매핑, 실행 환경을 연결합니다.
 - 평가: 대상 구성별로 연산자의 정확성과 성능을 검증하고, 결과를 바탕으로 백엔드를 최적화합니다.
 
-## 제가 기여하는 오픈소스 프로젝트
+## 오픈소스 기여
 
 - [TileLang](https://github.com/tile-ai/tilelang) — contributor
 - [Asterinas](https://github.com/asterinas/asterinas) — contributor
@@ -117,7 +117,7 @@ https://github.com/tianxingren-work
 
 ## 읽기 형식
 
-백엔드에 연결할 필요 없이 Markdown과 JSON 파일을 직접 읽을 수 있습니다. 전체 프로필과 각 프로젝트 페이지에 해당하는 파일을 제공합니다.
+아래 파일 링크에서 전체 프로필, 연락처, 프로젝트 정보를 Markdown 또는 JSON으로 읽을 수 있습니다.
 
 - Markdown: https://tianxingren-work.github.io/machine/ko/for-agents.md
 - JSON: https://tianxingren-work.github.io/machine/ko/for-agents.json

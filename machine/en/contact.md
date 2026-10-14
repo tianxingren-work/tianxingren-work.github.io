@@ -1,10 +1,10 @@
 CONTACT
 
-# Discuss research
+# Get in touch
 
 Working on AI compilers, emerging AI hardware, or a related systems problem? I’d be happy to exchange ideas and discuss your work.
 
-## A few starting points
+## Research topics
 
 New AI hardware & compiler backends
 

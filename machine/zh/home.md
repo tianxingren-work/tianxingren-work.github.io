@@ -6,7 +6,7 @@
 
 我研究 AI 编译器，希望让各种 AI 算法正确、高效地运行在新兴 AI 硬件上，让人和 Agent 更容易编程。
 
-[看看我做的项目](https://tianxingren-work.github.io/zh/projects/) [打个招呼](https://tianxingren-work.github.io/zh/contact/)
+[查看研究项目](https://tianxingren-work.github.io/zh/projects/) [联系我](https://tianxingren-work.github.io/zh/contact/)
 
 AI COMPILERS TILE-LEVEL PROGRAMMING HETEROGENEOUS COMPUTING
 

@@ -10,11 +10,11 @@ Language: en. Updated: 2026-10-14.
 
 I research AI compilers so that diverse AI algorithms can run correctly and efficiently on emerging AI hardware. I aim to make programming easier for people and agents.
 
-I’m a Doctor of Engineering student at Peking University, jointly trained with Zhongguancun Laboratory. I research AI compilers, tile-level programming, and heterogeneous computing, with an interest in programming languages and computer architecture.
+I’m a doctoral student in engineering at Peking University, in a joint program with Zhongguancun Laboratory. My research focuses on AI compilers, tile-level programming and heterogeneous computing, with related interests in programming languages and computer architecture.
 
 [Prof. Tao Xie](https://taoxiease.github.io/) and [Prof. Wei Yang](https://youngwei.com/) supervise my doctoral research.
 
-## Projects I lead
+## Research Projects
 
 ### TileLang-TPU
 
@@ -24,7 +24,7 @@ A TileLang backend for SOPHGO TPUs, from compile-time memory planning to executa
 
 TileLang-TPU brings tile-level programming to commercial SOPHGO accelerators. Tiles are small blocks of data used to express a computation. The compiler handles on-chip memory placement, data movement and overlapping transfers with computation. Its just-in-time (JIT) runtime compiles Python kernel definitions and launches them on the BM1690.
 
-Project stage: Milestone complete
+Project stage: Milestone completed
 Source availability: https://github.com/TongmingLAIC/tilelang-tpu
 
 https://tianxingren-work.github.io/projects/tilelang-tpu/
@@ -58,7 +58,7 @@ https://tianxingren-work.github.io/projects/tilelang-riscv/
 - Target integration: Connect compiler lowering, AME instruction mapping, and the execution environment.
 - Evaluation: Test operator correctness and performance across target configurations, and use the results to guide backend optimization.
 
-## I also contribute to these open-source projects
+## Open-source contributions
 
 - [TileLang](https://github.com/tile-ai/tilelang) — contributor
 - [Asterinas](https://github.com/asterinas/asterinas) — contributor
@@ -67,7 +67,7 @@ https://tianxingren-work.github.io/projects/tilelang-riscv/
 
 - Peking University, Doctor of Engineering student, Electronic Information. Sep 2025 – Jul 2030 · expected
 - Beihang University, Bachelor of Engineering, Cyberspace Security. Sep 2021 – Jul 2025
-  GPA 3.77 / 4.0. Average grade 90.41 / 100
+  GPA 3.77 / 4.0. Average score 90.41 / 100
 
 During my undergraduate studies, I conducted research primarily under the guidance of [Prof. Hua Guo](https://cst.buaa.edu.cn/info/1112/2741.htm) . I completed an area-efficient FPGA implementation of an algebraic lattice cryptography suite, which received Third Prize in the National Cryptography Technology Competition. I also completed a cloud-service key-protection mechanism based on secure multiparty computation, which received First Prize in the National College Student Information Security Competition.
 
@@ -117,7 +117,7 @@ https://github.com/tianxingren-work
 
 ## Reading formats
 
-Read the Markdown and JSON files directly; no backend connection is needed. The complete profile and each project page have their own files.
+Use the file links below to read the complete profile, contact details and project records in Markdown or JSON.
 
 - Markdown: https://tianxingren-work.github.io/machine/en/for-agents.md
 - JSON: https://tianxingren-work.github.io/machine/en/for-agents.json

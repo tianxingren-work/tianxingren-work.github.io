@@ -1,6 +1,6 @@
 # About me
 
-I’m a Doctor of Engineering student at Peking University, jointly trained with Zhongguancun Laboratory. I research AI compilers, tile-level programming, and heterogeneous computing, with an interest in programming languages and computer architecture.
+I’m a doctoral student in engineering at Peking University, in a joint program with Zhongguancun Laboratory. My research focuses on AI compilers, tile-level programming and heterogeneous computing, with related interests in programming languages and computer architecture.
 
 I research AI compilers so that diverse AI algorithms can run correctly and efficiently on emerging AI hardware. I aim to make programming easier for people and agents.
 
@@ -32,7 +32,7 @@ Bachelor of Engineering · Cyberspace Security
 
 During my undergraduate studies, I conducted research primarily under the guidance of [Prof. Hua Guo](https://cst.buaa.edu.cn/info/1112/2741.htm) . I completed an area-efficient FPGA implementation of an algebraic lattice cryptography suite, which received Third Prize in the National Cryptography Technology Competition. I also completed a cloud-service key-protection mechanism based on secure multiparty computation, which received First Prize in the National College Student Information Security Competition.
 
-GPA **3.77 / 4.00** Average grade **90.41 / 100**
+GPA **3.77 / 4.00** Average score **90.41 / 100**
 
 ## Internships
 
@@ -104,7 +104,7 @@ Summer School Visiting Student
 
 CONTACT
 
-## Discuss research
+## Get in touch
 
 Working on AI compilers, emerging AI hardware, or a related systems problem? I’d be happy to exchange ideas and discuss your work.
 

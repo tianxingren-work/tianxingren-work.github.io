@@ -61,4 +61,4 @@ TileLang-TPU 将 Tile 级编程带到商用算能加速器，通过数据分块�
 
 ## 你也在研究相关问题吗？
 
-[打个招呼](https://tianxingren-work.github.io/zh/contact/)
+[联系我](https://tianxingren-work.github.io/zh/contact/)

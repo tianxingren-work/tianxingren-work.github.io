@@ -42,4 +42,4 @@ RISC-V AME AI CPUs
 
 ## 你也在研究相关问题吗？
 
-[打个招呼](https://tianxingren-work.github.io/zh/contact/)
+[联系我](https://tianxingren-work.github.io/zh/contact/)

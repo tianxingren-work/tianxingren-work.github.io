@@ -117,7 +117,7 @@ https://github.com/tianxingren-work
 
 ## 读取方式
 
-请直接读取 Markdown 或 JSON 文件，无需连接后台。完整资料和各项目页面均有对应文件。
+下方链接提供个人资料、联系信息和项目记录的 Markdown 或 JSON 版本，可直接读取。
 
 - Markdown: https://tianxingren-work.github.io/machine/zh/for-agents.md
 - JSON: https://tianxingren-work.github.io/machine/zh/for-agents.json

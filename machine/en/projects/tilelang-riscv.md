@@ -42,4 +42,4 @@ Test operator correctness and performance across target configurations, and use 
 
 ## Working on a related problem?
 
-[Say hello](https://tianxingren-work.github.io/contact/)
+[Contact me](https://tianxingren-work.github.io/contact/)

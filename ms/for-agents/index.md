@@ -14,7 +14,7 @@ Saya mengikuti pengajian Doktor Kejuruteraan di Universiti Peking melalui progra
 
 Saya menjalankan penyelidikan kedoktoran di bawah bimbingan [Prof. Tao Xie](https://taoxiease.github.io/) dan [Prof. Wei Yang](https://youngwei.com/) .
 
-## Projek yang saya terajui
+## Projek penyelidikan
 
 ### TileLang-TPU
 
@@ -58,7 +58,7 @@ https://tianxingren-work.github.io/ms/projects/tilelang-riscv/
 - Penyepaduan sasaran: Menghubungkan penurunan kompilasi, pemetaan arahan AME dan persekitaran pelaksanaan.
 - Penilaian: Menguji ketepatan dan prestasi operator merentas konfigurasi sasaran, kemudian menggunakan hasilnya untuk mengoptimumkan backend.
 
-## Projek sumber terbuka yang saya sertai
+## Sumbangan sumber terbuka
 
 - [TileLang](https://github.com/tile-ai/tilelang) — contributor
 - [Asterinas](https://github.com/asterinas/asterinas) — contributor
@@ -117,7 +117,7 @@ https://github.com/tianxingren-work
 
 ## Format bacaan
 
-Baca fail Markdown dan JSON secara terus tanpa sambungan ke pelayan belakang. Profil lengkap dan setiap halaman projek mempunyai fail masing-masing.
+Pautan fail di bawah menyediakan profil lengkap, maklumat hubungan dan rekod projek dalam format Markdown atau JSON.
 
 - Markdown: https://tianxingren-work.github.io/machine/ms/for-agents.md
 - JSON: https://tianxingren-work.github.io/machine/ms/for-agents.json

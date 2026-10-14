@@ -10,9 +10,9 @@
 
 AI COMPILERS TILE-LEVEL PROGRAMMING HETEROGENEOUS COMPUTING
 
-연구 프로젝트
+연구
 
-## 주도한 프로젝트
+## 연구 프로젝트
 
 타일 단위 프로그래밍을 새로운 AI 하드웨어에 적용하는 프로젝트를 이끌고 있습니다.
 
@@ -35,7 +35,7 @@ AME 행렬 가속을 제공하는 RISC-V CPU에 TileLang을 이식합니다. 오
 
 [프로젝트 보기](https://tianxingren-work.github.io/ko/projects/tilelang-riscv/) RISC-V / AME
 
-제가 기여하는 오픈소스 프로젝트
+오픈소스 기여
 
 [**TileLang**](https://github.com/tile-ai/tilelang) [**Asterinas**](https://github.com/asterinas/asterinas)
 

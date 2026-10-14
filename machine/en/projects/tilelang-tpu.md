@@ -6,7 +6,7 @@ Project lead
 
 Tile-level code. TPU performance.
 
-Milestone complete [Open source](https://github.com/TongmingLAIC/tilelang-tpu)
+Milestone completed [Open source](https://github.com/TongmingLAIC/tilelang-tpu)
 TileLang SOPHGO TPU Compiler backends
 [Source code](https://github.com/TongmingLAIC/tilelang-tpu) [Get in touch](https://tianxingren-work.github.io/contact/)
 
@@ -61,4 +61,4 @@ Fused workloads. FlashAttention averages 12.50× over PPL; the W8A16 MLP average
 
 ## Working on a related problem?
 
-[Say hello](https://tianxingren-work.github.io/contact/)
+[Contact me](https://tianxingren-work.github.io/contact/)

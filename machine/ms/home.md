@@ -6,13 +6,13 @@ Saya **Tianxing Ren**, pelajar Doktor Kejuruteraan di Universiti Peking dalam pr
 
 Saya menyelidik pengkompil AI agar pelbagai algoritma AI dapat berjalan dengan betul dan cekap pada perkakasan AI baharu, serta memudahkan pengaturcaraan untuk manusia dan ejen.
 
-[Terokai projek](https://tianxingren-work.github.io/ms/projects/) [Hubungi saya](https://tianxingren-work.github.io/ms/contact/)
+[Lihat projek](https://tianxingren-work.github.io/ms/projects/) [Hubungi saya](https://tianxingren-work.github.io/ms/contact/)
 
 AI COMPILERS TILE-LEVEL PROGRAMMING HETEROGENEOUS COMPUTING
 
-PROJEK PENYELIDIKAN
+PENYELIDIKAN
 
-## Projek yang saya terajui
+## Projek penyelidikan
 
 Saya menerajui projek yang membawa pengaturcaraan peringkat tile kepada perkakasan AI baharu.
 
@@ -35,7 +35,7 @@ Membawa TileLang ke CPU RISC-V dengan pecutan matriks AME. Usaha berterusan bers
 
 [Lihat projek](https://tianxingren-work.github.io/ms/projects/tilelang-riscv/) RISC-V / AME
 
-Projek sumber terbuka yang saya sertai
+Sumbangan sumber terbuka
 
 [**TileLang**](https://github.com/tile-ai/tilelang) [**Asterinas**](https://github.com/asterinas/asterinas)
 
