@@ -1,6 +1,6 @@
-LET’S COMPARE NOTES
+CONTACT
 
-# Good systems start with a conversation.
+# Discuss research
 
 Working on AI compilers, emerging AI hardware, or a related systems problem? I’d be happy to exchange ideas and discuss your work.
 

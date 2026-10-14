@@ -6,7 +6,7 @@ Saya menyelidik pengkompil AI agar pelbagai algoritma AI dapat berjalan dengan b
 
 Saya menjalankan penyelidikan kedoktoran di bawah bimbingan [Prof. Tao Xie](https://taoxiease.github.io/) dan [Prof. Wei Yang](https://youngwei.com/) .
 
-[Hubungi saya](https://tianxing-ren.netlify.app/ms/contact/) [GitHub ](https://github.com/LeslinD)
+[Hubungi saya](https://tianxingren-work.github.io/ms/contact/) [GitHub ](https://github.com/LeslinD)
 
 ## Pendidikan
 
@@ -102,10 +102,10 @@ Jul 2024 – Ogo 2024
 
 Pelajar Lawatan Sekolah Musim Panas
 
-MARI BERTUKAR PANDANGAN
+HUBUNGI SAYA
 
-## Sistem yang baik bermula dengan perbualan.
+## Bincangkan penyelidikan
 
 Jika anda menyelidik pengkompil AI, perkakasan AI baharu atau persoalan sistem yang berkaitan, saya berbesar hati untuk bertukar pandangan. Kongsikan idea, soalan atau kerja yang sedang anda lakukan.
 
-[Hubungi saya](https://tianxing-ren.netlify.app/ms/contact/) [GitHub ](https://github.com/LeslinD)
+[Hubungi saya](https://tianxingren-work.github.io/ms/contact/) [GitHub ](https://github.com/LeslinD)

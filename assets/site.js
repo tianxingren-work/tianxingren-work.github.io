@@ -124,52 +124,13 @@
       el.open = false; el.querySelector('summary')?.focus();
     });
   });
-  // Optional browser-agent tools read public profile and contact data.
-  const registry = document.modelContext || navigator.modelContext;
-  if (!window.__SITE_PREVIEW__ && typeof registry?.registerTool === 'function') {
-    const lifecycle = new AbortController();
-    window.addEventListener('pagehide', () => lifecycle.abort(), {once: true});
-    const guide = document.querySelector('link[rel=describedby][type="text/markdown"]');
-    const dataURL = guide ? new URL(guide.getAttribute('href').replace(/\.md$/, '.json'), document.baseURI) : null;
-    const validate = (input, topic = false) => {
-      if (!input || typeof input !== 'object' || Array.isArray(input)) throw new Error('Arguments must be an object');
-      if (Object.keys(input).some(key => topic ? key !== 'topic' : true)) throw new Error('Unknown argument');
-      if (topic && (typeof input.topic !== 'string' || !input.topic.trim() || input.topic.length > 300)) throw new Error('topic must contain 1–300 characters');
-    };
-    const read = async signal => {
-      if (!dataURL) throw new Error('Profile resource unavailable');
-      const response = await fetch(dataURL, {signal});
-      if (!response.ok) throw new Error('Profile resource unavailable');
-      return response.json();
-    };
-    const definitions = [
-      {name: 'read_tianxing_contact', description: 'Read public email text, contact-page URL and GitHub profiles.',
-        inputSchema: {type: 'object', properties: {}, additionalProperties: false},
-        async execute(input, options = {}) { validate(input); const data = await read(options.signal); return {contact: data.profile.contact, source: data.profile.contact.url}; }},
-      {name: 'read_tianxing_profile', description: 'Read Tianxing Ren’s public AI compiler research goals and background in the current page language.',
-        inputSchema: {type: 'object', properties: {}, additionalProperties: false},
-        async execute(input, options = {}) { validate(input); const data = await read(options.signal); return {profile: data.profile, source: data.profile.url}; }},
-      {name: 'read_tianxing_projects', description: 'Read documented leading and contributing projects, with source links and evaluation scope.',
-        inputSchema: {type: 'object', properties: {}, additionalProperties: false},
-        async execute(input, options = {}) { validate(input); const data = await read(options.signal); return {leading_projects: data.leading_projects, participation: data.participation, source: data.url}; }},
-      {name: 'match_tianxing_work', description: 'Find documented AI compiler work related to a short topic, with source links.',
-        inputSchema: {type: 'object', properties: {topic: {type: 'string', minLength: 1, maxLength: 300}}, required: ['topic'], additionalProperties: false},
-        async execute(input, options = {}) {
-          validate(input, true);
-          const language = {en: 'en', 'zh-Hans': 'zh', ko: 'ko', ms: 'ms'}[document.documentElement.lang] || 'en';
-          const data = await read(options.signal);
-          const topic = input.topic.trim().toLowerCase();
-          const terms = [...new Set(topic.split(/[\s,，、/]+/).filter(Boolean))];
-          if (/tpu|sophgo|bm1690|sg2260|算能/.test(topic)) terms.push('tpu');
-          if (/risc|ame|matrix|矩阵/.test(topic)) terms.push('risc-v');
-          const matches = data.leading_projects.map(project => ({project, score: terms.reduce((n, term) => n + (JSON.stringify(project).toLowerCase().includes(term) ? 1 : 0), 0)})).filter(item => item.score > 0).sort((a, b) => b.score - a.score).map(item => item.project);
-          return {topic: input.topic, language, matches, source: data.url, profile: data.profile};
-        }}
-    ];
-    for (const tool of definitions) {
-      tool.annotations = {readOnlyHint: true, untrustedContentHint: false, consequentialHint: false};
-      try { Promise.resolve(registry.registerTool(tool, {signal: lifecycle.signal})).catch(() => {}); }
-      catch { /* Native registration is optional; ordinary reading stays available. */ }
-    }
+  // Send one small anonymous page event. Rendering never depends on the backend.
+  const endpoint = document.body.dataset.statistics;
+  if (endpoint && document.body.dataset.page !== '404' && !window.__SITE_PREVIEW__) {
+    let referrer = '';
+    try { referrer = new URL(document.referrer).origin; } catch { /* direct visit */ }
+    const payload = JSON.stringify({path: location.pathname, language: document.body.dataset.language, referrer});
+    fetch(endpoint, {method: 'POST', mode: 'cors', credentials: 'omit', keepalive: true,
+      headers: {'Content-Type': 'text/plain;charset=UTF-8'}, body: payload}).catch(() => {});
   }
 })();

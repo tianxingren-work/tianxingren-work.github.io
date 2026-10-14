@@ -2,7 +2,7 @@
 
 > AI compilers, Tile-level programming, Heterogeneous computing
 
-https://tianxing-ren.netlify.app/ko/for-agents/
+https://tianxingren-work.github.io/ko/for-agents/
 
 Language: ko. Updated: 2026-10-14.
 
@@ -27,7 +27,7 @@ TileLang-TPU는 상용 SOPHGO 가속기에서 타일 단위 프로그래밍을 �
 프로젝트 단계: 주요 단계 완료
 소스 공개 여부: https://github.com/TongmingLAIC/tilelang-tpu
 
-https://tianxing-ren.netlify.app/ko/projects/tilelang-tpu/
+https://tianxingren-work.github.io/ko/projects/tilelang-tpu/
 
 SOPHGO BM1690의 단일 코어에서 입력 크기를 컴파일 전에 확정한 조건으로 평가했습니다. 비교 기준은 Torch-TPU에서 사용하는 제조사의 최적화된 PPL 구현입니다. PPL(Primitive Programming Language)은 SOPHGO가 제공하는 저수준 프로그래밍 언어입니다.
 
@@ -52,7 +52,7 @@ AME 행렬 가속을 제공하는 RISC-V CPU에 TileLang을 이식합니다. 오
 프로젝트 단계: 진행 중
 소스 공개 여부: 소스 코드 비공개
 
-https://tianxing-ren.netlify.app/ko/projects/tilelang-riscv/
+https://tianxingren-work.github.io/ko/projects/tilelang-riscv/
 
 - 프로그래밍 모델: 일반적인 AI 연산자를 타일 단위 프로그램으로 표현하고 백엔드에 필요한 정보를 파악합니다.
 - 대상 플랫폼 통합: 컴파일 하향 변환, AME 명령어 매핑, 실행 환경을 연결합니다.
@@ -111,50 +111,14 @@ https://tianxing-ren.netlify.app/ko/projects/tilelang-riscv/
 공개 이메일 주소와 GitHub 링크를 직접 읽을 수 있습니다. AI 컴파일러, 새로운 AI 하드웨어 및 관련 시스템 연구에 관한 교류를 환영합니다.
 
 이메일: tianxingren25 [at] stu [dot] pku [dot] edu [dot] cn
-https://tianxing-ren.netlify.app/ko/contact/
+https://tianxingren-work.github.io/ko/contact/
 https://github.com/LeslinD
 https://github.com/tianxingren-work
 
-## Agent 인터페이스
+## 읽기 형식
 
-MCP는 프로필, 프로젝트 목록, 주제별 작업 검색, 연락처를 위한 네 가지 도구를 제공합니다. Markdown, JSON, HTTP 자료 인터페이스도 이용할 수 있습니다.
+백엔드에 연결할 필요 없이 Markdown과 JSON 파일을 직접 읽을 수 있습니다. 전체 프로필과 각 프로젝트 페이지에 해당하는 파일을 제공합니다.
 
-- Markdown: https://tianxing-ren.netlify.app/machine/ko/for-agents.md
-- JSON: https://tianxing-ren.netlify.app/machine/ko/for-agents.json
-- Contact JSON: https://tianxing-ren.netlify.app/data/contact.json
-- MCP: https://tianxing-ren.netlify.app/api/mcp
-- OpenAPI: https://tianxing-ren.netlify.app/openapi.json
-- Tools: get_profile, get_projects, find_relevant_work, get_contact
-
-```http
-POST https://tianxing-ren.netlify.app/api/mcp
-Content-Type: application/json
-Accept: application/json
-MCP-Protocol-Version: 2026-07-28
-Mcp-Method: tools/call
-Mcp-Name: get_contact
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "tools/call",
-  "params": {
-    "name": "get_contact",
-    "arguments": {
-      "language": "ko"
-    },
-    "_meta": {
-      "io.modelcontextprotocol/protocolVersion": "2026-07-28",
-      "io.modelcontextprotocol/clientInfo": {
-        "name": "ProfileReader",
-        "version": "1.0"
-      },
-      "io.modelcontextprotocol/clientCapabilities": {}
-    }
-  }
-}
-```
-
-## 자료 활용과 인용
-
-작업을 소개할 때 원래 프로젝트 페이지를 인용해 주세요. 성능 결과에는 하드웨어, 기준 구현, 평가 범위를 함께 표시해 주세요. 프로젝트 단계와 소스 공개 여부는 별도로 기록되며, 주도한 프로젝트와 기여한 프로젝트에는 각각 역할이 표시됩니다.
+- Markdown: https://tianxingren-work.github.io/machine/ko/for-agents.md
+- JSON: https://tianxingren-work.github.io/machine/ko/for-agents.json
+- Contact JSON: https://tianxingren-work.github.io/data/contact.json

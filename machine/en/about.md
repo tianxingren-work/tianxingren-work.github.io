@@ -6,7 +6,7 @@ I research AI compilers so that diverse AI algorithms can run correctly and effi
 
 [Prof. Tao Xie](https://taoxiease.github.io/) and [Prof. Wei Yang](https://youngwei.com/) supervise my doctoral research.
 
-[Get in touch](https://tianxing-ren.netlify.app/contact/) [GitHub ](https://github.com/LeslinD)
+[Get in touch](https://tianxingren-work.github.io/contact/) [GitHub ](https://github.com/LeslinD)
 
 ## Education
 
@@ -102,10 +102,10 @@ Jul 2024 – Aug 2024
 
 Summer School Visiting Student
 
-LET’S COMPARE NOTES
+CONTACT
 
-## Good systems start with a conversation.
+## Discuss research
 
 Working on AI compilers, emerging AI hardware, or a related systems problem? I’d be happy to exchange ideas and discuss your work.
 
-[Get in touch](https://tianxing-ren.netlify.app/contact/) [GitHub ](https://github.com/LeslinD)
+[Get in touch](https://tianxingren-work.github.io/contact/) [GitHub ](https://github.com/LeslinD)

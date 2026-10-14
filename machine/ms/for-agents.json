@@ -4,20 +4,20 @@
   "kind": "page",
   "language": "ms",
   "title": "For agents · Tianxing Ren",
-  "url": "https://tianxing-ren.netlify.app/ms/for-agents/",
-  "markdown_url": "https://tianxing-ren.netlify.app/machine/ms/for-agents.md",
-  "content_markdown": "# Tianxing Ren / 任天行\n\n> AI compilers, Tile-level programming, Heterogeneous computing\n\nhttps://tianxing-ren.netlify.app/ms/for-agents/\n\nLanguage: ms. Updated: 2026-10-14.\n\n## Profil dan penyelidikan\n\nSaya menyelidik pengkompil AI agar pelbagai algoritma AI dapat berjalan dengan betul dan cekap pada perkakasan AI baharu. Saya ingin memudahkan pengaturcaraan untuk manusia dan ejen.\n\nSaya mengikuti pengajian Doktor Kejuruteraan di Universiti Peking melalui program bersama Makmal Zhongguancun. Saya menyelidik pengkompil AI, pengaturcaraan peringkat tile dan pengkomputeran heterogen, serta berminat dengan bahasa pengaturcaraan dan seni bina komputer yang berkaitan.\n\nSaya menjalankan penyelidikan kedoktoran di bawah bimbingan [Prof. Tao Xie](https://taoxiease.github.io/) dan [Prof. Wei Yang](https://youngwei.com/) .\n\n## Projek yang saya terajui\n\n### TileLang-TPU\n\nPeneraju projek\n\nBackend TileLang untuk TPU SOPHGO, daripada perancangan memori ketika kompilasi hingga pelaksanaan kernel.\n\nTileLang-TPU membawa pengaturcaraan peringkat tile kepada pemecut SOPHGO komersial. Tile ialah blok data kecil yang digunakan untuk menyatakan pengiraan. Pengkompil mengurus penempatan memori dalam cip, pergerakan data dan pertindihan pemindahan dengan pengiraan. Masa jalan JIT mengkompil takrif kernel Python apabila diperlukan dan menjalankannya pada BM1690.\n\nTahap projek: Fasa utama selesai\nKetersediaan sumber: https://github.com/TongmingLAIC/tilelang-tpu\n\nhttps://tianxing-ren.netlify.app/ms/projects/tilelang-tpu/\n\nPenilaian dijalankan pada satu teras SOPHGO BM1690, dengan saiz input ditetapkan sebelum kompilasi. Prestasi dibandingkan dengan pelaksanaan PPL yang dioptimumkan oleh pengeluar dan digunakan dalam Torch-TPU. PPL (Primitive Programming Language) ialah bahasa pengaturcaraan aras rendah SOPHGO.\n\nKami menilai pendaraban matriks, RMSNorm, RoPE, SwiGLU dan penambahan unsur demi unsur dengan pelbagai konfigurasi input dan format nombor. RMSNorm melaraskan skala nilai, RoPE mengekod kedudukan dalam jujukan dan SwiGLU menjalankan transformasi tak linear dalam rangkaian neural. Purata peningkatan kelajuan mengikut jenis operasi ialah **1.05–1.23×** berbanding PPL.\n\nTileLang-TPU turut menyokong operasi gabungan yang menyatukan beberapa langkah pengiraan. FlashAttention mengira perhatian model dengan cekap. Selepas pengoptimuman algoritma yang memproses beberapa kepala perhatian dalam kelompok yang sama (head-batched), purata peningkatan kelajuannya mencapai **12.50×** berbanding PPL. Kepala perhatian ialah cabang pengiraan selari yang memberi tumpuan kepada maklumat berbeza.\n\nBagi MLP gabungan, iaitu rangkaian neural suap hadapan yang lazim dalam model AI, operasi MLP W8A16 Dequantized Forward mencapai purata **1.01×** dan hampir menyamai prestasi PPL. W8A16 menggunakan pemberat 8 bit dan nilai pengaktifan 16 bit. Penyahkuantuman menukar pemberat berketepatan rendah yang disimpan kepada nilai untuk pengiraan.\n\n- Peruntukan memori statik: Merancang kedudukan setiap blok data dalam memori pantas pada cip sebelum program dijalankan, mengikut aturan perkakasan dan had kapasiti memori.\n- Pemindahan data dan pengiraan serentak: Menyusun pemindahan data dan pengiraan kepada peringkat yang boleh berjalan serentak. Setiap langkah hanya bermula apabila data yang diperlukan tersedia.\n- Menjana dan menjalankan kod TPU: Menterjemah pengiraan kepada operasi yang boleh dilaksanakan oleh TPU, kemudian mengkompil, memuatkan dan menjalankan program.\n\n### TileLang-RISC-V\n\nPeneraju projek\n\nMembawa TileLang ke CPU RISC-V dengan pecutan matriks AME. Usaha berterusan bersama penyelidik perkakasan sumber terbuka dan sistem.\n\nProjek ini membangunkan backend TileLang untuk CPU AI RISC-V AME bersama Institut Cip Sumber Terbuka Beijing dan Institut Perisian, Akademi Sains China. Kerja semasa menumpukan pada pemetaan model pengaturcaraan kepada arahan sasaran serta pembinaan laluan kompilasi dan pelaksanaan yang boleh digunakan.\n\nTahap projek: Sedang dijalankan\nKetersediaan sumber: Kod sumber belum dibuka kepada umum\n\nhttps://tianxing-ren.netlify.app/ms/projects/tilelang-riscv/\n\n- Model pengaturcaraan: Menyatakan operator AI lazim melalui program peringkat tile dan mengenal pasti maklumat yang diperlukan oleh backend.\n- Penyepaduan sasaran: Menghubungkan penurunan kompilasi, pemetaan arahan AME dan persekitaran pelaksanaan.\n- Penilaian: Menguji ketepatan dan prestasi operator merentas konfigurasi sasaran, kemudian menggunakan hasilnya untuk mengoptimumkan backend.\n\n## Projek sumber terbuka yang saya sertai\n\n- [TileLang](https://github.com/tile-ai/tilelang) — contributor\n- [Asterinas](https://github.com/asterinas/asterinas) — contributor\n\n## Pendidikan\n\n- Universiti Peking, Pelajar Doktor Kejuruteraan, Maklumat Elektronik. Sep 2025 – Jul 2030 · dijangka\n- Universiti Beihang, Sarjana Muda Kejuruteraan, Keselamatan Siber. Sep 2021 – Jul 2025\n  GPA 3.77 / 4.0. Purata markah 90.41 / 100\n\nSemasa pengajian sarjana muda, saya menjalankan penyelidikan terutamanya di bawah bimbingan [Prof. Hua Guo](https://cst.buaa.edu.cn/info/1112/2741.htm) . Saya menyiapkan pelaksanaan suite kriptografi kekisi algebra pada FPGA dengan penggunaan keluasan litar yang rendah. Projek ini menerima Hadiah Ketiga dalam Pertandingan Teknologi Kriptografi Kebangsaan. Saya juga menyiapkan mekanisme perlindungan kunci perkhidmatan awan berasaskan pengiraan berbilang pihak yang selamat, yang menerima Hadiah Pertama dalam Pertandingan Keselamatan Maklumat Mahasiswa Kebangsaan.\n\n## Pengalaman latihan industri\n\n### Pusat Inovasi Teknologi Maklumat Tongming Lake Beijing\n\nDis 2025 – Kini. Pelatih Sistem Pintar\n\n- Menyesuaikan TileLang untuk TPU SOPHGO SG2260E yang menggunakan sambungan tensor RISC-V.\n- Membangunkan sokongan TileLang untuk CPU RISC-V dengan pecutan matriks AME.\n\n### Institut Cip Sumber Terbuka Beijing\n\nDis 2024 – Ogo 2025. Pelatih Pembangunan Perisian Sistem AI\n\n- Memperluas tindanan kompilasi Triton kepada TPU SOPHGO melalui penterjemahan ke rantaian alat vendor.\n- Membina rangka kerja kompilasi operator berasaskan TileLang, termasuk pustaka operator TPU, pas saluran paip dan penjanaan kod automatik bagi operator LLaMA.\n- Dalam konfigurasi yang diuji, beberapa operator menyamai atau mengatasi prestasi pelaksanaan yang dioptimumkan oleh vendor.\n\n### Eversec (Beijing) Technology Co., Ltd.\n\nJul 2024 – Ogo 2024. Pelatih Perkhidmatan Keselamatan\n\n- Membantu penilaian keselamatan rangkaian yang dibenarkan menggunakan Burp Suite dan alat berkaitan, menyusun penemuan serta mengenal pasti risiko.\n- Mengumpul dan menyeragamkan lebih 100 rekod PCAP trafik log masuk peranti IoT industri menggunakan Wireshark.\n\n## Anugerah dan biasiswa\n\n- 2025–2026: Biasiswa Kecemerlangan Akademik\n- 2024–2025: Anugerah Khas, Biasiswa Pertandingan Akademik; Hadiah Kedua, Biasiswa Kecemerlangan Akademik\n- 2023–2024: Pelajar Cemerlang; Anugerah Khas, Biasiswa Pertandingan Akademik; Hadiah Kedua, Biasiswa Khidmat Sosial\n- 2022–2023: Hadiah Pertama, Biasiswa Pertandingan Akademik; Hadiah Kedua, Biasiswa Kecemerlangan Akademik\n\n## Lawatan\n\n- Universiti Cina Hong Kong. Pelajar Lawatan Sekolah Musim Panas. Jul 2024 – Ogo 2024\n\n## Hubungi\n\nAlamat e-mel awam dan pautan GitHub boleh dibaca terus. Saya mengalu-alukan perbincangan tentang pengkompil AI, perkakasan AI baharu dan penyelidikan sistem berkaitan.\n\nE-mel: tianxingren25 [at] stu [dot] pku [dot] edu [dot] cn\nhttps://tianxing-ren.netlify.app/ms/contact/\nhttps://github.com/LeslinD\nhttps://github.com/tianxingren-work\n\n## Antara muka Agent\n\nMCP menyediakan empat alat untuk profil, senarai projek, padanan topik dan maklumat hubungan. Markdown, JSON dan antara muka data HTTP juga tersedia.\n\n- Markdown: https://tianxing-ren.netlify.app/machine/ms/for-agents.md\n- JSON: https://tianxing-ren.netlify.app/machine/ms/for-agents.json\n- Contact JSON: https://tianxing-ren.netlify.app/data/contact.json\n- MCP: https://tianxing-ren.netlify.app/api/mcp\n- OpenAPI: https://tianxing-ren.netlify.app/openapi.json\n- Tools: get_profile, get_projects, find_relevant_work, get_contact\n\n```http\nPOST https://tianxing-ren.netlify.app/api/mcp\nContent-Type: application/json\nAccept: application/json\nMCP-Protocol-Version: 2026-07-28\nMcp-Method: tools/call\nMcp-Name: get_contact\n\n{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"tools/call\",\n  \"params\": {\n    \"name\": \"get_contact\",\n    \"arguments\": {\n      \"language\": \"ms\"\n    },\n    \"_meta\": {\n      \"io.modelcontextprotocol/protocolVersion\": \"2026-07-28\",\n      \"io.modelcontextprotocol/clientInfo\": {\n        \"name\": \"ProfileReader\",\n        \"version\": \"1.0\"\n      },\n      \"io.modelcontextprotocol/clientCapabilities\": {}\n    }\n  }\n}\n```\n\n## Penggunaan dan rujukan\n\nApabila menerangkan kerja ini, rujuk halaman projek asal. Sertakan perkakasan, pelaksanaan asas dan skop penilaian bagi hasil prestasi. Tahap projek dan ketersediaan sumber direkodkan secara berasingan. Projek yang saya terajui dan sertai menyatakan peranan saya.\n",
+  "url": "https://tianxingren-work.github.io/ms/for-agents/",
+  "markdown_url": "https://tianxingren-work.github.io/machine/ms/for-agents.md",
+  "content_markdown": "# Tianxing Ren / 任天行\n\n> AI compilers, Tile-level programming, Heterogeneous computing\n\nhttps://tianxingren-work.github.io/ms/for-agents/\n\nLanguage: ms. Updated: 2026-10-14.\n\n## Profil dan penyelidikan\n\nSaya menyelidik pengkompil AI agar pelbagai algoritma AI dapat berjalan dengan betul dan cekap pada perkakasan AI baharu. Saya ingin memudahkan pengaturcaraan untuk manusia dan ejen.\n\nSaya mengikuti pengajian Doktor Kejuruteraan di Universiti Peking melalui program bersama Makmal Zhongguancun. Saya menyelidik pengkompil AI, pengaturcaraan peringkat tile dan pengkomputeran heterogen, serta berminat dengan bahasa pengaturcaraan dan seni bina komputer yang berkaitan.\n\nSaya menjalankan penyelidikan kedoktoran di bawah bimbingan [Prof. Tao Xie](https://taoxiease.github.io/) dan [Prof. Wei Yang](https://youngwei.com/) .\n\n## Projek yang saya terajui\n\n### TileLang-TPU\n\nPeneraju projek\n\nBackend TileLang untuk TPU SOPHGO, daripada perancangan memori ketika kompilasi hingga pelaksanaan kernel.\n\nTileLang-TPU membawa pengaturcaraan peringkat tile kepada pemecut SOPHGO komersial. Tile ialah blok data kecil yang digunakan untuk menyatakan pengiraan. Pengkompil mengurus penempatan memori dalam cip, pergerakan data dan pertindihan pemindahan dengan pengiraan. Masa jalan JIT mengkompil takrif kernel Python apabila diperlukan dan menjalankannya pada BM1690.\n\nTahap projek: Fasa utama selesai\nKetersediaan sumber: https://github.com/TongmingLAIC/tilelang-tpu\n\nhttps://tianxingren-work.github.io/ms/projects/tilelang-tpu/\n\nPenilaian dijalankan pada satu teras SOPHGO BM1690, dengan saiz input ditetapkan sebelum kompilasi. Prestasi dibandingkan dengan pelaksanaan PPL yang dioptimumkan oleh pengeluar dan digunakan dalam Torch-TPU. PPL (Primitive Programming Language) ialah bahasa pengaturcaraan aras rendah SOPHGO.\n\nKami menilai pendaraban matriks, RMSNorm, RoPE, SwiGLU dan penambahan unsur demi unsur dengan pelbagai konfigurasi input dan format nombor. RMSNorm melaraskan skala nilai, RoPE mengekod kedudukan dalam jujukan dan SwiGLU menjalankan transformasi tak linear dalam rangkaian neural. Purata peningkatan kelajuan mengikut jenis operasi ialah **1.05–1.23×** berbanding PPL.\n\nTileLang-TPU turut menyokong operasi gabungan yang menyatukan beberapa langkah pengiraan. FlashAttention mengira perhatian model dengan cekap. Selepas pengoptimuman algoritma yang memproses beberapa kepala perhatian dalam kelompok yang sama (head-batched), purata peningkatan kelajuannya mencapai **12.50×** berbanding PPL. Kepala perhatian ialah cabang pengiraan selari yang memberi tumpuan kepada maklumat berbeza.\n\nBagi MLP gabungan, iaitu rangkaian neural suap hadapan yang lazim dalam model AI, operasi MLP W8A16 Dequantized Forward mencapai purata **1.01×** dan hampir menyamai prestasi PPL. W8A16 menggunakan pemberat 8 bit dan nilai pengaktifan 16 bit. Penyahkuantuman menukar pemberat berketepatan rendah yang disimpan kepada nilai untuk pengiraan.\n\n- Peruntukan memori statik: Merancang kedudukan setiap blok data dalam memori pantas pada cip sebelum program dijalankan, mengikut aturan perkakasan dan had kapasiti memori.\n- Pemindahan data dan pengiraan serentak: Menyusun pemindahan data dan pengiraan kepada peringkat yang boleh berjalan serentak. Setiap langkah hanya bermula apabila data yang diperlukan tersedia.\n- Menjana dan menjalankan kod TPU: Menterjemah pengiraan kepada operasi yang boleh dilaksanakan oleh TPU, kemudian mengkompil, memuatkan dan menjalankan program.\n\n### TileLang-RISC-V\n\nPeneraju projek\n\nMembawa TileLang ke CPU RISC-V dengan pecutan matriks AME. Usaha berterusan bersama penyelidik perkakasan sumber terbuka dan sistem.\n\nProjek ini membangunkan backend TileLang untuk CPU AI RISC-V AME bersama Institut Cip Sumber Terbuka Beijing dan Institut Perisian, Akademi Sains China. Kerja semasa menumpukan pada pemetaan model pengaturcaraan kepada arahan sasaran serta pembinaan laluan kompilasi dan pelaksanaan yang boleh digunakan.\n\nTahap projek: Sedang dijalankan\nKetersediaan sumber: Kod sumber belum dibuka kepada umum\n\nhttps://tianxingren-work.github.io/ms/projects/tilelang-riscv/\n\n- Model pengaturcaraan: Menyatakan operator AI lazim melalui program peringkat tile dan mengenal pasti maklumat yang diperlukan oleh backend.\n- Penyepaduan sasaran: Menghubungkan penurunan kompilasi, pemetaan arahan AME dan persekitaran pelaksanaan.\n- Penilaian: Menguji ketepatan dan prestasi operator merentas konfigurasi sasaran, kemudian menggunakan hasilnya untuk mengoptimumkan backend.\n\n## Projek sumber terbuka yang saya sertai\n\n- [TileLang](https://github.com/tile-ai/tilelang) — contributor\n- [Asterinas](https://github.com/asterinas/asterinas) — contributor\n\n## Pendidikan\n\n- Universiti Peking, Pelajar Doktor Kejuruteraan, Maklumat Elektronik. Sep 2025 – Jul 2030 · dijangka\n- Universiti Beihang, Sarjana Muda Kejuruteraan, Keselamatan Siber. Sep 2021 – Jul 2025\n  GPA 3.77 / 4.0. Purata markah 90.41 / 100\n\nSemasa pengajian sarjana muda, saya menjalankan penyelidikan terutamanya di bawah bimbingan [Prof. Hua Guo](https://cst.buaa.edu.cn/info/1112/2741.htm) . Saya menyiapkan pelaksanaan suite kriptografi kekisi algebra pada FPGA dengan penggunaan keluasan litar yang rendah. Projek ini menerima Hadiah Ketiga dalam Pertandingan Teknologi Kriptografi Kebangsaan. Saya juga menyiapkan mekanisme perlindungan kunci perkhidmatan awan berasaskan pengiraan berbilang pihak yang selamat, yang menerima Hadiah Pertama dalam Pertandingan Keselamatan Maklumat Mahasiswa Kebangsaan.\n\n## Pengalaman latihan industri\n\n### Pusat Inovasi Teknologi Maklumat Tongming Lake Beijing\n\nDis 2025 – Kini. Pelatih Sistem Pintar\n\n- Menyesuaikan TileLang untuk TPU SOPHGO SG2260E yang menggunakan sambungan tensor RISC-V.\n- Membangunkan sokongan TileLang untuk CPU RISC-V dengan pecutan matriks AME.\n\n### Institut Cip Sumber Terbuka Beijing\n\nDis 2024 – Ogo 2025. Pelatih Pembangunan Perisian Sistem AI\n\n- Memperluas tindanan kompilasi Triton kepada TPU SOPHGO melalui penterjemahan ke rantaian alat vendor.\n- Membina rangka kerja kompilasi operator berasaskan TileLang, termasuk pustaka operator TPU, pas saluran paip dan penjanaan kod automatik bagi operator LLaMA.\n- Dalam konfigurasi yang diuji, beberapa operator menyamai atau mengatasi prestasi pelaksanaan yang dioptimumkan oleh vendor.\n\n### Eversec (Beijing) Technology Co., Ltd.\n\nJul 2024 – Ogo 2024. Pelatih Perkhidmatan Keselamatan\n\n- Membantu penilaian keselamatan rangkaian yang dibenarkan menggunakan Burp Suite dan alat berkaitan, menyusun penemuan serta mengenal pasti risiko.\n- Mengumpul dan menyeragamkan lebih 100 rekod PCAP trafik log masuk peranti IoT industri menggunakan Wireshark.\n\n## Anugerah dan biasiswa\n\n- 2025–2026: Biasiswa Kecemerlangan Akademik\n- 2024–2025: Anugerah Khas, Biasiswa Pertandingan Akademik; Hadiah Kedua, Biasiswa Kecemerlangan Akademik\n- 2023–2024: Pelajar Cemerlang; Anugerah Khas, Biasiswa Pertandingan Akademik; Hadiah Kedua, Biasiswa Khidmat Sosial\n- 2022–2023: Hadiah Pertama, Biasiswa Pertandingan Akademik; Hadiah Kedua, Biasiswa Kecemerlangan Akademik\n\n## Lawatan\n\n- Universiti Cina Hong Kong. Pelajar Lawatan Sekolah Musim Panas. Jul 2024 – Ogo 2024\n\n## Hubungi\n\nAlamat e-mel awam dan pautan GitHub boleh dibaca terus. Saya mengalu-alukan perbincangan tentang pengkompil AI, perkakasan AI baharu dan penyelidikan sistem berkaitan.\n\nE-mel: tianxingren25 [at] stu [dot] pku [dot] edu [dot] cn\nhttps://tianxingren-work.github.io/ms/contact/\nhttps://github.com/LeslinD\nhttps://github.com/tianxingren-work\n\n## Format bacaan\n\nBaca fail Markdown dan JSON secara terus tanpa sambungan ke pelayan belakang. Profil lengkap dan setiap halaman projek mempunyai fail masing-masing.\n\n- Markdown: https://tianxingren-work.github.io/machine/ms/for-agents.md\n- JSON: https://tianxingren-work.github.io/machine/ms/for-agents.json\n- Contact JSON: https://tianxingren-work.github.io/data/contact.json\n",
   "links": [
-    "https://tianxing-ren.netlify.app/machine/ms/for-agents.md",
-    "https://tianxing-ren.netlify.app/machine/ms/for-agents.json",
-    "https://tianxing-ren.netlify.app/data/contact.json",
+    "https://tianxingren-work.github.io/machine/ms/for-agents.md",
+    "https://tianxingren-work.github.io/machine/ms/for-agents.json",
+    "https://tianxingren-work.github.io/data/contact.json",
     "https://taoxiease.github.io/",
     "https://youngwei.com/",
-    "https://tianxing-ren.netlify.app/ms/projects/tilelang-tpu/",
+    "https://tianxingren-work.github.io/ms/projects/tilelang-tpu/",
     "https://github.com/TongmingLAIC/tilelang-tpu",
-    "https://tianxing-ren.netlify.app/assets/tilelang-tpu-operators.png",
-    "https://tianxing-ren.netlify.app/assets/tilelang-tpu-attention-mlp.png",
-    "https://tianxing-ren.netlify.app/ms/projects/tilelang-riscv/",
+    "https://tianxingren-work.github.io/assets/tilelang-tpu-operators.png",
+    "https://tianxingren-work.github.io/assets/tilelang-tpu-attention-mlp.png",
+    "https://tianxingren-work.github.io/ms/projects/tilelang-riscv/",
     "https://www.bosc.ac.cn/",
     "https://is.cas.cn/",
     "https://github.com/tile-ai/tilelang",
@@ -30,20 +30,18 @@
     "https://www.tlaic.ac.cn/",
     "https://eversec.com.cn/",
     "https://www.cuhk.edu.hk/",
-    "https://tianxing-ren.netlify.app/data/agent-tools.json",
-    "https://tianxing-ren.netlify.app/ms/contact/",
+    "https://tianxingren-work.github.io/ms/contact/",
     "https://github.com/LeslinD",
     "https://github.com/tianxingren-work",
-    "https://tianxing-ren.netlify.app/llms.txt",
-    "https://tianxing-ren.netlify.app/llms-full.md",
-    "https://tianxing-ren.netlify.app/data/agents.json",
-    "https://tianxing-ren.netlify.app/data/profile.json",
-    "https://tianxing-ren.netlify.app/data/projects.json",
-    "https://tianxing-ren.netlify.app/data/routes.json",
-    "https://tianxing-ren.netlify.app/openapi.json",
-    "https://tianxing-ren.netlify.app/machine/ms/about.md",
-    "https://tianxing-ren.netlify.app/machine/ms/projects/tilelang-tpu.md",
-    "https://tianxing-ren.netlify.app/machine/ms/projects/tilelang-riscv.md"
+    "https://tianxingren-work.github.io/llms.txt",
+    "https://tianxingren-work.github.io/llms-full.md",
+    "https://tianxingren-work.github.io/data/agents.json",
+    "https://tianxingren-work.github.io/data/profile.json",
+    "https://tianxingren-work.github.io/data/projects.json",
+    "https://tianxingren-work.github.io/data/routes.json",
+    "https://tianxingren-work.github.io/machine/ms/about.md",
+    "https://tianxingren-work.github.io/machine/ms/projects/tilelang-tpu.md",
+    "https://tianxingren-work.github.io/machine/ms/projects/tilelang-riscv.md"
   ],
   "profile": {
     "schema_version": "2.0",
@@ -230,13 +228,13 @@
       }
     ],
     "contact": {
-      "url": "https://tianxing-ren.netlify.app/ms/contact/",
+      "url": "https://tianxingren-work.github.io/ms/contact/",
       "interaction": "visitor-initiated",
       "github": "https://github.com/LeslinD",
       "github_work": "https://github.com/tianxingren-work",
       "email_text": "tianxingren25 [at] stu [dot] pku [dot] edu [dot] cn"
     },
-    "url": "https://tianxing-ren.netlify.app/ms/about/",
+    "url": "https://tianxingren-work.github.io/ms/about/",
     "site_languages": [
       "en",
       "zh",
@@ -269,8 +267,8 @@
           "description": "Menterjemah pengiraan kepada operasi yang boleh dilaksanakan oleh TPU, kemudian mengkompil, memuatkan dan menjalankan program."
         }
       ],
-      "url": "https://tianxing-ren.netlify.app/ms/projects/tilelang-tpu/",
-      "markdown": "https://tianxing-ren.netlify.app/machine/ms/projects/tilelang-tpu.md",
+      "url": "https://tianxingren-work.github.io/ms/projects/tilelang-tpu/",
+      "markdown": "https://tianxingren-work.github.io/machine/ms/projects/tilelang-tpu.md",
       "repository": "https://github.com/TongmingLAIC/tilelang-tpu",
       "evaluation": {
         "study_id": "bm1690-single-core-operators-and-fused-workloads",
@@ -326,7 +324,7 @@
             "height": 915,
             "alt": "Peningkatan kelajuan lima jenis operasi berbanding PPL bagi lima konfigurasi input dan tiga format titik apung.",
             "caption": "Operasi kendiri. M0–M4 mewakili lima konfigurasi input yang diuji. BF16 dan FP16 ialah format titik apung 16 bit, manakala FP32 menggunakan 32 bit. Nilai 1× bermaksud masa pelaksanaan yang sama dengan PPL; nilai lebih besar bermaksud lebih pantas. Ringkasan 1.05–1.23× ialah purata mengikut jenis operasi.",
-            "url": "https://tianxing-ren.netlify.app/assets/tilelang-tpu-operators.png"
+            "url": "https://tianxingren-work.github.io/assets/tilelang-tpu-operators.png"
           },
           {
             "asset": "assets/tilelang-tpu-attention-mlp.png",
@@ -334,7 +332,7 @@
             "height": 2797,
             "alt": "Purata peningkatan kelajuan FlashAttention ialah 12.50 kali dan MLP gabungan ialah 1.01 kali berbanding PPL.",
             "caption": "Operasi gabungan. Purata FlashAttention ialah 12.50× dan MLP W8A16 ialah 1.01×. B, H, S dan D mewakili saiz kelompok, bilangan kepala perhatian, panjang jujukan dan dimensi kepala. M, H dan I ialah bilangan baris input, lebar lapisan tersembunyi dan lebar lapisan perantaraan. Nilai dalam kurungan ialah saiz input yang diuji.",
-            "url": "https://tianxing-ren.netlify.app/assets/tilelang-tpu-attention-mlp.png"
+            "url": "https://tianxingren-work.github.io/assets/tilelang-tpu-attention-mlp.png"
           }
         ]
       },
@@ -368,8 +366,8 @@
           "description": "Menguji ketepatan dan prestasi operator merentas konfigurasi sasaran, kemudian menggunakan hasilnya untuk mengoptimumkan backend."
         }
       ],
-      "url": "https://tianxing-ren.netlify.app/ms/projects/tilelang-riscv/",
-      "markdown": "https://tianxing-ren.netlify.app/machine/ms/projects/tilelang-riscv.md",
+      "url": "https://tianxingren-work.github.io/ms/projects/tilelang-riscv/",
+      "markdown": "https://tianxingren-work.github.io/machine/ms/projects/tilelang-riscv.md",
       "partners": [
         {
           "name": "Institut Cip Sumber Terbuka Beijing",
@@ -401,11 +399,8 @@
   ],
   "last_reviewed": "2026-10-14",
   "interfaces": {
-    "markdown": "https://tianxing-ren.netlify.app/machine/ms/for-agents.md",
-    "json": "https://tianxing-ren.netlify.app/machine/ms/for-agents.json",
-    "contact": "https://tianxing-ren.netlify.app/data/contact.json",
-    "mcp": "https://tianxing-ren.netlify.app/api/mcp",
-    "tools": "https://tianxing-ren.netlify.app/data/agent-tools.json",
-    "openapi": "https://tianxing-ren.netlify.app/openapi.json"
+    "markdown": "https://tianxingren-work.github.io/machine/ms/for-agents.md",
+    "json": "https://tianxingren-work.github.io/machine/ms/for-agents.json",
+    "contact": "https://tianxingren-work.github.io/data/contact.json"
   }
 }

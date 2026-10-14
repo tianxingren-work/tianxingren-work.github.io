@@ -1,1 +1,0 @@
-const primary="https://tianxing-ren.netlify.app";if(location.origin!==primary){const target=new URL(primary+'/');target.pathname=location.pathname;target.search=location.search;target.hash=location.hash;location.replace(target.href);}

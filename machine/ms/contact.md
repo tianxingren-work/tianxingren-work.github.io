@@ -1,6 +1,6 @@
-MARI BERTUKAR PANDANGAN
+HUBUNGI SAYA
 
-# Sistem yang baik bermula dengan perbualan.
+# Bincangkan penyelidikan
 
 Jika anda menyelidik pengkompil AI, perkakasan AI baharu atau persoalan sistem yang berkaitan, saya berbesar hati untuk bertukar pandangan. Kongsikan idea, soalan atau kerja yang sedang anda lakukan.
 

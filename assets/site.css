@@ -49,3 +49,24 @@ html[lang=ms] .hero h1{font-size:clamp(48px,5vw,72px);line-height:1.04;letter-sp
 @media(max-width:600px){.project-results{padding-bottom:20px}.project-results>.body-copy{font-size:16px;line-height:1.8}.result-plot{padding:11px;margin:24px 0 30px}.result-plot figcaption{font-size:12px}}
 
 body[data-page=for-agents] .page-intro{padding-bottom:24px}body[data-page=for-agents] .page-intro h1{font-size:32px;line-height:1.2}body[data-page=for-agents] .page-lead{font-size:17px;max-width:780px}.agent-start{max-width:900px;margin:0 0 40px;padding:22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.agent-start h2{font-size:19px;margin:0 0 16px}.agent-access{display:flex;flex-wrap:wrap;gap:12px 28px;font-size:14px}.agent-email{overflow-wrap:anywhere}.agent-email code{font-size:14px}@media(max-width:600px){body[data-page=for-agents] .page-intro h1{font-size:28px}.agent-access{display:grid;gap:16px}}
+
+/* A compact research profile, with one consistent heading scale. */
+h1,h2,h3,h4{letter-spacing:-.025em;line-height:1.3;text-wrap:balance}
+.hero{grid-template-columns:minmax(0,1.25fr) minmax(0,.8fr);gap:72px;padding:60px 0 52px}
+html[lang] .hero h1{font-size:clamp(32px,3.3vw,44px);line-height:1.2;letter-spacing:-.035em;margin:16px 0 24px}
+.hero-intro{font-size:19px;line-height:1.85;max-width:660px}.hero-focus{font-size:13px;line-height:1.7;max-width:none;margin:22px 0 28px}
+.hero-art{box-shadow:7px 7px 0 #dce2d6}.art-stamp{display:none}.art-top{padding:13px 16px}.hero-art figcaption{padding:13px 16px}
+.section{padding:60px 0}.section-head{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:12px 40px;margin-bottom:26px}
+html[lang] .section-head h2{font-size:28px;line-height:1.4;margin:0}.section-head .eyebrow{color:var(--muted)}.section-head>p:last-child{max-width:560px;font-size:16px;justify-self:start}
+.project-card h3{font-size:29px;margin:24px 0 14px;line-height:1.3}.project-card .summary{min-height:0}.project-card{padding:26px}
+.background-grid{grid-template-columns:minmax(0,.7fr) minmax(0,1.4fr);padding:24px 0 60px;border-top:1px solid var(--line);gap:50px}
+.background-grid h2{font-size:28px;line-height:1.4;margin-top:12px}.background-grid>div:last-child{padding-top:0}.inline-people{display:block;line-height:1.8}
+.contact-banner{padding:35px 0 42px}.contact-top{margin-bottom:14px}.contact-top .orbit-star{font-size:25px}.contact-split{grid-template-columns:minmax(0,.7fr) minmax(0,1.4fr);gap:50px}
+html[lang] .contact-split h2{font-size:28px;line-height:1.4;margin:0}.contact-split p{max-width:660px;margin-bottom:20px}
+.page-intro{padding:48px 0 32px}.page-intro h1,.project-intro h1{font-size:clamp(30px,3.4vw,42px);line-height:1.3}.page-lead{font-size:18px;line-height:1.85}
+.project-intro{padding:38px 0 32px}.project-overview h2{font-size:28px;line-height:1.5}.project-tagline{font-size:20px;line-height:1.7}.mini-contact h2{font-size:26px;line-height:1.5}
+.subheading,.timeline-section>h2{font-size:24px;line-height:1.4}.contributions h3,.timeline-entry h3{font-size:22px;line-height:1.5}
+html[lang] .about-intro h1{font-size:32px;line-height:1.3}.machine-doc h2{font-size:24px;line-height:1.4}.machine-doc h3{font-size:21px;line-height:1.5}
+html[lang=zh-Hans] .hero-intro{line-height:1.95}html[lang=ko] .hero-intro{word-break:keep-all}html[lang=ms] .hero-intro{font-size:18px}
+@media(max-width:1000px){.hero{gap:36px;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr)}.hero-intro{font-size:17px}html[lang=ko] .hero-intro,html[lang=ms] .hero-intro{font-size:16px}.hero-focus{font-size:12px}.section-head,.background-grid,.contact-split{gap:16px 30px}}
+@media(max-width:700px){.hero{grid-template-columns:1fr;gap:30px;padding:38px 0}.hero-art{max-width:420px;width:100%;justify-self:center}.hero-intro{font-size:17px;max-width:none}.hero-focus{font-size:12px}.section{padding:42px 0}.section-head{display:grid;grid-template-columns:1fr;gap:12px}.section-head .eyebrow{grid-column:auto}.background-grid{display:grid;grid-template-columns:1fr;gap:20px;padding:28px 0 42px}.background-grid>div:last-child{padding-top:0}.contact-split{display:grid;grid-template-columns:1fr;gap:18px}.contact-banner{padding:28px 0 34px}.projects-grid{grid-template-columns:1fr}.project-card{padding:23px}.project-card .summary{min-height:0;font-size:14px}.project-card h3{font-size:27px}.page-intro{padding-top:34px}.page-intro h1,.project-intro h1{font-size:30px}.project-overview h2{font-size:25px}.section-head h2,.background-grid h2{font-size:26px}.page-lead{font-size:17px}.contributions h3,.timeline-entry h3{font-size:21px}}

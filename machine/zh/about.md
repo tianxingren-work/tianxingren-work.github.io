@@ -6,7 +6,7 @@
 
 我在[谢涛教授](https://taoxiease.github.io/) 和[杨威教授](https://youngwei.com/) 的指导下开展博士阶段的研究。
 
-[联系我](https://tianxing-ren.netlify.app/zh/contact/) [GitHub ](https://github.com/LeslinD)
+[联系我](https://tianxingren-work.github.io/zh/contact/) [GitHub ](https://github.com/LeslinD)
 
 ## 教育经历
 
@@ -102,10 +102,10 @@ AI 系统软件栈研发实习生
 
 暑期学校访学学生
 
-聊聊你在做的事情
+联系
 
-## 好的系统， 从一次交流开始。
+## 研究交流
 
 如果你在研究 AI 编译器、新兴 AI 硬件或相关系统问题，欢迎交流。可以聊聊你的想法、遇到的问题或正在做的工作。
 
-[联系我](https://tianxing-ren.netlify.app/zh/contact/) [GitHub ](https://github.com/LeslinD)
+[联系我](https://tianxingren-work.github.io/zh/contact/) [GitHub ](https://github.com/LeslinD)

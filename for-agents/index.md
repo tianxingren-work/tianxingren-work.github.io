@@ -2,7 +2,7 @@
 
 > AI compilers, Tile-level programming, Heterogeneous computing
 
-https://tianxing-ren.netlify.app/for-agents/
+https://tianxingren-work.github.io/for-agents/
 
 Language: en. Updated: 2026-10-14.
 
@@ -27,7 +27,7 @@ TileLang-TPU brings tile-level programming to commercial SOPHGO accelerators. Ti
 Project stage: Milestone complete
 Source availability: https://github.com/TongmingLAIC/tilelang-tpu
 
-https://tianxing-ren.netlify.app/projects/tilelang-tpu/
+https://tianxingren-work.github.io/projects/tilelang-tpu/
 
 Evaluated on a single core of the SOPHGO BM1690, with input sizes fixed before compilation. The baseline is the vendor’s optimized PPL implementation used by Torch-TPU. PPL (Primitive Programming Language) is SOPHGO’s low-level programming language.
 
@@ -52,7 +52,7 @@ This project is developing a TileLang backend for RISC-V AME AI CPUs, in collabo
 Project stage: In progress
 Source availability: Source code is not public
 
-https://tianxing-ren.netlify.app/projects/tilelang-riscv/
+https://tianxingren-work.github.io/projects/tilelang-riscv/
 
 - Programming model: Express common AI operators with tile-level programs and identify the information the backend needs.
 - Target integration: Connect compiler lowering, AME instruction mapping, and the execution environment.
@@ -111,50 +111,14 @@ Jul 2024 – Aug 2024. Security Services Intern
 Contact details include a readable public email address and GitHub links. Research discussions about AI compilers, emerging AI hardware and related systems are welcome.
 
 Email: tianxingren25 [at] stu [dot] pku [dot] edu [dot] cn
-https://tianxing-ren.netlify.app/contact/
+https://tianxingren-work.github.io/contact/
 https://github.com/LeslinD
 https://github.com/tianxingren-work
 
-## Agent interfaces
+## Reading formats
 
-MCP provides four tools for the profile, projects, topic matching and contact details. Markdown, JSON and HTTP data endpoints are also available.
+Read the Markdown and JSON files directly; no backend connection is needed. The complete profile and each project page have their own files.
 
-- Markdown: https://tianxing-ren.netlify.app/machine/en/for-agents.md
-- JSON: https://tianxing-ren.netlify.app/machine/en/for-agents.json
-- Contact JSON: https://tianxing-ren.netlify.app/data/contact.json
-- MCP: https://tianxing-ren.netlify.app/api/mcp
-- OpenAPI: https://tianxing-ren.netlify.app/openapi.json
-- Tools: get_profile, get_projects, find_relevant_work, get_contact
-
-```http
-POST https://tianxing-ren.netlify.app/api/mcp
-Content-Type: application/json
-Accept: application/json
-MCP-Protocol-Version: 2026-07-28
-Mcp-Method: tools/call
-Mcp-Name: get_contact
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "tools/call",
-  "params": {
-    "name": "get_contact",
-    "arguments": {
-      "language": "en"
-    },
-    "_meta": {
-      "io.modelcontextprotocol/protocolVersion": "2026-07-28",
-      "io.modelcontextprotocol/clientInfo": {
-        "name": "ProfileReader",
-        "version": "1.0"
-      },
-      "io.modelcontextprotocol/clientCapabilities": {}
-    }
-  }
-}
-```
-
-## Use and attribution
-
-When summarizing this work, cite the original project pages and include the hardware, baseline, and evaluation scope for performance results. Project stage and source availability are recorded separately. Projects I lead and projects I contribute to are listed with their respective roles.
+- Markdown: https://tianxingren-work.github.io/machine/en/for-agents.md
+- JSON: https://tianxingren-work.github.io/machine/en/for-agents.json
+- Contact JSON: https://tianxingren-work.github.io/data/contact.json

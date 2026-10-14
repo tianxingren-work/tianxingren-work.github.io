@@ -1,4 +1,4 @@
-[返回项目](https://tianxing-ren.netlify.app/zh/projects/)
+[返回项目](https://tianxingren-work.github.io/zh/projects/)
 
 项目负责人
 
@@ -8,7 +8,7 @@
 
 进行中
 RISC-V AME AI CPUs
-[联系我](https://tianxing-ren.netlify.app/zh/contact/)
+[联系我](https://tianxingren-work.github.io/zh/contact/)
 
 项目概述
 
@@ -42,4 +42,4 @@ RISC-V AME AI CPUs
 
 ## 你也在研究相关问题吗？
 
-[打个招呼](https://tianxing-ren.netlify.app/zh/contact/)
+[打个招呼](https://tianxingren-work.github.io/zh/contact/)

@@ -2,7 +2,7 @@
 
 > AI compilers, Tile-level programming, Heterogeneous computing
 
-https://tianxing-ren.netlify.app/zh/for-agents/
+https://tianxingren-work.github.io/zh/for-agents/
 
 Language: zh. Updated: 2026-10-14.
 
@@ -27,7 +27,7 @@ TileLang-TPU 将 Tile 级编程带到商用算能加速器，通过数据分块�
 项目阶段: 阶段性完成
 源码情况: https://github.com/TongmingLAIC/tilelang-tpu
 
-https://tianxing-ren.netlify.app/zh/projects/tilelang-tpu/
+https://tianxingren-work.github.io/zh/projects/tilelang-tpu/
 
 评测在算能 BM1690 单核上进行，输入形状在编译前确定。基线是算能 Torch-TPU 所用的厂商 PPL 优化实现。PPL（Primitive Programming Language）是厂商提供的底层编程语言。
 
@@ -52,7 +52,7 @@ https://tianxing-ren.netlify.app/zh/projects/tilelang-tpu/
 项目阶段: 进行中
 源码情况: 源码暂未公开
 
-https://tianxing-ren.netlify.app/zh/projects/tilelang-riscv/
+https://tianxingren-work.github.io/zh/projects/tilelang-riscv/
 
 - 编程模型: 使用 Tile-level 程序表达常用 AI 算子，明确后端所需信息。
 - 目标平台接入: 衔接编译转换、AME 指令映射和执行环境。
@@ -111,50 +111,14 @@ https://tianxing-ren.netlify.app/zh/projects/tilelang-riscv/
 联系信息可直接读取，包含公开邮箱写法和 GitHub 链接。欢迎就 AI 编译器、新兴 AI 硬件和相关系统研究交流。
 
 邮箱: tianxingren25 [at] stu [dot] pku [dot] edu [dot] cn
-https://tianxing-ren.netlify.app/zh/contact/
+https://tianxingren-work.github.io/zh/contact/
 https://github.com/LeslinD
 https://github.com/tianxingren-work
 
-## Agent 接口
+## 读取方式
 
-MCP 提供个人资料、项目列表、主题匹配和联系信息四个工具。也可以直接读取 Markdown、JSON 或使用 HTTP 资料接口。
+请直接读取 Markdown 或 JSON 文件，无需连接后台。完整资料和各项目页面均有对应文件。
 
-- Markdown: https://tianxing-ren.netlify.app/machine/zh/for-agents.md
-- JSON: https://tianxing-ren.netlify.app/machine/zh/for-agents.json
-- Contact JSON: https://tianxing-ren.netlify.app/data/contact.json
-- MCP: https://tianxing-ren.netlify.app/api/mcp
-- OpenAPI: https://tianxing-ren.netlify.app/openapi.json
-- Tools: get_profile, get_projects, find_relevant_work, get_contact
-
-```http
-POST https://tianxing-ren.netlify.app/api/mcp
-Content-Type: application/json
-Accept: application/json
-MCP-Protocol-Version: 2026-07-28
-Mcp-Method: tools/call
-Mcp-Name: get_contact
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "tools/call",
-  "params": {
-    "name": "get_contact",
-    "arguments": {
-      "language": "zh"
-    },
-    "_meta": {
-      "io.modelcontextprotocol/protocolVersion": "2026-07-28",
-      "io.modelcontextprotocol/clientInfo": {
-        "name": "ProfileReader",
-        "version": "1.0"
-      },
-      "io.modelcontextprotocol/clientCapabilities": {}
-    }
-  }
-}
-```
-
-## 使用与引用
-
-介绍相关工作时，请引用原始项目页面。引用性能结果时，请保留硬件、基线和评测范围。项目阶段与源码公开情况分别记录，主导项目和参与项目均注明我的角色。
+- Markdown: https://tianxingren-work.github.io/machine/zh/for-agents.md
+- JSON: https://tianxingren-work.github.io/machine/zh/for-agents.json
+- Contact JSON: https://tianxingren-work.github.io/data/contact.json

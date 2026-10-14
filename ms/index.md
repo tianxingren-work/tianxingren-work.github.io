@@ -1,58 +1,58 @@
 PELAJAR KEDOKTORAN · PEKING UNIVERSITY
 
-# Perkakasan baharu. Kod yang lebih baik.
+# Tianxing Ren
 
-Salam, saya **Tianxing Ren.** Saya menyelidik pengkompil AI agar pelbagai algoritma AI dapat berjalan dengan betul dan cekap pada perkakasan AI baharu, serta memudahkan pengaturcaraan untuk manusia dan ejen.
+Saya menyelidik pengkompil AI agar pelbagai algoritma AI dapat berjalan dengan betul dan cekap pada perkakasan AI baharu, serta memudahkan pengaturcaraan untuk manusia dan ejen.
 
-Pengkompil AI, pengaturcaraan peringkat tile dan pengkomputeran heterogen.
+Pengkompil AI · Pengaturcaraan peringkat tile · Pengkomputeran heterogen
 
-[Terokai projek](https://tianxing-ren.netlify.app/ms/projects/) [Hubungi saya](https://tianxing-ren.netlify.app/ms/contact/)
+[Terokai projek](https://tianxingren-work.github.io/ms/projects/) [Hubungi saya](https://tianxingren-work.github.io/ms/contact/)
 
 AI COMPILERS TILE-LEVEL PROGRAMMING HETEROGENEOUS COMPUTING
 
-01 / PROJEK YANG SAYA TERAJUI
+PROJEK PENYELIDIKAN
 
-## Daripada idea kepada sistem.
+## Projek yang saya terajui
 
 Saya menerajui projek yang membawa pengaturcaraan peringkat tile kepada perkakasan AI baharu.
 
 01 / Peneraju projek
 Fasa utama selesai [Sumber terbuka](https://github.com/TongmingLAIC/tilelang-tpu)
 
-### [TileLang-TPU](https://tianxing-ren.netlify.app/ms/projects/tilelang-tpu/)
+### [TileLang-TPU](https://tianxingren-work.github.io/ms/projects/tilelang-tpu/)
 
 Backend TileLang untuk TPU SOPHGO, daripada perancangan memori ketika kompilasi hingga pelaksanaan kernel.
 
-[](https://tianxing-ren.netlify.app/ms/projects/tilelang-tpu/)
-[Lihat projek](https://tianxing-ren.netlify.app/ms/projects/tilelang-tpu/) [Kod sumber](https://github.com/TongmingLAIC/tilelang-tpu)
+[](https://tianxingren-work.github.io/ms/projects/tilelang-tpu/)
+[Lihat projek](https://tianxingren-work.github.io/ms/projects/tilelang-tpu/) [Kod sumber](https://github.com/TongmingLAIC/tilelang-tpu)
 
 02 / Peneraju projek
 Sedang dijalankan
 
-### [TileLang-RISC-V](https://tianxing-ren.netlify.app/ms/projects/tilelang-riscv/)
+### [TileLang-RISC-V](https://tianxingren-work.github.io/ms/projects/tilelang-riscv/)
 
 Membawa TileLang ke CPU RISC-V dengan pecutan matriks AME. Usaha berterusan bersama penyelidik perkakasan sumber terbuka dan sistem.
 
-[Lihat projek](https://tianxing-ren.netlify.app/ms/projects/tilelang-riscv/) RISC-V / AME
+[Lihat projek](https://tianxingren-work.github.io/ms/projects/tilelang-riscv/) RISC-V / AME
 
 Projek sumber terbuka yang saya sertai
 
 [**TileLang**](https://github.com/tile-ai/tilelang) [**Asterinas**](https://github.com/asterinas/asterinas)
 
-02 / TENTANG SAYA
+LATAR BELAKANG
 
-## Bermula dengan rasa ingin tahu, membina sistem yang boleh diharap.
+## Penyelidikan dan pengalaman
 
 Saya mengikuti pengajian Doktor Kejuruteraan di Universiti Peking melalui program bersama Makmal Zhongguancun. Saya menyelidik pengkompil AI, pengaturcaraan peringkat tile dan pengkomputeran heterogen, serta berminat dengan bahasa pengaturcaraan dan seni bina komputer yang berkaitan.
 
 Saya menjalankan penyelidikan kedoktoran di bawah bimbingan [Prof. Tao Xie](https://taoxiease.github.io/) dan [Prof. Wei Yang](https://youngwei.com/) .
 
-[Kenali saya](https://tianxing-ren.netlify.app/ms/about/)
+[Kenali saya](https://tianxingren-work.github.io/ms/about/)
 
-MARI BERTUKAR PANDANGAN
+HUBUNGI SAYA
 
-## Sistem yang baik bermula dengan perbualan.
+## Bincangkan penyelidikan
 
 Jika anda menyelidik pengkompil AI, perkakasan AI baharu atau persoalan sistem yang berkaitan, saya berbesar hati untuk bertukar pandangan. Kongsikan idea, soalan atau kerja yang sedang anda lakukan.
 
-[Hubungi saya](https://tianxing-ren.netlify.app/ms/contact/) [GitHub ](https://github.com/LeslinD)
+[Hubungi saya](https://tianxingren-work.github.io/ms/contact/) [GitHub ](https://github.com/LeslinD)

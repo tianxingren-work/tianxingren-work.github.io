@@ -4,20 +4,20 @@
   "kind": "page",
   "language": "en",
   "title": "For agents · Tianxing Ren",
-  "url": "https://tianxing-ren.netlify.app/for-agents/",
-  "markdown_url": "https://tianxing-ren.netlify.app/machine/en/for-agents.md",
-  "content_markdown": "# Tianxing Ren / 任天行\n\n> AI compilers, Tile-level programming, Heterogeneous computing\n\nhttps://tianxing-ren.netlify.app/for-agents/\n\nLanguage: en. Updated: 2026-10-14.\n\n## Profile and research\n\nI research AI compilers so that diverse AI algorithms can run correctly and efficiently on emerging AI hardware. I aim to make programming easier for people and agents.\n\nI’m a Doctor of Engineering student at Peking University, jointly trained with Zhongguancun Laboratory. I research AI compilers, tile-level programming, and heterogeneous computing, with an interest in programming languages and computer architecture.\n\n[Prof. Tao Xie](https://taoxiease.github.io/) and [Prof. Wei Yang](https://youngwei.com/) supervise my doctoral research.\n\n## Projects I lead\n\n### TileLang-TPU\n\nProject lead\n\nA TileLang backend for SOPHGO TPUs, from compile-time memory planning to executable kernels.\n\nTileLang-TPU brings tile-level programming to commercial SOPHGO accelerators. Tiles are small blocks of data used to express a computation. The compiler handles on-chip memory placement, data movement and overlapping transfers with computation. Its just-in-time (JIT) runtime compiles Python kernel definitions and launches them on the BM1690.\n\nProject stage: Milestone complete\nSource availability: https://github.com/TongmingLAIC/tilelang-tpu\n\nhttps://tianxing-ren.netlify.app/projects/tilelang-tpu/\n\nEvaluated on a single core of the SOPHGO BM1690, with input sizes fixed before compilation. The baseline is the vendor’s optimized PPL implementation used by Torch-TPU. PPL (Primitive Programming Language) is SOPHGO’s low-level programming language.\n\nWe evaluated matrix multiplication, RMSNorm, RoPE, SwiGLU and element-wise addition across multiple input configurations and numerical formats. RMSNorm rescales values, RoPE encodes sequence positions and SwiGLU applies a nonlinear neural-network transformation. Average speedups by operator category are **1.05–1.23×** over PPL.\n\nTileLang-TPU also supports fused operators that combine multiple computation steps. FlashAttention efficiently computes model attention. After an algorithm optimization that processes multiple attention heads together in a batch (head-batched), it achieves an average speedup of **12.50×** over PPL. Attention heads are parallel computation branches that attend to different information.\n\nFor a fused MLP, a feed-forward neural network commonly used within AI models, the MLP W8A16 Dequantized Forward operator averages **1.01×** over PPL, essentially matching its performance. W8A16 uses 8-bit weights and 16-bit activations. Dequantization converts the stored low-precision weights into values used by the computation.\n\n- Static memory allocation: Plan where each data block sits in the chip’s fast local memory before the program runs, following the hardware’s placement rules and staying within its capacity.\n- Overlap transfers and computation: Arrange data transfers and computation into stages that can run in parallel, with each step starting only when its required data is ready.\n- Generate and run TPU code: Translate the computation into operations the TPU can execute, then compile, load and launch the program.\n\n### TileLang-RISC-V\n\nProject lead\n\nBringing TileLang to RISC-V CPUs with AME matrix acceleration. An ongoing effort with open-source hardware and systems researchers.\n\nThis project is developing a TileLang backend for RISC-V AME AI CPUs, in collaboration with the Beijing Institute of Open Source Chip and the Institute of Software, Chinese Academy of Sciences. Current work focuses on connecting the programming model to target instructions and establishing a usable compilation and execution path.\n\nProject stage: In progress\nSource availability: Source code is not public\n\nhttps://tianxing-ren.netlify.app/projects/tilelang-riscv/\n\n- Programming model: Express common AI operators with tile-level programs and identify the information the backend needs.\n- Target integration: Connect compiler lowering, AME instruction mapping, and the execution environment.\n- Evaluation: Test operator correctness and performance across target configurations, and use the results to guide backend optimization.\n\n## I also contribute to these open-source projects\n\n- [TileLang](https://github.com/tile-ai/tilelang) — contributor\n- [Asterinas](https://github.com/asterinas/asterinas) — contributor\n\n## Education\n\n- Peking University, Doctor of Engineering student, Electronic Information. Sep 2025 – Jul 2030 · expected\n- Beihang University, Bachelor of Engineering, Cyberspace Security. Sep 2021 – Jul 2025\n  GPA 3.77 / 4.0. Average grade 90.41 / 100\n\nDuring my undergraduate studies, I conducted research primarily under the guidance of [Prof. Hua Guo](https://cst.buaa.edu.cn/info/1112/2741.htm) . I completed an area-efficient FPGA implementation of an algebraic lattice cryptography suite, which received Third Prize in the National Cryptography Technology Competition. I also completed a cloud-service key-protection mechanism based on secure multiparty computation, which received First Prize in the National College Student Information Security Competition.\n\n## Internships\n\n### Beijing Tongming Lake IT Innovation Center\n\nDec 2025 – Present. Intelligent Systems Intern\n\n- Adapting TileLang to the SOPHGO SG2260E TPU with RISC-V tensor extensions.\n- Developing TileLang support for RISC-V CPUs with AME matrix acceleration.\n\n### Beijing Institute of Open Source Chip\n\nDec 2024 – Aug 2025. AI Systems Software Intern\n\n- Extended the Triton compilation stack to SOPHGO TPUs through translation into the vendor toolchain.\n- Built a TileLang-based operator compilation framework, including a TPU operator library, pipeline passes, and automatic code generation for operators used in LLaMA.\n- Several operators matched or exceeded vendor-tuned implementations in the evaluated configurations.\n\n### Eversec (Beijing) Technology Co., Ltd.\n\nJul 2024 – Aug 2024. Security Services Intern\n\n- Assisted with authorized network security assessments using Burp Suite and related tools, organizing findings and identifying potential risks.\n- Captured and standardized more than 100 industrial IoT login-traffic PCAP records with Wireshark.\n\n## Honors & scholarships\n\n- 2025–2026: Academic Excellence Scholarship\n- 2024–2025: Special Prize, Academic Competition Scholarship; Second Prize, Academic Excellence Scholarship\n- 2023–2024: Outstanding Student; Special Prize, Academic Competition Scholarship; Second Prize, Social Service Scholarship\n- 2022–2023: First Prize, Academic Competition Scholarship; Second Prize, Academic Excellence Scholarship\n\n## Visits\n\n- The Chinese University of Hong Kong. Summer School Visiting Student. Jul 2024 – Aug 2024\n\n## Contact\n\nContact details include a readable public email address and GitHub links. Research discussions about AI compilers, emerging AI hardware and related systems are welcome.\n\nEmail: tianxingren25 [at] stu [dot] pku [dot] edu [dot] cn\nhttps://tianxing-ren.netlify.app/contact/\nhttps://github.com/LeslinD\nhttps://github.com/tianxingren-work\n\n## Agent interfaces\n\nMCP provides four tools for the profile, projects, topic matching and contact details. Markdown, JSON and HTTP data endpoints are also available.\n\n- Markdown: https://tianxing-ren.netlify.app/machine/en/for-agents.md\n- JSON: https://tianxing-ren.netlify.app/machine/en/for-agents.json\n- Contact JSON: https://tianxing-ren.netlify.app/data/contact.json\n- MCP: https://tianxing-ren.netlify.app/api/mcp\n- OpenAPI: https://tianxing-ren.netlify.app/openapi.json\n- Tools: get_profile, get_projects, find_relevant_work, get_contact\n\n```http\nPOST https://tianxing-ren.netlify.app/api/mcp\nContent-Type: application/json\nAccept: application/json\nMCP-Protocol-Version: 2026-07-28\nMcp-Method: tools/call\nMcp-Name: get_contact\n\n{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"tools/call\",\n  \"params\": {\n    \"name\": \"get_contact\",\n    \"arguments\": {\n      \"language\": \"en\"\n    },\n    \"_meta\": {\n      \"io.modelcontextprotocol/protocolVersion\": \"2026-07-28\",\n      \"io.modelcontextprotocol/clientInfo\": {\n        \"name\": \"ProfileReader\",\n        \"version\": \"1.0\"\n      },\n      \"io.modelcontextprotocol/clientCapabilities\": {}\n    }\n  }\n}\n```\n\n## Use and attribution\n\nWhen summarizing this work, cite the original project pages and include the hardware, baseline, and evaluation scope for performance results. Project stage and source availability are recorded separately. Projects I lead and projects I contribute to are listed with their respective roles.\n",
+  "url": "https://tianxingren-work.github.io/for-agents/",
+  "markdown_url": "https://tianxingren-work.github.io/machine/en/for-agents.md",
+  "content_markdown": "# Tianxing Ren / 任天行\n\n> AI compilers, Tile-level programming, Heterogeneous computing\n\nhttps://tianxingren-work.github.io/for-agents/\n\nLanguage: en. Updated: 2026-10-14.\n\n## Profile and research\n\nI research AI compilers so that diverse AI algorithms can run correctly and efficiently on emerging AI hardware. I aim to make programming easier for people and agents.\n\nI’m a Doctor of Engineering student at Peking University, jointly trained with Zhongguancun Laboratory. I research AI compilers, tile-level programming, and heterogeneous computing, with an interest in programming languages and computer architecture.\n\n[Prof. Tao Xie](https://taoxiease.github.io/) and [Prof. Wei Yang](https://youngwei.com/) supervise my doctoral research.\n\n## Projects I lead\n\n### TileLang-TPU\n\nProject lead\n\nA TileLang backend for SOPHGO TPUs, from compile-time memory planning to executable kernels.\n\nTileLang-TPU brings tile-level programming to commercial SOPHGO accelerators. Tiles are small blocks of data used to express a computation. The compiler handles on-chip memory placement, data movement and overlapping transfers with computation. Its just-in-time (JIT) runtime compiles Python kernel definitions and launches them on the BM1690.\n\nProject stage: Milestone complete\nSource availability: https://github.com/TongmingLAIC/tilelang-tpu\n\nhttps://tianxingren-work.github.io/projects/tilelang-tpu/\n\nEvaluated on a single core of the SOPHGO BM1690, with input sizes fixed before compilation. The baseline is the vendor’s optimized PPL implementation used by Torch-TPU. PPL (Primitive Programming Language) is SOPHGO’s low-level programming language.\n\nWe evaluated matrix multiplication, RMSNorm, RoPE, SwiGLU and element-wise addition across multiple input configurations and numerical formats. RMSNorm rescales values, RoPE encodes sequence positions and SwiGLU applies a nonlinear neural-network transformation. Average speedups by operator category are **1.05–1.23×** over PPL.\n\nTileLang-TPU also supports fused operators that combine multiple computation steps. FlashAttention efficiently computes model attention. After an algorithm optimization that processes multiple attention heads together in a batch (head-batched), it achieves an average speedup of **12.50×** over PPL. Attention heads are parallel computation branches that attend to different information.\n\nFor a fused MLP, a feed-forward neural network commonly used within AI models, the MLP W8A16 Dequantized Forward operator averages **1.01×** over PPL, essentially matching its performance. W8A16 uses 8-bit weights and 16-bit activations. Dequantization converts the stored low-precision weights into values used by the computation.\n\n- Static memory allocation: Plan where each data block sits in the chip’s fast local memory before the program runs, following the hardware’s placement rules and staying within its capacity.\n- Overlap transfers and computation: Arrange data transfers and computation into stages that can run in parallel, with each step starting only when its required data is ready.\n- Generate and run TPU code: Translate the computation into operations the TPU can execute, then compile, load and launch the program.\n\n### TileLang-RISC-V\n\nProject lead\n\nBringing TileLang to RISC-V CPUs with AME matrix acceleration. An ongoing effort with open-source hardware and systems researchers.\n\nThis project is developing a TileLang backend for RISC-V AME AI CPUs, in collaboration with the Beijing Institute of Open Source Chip and the Institute of Software, Chinese Academy of Sciences. Current work focuses on connecting the programming model to target instructions and establishing a usable compilation and execution path.\n\nProject stage: In progress\nSource availability: Source code is not public\n\nhttps://tianxingren-work.github.io/projects/tilelang-riscv/\n\n- Programming model: Express common AI operators with tile-level programs and identify the information the backend needs.\n- Target integration: Connect compiler lowering, AME instruction mapping, and the execution environment.\n- Evaluation: Test operator correctness and performance across target configurations, and use the results to guide backend optimization.\n\n## I also contribute to these open-source projects\n\n- [TileLang](https://github.com/tile-ai/tilelang) — contributor\n- [Asterinas](https://github.com/asterinas/asterinas) — contributor\n\n## Education\n\n- Peking University, Doctor of Engineering student, Electronic Information. Sep 2025 – Jul 2030 · expected\n- Beihang University, Bachelor of Engineering, Cyberspace Security. Sep 2021 – Jul 2025\n  GPA 3.77 / 4.0. Average grade 90.41 / 100\n\nDuring my undergraduate studies, I conducted research primarily under the guidance of [Prof. Hua Guo](https://cst.buaa.edu.cn/info/1112/2741.htm) . I completed an area-efficient FPGA implementation of an algebraic lattice cryptography suite, which received Third Prize in the National Cryptography Technology Competition. I also completed a cloud-service key-protection mechanism based on secure multiparty computation, which received First Prize in the National College Student Information Security Competition.\n\n## Internships\n\n### Beijing Tongming Lake IT Innovation Center\n\nDec 2025 – Present. Intelligent Systems Intern\n\n- Adapting TileLang to the SOPHGO SG2260E TPU with RISC-V tensor extensions.\n- Developing TileLang support for RISC-V CPUs with AME matrix acceleration.\n\n### Beijing Institute of Open Source Chip\n\nDec 2024 – Aug 2025. AI Systems Software Intern\n\n- Extended the Triton compilation stack to SOPHGO TPUs through translation into the vendor toolchain.\n- Built a TileLang-based operator compilation framework, including a TPU operator library, pipeline passes, and automatic code generation for operators used in LLaMA.\n- Several operators matched or exceeded vendor-tuned implementations in the evaluated configurations.\n\n### Eversec (Beijing) Technology Co., Ltd.\n\nJul 2024 – Aug 2024. Security Services Intern\n\n- Assisted with authorized network security assessments using Burp Suite and related tools, organizing findings and identifying potential risks.\n- Captured and standardized more than 100 industrial IoT login-traffic PCAP records with Wireshark.\n\n## Honors & scholarships\n\n- 2025–2026: Academic Excellence Scholarship\n- 2024–2025: Special Prize, Academic Competition Scholarship; Second Prize, Academic Excellence Scholarship\n- 2023–2024: Outstanding Student; Special Prize, Academic Competition Scholarship; Second Prize, Social Service Scholarship\n- 2022–2023: First Prize, Academic Competition Scholarship; Second Prize, Academic Excellence Scholarship\n\n## Visits\n\n- The Chinese University of Hong Kong. Summer School Visiting Student. Jul 2024 – Aug 2024\n\n## Contact\n\nContact details include a readable public email address and GitHub links. Research discussions about AI compilers, emerging AI hardware and related systems are welcome.\n\nEmail: tianxingren25 [at] stu [dot] pku [dot] edu [dot] cn\nhttps://tianxingren-work.github.io/contact/\nhttps://github.com/LeslinD\nhttps://github.com/tianxingren-work\n\n## Reading formats\n\nRead the Markdown and JSON files directly; no backend connection is needed. The complete profile and each project page have their own files.\n\n- Markdown: https://tianxingren-work.github.io/machine/en/for-agents.md\n- JSON: https://tianxingren-work.github.io/machine/en/for-agents.json\n- Contact JSON: https://tianxingren-work.github.io/data/contact.json\n",
   "links": [
-    "https://tianxing-ren.netlify.app/machine/en/for-agents.md",
-    "https://tianxing-ren.netlify.app/machine/en/for-agents.json",
-    "https://tianxing-ren.netlify.app/data/contact.json",
+    "https://tianxingren-work.github.io/machine/en/for-agents.md",
+    "https://tianxingren-work.github.io/machine/en/for-agents.json",
+    "https://tianxingren-work.github.io/data/contact.json",
     "https://taoxiease.github.io/",
     "https://youngwei.com/",
-    "https://tianxing-ren.netlify.app/projects/tilelang-tpu/",
+    "https://tianxingren-work.github.io/projects/tilelang-tpu/",
     "https://github.com/TongmingLAIC/tilelang-tpu",
-    "https://tianxing-ren.netlify.app/assets/tilelang-tpu-operators.png",
-    "https://tianxing-ren.netlify.app/assets/tilelang-tpu-attention-mlp.png",
-    "https://tianxing-ren.netlify.app/projects/tilelang-riscv/",
+    "https://tianxingren-work.github.io/assets/tilelang-tpu-operators.png",
+    "https://tianxingren-work.github.io/assets/tilelang-tpu-attention-mlp.png",
+    "https://tianxingren-work.github.io/projects/tilelang-riscv/",
     "https://www.bosc.ac.cn/",
     "https://is.cas.cn/",
     "https://github.com/tile-ai/tilelang",
@@ -30,20 +30,18 @@
     "https://www.tlaic.ac.cn/",
     "https://eversec.com.cn/",
     "https://www.cuhk.edu.hk/",
-    "https://tianxing-ren.netlify.app/data/agent-tools.json",
-    "https://tianxing-ren.netlify.app/contact/",
+    "https://tianxingren-work.github.io/contact/",
     "https://github.com/LeslinD",
     "https://github.com/tianxingren-work",
-    "https://tianxing-ren.netlify.app/llms.txt",
-    "https://tianxing-ren.netlify.app/llms-full.md",
-    "https://tianxing-ren.netlify.app/data/agents.json",
-    "https://tianxing-ren.netlify.app/data/profile.json",
-    "https://tianxing-ren.netlify.app/data/projects.json",
-    "https://tianxing-ren.netlify.app/data/routes.json",
-    "https://tianxing-ren.netlify.app/openapi.json",
-    "https://tianxing-ren.netlify.app/machine/en/about.md",
-    "https://tianxing-ren.netlify.app/machine/en/projects/tilelang-tpu.md",
-    "https://tianxing-ren.netlify.app/machine/en/projects/tilelang-riscv.md"
+    "https://tianxingren-work.github.io/llms.txt",
+    "https://tianxingren-work.github.io/llms-full.md",
+    "https://tianxingren-work.github.io/data/agents.json",
+    "https://tianxingren-work.github.io/data/profile.json",
+    "https://tianxingren-work.github.io/data/projects.json",
+    "https://tianxingren-work.github.io/data/routes.json",
+    "https://tianxingren-work.github.io/machine/en/about.md",
+    "https://tianxingren-work.github.io/machine/en/projects/tilelang-tpu.md",
+    "https://tianxingren-work.github.io/machine/en/projects/tilelang-riscv.md"
   ],
   "profile": {
     "schema_version": "2.0",
@@ -230,13 +228,13 @@
       }
     ],
     "contact": {
-      "url": "https://tianxing-ren.netlify.app/contact/",
+      "url": "https://tianxingren-work.github.io/contact/",
       "interaction": "visitor-initiated",
       "github": "https://github.com/LeslinD",
       "github_work": "https://github.com/tianxingren-work",
       "email_text": "tianxingren25 [at] stu [dot] pku [dot] edu [dot] cn"
     },
-    "url": "https://tianxing-ren.netlify.app/about/",
+    "url": "https://tianxingren-work.github.io/about/",
     "site_languages": [
       "en",
       "zh",
@@ -269,8 +267,8 @@
           "description": "Translate the computation into operations the TPU can execute, then compile, load and launch the program."
         }
       ],
-      "url": "https://tianxing-ren.netlify.app/projects/tilelang-tpu/",
-      "markdown": "https://tianxing-ren.netlify.app/machine/en/projects/tilelang-tpu.md",
+      "url": "https://tianxingren-work.github.io/projects/tilelang-tpu/",
+      "markdown": "https://tianxingren-work.github.io/machine/en/projects/tilelang-tpu.md",
       "repository": "https://github.com/TongmingLAIC/tilelang-tpu",
       "evaluation": {
         "study_id": "bm1690-single-core-operators-and-fused-workloads",
@@ -326,7 +324,7 @@
             "height": 915,
             "alt": "Speedup of five operator categories over PPL across five input configurations and three floating-point formats.",
             "caption": "Standalone operators. M0–M4 label five tested input configurations. BF16 and FP16 use 16-bit floating-point formats; FP32 uses 32 bits. A value of 1× means the same execution time as PPL, and larger values mean faster execution. The 1.05–1.23× summary gives averages by operator category.",
-            "url": "https://tianxing-ren.netlify.app/assets/tilelang-tpu-operators.png"
+            "url": "https://tianxingren-work.github.io/assets/tilelang-tpu-operators.png"
           },
           {
             "asset": "assets/tilelang-tpu-attention-mlp.png",
@@ -334,7 +332,7 @@
             "height": 2797,
             "alt": "FlashAttention average speedup of 12.50 times and fused MLP average speedup of 1.01 times over PPL.",
             "caption": "Fused workloads. FlashAttention averages 12.50× over PPL; the W8A16 MLP averages 1.01×. B, H, S and D denote batch size, attention heads, sequence length and head dimension. M, H and I denote input rows, hidden width and intermediate width. The tuples identify the tested input sizes.",
-            "url": "https://tianxing-ren.netlify.app/assets/tilelang-tpu-attention-mlp.png"
+            "url": "https://tianxingren-work.github.io/assets/tilelang-tpu-attention-mlp.png"
           }
         ]
       },
@@ -368,8 +366,8 @@
           "description": "Test operator correctness and performance across target configurations, and use the results to guide backend optimization."
         }
       ],
-      "url": "https://tianxing-ren.netlify.app/projects/tilelang-riscv/",
-      "markdown": "https://tianxing-ren.netlify.app/machine/en/projects/tilelang-riscv.md",
+      "url": "https://tianxingren-work.github.io/projects/tilelang-riscv/",
+      "markdown": "https://tianxingren-work.github.io/machine/en/projects/tilelang-riscv.md",
       "partners": [
         {
           "name": "Beijing Institute of Open Source Chip",
@@ -401,11 +399,8 @@
   ],
   "last_reviewed": "2026-10-14",
   "interfaces": {
-    "markdown": "https://tianxing-ren.netlify.app/machine/en/for-agents.md",
-    "json": "https://tianxing-ren.netlify.app/machine/en/for-agents.json",
-    "contact": "https://tianxing-ren.netlify.app/data/contact.json",
-    "mcp": "https://tianxing-ren.netlify.app/api/mcp",
-    "tools": "https://tianxing-ren.netlify.app/data/agent-tools.json",
-    "openapi": "https://tianxing-ren.netlify.app/openapi.json"
+    "markdown": "https://tianxingren-work.github.io/machine/en/for-agents.md",
+    "json": "https://tianxingren-work.github.io/machine/en/for-agents.json",
+    "contact": "https://tianxingren-work.github.io/data/contact.json"
   }
 }

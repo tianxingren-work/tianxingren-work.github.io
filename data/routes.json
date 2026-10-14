@@ -3,7 +3,7 @@
     "locale": "en",
     "route": "",
     "file": "index.html",
-    "url": "https://tianxing-ren.netlify.app/",
+    "url": "https://tianxingren-work.github.io/",
     "markdown": "machine/en/home.md",
     "json": "machine/en/home.json"
   },
@@ -11,7 +11,7 @@
     "locale": "en",
     "route": "projects",
     "file": "projects/index.html",
-    "url": "https://tianxing-ren.netlify.app/projects/",
+    "url": "https://tianxingren-work.github.io/projects/",
     "markdown": "machine/en/projects.md",
     "json": "machine/en/projects.json"
   },
@@ -19,7 +19,7 @@
     "locale": "en",
     "route": "projects/tilelang-tpu",
     "file": "projects/tilelang-tpu/index.html",
-    "url": "https://tianxing-ren.netlify.app/projects/tilelang-tpu/",
+    "url": "https://tianxingren-work.github.io/projects/tilelang-tpu/",
     "markdown": "machine/en/projects/tilelang-tpu.md",
     "json": "machine/en/projects/tilelang-tpu.json"
   },
@@ -27,7 +27,7 @@
     "locale": "en",
     "route": "projects/tilelang-riscv",
     "file": "projects/tilelang-riscv/index.html",
-    "url": "https://tianxing-ren.netlify.app/projects/tilelang-riscv/",
+    "url": "https://tianxingren-work.github.io/projects/tilelang-riscv/",
     "markdown": "machine/en/projects/tilelang-riscv.md",
     "json": "machine/en/projects/tilelang-riscv.json"
   },
@@ -35,7 +35,7 @@
     "locale": "en",
     "route": "about",
     "file": "about/index.html",
-    "url": "https://tianxing-ren.netlify.app/about/",
+    "url": "https://tianxingren-work.github.io/about/",
     "markdown": "machine/en/about.md",
     "json": "machine/en/about.json"
   },
@@ -43,7 +43,7 @@
     "locale": "en",
     "route": "contact",
     "file": "contact/index.html",
-    "url": "https://tianxing-ren.netlify.app/contact/",
+    "url": "https://tianxingren-work.github.io/contact/",
     "markdown": "machine/en/contact.md",
     "json": "machine/en/contact.json"
   },
@@ -51,7 +51,7 @@
     "locale": "en",
     "route": "for-agents",
     "file": "for-agents/index.html",
-    "url": "https://tianxing-ren.netlify.app/for-agents/",
+    "url": "https://tianxingren-work.github.io/for-agents/",
     "markdown": "machine/en/for-agents.md",
     "json": "machine/en/for-agents.json"
   },
@@ -59,7 +59,7 @@
     "locale": "zh",
     "route": "",
     "file": "zh/index.html",
-    "url": "https://tianxing-ren.netlify.app/zh/",
+    "url": "https://tianxingren-work.github.io/zh/",
     "markdown": "machine/zh/home.md",
     "json": "machine/zh/home.json"
   },
@@ -67,7 +67,7 @@
     "locale": "zh",
     "route": "projects",
     "file": "zh/projects/index.html",
-    "url": "https://tianxing-ren.netlify.app/zh/projects/",
+    "url": "https://tianxingren-work.github.io/zh/projects/",
     "markdown": "machine/zh/projects.md",
     "json": "machine/zh/projects.json"
   },
@@ -75,7 +75,7 @@
     "locale": "zh",
     "route": "projects/tilelang-tpu",
     "file": "zh/projects/tilelang-tpu/index.html",
-    "url": "https://tianxing-ren.netlify.app/zh/projects/tilelang-tpu/",
+    "url": "https://tianxingren-work.github.io/zh/projects/tilelang-tpu/",
     "markdown": "machine/zh/projects/tilelang-tpu.md",
     "json": "machine/zh/projects/tilelang-tpu.json"
   },
@@ -83,7 +83,7 @@
     "locale": "zh",
     "route": "projects/tilelang-riscv",
     "file": "zh/projects/tilelang-riscv/index.html",
-    "url": "https://tianxing-ren.netlify.app/zh/projects/tilelang-riscv/",
+    "url": "https://tianxingren-work.github.io/zh/projects/tilelang-riscv/",
     "markdown": "machine/zh/projects/tilelang-riscv.md",
     "json": "machine/zh/projects/tilelang-riscv.json"
   },
@@ -91,7 +91,7 @@
     "locale": "zh",
     "route": "about",
     "file": "zh/about/index.html",
-    "url": "https://tianxing-ren.netlify.app/zh/about/",
+    "url": "https://tianxingren-work.github.io/zh/about/",
     "markdown": "machine/zh/about.md",
     "json": "machine/zh/about.json"
   },
@@ -99,7 +99,7 @@
     "locale": "zh",
     "route": "contact",
     "file": "zh/contact/index.html",
-    "url": "https://tianxing-ren.netlify.app/zh/contact/",
+    "url": "https://tianxingren-work.github.io/zh/contact/",
     "markdown": "machine/zh/contact.md",
     "json": "machine/zh/contact.json"
   },
@@ -107,7 +107,7 @@
     "locale": "zh",
     "route": "for-agents",
     "file": "zh/for-agents/index.html",
-    "url": "https://tianxing-ren.netlify.app/zh/for-agents/",
+    "url": "https://tianxingren-work.github.io/zh/for-agents/",
     "markdown": "machine/zh/for-agents.md",
     "json": "machine/zh/for-agents.json"
   },
@@ -115,7 +115,7 @@
     "locale": "ko",
     "route": "",
     "file": "ko/index.html",
-    "url": "https://tianxing-ren.netlify.app/ko/",
+    "url": "https://tianxingren-work.github.io/ko/",
     "markdown": "machine/ko/home.md",
     "json": "machine/ko/home.json"
   },
@@ -123,7 +123,7 @@
     "locale": "ko",
     "route": "projects",
     "file": "ko/projects/index.html",
-    "url": "https://tianxing-ren.netlify.app/ko/projects/",
+    "url": "https://tianxingren-work.github.io/ko/projects/",
     "markdown": "machine/ko/projects.md",
     "json": "machine/ko/projects.json"
   },
@@ -131,7 +131,7 @@
     "locale": "ko",
     "route": "projects/tilelang-tpu",
     "file": "ko/projects/tilelang-tpu/index.html",
-    "url": "https://tianxing-ren.netlify.app/ko/projects/tilelang-tpu/",
+    "url": "https://tianxingren-work.github.io/ko/projects/tilelang-tpu/",
     "markdown": "machine/ko/projects/tilelang-tpu.md",
     "json": "machine/ko/projects/tilelang-tpu.json"
   },
@@ -139,7 +139,7 @@
     "locale": "ko",
     "route": "projects/tilelang-riscv",
     "file": "ko/projects/tilelang-riscv/index.html",
-    "url": "https://tianxing-ren.netlify.app/ko/projects/tilelang-riscv/",
+    "url": "https://tianxingren-work.github.io/ko/projects/tilelang-riscv/",
     "markdown": "machine/ko/projects/tilelang-riscv.md",
     "json": "machine/ko/projects/tilelang-riscv.json"
   },
@@ -147,7 +147,7 @@
     "locale": "ko",
     "route": "about",
     "file": "ko/about/index.html",
-    "url": "https://tianxing-ren.netlify.app/ko/about/",
+    "url": "https://tianxingren-work.github.io/ko/about/",
     "markdown": "machine/ko/about.md",
     "json": "machine/ko/about.json"
   },
@@ -155,7 +155,7 @@
     "locale": "ko",
     "route": "contact",
     "file": "ko/contact/index.html",
-    "url": "https://tianxing-ren.netlify.app/ko/contact/",
+    "url": "https://tianxingren-work.github.io/ko/contact/",
     "markdown": "machine/ko/contact.md",
     "json": "machine/ko/contact.json"
   },
@@ -163,7 +163,7 @@
     "locale": "ko",
     "route": "for-agents",
     "file": "ko/for-agents/index.html",
-    "url": "https://tianxing-ren.netlify.app/ko/for-agents/",
+    "url": "https://tianxingren-work.github.io/ko/for-agents/",
     "markdown": "machine/ko/for-agents.md",
     "json": "machine/ko/for-agents.json"
   },
@@ -171,7 +171,7 @@
     "locale": "ms",
     "route": "",
     "file": "ms/index.html",
-    "url": "https://tianxing-ren.netlify.app/ms/",
+    "url": "https://tianxingren-work.github.io/ms/",
     "markdown": "machine/ms/home.md",
     "json": "machine/ms/home.json"
   },
@@ -179,7 +179,7 @@
     "locale": "ms",
     "route": "projects",
     "file": "ms/projects/index.html",
-    "url": "https://tianxing-ren.netlify.app/ms/projects/",
+    "url": "https://tianxingren-work.github.io/ms/projects/",
     "markdown": "machine/ms/projects.md",
     "json": "machine/ms/projects.json"
   },
@@ -187,7 +187,7 @@
     "locale": "ms",
     "route": "projects/tilelang-tpu",
     "file": "ms/projects/tilelang-tpu/index.html",
-    "url": "https://tianxing-ren.netlify.app/ms/projects/tilelang-tpu/",
+    "url": "https://tianxingren-work.github.io/ms/projects/tilelang-tpu/",
     "markdown": "machine/ms/projects/tilelang-tpu.md",
     "json": "machine/ms/projects/tilelang-tpu.json"
   },
@@ -195,7 +195,7 @@
     "locale": "ms",
     "route": "projects/tilelang-riscv",
     "file": "ms/projects/tilelang-riscv/index.html",
-    "url": "https://tianxing-ren.netlify.app/ms/projects/tilelang-riscv/",
+    "url": "https://tianxingren-work.github.io/ms/projects/tilelang-riscv/",
     "markdown": "machine/ms/projects/tilelang-riscv.md",
     "json": "machine/ms/projects/tilelang-riscv.json"
   },
@@ -203,7 +203,7 @@
     "locale": "ms",
     "route": "about",
     "file": "ms/about/index.html",
-    "url": "https://tianxing-ren.netlify.app/ms/about/",
+    "url": "https://tianxingren-work.github.io/ms/about/",
     "markdown": "machine/ms/about.md",
     "json": "machine/ms/about.json"
   },
@@ -211,7 +211,7 @@
     "locale": "ms",
     "route": "contact",
     "file": "ms/contact/index.html",
-    "url": "https://tianxing-ren.netlify.app/ms/contact/",
+    "url": "https://tianxingren-work.github.io/ms/contact/",
     "markdown": "machine/ms/contact.md",
     "json": "machine/ms/contact.json"
   },
@@ -219,7 +219,7 @@
     "locale": "ms",
     "route": "for-agents",
     "file": "ms/for-agents/index.html",
-    "url": "https://tianxing-ren.netlify.app/ms/for-agents/",
+    "url": "https://tianxingren-work.github.io/ms/for-agents/",
     "markdown": "machine/ms/for-agents.md",
     "json": "machine/ms/for-agents.json"
   }

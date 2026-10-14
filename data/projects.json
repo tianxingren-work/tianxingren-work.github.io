@@ -24,8 +24,8 @@
           "description": "Translate the computation into operations the TPU can execute, then compile, load and launch the program."
         }
       ],
-      "url": "https://tianxing-ren.netlify.app/projects/tilelang-tpu/",
-      "markdown": "https://tianxing-ren.netlify.app/machine/en/projects/tilelang-tpu.md",
+      "url": "https://tianxingren-work.github.io/projects/tilelang-tpu/",
+      "markdown": "https://tianxingren-work.github.io/machine/en/projects/tilelang-tpu.md",
       "repository": "https://github.com/TongmingLAIC/tilelang-tpu",
       "evaluation": {
         "study_id": "bm1690-single-core-operators-and-fused-workloads",
@@ -81,7 +81,7 @@
             "height": 915,
             "alt": "Speedup of five operator categories over PPL across five input configurations and three floating-point formats.",
             "caption": "Standalone operators. M0–M4 label five tested input configurations. BF16 and FP16 use 16-bit floating-point formats; FP32 uses 32 bits. A value of 1× means the same execution time as PPL, and larger values mean faster execution. The 1.05–1.23× summary gives averages by operator category.",
-            "url": "https://tianxing-ren.netlify.app/assets/tilelang-tpu-operators.png"
+            "url": "https://tianxingren-work.github.io/assets/tilelang-tpu-operators.png"
           },
           {
             "asset": "assets/tilelang-tpu-attention-mlp.png",
@@ -89,7 +89,7 @@
             "height": 2797,
             "alt": "FlashAttention average speedup of 12.50 times and fused MLP average speedup of 1.01 times over PPL.",
             "caption": "Fused workloads. FlashAttention averages 12.50× over PPL; the W8A16 MLP averages 1.01×. B, H, S and D denote batch size, attention heads, sequence length and head dimension. M, H and I denote input rows, hidden width and intermediate width. The tuples identify the tested input sizes.",
-            "url": "https://tianxing-ren.netlify.app/assets/tilelang-tpu-attention-mlp.png"
+            "url": "https://tianxingren-work.github.io/assets/tilelang-tpu-attention-mlp.png"
           }
         ]
       },
@@ -123,8 +123,8 @@
           "description": "Test operator correctness and performance across target configurations, and use the results to guide backend optimization."
         }
       ],
-      "url": "https://tianxing-ren.netlify.app/projects/tilelang-riscv/",
-      "markdown": "https://tianxing-ren.netlify.app/machine/en/projects/tilelang-riscv.md",
+      "url": "https://tianxingren-work.github.io/projects/tilelang-riscv/",
+      "markdown": "https://tianxingren-work.github.io/machine/en/projects/tilelang-riscv.md",
       "partners": [
         {
           "name": "Beijing Institute of Open Source Chip",

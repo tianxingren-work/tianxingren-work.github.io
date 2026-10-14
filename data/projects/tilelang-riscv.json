@@ -21,8 +21,8 @@
       "description": "Test operator correctness and performance across target configurations, and use the results to guide backend optimization."
     }
   ],
-  "url": "https://tianxing-ren.netlify.app/projects/tilelang-riscv/",
-  "markdown": "https://tianxing-ren.netlify.app/machine/en/projects/tilelang-riscv.md",
+  "url": "https://tianxingren-work.github.io/projects/tilelang-riscv/",
+  "markdown": "https://tianxingren-work.github.io/machine/en/projects/tilelang-riscv.md",
   "partners": [
     {
       "name": "Beijing Institute of Open Source Chip",

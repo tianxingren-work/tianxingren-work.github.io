@@ -6,7 +6,7 @@
 
 [Tao Xie 교수님](https://taoxiease.github.io/) 과 [Wei Yang 교수님](https://youngwei.com/) 의 지도를 받으며 박사과정 연구를 진행하고 있습니다.
 
-[연락하기](https://tianxing-ren.netlify.app/ko/contact/) [GitHub ](https://github.com/LeslinD)
+[연락하기](https://tianxingren-work.github.io/ko/contact/) [GitHub ](https://github.com/LeslinD)
 
 ## 학력
 
@@ -102,10 +102,10 @@ AI 시스템 소프트웨어 개발 인턴
 
 여름학교 방문학생
 
-함께 이야기해요
+연락처
 
-## 좋은 시스템은 대화에서 시작됩니다.
+## 연구에 관한 대화
 
 AI 컴파일러, 새로운 AI 하드웨어 또는 관련 시스템 문제를 연구하고 계신다면 의견을 나누고 싶습니다. 아이디어, 궁금한 점, 진행 중인 작업을 소개해 주세요.
 
-[연락하기](https://tianxing-ren.netlify.app/ko/contact/) [GitHub ](https://github.com/LeslinD)
+[연락하기](https://tianxingren-work.github.io/ko/contact/) [GitHub ](https://github.com/LeslinD)

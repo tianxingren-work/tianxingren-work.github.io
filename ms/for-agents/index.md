@@ -2,7 +2,7 @@
 
 > AI compilers, Tile-level programming, Heterogeneous computing
 
-https://tianxing-ren.netlify.app/ms/for-agents/
+https://tianxingren-work.github.io/ms/for-agents/
 
 Language: ms. Updated: 2026-10-14.
 
@@ -27,7 +27,7 @@ TileLang-TPU membawa pengaturcaraan peringkat tile kepada pemecut SOPHGO komersi
 Tahap projek: Fasa utama selesai
 Ketersediaan sumber: https://github.com/TongmingLAIC/tilelang-tpu
 
-https://tianxing-ren.netlify.app/ms/projects/tilelang-tpu/
+https://tianxingren-work.github.io/ms/projects/tilelang-tpu/
 
 Penilaian dijalankan pada satu teras SOPHGO BM1690, dengan saiz input ditetapkan sebelum kompilasi. Prestasi dibandingkan dengan pelaksanaan PPL yang dioptimumkan oleh pengeluar dan digunakan dalam Torch-TPU. PPL (Primitive Programming Language) ialah bahasa pengaturcaraan aras rendah SOPHGO.
 
@@ -52,7 +52,7 @@ Projek ini membangunkan backend TileLang untuk CPU AI RISC-V AME bersama Institu
 Tahap projek: Sedang dijalankan
 Ketersediaan sumber: Kod sumber belum dibuka kepada umum
 
-https://tianxing-ren.netlify.app/ms/projects/tilelang-riscv/
+https://tianxingren-work.github.io/ms/projects/tilelang-riscv/
 
 - Model pengaturcaraan: Menyatakan operator AI lazim melalui program peringkat tile dan mengenal pasti maklumat yang diperlukan oleh backend.
 - Penyepaduan sasaran: Menghubungkan penurunan kompilasi, pemetaan arahan AME dan persekitaran pelaksanaan.
@@ -111,50 +111,14 @@ Jul 2024 – Ogo 2024. Pelatih Perkhidmatan Keselamatan
 Alamat e-mel awam dan pautan GitHub boleh dibaca terus. Saya mengalu-alukan perbincangan tentang pengkompil AI, perkakasan AI baharu dan penyelidikan sistem berkaitan.
 
 E-mel: tianxingren25 [at] stu [dot] pku [dot] edu [dot] cn
-https://tianxing-ren.netlify.app/ms/contact/
+https://tianxingren-work.github.io/ms/contact/
 https://github.com/LeslinD
 https://github.com/tianxingren-work
 
-## Antara muka Agent
+## Format bacaan
 
-MCP menyediakan empat alat untuk profil, senarai projek, padanan topik dan maklumat hubungan. Markdown, JSON dan antara muka data HTTP juga tersedia.
+Baca fail Markdown dan JSON secara terus tanpa sambungan ke pelayan belakang. Profil lengkap dan setiap halaman projek mempunyai fail masing-masing.
 
-- Markdown: https://tianxing-ren.netlify.app/machine/ms/for-agents.md
-- JSON: https://tianxing-ren.netlify.app/machine/ms/for-agents.json
-- Contact JSON: https://tianxing-ren.netlify.app/data/contact.json
-- MCP: https://tianxing-ren.netlify.app/api/mcp
-- OpenAPI: https://tianxing-ren.netlify.app/openapi.json
-- Tools: get_profile, get_projects, find_relevant_work, get_contact
-
-```http
-POST https://tianxing-ren.netlify.app/api/mcp
-Content-Type: application/json
-Accept: application/json
-MCP-Protocol-Version: 2026-07-28
-Mcp-Method: tools/call
-Mcp-Name: get_contact
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "tools/call",
-  "params": {
-    "name": "get_contact",
-    "arguments": {
-      "language": "ms"
-    },
-    "_meta": {
-      "io.modelcontextprotocol/protocolVersion": "2026-07-28",
-      "io.modelcontextprotocol/clientInfo": {
-        "name": "ProfileReader",
-        "version": "1.0"
-      },
-      "io.modelcontextprotocol/clientCapabilities": {}
-    }
-  }
-}
-```
-
-## Penggunaan dan rujukan
-
-Apabila menerangkan kerja ini, rujuk halaman projek asal. Sertakan perkakasan, pelaksanaan asas dan skop penilaian bagi hasil prestasi. Tahap projek dan ketersediaan sumber direkodkan secara berasingan. Projek yang saya terajui dan sertai menyatakan peranan saya.
+- Markdown: https://tianxingren-work.github.io/machine/ms/for-agents.md
+- JSON: https://tianxingren-work.github.io/machine/ms/for-agents.json
+- Contact JSON: https://tianxingren-work.github.io/data/contact.json

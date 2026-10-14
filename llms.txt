@@ -6,40 +6,35 @@ I research AI compilers so that diverse AI algorithms can run correctly and effi
 
 ## Profile and projects
 
-- [About](https://tianxing-ren.netlify.app/machine/en/about.md): education, advisors, internships, awards, and visits.
-- [TileLang-TPU](https://tianxing-ren.netlify.app/machine/en/projects/tilelang-tpu.md): project lead; stage milestone-complete; open source true.
-- [TileLang-RISC-V](https://tianxing-ren.netlify.app/machine/en/projects/tilelang-riscv.md): project lead; stage in-progress; open source false.
+- [About](https://tianxingren-work.github.io/machine/en/about.md): education, advisors, internships, awards, and visits.
+- [TileLang-TPU](https://tianxingren-work.github.io/machine/en/projects/tilelang-tpu.md): project lead; stage milestone-complete; open source true.
+- [TileLang-RISC-V](https://tianxingren-work.github.io/machine/en/projects/tilelang-riscv.md): project lead; stage in-progress; open source false.
 
 ## Complete profile
 
-- [Full profile in Markdown](https://tianxing-ren.netlify.app/llms-full.md)
-- [Full profile in JSON](https://tianxing-ren.netlify.app/data/agents.json)
+- [Agent page](https://tianxingren-work.github.io/for-agents/)
+- [Full profile in Markdown](https://tianxingren-work.github.io/llms-full.md)
+- [Full profile in JSON](https://tianxingren-work.github.io/data/agents.json)
 
 ## Contact
 
-- [Contact details](https://tianxing-ren.netlify.app/data/contact.json): public email text and GitHub profiles.
+- [Contact details](https://tianxingren-work.github.io/data/contact.json): public email text and GitHub profiles.
 
-## Structured access
+## Structured files
 
-- [Profile](https://tianxing-ren.netlify.app/data/profile.json)
-- [Projects and participation](https://tianxing-ren.netlify.app/data/projects.json)
-- [All page representations](https://tianxing-ren.netlify.app/data/routes.json)
-- [HTTP API description](https://tianxing-ren.netlify.app/openapi.json)
-- [Agent tool definitions](https://tianxing-ren.netlify.app/data/agent-tools.json)
+- [Profile](https://tianxingren-work.github.io/data/profile.json)
+- [Projects and participation](https://tianxingren-work.github.io/data/projects.json)
+- [All page representations](https://tianxingren-work.github.io/data/routes.json)
 
 ## Language versions
 
-- [English](https://tianxing-ren.netlify.app/machine/en/for-agents.md)
-- [中文](https://tianxing-ren.netlify.app/machine/zh/for-agents.md)
-- [한국어](https://tianxing-ren.netlify.app/machine/ko/for-agents.md)
-- [Bahasa Melayu](https://tianxing-ren.netlify.app/machine/ms/for-agents.md)
+- [English](https://tianxingren-work.github.io/machine/en/for-agents.md)
+- [中文](https://tianxingren-work.github.io/machine/zh/for-agents.md)
+- [한국어](https://tianxingren-work.github.io/machine/ko/for-agents.md)
+- [Bahasa Melayu](https://tianxingren-work.github.io/machine/ms/for-agents.md)
 
-## Requesting a representation
+## Reading this site
 
-The production host and supplied HTTP server automatically serve Markdown to recognized AI tool user agents. Homepage requests receive the complete agent profile; other routes keep the requested page content. An explicit format query parameter or Accept media type takes priority. Use ?format=markdown, ?format=json or ?format=html. Static hosts expose the directly linked files.
+This site is hosted as static files on GitHub Pages. Read the Markdown and JSON URLs directly; they work without JavaScript or a backend. HTML pages link to their alternate files in the document head. Recognized agent user agents in browsers that execute JavaScript are directed to the localized agent page. GitHub Pages does not select response content from the User-Agent or Accept header.
 
-## Sources
-
-Cite the original project page and preserve the hardware, baseline, and evaluation scope. Project stage and source availability are recorded separately. Project lead and contributor roles are specified in the project directory.
-
-For research collaboration, use the contact page at https://tianxing-ren.netlify.app/contact/ or the linked GitHub profiles.
+For research collaboration, use the contact page at https://tianxingren-work.github.io/contact/ or the linked GitHub profiles.

@@ -183,13 +183,13 @@
     }
   ],
   "contact": {
-    "url": "https://tianxing-ren.netlify.app/contact/",
+    "url": "https://tianxingren-work.github.io/contact/",
     "interaction": "visitor-initiated",
     "github": "https://github.com/LeslinD",
     "github_work": "https://github.com/tianxingren-work",
     "email_text": "tianxingren25 [at] stu [dot] pku [dot] edu [dot] cn"
   },
-  "url": "https://tianxing-ren.netlify.app/about/",
+  "url": "https://tianxingren-work.github.io/about/",
   "site_languages": [
     "en",
     "zh",
