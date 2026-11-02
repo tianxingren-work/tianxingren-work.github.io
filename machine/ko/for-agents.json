@@ -6,7 +6,7 @@
   "title": "For agents · Tianxing Ren",
   "url": "https://tianxingren-work.github.io/ko/for-agents/",
   "markdown_url": "https://tianxingren-work.github.io/machine/ko/for-agents.md",
-  "content_markdown": "# Tianxing Ren / 任天行\n\n> AI compilers, Tile-level programming, Heterogeneous computing\n\nhttps://tianxingren-work.github.io/ko/for-agents/\n\nLanguage: ko. Updated: 2026-10-14.\n\n## 프로필과 연구\n\n다양한 AI 알고리즘이 새로운 AI 하드웨어에서 정확하고 효율적으로 실행되도록 AI 컴파일러를 연구합니다. 사람과 에이전트가 더 쉽게 프로그래밍할 수 있도록 돕고자 합니다.\n\n베이징대학교와 중관춘 연구소의 공동 공학 박사과정에 재학 중입니다. AI 컴파일러, 타일 단위 프로그래밍, 이종 컴퓨팅을 연구하며 관련 프로그래밍 언어와 컴퓨터 구조 문제에 관심이 있습니다.\n\n[Tao Xie 교수님](https://taoxiease.github.io/) 과 [Wei Yang 교수님](https://youngwei.com/) 의 지도를 받으며 박사과정 연구를 진행하고 있습니다.\n\n## 연구 프로젝트\n\n### TileLang-TPU\n\n프로젝트 책임자\n\n컴파일 시점의 메모리 계획부터 커널 실행까지 지원하는 SOPHGO TPU용 TileLang 백엔드입니다.\n\nTileLang-TPU는 상용 SOPHGO 가속기에서 타일 단위 프로그래밍을 지원합니다. 타일은 계산을 표현하는 작은 데이터 블록입니다. 컴파일러가 온칩 메모리 배치, 데이터 이동, 전송과 연산의 중첩을 처리합니다. JIT(실행 시점 컴파일) 런타임은 Python으로 정의한 커널을 컴파일하고 BM1690에서 실행합니다.\n\n프로젝트 단계: 주요 단계 완료\n소스 공개 여부: https://github.com/TongmingLAIC/tilelang-tpu\n\nhttps://tianxingren-work.github.io/ko/projects/tilelang-tpu/\n\nSOPHGO BM1690의 단일 코어에서 입력 크기를 컴파일 전에 확정한 조건으로 평가했습니다. 비교 기준은 Torch-TPU에서 사용하는 제조사의 최적화된 PPL 구현입니다. PPL(Primitive Programming Language)은 SOPHGO가 제공하는 저수준 프로그래밍 언어입니다.\n\n행렬 곱셈, RMSNorm, RoPE, SwiGLU, 원소별 덧셈을 여러 입력 구성과 수치 형식으로 평가했습니다. RMSNorm은 값의 크기를 조정하고, RoPE는 시퀀스 내 위치를 표현하며, SwiGLU는 신경망의 비선형 변환을 수행합니다. 연산 종류별 평균 속도 향상은 PPL 대비 **1.05–1.23×**입니다.\n\nTileLang-TPU는 여러 계산 단계를 하나로 합치는 융합 연산도 지원합니다. FlashAttention은 모델의 어텐션을 효율적으로 계산합니다. 여러 어텐션 헤드를 한 배치로 함께 처리하는 head-batched 알고리즘 최적화 후 PPL 대비 평균 **12.50×**의 속도 향상을 달성했습니다. 어텐션 헤드는 서로 다른 정보에 주목하는 병렬 계산 분기입니다.\n\nAI 모델에서 흔히 사용하는 순방향 신경망인 MLP의 융합 연산에서는 MLP W8A16 Dequantized Forward가 평균 **1.01×**로 PPL과 거의 같은 성능을 보였습니다. W8A16은 8비트 가중치와 16비트 활성값을 뜻합니다. 역양자화는 저장된 저정밀도 가중치를 계산에 사용할 값으로 변환하는 과정입니다.\n\n- 정적 메모리 할당: 프로그램 실행 전에 각 데이터 블록을 칩 내부의 빠른 메모리 어디에 둘지 정합니다. 하드웨어의 배치 규칙을 따르고 메모리 용량을 넘지 않도록 합니다.\n- 데이터 전송과 연산의 중첩: 데이터 전송과 연산을 병렬로 진행할 수 있는 단계로 나눕니다. 각 단계는 필요한 데이터가 준비된 후 시작하도록 합니다.\n- TPU 코드 생성과 실행: 계산을 TPU가 실행할 수 있는 연산으로 변환하고 프로그램을 컴파일, 로딩, 실행합니다.\n\n### TileLang-RISC-V\n\n프로젝트 책임자\n\nAME 행렬 가속을 제공하는 RISC-V CPU에 TileLang을 이식합니다. 오픈소스 하드웨어·시스템 연구팀과 진행 중인 프로젝트입니다.\n\n베이징 오픈소스 칩 연구원 및 중국과학원 소프트웨어연구소와 협력해 RISC-V AME AI CPU용 TileLang 백엔드를 개발하고 있습니다. 현재 프로그래밍 모델과 대상 명령어를 연결하고 실용적인 컴파일·실행 경로를 구축하는 데 집중합니다.\n\n프로젝트 단계: 진행 중\n소스 공개 여부: 소스 코드 비공개\n\nhttps://tianxingren-work.github.io/ko/projects/tilelang-riscv/\n\n- 프로그래밍 모델: 일반적인 AI 연산자를 타일 단위 프로그램으로 표현하고 백엔드에 필요한 정보를 파악합니다.\n- 대상 플랫폼 통합: 컴파일 하향 변환, AME 명령어 매핑, 실행 환경을 연결합니다.\n- 평가: 대상 구성별로 연산자의 정확성과 성능을 검증하고, 결과를 바탕으로 백엔드를 최적화합니다.\n\n## 오픈소스 기여\n\n- [TileLang](https://github.com/tile-ai/tilelang) — contributor\n- [Asterinas](https://github.com/asterinas/asterinas) — contributor\n\n## 학력\n\n- 베이징대학교, 공학 전문박사과정, 전자정보. 2025.09 – 2030.07 · 예정\n- 베이항대학교, 공학 학사, 사이버보안. 2021.09 – 2025.07\n  GPA 3.77 / 4.0. 평균 성적 90.41 / 100\n\n학부 재학 중에는 주로 [Hua Guo 교수님](https://cst.buaa.edu.cn/info/1112/2741.htm) 의 지도 아래 연구를 진행했습니다. 적은 회로 면적을 사용하는 대수 격자 암호 제품군을 FPGA로 구현하여 전국 암호기술 경진대회에서 3등상을 받았습니다. 안전한 다자간 계산을 기반으로 한 클라우드 서비스 키 보호 메커니즘도 완성하여 전국 대학생 정보보안 경진대회에서 1등상을 받았습니다.\n\n## 인턴십\n\n### 베이징 퉁밍후 정보기술 혁신센터\n\n2025.12 – 현재. 지능형 시스템 인턴\n\n- RISC-V 텐서 확장을 사용하는 SOPHGO SG2260E TPU에 TileLang을 이식하고 있습니다.\n- AME 행렬 가속을 제공하는 RISC-V CPU를 위한 TileLang 지원을 개발하고 있습니다.\n\n### 베이징 오픈소스 칩 연구원\n\n2024.12 – 2025.08. AI 시스템 소프트웨어 개발 인턴\n\n- 벤더 툴체인으로의 변환을 통해 Triton 컴파일 스택을 SOPHGO TPU로 확장했습니다.\n- TileLang 기반 연산자 컴파일 프레임워크를 구축하고, TPU 연산자 라이브러리, 파이프라인 패스, LLaMA 연산자용 자동 코드 생성을 개발했습니다.\n- 평가한 구성에서 여러 연산자가 벤더 최적화 구현과 동등하거나 더 높은 성능을 보였습니다.\n\n### Eversec (Beijing) Technology Co., Ltd.\n\n2024.07 – 2024.08. 보안 서비스 인턴\n\n- Burp Suite 등으로 승인된 네트워크 보안 평가를 지원하고 결과를 정리해 잠재적 위험을 파악했습니다.\n- Wireshark로 산업용 IoT 기기의 로그인 트래픽 PCAP 기록 100여 건을 수집하고 표준화했습니다.\n\n## 수상 및 장학금\n\n- 2025–2026: 학업우수 장학금\n- 2024–2025: 학술경진대회 장학금 특별상; 학업우수 장학금 2등상\n- 2023–2024: 우수학생 표창; 학술경진대회 장학금 특별상; 사회봉사 장학금 2등상\n- 2022–2023: 학술경진대회 장학금 1등상; 학업우수 장학금 2등상\n\n## 방문\n\n- 홍콩중문대학교. 여름학교 방문학생. 2024.07 – 2024.08\n\n## 연락처\n\n공개 이메일 주소와 GitHub 링크를 직접 읽을 수 있습니다. AI 컴파일러, 새로운 AI 하드웨어 및 관련 시스템 연구에 관한 교류를 환영합니다.\n\n이메일: tianxingren25 [at] stu [dot] pku [dot] edu [dot] cn\nhttps://tianxingren-work.github.io/ko/contact/\nhttps://github.com/LeslinD\nhttps://github.com/tianxingren-work\n\n## 읽기 형식\n\n아래 파일 링크에서 전체 프로필, 연락처, 프로젝트 정보를 Markdown 또는 JSON으로 읽을 수 있습니다.\n\n- Markdown: https://tianxingren-work.github.io/machine/ko/for-agents.md\n- JSON: https://tianxingren-work.github.io/machine/ko/for-agents.json\n- Contact JSON: https://tianxingren-work.github.io/data/contact.json\n",
+  "content_markdown": "# Tianxing Ren / 任天行\n\n> AI compilers, Tile-level programming, Heterogeneous computing\n\nhttps://tianxingren-work.github.io/ko/for-agents/\n\nLanguage: ko. Updated: 2026-10-14.\n\n## 프로필과 연구\n\n다양한 AI 알고리즘이 새로운 AI 하드웨어에서 정확하고 효율적으로 실행되도록 AI 컴파일러를 연구합니다. 사람과 에이전트가 더 쉽게 프로그래밍할 수 있도록 돕고자 합니다.\n\n베이징대학교와 중관춘 연구소의 공동 공학 박사과정에 재학 중입니다. AI 컴파일러, 타일 단위 프로그래밍, 이종 컴퓨팅을 연구하며 관련 프로그래밍 언어와 컴퓨터 구조 문제에 관심이 있습니다.\n\n[Tao Xie 교수님](https://taoxiease.github.io/) 과 [Wei Yang 교수님](https://youngwei.com/) 의 지도를 받으며 박사과정 연구를 진행하고 있습니다.\n\n## 연구 프로젝트\n\n### TileLang-TPU\n\n프로젝트 책임자\n\nPython으로 고성능 커널을 작성할 수 있는 SOPHGO TPU용 TileLang 컴파일러 백엔드입니다.\n\nTileLang-TPU는 Python으로 SOPHGO TPU에서 실행할 고성능 커널을 작성할 수 있도록 합니다. TileLang의 타일 추상화와 프런트엔드, 하드웨어에 독립적인 변환 및 최적화를 그대로 활용합니다. 타일은 계산을 표현하는 데이터 블록입니다. 컴파일러는 온칩 메모리 할당, 데이터 전송, 연산 파이프라인 스케줄링, TPU 명령어 선택을 처리합니다. JIT(실행 시점 컴파일)를 통해 Python으로 정의한 커널을 장치에서 실행합니다. 개발자는 이러한 하드웨어 세부 사항을 직접 다루지 않고도 간결한 커널 코드를 작성할 수 있습니다. 평가한 워크로드에서는 제조사의 최적화된 구현과 같거나 더 나은 성능을 보였습니다.\n\n현재 SOPHGO BM1690에서 딥러닝에 자주 쓰이는 연산을 지원하며, 해당 칩에서 성능 평가를 마쳤습니다. 실제 장치 실행과 소프트웨어 시뮬레이터를 이용한 디버깅을 모두 지원합니다. 앞으로는 대규모 언어 모델의 전체 추론 워크로드를 평가하고 여러 코어를 활용하도록 확장할 계획입니다.\n\n프로젝트 단계: 주요 단계 완료\n소스 공개 여부: https://github.com/TongmingLAIC/tilelang-tpu\n\nhttps://tianxingren-work.github.io/ko/projects/tilelang-tpu/\n\nTPU용 고성능 커널을 개발하려면 계산 내용뿐 아니라 온칩 메모리의 데이터 배치, 전송과 연산의 실행 순서, 하드웨어 명령어 인터페이스 호출도 정해야 합니다. TileLang-TPU는 TileLang의 Python 프런트엔드, 텐서 중간 표현(TIR), 공통 컴파일 패스를 재사용합니다. 하드웨어에 종속적인 작업은 TPU 전용 백엔드가 처리합니다.\n개발자는 TileLang-TPU의 프런트엔드 연산으로 계산과 데이터 전송을 표현합니다. 현재 백엔드는 단일 코어 안에서 최적화하며, 코어 간 작업 분배는 아직 지원하지 않습니다. 입력 크기가 컴파일 시점에 정해지는 정적 형상만 지원하고, 동적 형상 컴파일은 지원하지 않습니다.\n\nBM1690용 컴파일러 백엔드, JIT 런타임, 대규모 언어 모델에 자주 쓰이는 연산을 구현했습니다. 행렬 곱셈, RMSNorm, RoPE, SwiGLU, 원소별 덧셈, 리덕션 등을 지원하며, LLaMA와 DeepSeek 추론에 쓰이는 연산도 포함합니다.\n\n성능은 SOPHGO BM1690 단일 코어에서 평가했습니다. TileLang-TPU와 SOPHGO Torch-TPU 연산 라이브러리에 포함된 제조사의 최적화된 PPL 구현을 같은 입력 형상과 데이터형으로 비교했습니다. 입력 형상은 컴파일 시점에 고정하며, 장치 측 커널 실행 시간을 측정했습니다. PPL(Primitive Programming Language)은 SOPHGO가 제공하는 커널 프로그래밍 언어입니다.\n\nPPL 대비 평균 속도 향상은 행렬 곱셈 **1.14×**, RMSNorm **1.23×**, RoPE **1.08×**, SwiGLU **1.11×**, 원소별 덧셈 **1.05×**입니다. 다섯 연산 종류 모두 평균 성능이 제조사 구현보다 높았습니다. 커널 구현 부분의 유효 코드 줄 수는 PPL보다 **44.85%** 줄었습니다. 평가한 워크로드에서는 타일 추상화로 더 간결한 코드를 작성하면서도 제조사 라이브러리와 같거나 더 나은 성능을 얻을 수 있었습니다.\n\n여러 계산 단계를 하나로 합친 융합 커널도 지원합니다. 대규모 언어 모델의 핵심 어텐션 커널인 FlashAttention은 같은 알고리즘 표현을 사용했을 때 제조사의 PPL 구현 대비 평균 **1.36×**의 속도 향상을 보였습니다.\n\nW8A16 역양자화 MLP 순방향 계산(MLP W8A16 Dequantized Forward)은 평가한 구성에서 PPL 대비 평균 **1.01×**로, 거의 같은 성능을 보였습니다. MLP는 모델의 순방향 신경망입니다. W8A16은 8비트 가중치와 16비트 활성값을 뜻하며, 역양자화는 저장된 저정밀도 가중치를 계산에 사용할 값으로 변환하는 과정입니다.\n\n- 온칩 메모리 관리: TPU의 온칩 메모리 구조에 맞춘 자동 주소 할당 알고리즘을 구현했습니다. 컴파일러는 텐서의 형상, 데이터형, 읽기·쓰기 관계를 바탕으로 수명을 분석합니다. 수명이 겹치지 않는 텐서는 저장 공간을 공유하고, 동시에 읽는 텐서는 가능한 한 서로 다른 메모리 뱅크에 배치해 접근 충돌을 줄입니다.\n- 데이터 전송과 연산 파이프라이닝: 컴파일러는 실행 유닛 간 데이터 의존성을 분석하고, 사용자가 지정한 파이프라인 단계 수에 맞춰 타일 루프의 데이터 로드, 연산, 저장을 배치합니다. GDMA 데이터 전송 유닛과 TIU 연산 유닛을 병렬로 실행하도록 스케줄링합니다. 현재 타일을 계산하는 동안 다음 타일을 준비해 전송과 연산을 세밀하게 중첩합니다.\n- 하드웨어 명령어 매핑: 데이터 복사와 전송, 행렬 곱셈, 원소별 연산, 합계나 최댓값을 구하는 리덕션 등의 공통 연산을 TPU-Kernel 하드웨어 명령어 호출로 변환합니다. 컴파일러가 형상, 스트라이드, 주소, 데이터형을 채워 장치 코드를 생성합니다.\n- Python에서의 컴파일과 실행: JIT 컴파일은 장치 프로그램과 호스트 호출 코드를 자동으로 생성하고, 컴파일, 로딩, 커널 실행을 처리합니다. PCIe로 연결된 실제 TPU에서의 실행과 cmodel 소프트웨어 시뮬레이터를 이용한 디버깅을 지원합니다.\n\n### TileLang-RISC-V\n\n프로젝트 책임자\n\nAME 행렬 가속을 제공하는 RISC-V CPU에 TileLang을 이식합니다. 오픈소스 하드웨어·시스템 연구팀과 진행 중인 프로젝트입니다.\n\n베이징 오픈소스 칩 연구원 및 중국과학원 소프트웨어연구소와 협력해 RISC-V AME AI CPU용 TileLang 백엔드를 개발하고 있습니다. 현재 프로그래밍 모델과 대상 명령어를 연결하고 실용적인 컴파일·실행 경로를 구축하는 데 집중합니다.\n\n프로젝트 단계: 진행 중\n소스 공개 여부: 소스 코드 비공개\n\nhttps://tianxingren-work.github.io/ko/projects/tilelang-riscv/\n\n- 프로그래밍 모델: 일반적인 AI 연산자를 타일 단위 프로그램으로 표현하고 백엔드에 필요한 정보를 파악합니다.\n- 대상 플랫폼 통합: 컴파일 하향 변환, AME 명령어 매핑, 실행 환경을 연결합니다.\n- 평가: 대상 구성별로 연산자의 정확성과 성능을 검증하고, 결과를 바탕으로 백엔드를 최적화합니다.\n\n## 오픈소스 기여\n\n- [TileLang](https://github.com/tile-ai/tilelang) — contributor\n- [Asterinas](https://github.com/asterinas/asterinas) — contributor\n\n## 학력\n\n- 베이징대학교, 공학 전문박사과정, 전자정보. 2025.09 – 2030.07 · 예정\n- 베이항대학교, 공학 학사, 사이버보안. 2021.09 – 2025.07\n  GPA 3.77 / 4.0. 평균 성적 90.41 / 100\n\n학부 재학 중에는 주로 [Hua Guo 교수님](https://cst.buaa.edu.cn/info/1112/2741.htm) 의 지도 아래 연구를 진행했습니다. 적은 회로 면적을 사용하는 대수 격자 암호 제품군을 FPGA로 구현하여 전국 암호기술 경진대회에서 3등상을 받았습니다. 안전한 다자간 계산을 기반으로 한 클라우드 서비스 키 보호 메커니즘도 완성하여 전국 대학생 정보보안 경진대회에서 1등상을 받았습니다.\n\n## 인턴십\n\n### 베이징 퉁밍후 정보기술 혁신센터\n\n2025.12 – 현재. 지능형 시스템 인턴\n\n- RISC-V 텐서 확장을 사용하는 SOPHGO SG2260E TPU에 TileLang을 이식하고 있습니다.\n- AME 행렬 가속을 제공하는 RISC-V CPU를 위한 TileLang 지원을 개발하고 있습니다.\n\n### 베이징 오픈소스 칩 연구원\n\n2024.12 – 2025.08. AI 시스템 소프트웨어 개발 인턴\n\n- 벤더 툴체인으로의 변환을 통해 Triton 컴파일 스택을 SOPHGO TPU로 확장했습니다.\n- TileLang 기반 연산자 컴파일 프레임워크를 구축하고, TPU 연산자 라이브러리, 파이프라인 패스, LLaMA 연산자용 자동 코드 생성을 개발했습니다.\n- 평가한 구성에서 여러 연산자가 벤더 최적화 구현과 동등하거나 더 높은 성능을 보였습니다.\n\n### Eversec (Beijing) Technology Co., Ltd.\n\n2024.07 – 2024.08. 보안 서비스 인턴\n\n- Burp Suite 등으로 승인된 네트워크 보안 평가를 지원하고 결과를 정리해 잠재적 위험을 파악했습니다.\n- Wireshark로 산업용 IoT 기기의 로그인 트래픽 PCAP 기록 100여 건을 수집하고 표준화했습니다.\n\n## 수상 및 장학금\n\n- 2025–2026: 학업우수 장학금\n- 2024–2025: 학술경진대회 장학금 특별상; 학업우수 장학금 2등상\n- 2023–2024: 우수학생 표창; 학술경진대회 장학금 특별상; 사회봉사 장학금 2등상\n- 2022–2023: 학술경진대회 장학금 1등상; 학업우수 장학금 2등상\n\n## 방문\n\n- 홍콩중문대학교. 여름학교 방문학생. 2024.07 – 2024.08\n\n## 연락처\n\n공개 이메일 주소와 GitHub 링크를 직접 읽을 수 있습니다. AI 컴파일러, 새로운 AI 하드웨어 및 관련 시스템 연구에 관한 교류를 환영합니다.\n\n이메일: tianxingren25 [at] stu [dot] pku [dot] edu [dot] cn\nhttps://tianxingren-work.github.io/ko/contact/\nhttps://github.com/LeslinD\nhttps://github.com/tianxingren-work\n\n## 읽기 형식\n\n아래 파일 링크에서 전체 프로필, 연락처, 프로젝트 정보를 Markdown 또는 JSON으로 읽을 수 있습니다.\n\n- Markdown: https://tianxingren-work.github.io/machine/ko/for-agents.md\n- JSON: https://tianxingren-work.github.io/machine/ko/for-agents.json\n- Contact JSON: https://tianxingren-work.github.io/data/contact.json\n",
   "links": [
     "https://tianxingren-work.github.io/machine/ko/for-agents.md",
     "https://tianxingren-work.github.io/machine/ko/for-agents.json",
@@ -16,7 +16,7 @@
     "https://tianxingren-work.github.io/ko/projects/tilelang-tpu/",
     "https://github.com/TongmingLAIC/tilelang-tpu",
     "https://tianxingren-work.github.io/assets/tilelang-tpu-operators.png",
-    "https://tianxingren-work.github.io/assets/tilelang-tpu-attention-mlp.png",
+    "https://tianxingren-work.github.io/assets/tilelang-tpu-attention-mlp-en.png",
     "https://tianxingren-work.github.io/ko/projects/tilelang-riscv/",
     "https://www.bosc.ac.cn/",
     "https://is.cas.cn/",
@@ -251,20 +251,24 @@
       "role": "project-lead",
       "stage": "milestone-complete",
       "open_source": true,
-      "summary": "컴파일 시점의 메모리 계획부터 커널 실행까지 지원하는 SOPHGO TPU용 TileLang 백엔드입니다.",
-      "overview": "TileLang-TPU는 상용 SOPHGO 가속기에서 타일 단위 프로그래밍을 지원합니다. 타일은 계산을 표현하는 작은 데이터 블록입니다. 컴파일러가 온칩 메모리 배치, 데이터 이동, 전송과 연산의 중첩을 처리합니다. JIT(실행 시점 컴파일) 런타임은 Python으로 정의한 커널을 컴파일하고 BM1690에서 실행합니다.",
+      "summary": "Python으로 고성능 커널을 작성할 수 있는 SOPHGO TPU용 TileLang 컴파일러 백엔드입니다.",
+      "overview": "TileLang-TPU는 Python으로 SOPHGO TPU에서 실행할 고성능 커널을 작성할 수 있도록 합니다. TileLang의 타일 추상화와 프런트엔드, 하드웨어에 독립적인 변환 및 최적화를 그대로 활용합니다. 타일은 계산을 표현하는 데이터 블록입니다. 컴파일러는 온칩 메모리 할당, 데이터 전송, 연산 파이프라인 스케줄링, TPU 명령어 선택을 처리합니다. JIT(실행 시점 컴파일)를 통해 Python으로 정의한 커널을 장치에서 실행합니다. 개발자는 이러한 하드웨어 세부 사항을 직접 다루지 않고도 간결한 커널 코드를 작성할 수 있습니다. 평가한 워크로드에서는 제조사의 최적화된 구현과 같거나 더 나은 성능을 보였습니다.\n\n현재 SOPHGO BM1690에서 딥러닝에 자주 쓰이는 연산을 지원하며, 해당 칩에서 성능 평가를 마쳤습니다. 실제 장치 실행과 소프트웨어 시뮬레이터를 이용한 디버깅을 모두 지원합니다. 앞으로는 대규모 언어 모델의 전체 추론 워크로드를 평가하고 여러 코어를 활용하도록 확장할 계획입니다.",
       "highlights": [
         {
-          "title": "정적 메모리 할당",
-          "description": "프로그램 실행 전에 각 데이터 블록을 칩 내부의 빠른 메모리 어디에 둘지 정합니다. 하드웨어의 배치 규칙을 따르고 메모리 용량을 넘지 않도록 합니다."
+          "title": "온칩 메모리 관리",
+          "description": "TPU의 온칩 메모리 구조에 맞춘 자동 주소 할당 알고리즘을 구현했습니다. 컴파일러는 텐서의 형상, 데이터형, 읽기·쓰기 관계를 바탕으로 수명을 분석합니다. 수명이 겹치지 않는 텐서는 저장 공간을 공유하고, 동시에 읽는 텐서는 가능한 한 서로 다른 메모리 뱅크에 배치해 접근 충돌을 줄입니다."
         },
         {
-          "title": "데이터 전송과 연산의 중첩",
-          "description": "데이터 전송과 연산을 병렬로 진행할 수 있는 단계로 나눕니다. 각 단계는 필요한 데이터가 준비된 후 시작하도록 합니다."
+          "title": "데이터 전송과 연산 파이프라이닝",
+          "description": "컴파일러는 실행 유닛 간 데이터 의존성을 분석하고, 사용자가 지정한 파이프라인 단계 수에 맞춰 타일 루프의 데이터 로드, 연산, 저장을 배치합니다. GDMA 데이터 전송 유닛과 TIU 연산 유닛을 병렬로 실행하도록 스케줄링합니다. 현재 타일을 계산하는 동안 다음 타일을 준비해 전송과 연산을 세밀하게 중첩합니다."
         },
         {
-          "title": "TPU 코드 생성과 실행",
-          "description": "계산을 TPU가 실행할 수 있는 연산으로 변환하고 프로그램을 컴파일, 로딩, 실행합니다."
+          "title": "하드웨어 명령어 매핑",
+          "description": "데이터 복사와 전송, 행렬 곱셈, 원소별 연산, 합계나 최댓값을 구하는 리덕션 등의 공통 연산을 TPU-Kernel 하드웨어 명령어 호출로 변환합니다. 컴파일러가 형상, 스트라이드, 주소, 데이터형을 채워 장치 코드를 생성합니다."
+        },
+        {
+          "title": "Python에서의 컴파일과 실행",
+          "description": "JIT 컴파일은 장치 프로그램과 호스트 호출 코드를 자동으로 생성하고, 컴파일, 로딩, 커널 실행을 처리합니다. PCIe로 연결된 실제 TPU에서의 실행과 cmodel 소프트웨어 시뮬레이터를 이용한 디버깅을 지원합니다."
         }
       ],
       "url": "https://tianxingren-work.github.io/ko/projects/tilelang-tpu/",
@@ -292,15 +296,52 @@
             1.05,
             1.23
           ],
-          "aggregation": "Average speedup by operator category across tested configurations and data types"
+          "aggregation": "Average speedup by operator category across tested configurations and data types",
+          "average_speedups": {
+            "Matmul": 1.14,
+            "RMSNorm": 1.23,
+            "RoPE": 1.08,
+            "SwiGLU": 1.11,
+            "Element-wise addition": 1.05
+          },
+          "input_shapes": [
+            [
+              64,
+              64
+            ],
+            [
+              128,
+              128
+            ],
+            [
+              256,
+              256
+            ],
+            [
+              512,
+              512
+            ],
+            [
+              1024,
+              1024
+            ]
+          ],
+          "shape_labels": [
+            "M0",
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ],
+          "matmul_dimensions": "K = M = N"
         },
         "flash_attention": {
-          "average_speedup": 12.5,
+          "average_speedup": 1.36,
           "dtypes": [
             "BF16",
             "FP16"
           ],
-          "optimization": "Head-batched computation: process multiple attention heads together"
+          "comparison": "Same algorithmic formulation as the vendor PPL implementation"
         },
         "fused_mlp": {
           "workload": "MLP W8A16 Dequantized Forward",
@@ -310,31 +351,65 @@
         },
         "source": {
           "type": "owner-supplied updated evaluation summary and figures",
-          "date": "2026-10-14"
+          "date": "2026-11-02"
         },
-        "scope": "SOPHGO BM1690의 단일 코어에서 입력 크기를 컴파일 전에 확정한 조건으로 평가했습니다. 비교 기준은 Torch-TPU에서 사용하는 제조사의 최적화된 PPL 구현입니다. PPL(Primitive Programming Language)은 SOPHGO가 제공하는 저수준 프로그래밍 언어입니다.",
-        "methods": "속도 향상은 평가한 연산의 실행 시간을 비교한 값입니다. 독립 연산 결과는 연산 종류별 평균이며, FlashAttention과 융합 MLP는 각각 별도의 평균을 사용합니다.",
-        "standalone_text": "행렬 곱셈, RMSNorm, RoPE, SwiGLU, 원소별 덧셈을 여러 입력 구성과 수치 형식으로 평가했습니다. RMSNorm은 값의 크기를 조정하고, RoPE는 시퀀스 내 위치를 표현하며, SwiGLU는 신경망의 비선형 변환을 수행합니다. 연산 종류별 평균 속도 향상은 PPL 대비 1.05–1.23×입니다.",
-        "attention_text": "TileLang-TPU는 여러 계산 단계를 하나로 합치는 융합 연산도 지원합니다. FlashAttention은 모델의 어텐션을 효율적으로 계산합니다. 여러 어텐션 헤드를 한 배치로 함께 처리하는 head-batched 알고리즘 최적화 후 PPL 대비 평균 12.50×의 속도 향상을 달성했습니다. 어텐션 헤드는 서로 다른 정보에 주목하는 병렬 계산 분기입니다.",
-        "mlp_text": "AI 모델에서 흔히 사용하는 순방향 신경망인 MLP의 융합 연산에서는 MLP W8A16 Dequantized Forward가 평균 1.01×로 PPL과 거의 같은 성능을 보였습니다. W8A16은 8비트 가중치와 16비트 활성값을 뜻합니다. 역양자화는 저장된 저정밀도 가중치를 계산에 사용할 값으로 변환하는 과정입니다.",
+        "scope": "성능은 SOPHGO BM1690 단일 코어에서 평가했습니다. TileLang-TPU와 SOPHGO Torch-TPU 연산 라이브러리에 포함된 제조사의 최적화된 PPL 구현을 같은 입력 형상과 데이터형으로 비교했습니다. 입력 형상은 컴파일 시점에 고정하며, 장치 측 커널 실행 시간을 측정했습니다. PPL(Primitive Programming Language)은 SOPHGO가 제공하는 커널 프로그래밍 언어입니다.",
+        "methods": "속도 향상 배수는 PPL 커널 실행 시간을 TileLang-TPU 커널 실행 시간으로 나눈 값입니다. 독립 연산 종류와 융합 워크로드별로 평균을 따로 계산했습니다. 이 결과는 장치 측 커널 실행 시간이며 모델 전체의 추론 시간은 아닙니다.",
+        "standalone_text": "PPL 대비 평균 속도 향상은 행렬 곱셈 1.14×, RMSNorm 1.23×, RoPE 1.08×, SwiGLU 1.11×, 원소별 덧셈 1.05×입니다. 다섯 연산 종류 모두 평균 성능이 제조사 구현보다 높았습니다. 커널 구현 부분의 유효 코드 줄 수는 PPL보다 44.85% 줄었습니다. 평가한 워크로드에서는 타일 추상화로 더 간결한 코드를 작성하면서도 제조사 라이브러리와 같거나 더 나은 성능을 얻을 수 있었습니다.",
+        "attention_text": "여러 계산 단계를 하나로 합친 융합 커널도 지원합니다. 대규모 언어 모델의 핵심 어텐션 커널인 FlashAttention은 같은 알고리즘 표현을 사용했을 때 제조사의 PPL 구현 대비 평균 1.36×의 속도 향상을 보였습니다.",
+        "mlp_text": "W8A16 역양자화 MLP 순방향 계산(MLP W8A16 Dequantized Forward)은 평가한 구성에서 PPL 대비 평균 1.01×로, 거의 같은 성능을 보였습니다. MLP는 모델의 순방향 신경망입니다. W8A16은 8비트 가중치와 16비트 활성값을 뜻하며, 역양자화는 저장된 저정밀도 가중치를 계산에 사용할 값으로 변환하는 과정입니다.",
         "figures": [
           {
             "asset": "assets/tilelang-tpu-operators.png",
             "width": 3166,
             "height": 915,
             "alt": "다섯 입력 구성과 세 부동소수점 형식에서 다섯 연산 종류의 PPL 대비 속도 향상.",
-            "caption": "독립 연산 평가. M0–M4는 다섯 가지 테스트 입력 구성을 나타냅니다. BF16과 FP16은 16비트, FP32는 32비트 부동소수점 형식입니다. 1×는 PPL과 같은 실행 시간을 뜻하며 값이 클수록 빠릅니다. 1.05–1.23×는 연산 종류별 평균입니다.",
+            "caption": "그림 2. TPU의 다섯 가지 대표 연산에 대한 제조사 PPL 구현 대비 속도 향상. 가로축은 입력 형상, 세로축은 속도 향상 배수입니다. 1보다 크면 TileLang-TPU가 더 빠릅니다. M0–M4는 각각 (64,64), (128,128), (256,256), (512,512), (1024,1024)이며, 행렬 곱셈에서는 K = M = N입니다.",
             "url": "https://tianxingren-work.github.io/assets/tilelang-tpu-operators.png"
           },
           {
-            "asset": "assets/tilelang-tpu-attention-mlp.png",
-            "width": 9282,
-            "height": 2797,
-            "alt": "FlashAttention의 PPL 대비 평균 속도 향상은 12.50배, 융합 MLP는 1.01배입니다.",
-            "caption": "융합 연산 평가. FlashAttention은 평균 12.50×, W8A16 MLP는 평균 1.01×입니다. B, H, S, D는 배치 크기, 어텐션 헤드 수, 시퀀스 길이, 헤드 차원입니다. M, H, I는 입력 행 수, 은닉층 너비, 중간층 너비입니다. 괄호 안의 수치는 테스트 입력 크기입니다.",
-            "url": "https://tianxingren-work.github.io/assets/tilelang-tpu-attention-mlp.png"
+            "asset": "assets/tilelang-tpu-attention-mlp-en.png",
+            "width": 4440,
+            "height": 2490,
+            "alt": "PPL 대비 FlashAttention과 W8A16 MLP의 평균 속도 향상은 각각 1.36×와 1.01×입니다.",
+            "caption": "그림 3. TPU 융합 커널 두 종류의 제조사 PPL 구현 대비 속도 향상. FlashAttention은 평균 1.36×, MLP Forward W8A16은 평균 1.01×입니다. 왼쪽의 B, H, S, D는 배치 크기, 어텐션 헤드 수, 시퀀스 길이, 헤드 차원입니다. 오른쪽의 M, H, I는 입력 행 수, 은닉층 너비, 중간층 너비입니다.",
+            "url": "https://tianxingren-work.github.io/assets/tilelang-tpu-attention-mlp-en.png"
           }
+        ],
+        "code_size": {
+          "effective_kernel_loc_reduction_percent": 44.85,
+          "baseline": "Vendor PPL kernel implementations",
+          "scope": "Operator implementation code"
+        },
+        "completion_text": "BM1690용 컴파일러 백엔드, JIT 런타임, 대규모 언어 모델에 자주 쓰이는 연산을 구현했습니다. 행렬 곱셈, RMSNorm, RoPE, SwiGLU, 원소별 덧셈, 리덕션 등을 지원하며, LLaMA와 DeepSeek 추론에 쓰이는 연산도 포함합니다.",
+        "operator_terms": "RMSNorm은 활성값의 크기를 정규화하고, RoPE는 토큰의 위치를 표현합니다. SwiGLU는 순방향 계층에서 쓰이는 게이트 활성화 함수입니다. BF16과 FP16은 16비트 부동소수점 형식이며, FP32는 32비트 형식입니다."
+      },
+      "article": {
+        "headings": {
+          "introduction": "소개",
+          "architecture": "프로젝트 구조",
+          "features": "주요 기능",
+          "results": "구현 현황과 성능",
+          "value": "프로젝트의 의의",
+          "links": "관련 링크"
+        },
+        "introduction": [
+          "{project}는 Python으로 SOPHGO TPU에서 실행할 고성능 커널을 작성할 수 있도록 합니다. TileLang의 타일 추상화와 프런트엔드, 하드웨어에 독립적인 변환 및 최적화를 그대로 활용합니다. 타일은 계산을 표현하는 데이터 블록입니다. 컴파일러는 온칩 메모리 할당, 데이터 전송, 연산 파이프라인 스케줄링, TPU 명령어 선택을 처리합니다. JIT(실행 시점 컴파일)를 통해 Python으로 정의한 커널을 장치에서 실행합니다. 개발자는 이러한 하드웨어 세부 사항을 직접 다루지 않고도 간결한 커널 코드를 작성할 수 있습니다. 평가한 워크로드에서는 제조사의 최적화된 구현과 같거나 더 나은 성능을 보였습니다.",
+          "현재 SOPHGO BM1690에서 딥러닝에 자주 쓰이는 연산을 지원하며, 해당 칩에서 성능 평가를 마쳤습니다. 실제 장치 실행과 소프트웨어 시뮬레이터를 이용한 디버깅을 모두 지원합니다. 앞으로는 대규모 언어 모델의 전체 추론 워크로드를 평가하고 여러 코어를 활용하도록 확장할 계획입니다."
+        ],
+        "architecture": [
+          "TPU용 고성능 커널을 개발하려면 계산 내용뿐 아니라 온칩 메모리의 데이터 배치, 전송과 연산의 실행 순서, 하드웨어 명령어 인터페이스 호출도 정해야 합니다. TileLang-TPU는 TileLang의 Python 프런트엔드, 텐서 중간 표현(TIR), 공통 컴파일 패스를 재사용합니다. 하드웨어에 종속적인 작업은 TPU 전용 백엔드가 처리합니다.",
+          "개발자는 TileLang-TPU의 프런트엔드 연산으로 계산과 데이터 전송을 표현합니다. 현재 백엔드는 단일 코어 안에서 최적화하며, 코어 간 작업 분배는 아직 지원하지 않습니다. 입력 크기가 컴파일 시점에 정해지는 정적 형상만 지원하고, 동적 형상 컴파일은 지원하지 않습니다."
+        ],
+        "value": [
+          "<strong>TileLang-TPU는 전용 AI 칩을 개방형 커널 프로그래밍 생태계에 연결하는 구현 사례입니다.</strong> SOPHGO TPU를 대상으로 TileLang의 프로그래밍 인터페이스와 공통 컴파일러 구성 요소를 재사용하고, 칩 고유의 메모리 관리, 데이터 전송, 하드웨어 호출은 전용 백엔드에 구현했습니다. 새 칩의 커널 프로그래밍 환경을 구축할 때 중복 작업을 줄이는 데 도움이 됩니다. 칩 제조사는 커뮤니티의 프로그래밍 도구, 커널 구현, 컴파일 기술을 활용할 수 있습니다. 개발자는 익숙한 타일 단위 코드로 새 하드웨어를 지원하면서도 칩 특성에 맞게 알고리즘과 성능을 조정할 수 있습니다.",
+          "<strong>오픈소스 구현은 중국 안팎의 AI 칩 제조사, 컴파일러 연구팀, 대규모 언어 모델 개발팀이 함께 작업할 기반을 제공합니다.</strong> 새로운 하드웨어 지원, 복잡한 커널 최적화, 다양한 모델과 장치의 가속에 관한 협업을 환영합니다. 구현과 최적화 경험을 공개해 다른 개발자가 재사용하고 확장할 수 있도록 하며, 더 많은 AI 칩이 개방형 생태계에 참여하고 사용자의 선택지가 넓어지기를 바랍니다."
         ]
+      },
+      "announcement_url": "https://devcom.tlaic.ac.cn/news/a0d8aa85-a439-499c-9da9-68ebeec3c04b",
+      "architecture_figure": {
+        "url": "https://tianxingren-work.github.io/assets/tilelang-tpu-overview-en.png",
+        "caption": "그림 1. TileLang-TPU의 컴파일 및 실행 과정. TileLang 프런트엔드를 재사용하며, TPU 백엔드는 메모리 할당, 파이프라인 스케줄링, 하드웨어 인터페이스 매핑을 담당합니다. JIT 런타임은 Python과 TPU 실행을 연결합니다. LMEM은 온칩 로컬 메모리, bank는 메모리 분할 영역, DMA는 데이터 전송을 뜻합니다. Intrinsic은 하드웨어 호출로 매핑되는 컴파일러 내장 연산입니다."
       },
       "implementation_sources": [
         {

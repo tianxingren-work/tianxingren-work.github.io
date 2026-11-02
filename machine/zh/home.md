@@ -21,7 +21,7 @@ AI COMPILERS TILE-LEVEL PROGRAMMING HETEROGENEOUS COMPUTING
 
 ### [TileLang-TPU](https://tianxingren-work.github.io/zh/projects/tilelang-tpu/)
 
-面向算能 TPU 的 TileLang 后端，打通编译期内存规划、流水线优化与算子执行。
+面向算能 TPU 的 TileLang 编译后端，用 Python 编写高性能算子。
 
 [](https://tianxingren-work.github.io/zh/projects/tilelang-tpu/)
 [查看项目](https://tianxingren-work.github.io/zh/projects/tilelang-tpu/) [源代码](https://github.com/TongmingLAIC/tilelang-tpu)

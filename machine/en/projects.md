@@ -9,7 +9,7 @@ Milestone completed [Open source](https://github.com/TongmingLAIC/tilelang-tpu)
 
 ### [TileLang-TPU](https://tianxingren-work.github.io/projects/tilelang-tpu/)
 
-A TileLang backend for SOPHGO TPUs, from compile-time memory planning to executable kernels.
+A TileLang compiler backend for writing high-performance Python kernels on SOPHGO TPUs.
 
 [](https://tianxingren-work.github.io/projects/tilelang-tpu/)
 [View project](https://tianxingren-work.github.io/projects/tilelang-tpu/) [Source code](https://github.com/TongmingLAIC/tilelang-tpu)

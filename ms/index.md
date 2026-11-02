@@ -21,7 +21,7 @@ Fasa utama selesai [Sumber terbuka](https://github.com/TongmingLAIC/tilelang-tpu
 
 ### [TileLang-TPU](https://tianxingren-work.github.io/ms/projects/tilelang-tpu/)
 
-Backend TileLang untuk TPU SOPHGO, daripada perancangan memori ketika kompilasi hingga pelaksanaan kernel.
+Backend pengkompil TileLang untuk menulis kernel berprestasi tinggi dalam Python pada TPU SOPHGO.
 
 [](https://tianxingren-work.github.io/ms/projects/tilelang-tpu/)
 [Lihat projek](https://tianxingren-work.github.io/ms/projects/tilelang-tpu/) [Kod sumber](https://github.com/TongmingLAIC/tilelang-tpu)

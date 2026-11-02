@@ -21,7 +21,7 @@ AI COMPILERS TILE-LEVEL PROGRAMMING HETEROGENEOUS COMPUTING
 
 ### [TileLang-TPU](https://tianxingren-work.github.io/ko/projects/tilelang-tpu/)
 
-컴파일 시점의 메모리 계획부터 커널 실행까지 지원하는 SOPHGO TPU용 TileLang 백엔드입니다.
+Python으로 고성능 커널을 작성할 수 있는 SOPHGO TPU용 TileLang 컴파일러 백엔드입니다.
 
 [](https://tianxingren-work.github.io/ko/projects/tilelang-tpu/)
 [프로젝트 보기](https://tianxingren-work.github.io/ko/projects/tilelang-tpu/) [소스 코드](https://github.com/TongmingLAIC/tilelang-tpu)
