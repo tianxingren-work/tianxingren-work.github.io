@@ -21,7 +21,7 @@ TPU용 고성능 커널을 개발하려면 계산 내용뿐 아니라 온칩 메
 개발자는 TileLang-TPU의 프런트엔드 연산으로 계산과 데이터 전송을 표현합니다. 현재 백엔드는 단일 코어 안에서 최적화하며, 코어 간 작업 분배는 아직 지원하지 않습니다. 입력 크기가 컴파일 시점에 정해지는 정적 형상만 지원하고, 동적 형상 컴파일은 지원하지 않습니다.
 
 [](https://tianxingren-work.github.io/assets/tilelang-tpu-overview-en.png)
-그림 1. TileLang-TPU의 컴파일 및 실행 과정. TileLang 프런트엔드를 재사용하며, TPU 백엔드는 메모리 할당, 파이프라인 스케줄링, 하드웨어 인터페이스 매핑을 담당합니다. JIT 런타임은 Python과 TPU 실행을 연결합니다. LMEM은 온칩 로컬 메모리, bank는 메모리 분할 영역, DMA는 데이터 전송을 뜻합니다. Intrinsic은 하드웨어 호출로 매핑되는 컴파일러 내장 연산입니다.좌우로 스크롤해 자세히 보거나 이미지를 눌러 원본을 열 수 있습니다.
+그림 1. TileLang-TPU의 컴파일 및 실행 과정. TileLang 프런트엔드를 재사용하며, TPU 백엔드는 메모리 할당, 파이프라인 스케줄링, 하드웨어 인터페이스 매핑을 담당합니다. JIT 런타임은 Python과 TPU 실행을 연결합니다. LMEM은 온칩 로컬 메모리, bank는 메모리 분할 영역, DMA는 데이터 전송을 뜻합니다. Intrinsic은 하드웨어 호출로 매핑되는 컴파일러 내장 연산입니다. [원본 이미지 보기](https://tianxingren-work.github.io/assets/tilelang-tpu-overview-en.png)
 
 ## 주요 기능
 
@@ -60,14 +60,14 @@ PPL 대비 평균 속도 향상은 행렬 곱셈 **1.14×**, RMSNorm **1.23×**,
 RMSNorm은 활성값의 크기를 정규화하고, RoPE는 토큰의 위치를 표현합니다. SwiGLU는 순방향 계층에서 쓰이는 게이트 활성화 함수입니다. BF16과 FP16은 16비트 부동소수점 형식이며, FP32는 32비트 형식입니다.
 
 [](https://tianxingren-work.github.io/assets/tilelang-tpu-operators.png)
-그림 2. TPU의 다섯 가지 대표 연산에 대한 제조사 PPL 구현 대비 속도 향상. 가로축은 입력 형상, 세로축은 속도 향상 배수입니다. 1보다 크면 TileLang-TPU가 더 빠릅니다. M0–M4는 각각 (64,64), (128,128), (256,256), (512,512), (1024,1024)이며, 행렬 곱셈에서는 K = M = N입니다.좌우로 스크롤해 자세히 보거나 이미지를 눌러 원본을 열 수 있습니다.
+그림 2. TPU의 다섯 가지 대표 연산에 대한 제조사 PPL 구현 대비 속도 향상. 가로축은 입력 형상, 세로축은 속도 향상 배수입니다. 1보다 크면 TileLang-TPU가 더 빠릅니다. M0–M4는 각각 (64,64), (128,128), (256,256), (512,512), (1024,1024)이며, 행렬 곱셈에서는 K = M = N입니다. [원본 이미지 보기](https://tianxingren-work.github.io/assets/tilelang-tpu-operators.png)
 
 여러 계산 단계를 하나로 합친 융합 커널도 지원합니다. 대규모 언어 모델의 핵심 어텐션 커널인 FlashAttention은 같은 알고리즘 표현을 사용했을 때 제조사의 PPL 구현 대비 평균 **1.36×**의 속도 향상을 보였습니다.
 
 W8A16 역양자화 MLP 순방향 계산(MLP W8A16 Dequantized Forward)은 평가한 구성에서 PPL 대비 평균 **1.01×**로, 거의 같은 성능을 보였습니다. MLP는 모델의 순방향 신경망입니다. W8A16은 8비트 가중치와 16비트 활성값을 뜻하며, 역양자화는 저장된 저정밀도 가중치를 계산에 사용할 값으로 변환하는 과정입니다.
 
 [](https://tianxingren-work.github.io/assets/tilelang-tpu-attention-mlp-en.png)
-그림 3. TPU 융합 커널 두 종류의 제조사 PPL 구현 대비 속도 향상. FlashAttention은 평균 1.36×, MLP Forward W8A16은 평균 1.01×입니다. 왼쪽의 B, H, S, D는 배치 크기, 어텐션 헤드 수, 시퀀스 길이, 헤드 차원입니다. 오른쪽의 M, H, I는 입력 행 수, 은닉층 너비, 중간층 너비입니다.좌우로 스크롤해 자세히 보거나 이미지를 눌러 원본을 열 수 있습니다.
+그림 3. TPU 융합 커널 두 종류의 제조사 PPL 구현 대비 속도 향상. FlashAttention은 평균 1.36×, MLP Forward W8A16은 평균 1.01×입니다. 왼쪽의 B, H, S, D는 배치 크기, 어텐션 헤드 수, 시퀀스 길이, 헤드 차원입니다. 오른쪽의 M, H, I는 입력 행 수, 은닉층 너비, 중간층 너비입니다. [원본 이미지 보기](https://tianxingren-work.github.io/assets/tilelang-tpu-attention-mlp-en.png)
 
 ## 프로젝트의 의의
 

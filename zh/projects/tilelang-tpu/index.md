@@ -21,7 +21,7 @@
 开发者只需描述计算和数据搬运，并使用 TileLang-TPU 的前端操作接口实现。当前后端仅在单核范围内优化，尚未支持多核之间的任务分工。另外，目前只支持静态形状编译，即输入形状需要在编译时确定，暂不支持动态形状。
 
 [](https://tianxingren-work.github.io/assets/tilelang-tpu-overview-zh.png)
-图 1　TileLang-TPU 的编译与运行流程。复用 TileLang 前端，在专用后端完成内存分配、流水调度和硬件接口映射，通过 JIT 运行时连接 Python 与 TPU 执行。图中的 LMEM 指片上局部内存，Bank 指存储分区，DMA 指数据搬运，Intrinsics 指映射到硬件调用的编译器内建操作。左右滑动查看细节，点击图片可打开原图。
+图 1　TileLang-TPU 的编译与运行流程。复用 TileLang 前端，在专用后端完成内存分配、流水调度和硬件接口映射，通过 JIT 运行时连接 Python 与 TPU 执行。图中的 LMEM 指片上局部内存，Bank 指存储分区，DMA 指数据搬运，Intrinsics 指映射到硬件调用的编译器内建操作。 [查看原图](https://tianxingren-work.github.io/assets/tilelang-tpu-overview-zh.png)
 
 ## 核心功能
 
@@ -60,14 +60,14 @@
 RMSNorm 用于归一化激活值的尺度，RoPE 用于表示词元的位置，SwiGLU 是前馈层使用的一种门控激活函数。BF16 和 FP16 是两种 16 位浮点格式，FP32 为 32 位浮点格式。
 
 [](https://tianxingren-work.github.io/assets/tilelang-tpu-operators.png)
-图 2　TPU 上五类代表性算子相对厂商 PPL 实现的加速比。横轴为输入形状，纵轴为加速比，大于 1 表示 TileLang-TPU 更快。M0–M4 分别对应 (64,64)、(128,128)、(256,256)、(512,512) 和 (1024,1024)。矩阵乘法中 K = M = N。左右滑动查看细节，点击图片可打开原图。
+图 2　TPU 上五类代表性算子相对厂商 PPL 实现的加速比。横轴为输入形状，纵轴为加速比，大于 1 表示 TileLang-TPU 更快。M0–M4 分别对应 (64,64)、(128,128)、(256,256)、(512,512) 和 (1024,1024)。矩阵乘法中 K = M = N。 [查看原图](https://tianxingren-work.github.io/assets/tilelang-tpu-operators.png)
 
 除了独立算子，TileLang-TPU 还支持将多个计算步骤合在一起的融合算子。对于大模型中的核心注意力算子 FlashAttention，在相同的算法表达下，TileLang-TPU 相比厂商 PPL 实现取得了 **1.36×** 的平均加速。
 
 对于 W8A16 反量化 MLP 前向计算（MLP W8A16 Dequantized Forward），TileLang-TPU 在所测配置下相对 PPL 的平均加速比为 **1.01×**，总体性能基本持平。MLP 是模型中的前馈网络。W8A16 表示权重采用 8 位、激活值采用 16 位，反量化将存储的低精度权重转换为计算所用的数值。
 
 [](https://tianxingren-work.github.io/assets/tilelang-tpu-attention-mlp-zh.png)
-图 3　TPU 上两种融合算子相对厂商 PPL 实现的加速比。FlashAttention 平均为 1.36×，MLP Forward W8A16 平均为 1.01×。左图 B、H、S、D 分别为批大小、注意力头数、序列长度和每个头的维度，右图 M、H、I 分别为输入行数、隐藏层宽度和中间层宽度。左右滑动查看细节，点击图片可打开原图。
+图 3　TPU 上两种融合算子相对厂商 PPL 实现的加速比。FlashAttention 平均为 1.36×，MLP Forward W8A16 平均为 1.01×。左图 B、H、S、D 分别为批大小、注意力头数、序列长度和每个头的维度，右图 M、H、I 分别为输入行数、隐藏层宽度和中间层宽度。 [查看原图](https://tianxingren-work.github.io/assets/tilelang-tpu-attention-mlp-zh.png)
 
 ## 项目价值
 

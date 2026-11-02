@@ -21,7 +21,7 @@ Writing a fast TPU kernel requires more than describing the computation. It also
 Developers describe computation and data transfers with TileLang-TPU’s frontend operations. The current backend optimizes within a single core; it does not yet distribute work across cores. It also requires static input shapes, which are known at compile time. Dynamic-shape compilation is not yet supported.
 
 [](https://tianxingren-work.github.io/assets/tilelang-tpu-overview-en.png)
-Figure 1. Compilation and execution in TileLang-TPU. The TileLang frontend is reused. The TPU backend handles memory allocation, pipeline scheduling and hardware interface mapping, while the JIT runtime connects Python to TPU execution. LMEM means local on-chip memory; a bank is a memory partition. DMA transfers data, and intrinsics are compiler-level operations mapped to hardware calls.Scroll sideways to view details, or open the full-size figure.
+Figure 1. Compilation and execution in TileLang-TPU. The TileLang frontend is reused. The TPU backend handles memory allocation, pipeline scheduling and hardware interface mapping, while the JIT runtime connects Python to TPU execution. LMEM means local on-chip memory; a bank is a memory partition. DMA transfers data, and intrinsics are compiler-level operations mapped to hardware calls. [Open full-size figure](https://tianxingren-work.github.io/assets/tilelang-tpu-overview-en.png)
 
 ## Core features
 
@@ -60,14 +60,14 @@ Average speedups over PPL are **1.14×** for matrix multiplication, **1.23×** f
 RMSNorm normalizes the scale of activations, RoPE encodes token positions and SwiGLU is a gated activation used in feed-forward layers. BF16 and FP16 are 16-bit floating-point formats; FP32 uses 32 bits.
 
 [](https://tianxingren-work.github.io/assets/tilelang-tpu-operators.png)
-Figure 2. Speedup of five representative TPU operators over the vendor PPL implementations. The horizontal axis identifies input shapes; the vertical axis shows speedup. Values above 1 mean TileLang-TPU is faster. M0–M4 correspond to (64,64), (128,128), (256,256), (512,512) and (1024,1024). For matrix multiplication, K = M = N.Scroll sideways to view details, or open the full-size figure.
+Figure 2. Speedup of five representative TPU operators over the vendor PPL implementations. The horizontal axis identifies input shapes; the vertical axis shows speedup. Values above 1 mean TileLang-TPU is faster. M0–M4 correspond to (64,64), (128,128), (256,256), (512,512) and (1024,1024). For matrix multiplication, K = M = N. [Open full-size figure](https://tianxingren-work.github.io/assets/tilelang-tpu-operators.png)
 
 TileLang-TPU also supports fused kernels, which combine several computation steps. For FlashAttention, an attention kernel used in large language models, the implementation achieves an average speedup of **1.36×** over the vendor’s PPL implementation under the same algorithmic formulation.
 
 For the MLP W8A16 Dequantized Forward workload, the average speedup over PPL is **1.01×** across the tested configurations, essentially matching the baseline. MLP is the model’s feed-forward network. W8A16 means 8-bit weights and 16-bit activations; dequantization converts stored low-precision weights into values used for computation.
 
 [](https://tianxingren-work.github.io/assets/tilelang-tpu-attention-mlp-en.png)
-Figure 3. Fused TPU kernels compared with the vendor PPL implementations. FlashAttention averages 1.36×; MLP Forward W8A16 averages 1.01×. In the left panel, B, H, S and D are batch size, attention heads, sequence length and head dimension. In the right panel, M, H and I are input rows, hidden width and intermediate width.Scroll sideways to view details, or open the full-size figure.
+Figure 3. Fused TPU kernels compared with the vendor PPL implementations. FlashAttention averages 1.36×; MLP Forward W8A16 averages 1.01×. In the left panel, B, H, S and D are batch size, attention heads, sequence length and head dimension. In the right panel, M, H and I are input rows, hidden width and intermediate width. [Open full-size figure](https://tianxingren-work.github.io/assets/tilelang-tpu-attention-mlp-en.png)
 
 ## Significance
 
