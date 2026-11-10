@@ -56,17 +56,15 @@ AI Systems Software Intern
 
 - Built a TileLang-based operator compilation framework, including a TPU operator library, pipeline passes, and automatic code generation for operators used in LLaMA.
 
-- Several operators matched or exceeded vendor-tuned implementations in the evaluated configurations.
-
 Jul 2024 – Aug 2024
 
-### [Eversec (Beijing) Technology Co., Ltd.](https://eversec.com.cn/)
+### [Eversec (Beijing) Technology Co., Ltd.](https://home.eversec.com.cn/)
 
 Security Services Intern
 
 - Assisted with authorized network security assessments using Burp Suite and related tools, organizing findings and identifying potential risks.
 
-- Captured and standardized more than 100 industrial IoT login-traffic PCAP records with Wireshark.
+- Used Wireshark to collect, standardize and analyze PCAP records of login traffic from real industrial IoT devices.
 
 ## Honors & scholarships
 

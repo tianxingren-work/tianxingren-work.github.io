@@ -56,17 +56,15 @@ Pelatih Pembangunan Perisian Sistem AI
 
 - Membina rangka kerja kompilasi operator berasaskan TileLang, termasuk pustaka operator TPU, pas saluran paip dan penjanaan kod automatik bagi operator LLaMA.
 
-- Dalam konfigurasi yang diuji, beberapa operator menyamai atau mengatasi prestasi pelaksanaan yang dioptimumkan oleh vendor.
-
 Jul 2024 – Ogo 2024
 
-### [Eversec (Beijing) Technology Co., Ltd.](https://eversec.com.cn/)
+### [Eversec (Beijing) Technology Co., Ltd.](https://home.eversec.com.cn/)
 
 Pelatih Perkhidmatan Keselamatan
 
 - Membantu penilaian keselamatan rangkaian yang dibenarkan menggunakan Burp Suite dan alat berkaitan, menyusun penemuan serta mengenal pasti risiko.
 
-- Mengumpul dan menyeragamkan lebih 100 rekod PCAP trafik log masuk peranti IoT industri menggunakan Wireshark.
+- Menggunakan Wireshark untuk mengumpul, menyeragamkan dan menganalisis rekod PCAP trafik log masuk daripada peranti IoT industri sebenar.
 
 ## Anugerah dan biasiswa
 

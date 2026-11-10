@@ -4,7 +4,7 @@
 
 https://tianxingren-work.github.io/ko/for-agents/
 
-Language: ko. Updated: 2026-10-14.
+Language: ko. Updated: 2026-11-10.
 
 ## 프로필과 연구
 
@@ -94,14 +94,13 @@ https://tianxingren-work.github.io/ko/projects/tilelang-riscv/
 
 - 벤더 툴체인으로의 변환을 통해 Triton 컴파일 스택을 SOPHGO TPU로 확장했습니다.
 - TileLang 기반 연산자 컴파일 프레임워크를 구축하고, TPU 연산자 라이브러리, 파이프라인 패스, LLaMA 연산자용 자동 코드 생성을 개발했습니다.
-- 평가한 구성에서 여러 연산자가 벤더 최적화 구현과 동등하거나 더 높은 성능을 보였습니다.
 
 ### Eversec (Beijing) Technology Co., Ltd.
 
 2024.07 – 2024.08. 보안 서비스 인턴
 
 - Burp Suite 등으로 승인된 네트워크 보안 평가를 지원하고 결과를 정리해 잠재적 위험을 파악했습니다.
-- Wireshark로 산업용 IoT 기기의 로그인 트래픽 PCAP 기록 100여 건을 수집하고 표준화했습니다.
+- Wireshark를 사용해 실제 산업용 IoT 기기의 로그인 트래픽 PCAP 기록을 수집하고 표준화한 뒤 분석했습니다.
 
 ## 수상 및 장학금
 

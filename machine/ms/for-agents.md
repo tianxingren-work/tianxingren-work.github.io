@@ -4,7 +4,7 @@
 
 https://tianxingren-work.github.io/ms/for-agents/
 
-Language: ms. Updated: 2026-10-14.
+Language: ms. Updated: 2026-11-10.
 
 ## Profil dan penyelidikan
 
@@ -94,14 +94,13 @@ Dis 2024 – Ogo 2025. Pelatih Pembangunan Perisian Sistem AI
 
 - Memperluas tindanan kompilasi Triton kepada TPU SOPHGO melalui penterjemahan ke rantaian alat vendor.
 - Membina rangka kerja kompilasi operator berasaskan TileLang, termasuk pustaka operator TPU, pas saluran paip dan penjanaan kod automatik bagi operator LLaMA.
-- Dalam konfigurasi yang diuji, beberapa operator menyamai atau mengatasi prestasi pelaksanaan yang dioptimumkan oleh vendor.
 
 ### Eversec (Beijing) Technology Co., Ltd.
 
 Jul 2024 – Ogo 2024. Pelatih Perkhidmatan Keselamatan
 
 - Membantu penilaian keselamatan rangkaian yang dibenarkan menggunakan Burp Suite dan alat berkaitan, menyusun penemuan serta mengenal pasti risiko.
-- Mengumpul dan menyeragamkan lebih 100 rekod PCAP trafik log masuk peranti IoT industri menggunakan Wireshark.
+- Menggunakan Wireshark untuk mengumpul, menyeragamkan dan menganalisis rekod PCAP trafik log masuk daripada peranti IoT industri sebenar.
 
 ## Anugerah dan biasiswa
 

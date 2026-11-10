@@ -4,7 +4,7 @@
 
 https://tianxingren-work.github.io/zh/for-agents/
 
-Language: zh. Updated: 2026-10-14.
+Language: zh. Updated: 2026-11-10.
 
 ## 个人简介与研究
 
@@ -94,14 +94,13 @@ https://tianxingren-work.github.io/zh/projects/tilelang-riscv/
 
 - 通过转译衔接算能 TPU 编译工具链，扩展 Triton 编译栈以运行 Triton 生态程序。
 - 基于 TileLang 构建异构芯片算子编译框架，开发 TPU 算子库、流水线 Pass 和自动代码生成，支持 LLaMA 所用算子。
-- 在已测试的配置中，多个算子性能达到或超过厂商调优实现。
 
 ### 恒安嘉新（北京）科技股份公司
 
 2024.07 – 2024.08. 安全服务实习生
 
 - 使用 Burp Suite 等工具参与经授权的网络安全评估，整理扫描结果并初步识别风险。
-- 使用 Wireshark 收集并标准化处理 100 余项工业物联网设备登录 PCAP 流量记录。
+- 使用 Wireshark 收集、标准化处理并分析真实工业物联网设备登录 PCAP 流量记录。
 
 ## 荣誉与奖学金
 
